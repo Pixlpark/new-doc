@@ -1,6 +1,6 @@
 {
-  "label": "Сайт",
-  "position": 3,
+  "label": "Настройка",
+  "position": 5,
   "link": {
     "type": "generated-index"
   }

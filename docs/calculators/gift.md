@@ -1,3 +1,6 @@
+---
+title: Нанесение на бизнес-сувениры
+---
 # [Нанесение на бизнес-сувениры](http://gifts.pixlpark.com/catalog/futbolki/futbolka-imperial-190-belaya-137460)
 
 ## Техническое задание

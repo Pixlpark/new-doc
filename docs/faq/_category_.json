@@ -1,6 +1,6 @@
 {
-  "label": "FAQ",
-  "position": 3,
+  "label": "Статьи",
+  "position": 10,
   "link": {
     "type": "generated-index"
   }

@@ -1,6 +1,6 @@
 {
-  "label": "Гостевая книга",
-  "position": 3,
+  "label": "Отзывы",
+  "position": 12,
   "link": {
     "type": "generated-index"
   }
