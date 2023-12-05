@@ -1,6 +1,8 @@
 ---
 title: Объемные буквы
 ---
+import PxpCalculator from '@site/src/components/calc/calculator';
+
 # [Объемные буквы](https://demo.pixlpark.ru/signs/letters)
 ## Техническое задание
 * Необходимо настроить расчет стоимости изготовления объемных букв двух типов:
@@ -904,17 +906,4 @@ title: Объемные буквы
     + Комментарий к макету.
 
 ## Калькулятор расчета стоимости объемных букв
-<!-- <div id="integratedCalculator" class="url-letters" style="position: relative; min-height: 150px;"></div>
-<script>
-    let container = document.getElementById("integratedCalculator");
-    let params = { 
-            materialType: "letters",
-        };
-    let integrated = new PxpCalcManager(container, params);
-    if(window.innerWidth<=800) {
-	window.onCompleteLoadPxpCalc = (calc) => {
-      calc.totalPriceCalculator.stickyBlock.isEnable(false);
-      calc.totalPriceCalculator.stickyBlock.isEnable.subscribe(val=>{
-      calc.totalPriceCalculator.stickyBlock.isEnable(false)});
-    }}
-</script> -->
+<PxpCalculator materialType="letters"/>

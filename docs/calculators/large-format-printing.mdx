@@ -1,6 +1,8 @@
 ---
 title: Широкоформатная печать
 ---
+import PxpCalculator from '@site/src/components/calc/calculator';
+
 # [Широкоформатная печать](https://demo.pixlpark.ru/signs/banners)
 ## Техническое задание
 * Необходимо настроить расчет стоимости широкоформатной печати баннеров произвольного размера с разрешением печати:
@@ -596,18 +598,5 @@ title: Широкоформатная печать
 	</tbody>
 </table>
 
-<!-- ## Калькулятор расчета печати баннеров по произвольным размерам в калькуляторе (дизайн) и в онлайн-редакторе (макет)
-<div id="integratedCalculator" class="url-banners" style="position: relative; min-height: 150px;"></div>
-<script>
-    let container = document.getElementById("integratedCalculator");
-    let  params = { 
-            materialType: "banners",
-        };
-        let integrated = new PxpCalcManager(container, params);
-		    if(window.innerWidth<=800) {
-				window.onCompleteLoadPxpCalc = (calc) => {
-				calc.totalPriceCalculator.stickyBlock.isEnable(false);
-				calc.totalPriceCalculator.stickyBlock.isEnable.subscribe(val=>{
-				calc.totalPriceCalculator.stickyBlock.isEnable(false)});
-    }}
-</script> -->
+## Калькулятор расчета печати баннеров по произвольным размерам в калькуляторе (дизайн) и в онлайн-редакторе (макет)
+<PxpCalculator materialType="banners"/>

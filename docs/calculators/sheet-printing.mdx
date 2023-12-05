@@ -1,6 +1,8 @@
 ---
 title: Листовая печать
 ---
+import PxpCalculator from '@site/src/components/calc/calculator';
+
 # [Листовая печать](https://demo.pixlpark.ru/prints/businesscards)
 ## Техническое задание
 * Необходимо настроить расчет стоимости цифровой и офсетной печати визитных карточек на листах SRА3 (450 х 320мм) для двух форматов:
@@ -1101,17 +1103,4 @@ title: Листовая печать
 ![](../_media/calc/sheet-printing_83.png)
 
 ## Калькулятор расчета стоимости листовой печати для визиток
-<!-- <div id="integratedCalculator" class="url-businesscards" style="position: relative; min-height: 150px;"></div>
-<script>
-    let container = document.getElementById("integratedCalculator");
-    let  params = { 
-            materialType: "sheet-printing",
-        };
-    let integrated = new PxpCalcManager(container, params);
-    if(window.innerWidth<=800) {
-	window.onCompleteLoadPxpCalc = (calc) => {
-      calc.totalPriceCalculator.stickyBlock.isEnable(false);
-      calc.totalPriceCalculator.stickyBlock.isEnable.subscribe(val=>{
-      calc.totalPriceCalculator.stickyBlock.isEnable(false)});
-    }}
-</script> -->
+<PxpCalculator materialType="sheet-printing"/>
