@@ -1,6 +1,5 @@
 {
-  "label": "Клиенты",
-  "position": 2,
+  "label": "Организации",
   "link": {
     "type": "generated-index"
   }

@@ -18,8 +18,8 @@
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
+[data-theme="dark"] {
+  --ifm-color-primary: #64bb46;
   --ifm-color-primary-dark: #21af90;
   --ifm-color-primary-darker: #1fa588;
   --ifm-color-primary-darkest: #1a8870;
@@ -27,8 +27,11 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-navbar-link-hover-color: #64bb46;
 }
-
+[data-theme="light"] .DocSearch {
+  --docsearch-primary-color: var(--ifm-color-primary);
+}
 
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,400;0,600;1,400;1,600&display=swap");
 * {
@@ -39,7 +42,61 @@
   --text-color: #3e3e3e;
 }
 
+/* SOLIEV */
 
+.navbar .navbar__item.navbar__link > svg,
+.navbar .menu__list-item > svg {
+  display: none;
+}
+.navbar__items.navbar__items--right {
+  gap: 20px;
+}
+.navbarSearchContainer_node_modules-\@docusaurus-theme-classic-lib-theme-Navbar-Search-styles-module {
+  order: -1;
+}
+.DocSearch-Button {
+  min-width: 280px;
+}
+.docs-wrapper.docs-doc-id-Главная .container > .row .col {
+  max-width: 100% !important;
+}
+.sections {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 15px;
+}
+
+.sections .section {
+  margin: 0;
+  flex: 1;
+  width: 100%;
+  min-width: 290px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-pagination-nav-border-radius);
+  padding: var(--ifm-global-spacing);
+  transition: border-color var(--ifm-transition-fast)
+    var(--ifm-transition-timing-default);
+}
+.sections .section:hover {
+  border-color: var(--ifm-pagination-nav-color-hover);
+}
+.section-link {
+  text-decoration: none !important;
+}
+.section-title {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+.section-description {
+  color: var(--text-color);
+}
+/* SOLIEV */
 
 #integratedCalculator {
   width: 44%;
@@ -1719,25 +1776,82 @@ sup {
 }
 .url-banners #pxpProducCalc .pxp-material-selector .material-selector a {
   width: 210px;
-  text-align: center
+  text-align: center;
 }
-.url-banners .pxp-calculator .editor-sizes-width .option-value,.pxp-calculator .editor-sizes-height .option-value {padding: 6px 12px;}
-.url-banners #pxpProducCalc .pxp-editor-settings-controller .editor-sizes input.option-value {width: 150px;text-align: left;}
-.url-banners #pxpProducCalc .option-row.customWorkRadio .option-value label {width: 135px;}
-.url-banners #pxpProducCalc ul li.calc-variable {margin-bottom: 0;}
-.url-banners .calc-variable span[data-bind="html: title"] {font-weight: 400;font-size: 14px; line-height: 20px;}
-.url-banners input.text {padding: 1px 2px;font-size: 14px;line-height: 20px;}
-.url-banners ul.option-value.list-inline {clear: both;}
-.url-banners ul.option-value.list-inline + ul  {float: none;clear: both;}
-.url-banners .pxp-editor-settings-controller .editor-sizes.option-row .editor-sizes-pages-count, .url-banners .pxp-editor-settings-controller .editor-sizes.option-row .editor-sizes-pages-count + .editor-sizes-arbitrary-measurement {
+.url-banners .pxp-calculator .editor-sizes-width .option-value,
+.pxp-calculator .editor-sizes-height .option-value {
+  padding: 6px 12px;
+}
+.url-banners
+  #pxpProducCalc
+  .pxp-editor-settings-controller
+  .editor-sizes
+  input.option-value {
+  width: 150px;
+  text-align: left;
+}
+.url-banners #pxpProducCalc .option-row.customWorkRadio .option-value label {
+  width: 135px;
+}
+.url-banners #pxpProducCalc ul li.calc-variable {
+  margin-bottom: 0;
+}
+.url-banners .calc-variable span[data-bind="html: title"] {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+.url-banners input.text {
+  padding: 1px 2px;
+  font-size: 14px;
+  line-height: 20px;
+}
+.url-banners ul.option-value.list-inline {
+  clear: both;
+}
+.url-banners ul.option-value.list-inline + ul {
+  float: none;
+  clear: both;
+}
+.url-banners
+  .pxp-editor-settings-controller
+  .editor-sizes.option-row
+  .editor-sizes-pages-count,
+.url-banners
+  .pxp-editor-settings-controller
+  .editor-sizes.option-row
+  .editor-sizes-pages-count
+  + .editor-sizes-arbitrary-measurement {
   display: none;
 }
-.url-banners .pxp-editor-settings-controller .editor-sizes.option-row {font-size:0;}
-.url-banners .pxp-editor-settings-controller .editor-sizes.option-row .editor-sizes-width:after{content: '× ';}
-.url-banners .pxp-editor-settings-controller .editor-sizes.option-row .editor-sizes-width, .url-banners .pxp-editor-settings-controller .editor-sizes.option-row .editor-sizes-arbitrary-measurement {font-size: 14px;}
-.url-banners .pxp-editor-settings-controller .editor-sizes.option-row .editor-sizes-arbitrary-measurement {padding-left: 5px;}
-[data-page="calculators/large-format-printing.md"] h5 +ol li > ul li {list-style: inside;}
-
+.url-banners .pxp-editor-settings-controller .editor-sizes.option-row {
+  font-size: 0;
+}
+.url-banners
+  .pxp-editor-settings-controller
+  .editor-sizes.option-row
+  .editor-sizes-width:after {
+  content: "× ";
+}
+.url-banners
+  .pxp-editor-settings-controller
+  .editor-sizes.option-row
+  .editor-sizes-width,
+.url-banners
+  .pxp-editor-settings-controller
+  .editor-sizes.option-row
+  .editor-sizes-arbitrary-measurement {
+  font-size: 14px;
+}
+.url-banners
+  .pxp-editor-settings-controller
+  .editor-sizes.option-row
+  .editor-sizes-arbitrary-measurement {
+  padding-left: 5px;
+}
+[data-page="calculators/large-format-printing.md"] h5 + ol li > ul li {
+  list-style: inside;
+}
 
 @media screen and (max-width: 1055px) {
   #integratedCalculator {
@@ -1872,7 +1986,7 @@ sup {
       width: 48%;
     }
     .url-banners #pxpProducCalc .editor-sizes .editor-sizes-width,
-    .url-banners #pxpProducCalc .editor-sizes .editor-sizes-height{
+    .url-banners #pxpProducCalc .editor-sizes .editor-sizes-height {
       display: block;
     }
   }
@@ -2019,5 +2133,12 @@ h2#Создание-har-файла,
   margin-top: 0px !important;
   border-top: 0 !important;
 }
-[data-page="calculators/large-format-printing.md"] .markdown-section h5 {margin: 1rem 0;}
-[data-page="calculators/large-format-printing.md"] .markdown-section h5 + blockquote{margin: 0;}
+[data-page="calculators/large-format-printing.md"] .markdown-section h5 {
+  margin: 1rem 0;
+}
+[data-page="calculators/large-format-printing.md"]
+  .markdown-section
+  h5
+  + blockquote {
+  margin: 0;
+}

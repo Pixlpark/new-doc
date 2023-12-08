@@ -1,5 +1,5 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
@@ -34,8 +34,8 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/Pixlpark/new-doc/tree/main/',
+          editUrl: 'https://github.com/Pixlpark/new-doc/tree/main/',
+          routeBasePath: '/',
         },
         blog: {
           showReadingTime: true,
@@ -55,10 +55,9 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'Pixlpark',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/pixlpark_logo.svg',
+        alt: 'Pixlpark Documentation',
+        src: 'img/logo-pixlpark.svg',
       },
       items: [
         {
@@ -66,40 +65,23 @@ const config: Config = {
           sidebarId: 'tutorialSidebar',
           position: 'left',
           label: 'Документация',
-        }
-      ],
-    },
-    footer: {
-      style: 'dark',
-      links: [
-        {
-          title: 'Главное',
-          items: [
-            {
-              label: 'Документация',
-              to: '/docs/intro',
-            },
-          ],
         },
         {
-          title: 'Полезное',
-          items: [
-            {
-              label: 'Pixlpark',
-              href: 'https://pixlpark.ru/',
-            },
-            {
-              label: 'Поддержка',
-              href: 'http://support.pixlpark.ru/Main/',
-            },
-          ],
+          href: "https://help.pixlpark.com",
+          position: 'left',
+          label: 'Поддержка',
+        },
+        {
+          href: "https://demo.pixlpark.ru",
+          position: 'left',
+          label: 'Демонстрация',
+        },
+        {
+          href: "https://pixlpark.ru",
+          position: 'left',
+          label: 'О сервисе',
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Pixlpark.`,
-    },
-    prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
     },
     docs: {
       sidebar: {
@@ -107,7 +89,18 @@ const config: Config = {
         autoCollapseCategories: true,
       },
     },
-   
+    algolia: {
+      appId: 'NMRL2AGVNK',
+      apiKey: 'a291a71229ef861342028f02572ff8ea',
+      indexName: 'new',
+
+      // Optional: see doc section below
+      contextualSearch: false,
+    },
+    prism: {
+      theme: prismThemes.github,
+      darkTheme: prismThemes.dracula,
+    },
   } satisfies Preset.ThemeConfig,
 };
 
