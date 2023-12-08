@@ -3,16 +3,16 @@ import categories from './categories.json'
 
 export default function Main() {
   const listItems = categories.map((category) =>
-    <li className='section'>
-      <Link to={'category/' + category?.title} className="section-link">
-        <div className="section-title">{category?.title}</div>
-        <div className="section-description">{category?.description}</div>
+    <li className='section col col--4 margin-bottom--lg'>
+      <Link to={'category/' + category?.title} className="section-link card padding--lg cardContainer_node_modules-@docusaurus-theme-classic-lib-theme-DocCard-styles-module">
+        <h2 className="section-title text--truncate cardTitle_node_modules-@docusaurus-theme-classic-lib-theme-DocCard-styles-module"><span>📄️</span>{category?.title}</h2>
+        <div className="section-description text--truncate cardDescription_node_modules-@docusaurus-theme-classic-lib-theme-DocCard-styles-module">{category?.description}</div>
       </Link>
     </li>
   );
   return (
     <div className='main'>
-      <ul className="sections">{listItems}</ul>
+      <ul className="sections row">{listItems}</ul>
     </div>
   );
 }

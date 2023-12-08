@@ -57,45 +57,29 @@
 .DocSearch-Button {
   min-width: 280px;
 }
-.docs-wrapper.docs-doc-id-Главная .container > .row .col {
+.docs-wrapper.docs-doc-id-Главная .container > .row .col,
+#__docusaurus
+  .generatedIndexPage_node_modules-\@docusaurus-theme-classic-lib-theme-DocCategoryGeneratedIndexPage-styles-module {
   max-width: 100% !important;
 }
 .sections {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  justify-content: flex-start;
-  width: 100%;
   list-style: none;
   padding: 0;
-  margin: 0;
-  gap: 15px;
 }
-
-.sections .section {
-  margin: 0;
-  flex: 1;
-  width: 100%;
-  min-width: 290px;
-  border: 1px solid var(--ifm-color-emphasis-300);
-  border-radius: var(--ifm-pagination-nav-border-radius);
-  padding: var(--ifm-global-spacing);
-  transition: border-color var(--ifm-transition-fast)
-    var(--ifm-transition-timing-default);
+.section.col.col--6,
+article.col.col--6 {
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
 }
-.sections .section:hover {
-  border-color: var(--ifm-pagination-nav-color-hover);
+.section.col.col--4 {
+  margin-top: 0;
 }
-.section-link {
-  text-decoration: none !important;
-}
-.section-title {
-  font-size: 1.2rem;
+h2.section-title {
+  display: flex;
+  gap: 6px;
   text-transform: capitalize;
 }
-.section-description {
-  color: var(--text-color);
-}
+
 /* SOLIEV */
 
 #integratedCalculator {
