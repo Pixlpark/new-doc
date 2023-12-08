@@ -58,8 +58,7 @@
   min-width: 280px;
 }
 .docs-wrapper.docs-doc-id-Главная .container > .row .col,
-#__docusaurus
-  .generatedIndexPage_node_modules-\@docusaurus-theme-classic-lib-theme-DocCategoryGeneratedIndexPage-styles-module {
+#__docusaurus main > div > div {
   max-width: 100% !important;
 }
 .sections {
@@ -74,10 +73,20 @@ article.col.col--6 {
 .section.col.col--4 {
   margin-top: 0;
 }
+.section-link {
+  --ifm-link-color: var(--ifm-color-emphasis-800);
+  --ifm-link-hover-color: var(--ifm-color-emphasis-700);
+  --ifm-link-hover-decoration: none;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  box-shadow: 0 1.5px 3px 0 #00000026;
+  transition: all var(--ifm-transition-fast) ease;
+  transition-property: border, box-shadow;
+}
 h2.section-title {
   display: flex;
   gap: 6px;
   text-transform: capitalize;
+  font-size: 1.2rem;
 }
 
 /* SOLIEV */
