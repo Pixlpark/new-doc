@@ -96,6 +96,23 @@ h2.section-title {
 .section-description {
   font-size: 0.8rem;
 }
+.card{
+  padding: 20px 15px !important;
+  justify-content: stretch;
+    height: 100%;
+}
+.card h2.text--truncate,
+.card p.text--truncate {
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    white-space: normal;
+}
+
+.card h2.text--truncate {
+    -webkit-line-clamp: 1;
+}
 /* SOLIEV */
 
 #integratedCalculator {
