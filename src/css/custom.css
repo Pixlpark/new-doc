@@ -71,6 +71,10 @@ article.col.col--6 {
   flex: 0 0 33.33%;
   max-width: 33.33%;
 }
+#__docusaurus .section.col.col--6,
+#__docusaurus article.col.col--6 {
+  margin-bottom: 2rem !important;
+}
 .section.col.col--4 {
   margin-top: 0;
 }
@@ -84,6 +88,9 @@ article.col.col--6 {
   transition-property: border, box-shadow;
   height: 100%;
 }
+#__docusaurus h1 {
+  font-size: 2.5rem;
+}
 h2.section-title {
   display: flex;
   gap: 6px;
@@ -96,24 +103,27 @@ h2.section-title {
 .section-description {
   font-size: 0.8rem;
 }
-.card{
+.card {
   padding: 20px 15px !important;
   justify-content: stretch;
-    height: 100%;
+  height: 100%;
 }
 .card h2.text--truncate,
 .card p.text--truncate {
-    -webkit-line-clamp: 2;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    white-space: normal;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  white-space: normal;
 }
 
 .card h2.text--truncate {
-    -webkit-line-clamp: 1;
+  -webkit-line-clamp: 1;
 }
-
+.markdown > ul {
+  list-style: none;
+  padding-left: 0;
+}
 /* SOLIEV */
 
 #integratedCalculator {
