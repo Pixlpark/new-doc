@@ -1,7 +1,5 @@
 ---
-title: Дизайны для именных фотокниг
 sidebar_class_name: hidden
-unlisted: true
 ---
 
 # Дизайны для именных фотокниг
