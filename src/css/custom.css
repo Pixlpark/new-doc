@@ -147,6 +147,10 @@ h1 .note {
   font-weight: normal;
 }
 
+.hidden {
+  display: none !important;
+  }
+
 /* SOLIEV */
 
 #integratedCalculator {

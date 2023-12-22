@@ -1,6 +1,7 @@
 ---
 title: Бизнес-сувениры
 description: Пример настройки калькулятора для бизнес-сувениров с расчетом стоимости по нанесению и площади
+sidebar_position: 7
 ---
 # [Нанесение на бизнес-сувениры](http://gifts.pixlpark.com/catalog/futbolki/futbolka-imperial-190-belaya-137460)
 

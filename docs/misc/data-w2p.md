@@ -1,6 +1,7 @@
 ---
 title: Данные для Web-to-Print
 description: Необходимая информация для базовой настройки Web-to-Print сайта
+sidebar_position: 1
 ---
 
 # Данные для настройки Web-to-Print сайта
