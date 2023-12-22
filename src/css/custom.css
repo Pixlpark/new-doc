@@ -120,10 +120,33 @@ h2.section-title {
 .card h2.text--truncate {
   -webkit-line-clamp: 1;
 }
+
+h2.section-title>span{
+  padding-right: 6px;
+}
+
 .markdown > ul {
   list-style: none;
   padding-left: 0;
 }
+
+.markdown > ul > li{
+  padding-bottom: 10px;
+}
+
+.markdown > ul > li img {
+  display: inherit;
+}
+
+.markdown > h2 {
+  margin-top: 0px;
+}
+
+h1 .note {
+  font-size: 16px;
+  font-weight: normal;
+}
+
 /* SOLIEV */
 
 #integratedCalculator {
@@ -2086,6 +2109,11 @@ sup {
   #pxpProducCalc .totalPriceContainer {
     font-size: 10pt;
   }
+}
+
+.list {
+  list-style: disc;
+  margin: 15px 0;
 }
 
 .gifts-data--wrapper {
