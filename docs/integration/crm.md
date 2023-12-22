@@ -1,3 +1,9 @@
+---
+title: CRM и ERP-системы
+description: Битрикс24, ASystem, 1С:Полиграфия, Axiom, HelloPrint
+sidebar_position: 6
+---
+
 # Интеграции с ERP и CRM системами
 
 ## Битрикс24
