@@ -4,8 +4,8 @@
   <ShortName>Документация Pixlpark</ShortName>
   <Description>Search Документация Pixlpark</Description>
   <InputEncoding>UTF-8</InputEncoding>
-  <Image width="16" height="16" type="image/x-icon">https://pixlpark.github.io/img/favicon.ico</Image>
-  <Url type="text/html" method="get" template="https://pixlpark.github.io/search?q={searchTerms}"/>
-  <Url type="application/opensearchdescription+xml" rel="self" template="https://pixlpark.github.io/opensearch.xml" />
-  <moz:SearchForm>https://pixlpark.github.io/</moz:SearchForm>
+  <Image width="16" height="16" type="image/x-icon">https://pixlpark.github.io/new-doc/img/favicon.ico</Image>
+  <Url type="text/html" method="get" template="https://pixlpark.github.io/new-doc/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://pixlpark.github.io/new-doc/opensearch.xml" />
+  <moz:SearchForm>https://pixlpark.github.io/new-doc/</moz:SearchForm>
 </OpenSearchDescription>
