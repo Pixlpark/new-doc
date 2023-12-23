@@ -57,7 +57,7 @@ const config: Config = {
     navbar: {
       logo: {
         alt: 'Pixlpark Documentation',
-        src: 'new-doc/img/logo-pixlpark.svg',
+        src: 'img/logo-pixlpark.svg',
       },
       items: [
         {
