@@ -1,6 +1,6 @@
 ---
 title: Видео-презентации Pixlpark
-description: Видео-презентации Web-to-Print, бизнес-сувениров, мобильного приложения и панели управления
+description: Видео-презентации продуктов сервиса Pixlpark
 sidebar_position: 7
 ---
 
