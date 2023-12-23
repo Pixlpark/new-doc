@@ -1,3 +1,9 @@
+---
+title: Работа с API и Вебхуками
+description: Описание механизма взаимодействия с сервисом Pixlpark через API и вебхуки
+sidebar_position: 6
+---
+
 # Работа с API и Вебхуками
 
 ## Работа с API
@@ -8,7 +14,6 @@
     1. Получить __Request Token__, вызвав метод "__Get Request Token__".
     1. Получить __Access Token__, вызвав метод "__Get Access Token__", передав Request Token, Public Key и Private Key.
     1. Вызвать любой API-метод, передав Access Token.
-
 * Все API-методы разбиты на следующие группы:
     + __Authentication__ - методы получения доступа к API.
     + __Orders__ - методы работы с заказами.
