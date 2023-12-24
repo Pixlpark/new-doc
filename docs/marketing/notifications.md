@@ -1,7 +1,7 @@
 ---
 title: Уведомления
 description: Настройка системы уведомлений по электронной почте и смс
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 # Уведомления
