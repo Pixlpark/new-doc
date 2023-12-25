@@ -67,7 +67,7 @@ const config: Config = {
           label: 'Документация',
         },
         {
-          href: "https://help.pixlpark.ru",
+          href: "https://support.pixlpark.com",
           position: 'left',
           label: 'Поддержка',
         },
