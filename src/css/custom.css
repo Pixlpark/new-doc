@@ -151,6 +151,10 @@ h1 .note {
   display: none !important;
   }
 
+.theme-doc-footer {
+  display: none;
+}
+
 /* SOLIEV */
 
 #integratedCalculator {
