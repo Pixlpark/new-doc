@@ -43,7 +43,20 @@
 }
 
 /* SOLIEV */
-
+@media screen and (min-width: 768px) {
+  .DocSearch-Button {
+    min-width: 280px;
+  }
+  .section.col.col--6,
+  article.col.col--6 {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+  }
+  .docs-wrapper.docs-doc-id-Главная .container > .row .col,
+  #__docusaurus main > div > div {
+    max-width: 100% !important;
+  }
+}
 .navbar .navbar__item.navbar__link > svg,
 .navbar .menu__list-item > svg {
   display: none;
@@ -54,23 +67,13 @@
 .navbarSearchContainer_node_modules-\@docusaurus-theme-classic-lib-theme-Navbar-Search-styles-module {
   order: -1;
 }
-.DocSearch-Button {
-  min-width: 280px;
-}
-.docs-wrapper.docs-doc-id-Главная .container > .row .col,
-#__docusaurus main > div > div {
-  max-width: 100% !important;
-}
+
 .sections {
   list-style: none;
   padding: 0;
   align-items: stretch;
 }
-.section.col.col--6,
-article.col.col--6 {
-  flex: 0 0 33.33%;
-  max-width: 33.33%;
-}
+
 #__docusaurus .section.col.col--6,
 #__docusaurus article.col.col--6 {
   margin-bottom: 2rem !important;
@@ -121,7 +124,7 @@ h2.section-title {
   -webkit-line-clamp: 1;
 }
 
-h2.section-title>span{
+h2.section-title > span {
   padding-right: 6px;
 }
 
@@ -130,7 +133,7 @@ h2.section-title>span{
   padding-left: 0;
 }
 
-.markdown > ul > li{
+.markdown > ul > li {
   padding-bottom: 10px;
 }
 
@@ -149,7 +152,7 @@ h1 .note {
 
 .hidden {
   display: none !important;
-  }
+}
 
 .theme-doc-footer {
   display: none;
