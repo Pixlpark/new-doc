@@ -158,6 +158,10 @@ h1 .note {
   display: none;
 }
 
+.pagination-nav {
+  display: none;
+}
+
 /* SOLIEV */
 
 #integratedCalculator {
