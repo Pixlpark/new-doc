@@ -90,9 +90,9 @@ const config: Config = {
       },
     },
     algolia: {
-      appId: 'NMRL2AGVNK',
-      apiKey: 'a291a71229ef861342028f02572ff8ea',
-      indexName: 'new',
+      appId: 'CBISSLUS3P',
+      apiKey: '5fbb925f3ae404c5e3f239aedc2c0eca',
+      indexName: 'pixlpark',
 
       // Optional: see doc section below
       contextualSearch: false,
