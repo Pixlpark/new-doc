@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.0.1">
 <title data-rh="true">Подготовка макетов | Документация Pixlpark</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://docs.pixlpark.ru/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://docs.pixlpark.ru/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://docs.pixlpark.ru/design/psd"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Подготовка макетов | Документация Pixlpark"><meta data-rh="true" name="description" content="Спецификация подготовки PSD-макетов"><meta data-rh="true" property="og:description" content="Спецификация подготовки PSD-макетов"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://docs.pixlpark.ru/design/psd"><link data-rh="true" rel="alternate" href="https://docs.pixlpark.ru/design/psd" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.pixlpark.ru/design/psd" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://CBISSLUS3P-dsn.algolia.net" crossorigin="anonymous"><link rel="search" type="application/opensearchdescription+xml" title="Документация Pixlpark" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.c617f99b.css">
-<script src="/assets/js/runtime~main.3aeb9048.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.611e30ec.js" defer="defer"></script>
 <script src="/assets/js/main.ad1a7658.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -26,13 +26,22 @@
 <li><code>[foreground]</code> – считает слой обложкой, т.е. располагает поверх всех слоев и запрещает с ним любые операции (редактирования, перемещения и удаления).</li>
 </ul>
 </li>
+<li>А для текстовых слоев помимо ключей можно использовать и префиксы, которые автоматически устанавливают значение слоя данными клиента:<!-- -->
+<ul>
+<li><code>txt_FirstName</code> - имя;</li>
+<li><code>txt_LastName</code> - фамилия;</li>
+<li><code>txt_Email</code> - эл. почта;</li>
+<li><code>txt_Phone</code> - телефон.</li>
+</ul>
+</li>
+<li>При смене шаблонов в редакторе значения текстовых слоев с префиксом <code>txt_*</code> переносятся между собой в случае полного совпадения имени.</li>
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="работа-с-текстом">Работа с текстом<a href="#работа-с-текстом" class="hash-link" aria-label="Direct link to Работа с текстом" title="Direct link to Работа с текстом">​</a></h2>
 <ul>
 <li>Размер текста устанавливать в Adobe Photoshop  нужно только при помощи изменения кегля.</li>
 <li>Короткий текст может содержать только одну строку и иметь выравнивание по центру, по левому или по правому краю.</li>
 <li>Блочный текст может содержать любое количество строк и иметь выравнивание только по левому краю.</li>
-<li>Для текстовых слоев можно использовать ключ <code>[optional]</code>, который не выводит слой в файле для печати, если он не был изменен в редакторе.</li>
+<li>Для текстовых слоев можно использовать ключ <code>[optional]</code>, который не выводит слой в файле д ля печати, если он не был изменен в редакторе.</li>
 <li>Для создания макета можно использовать любые шрифты. Однако, если шрифт не принадлежит коллекции Google Fonts, предварительно его нужно загрузить в систему и связать через механизм маппинга с названием шрифта в макете. Это можно выполнить в панели управления в разделе <a href="/print/designs">&quot;Печать / Дизайн / Шрифты&quot;</a>.</li>
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="работа-с-изображениями">Работа с изображениями<a href="#работа-с-изображениями" class="hash-link" aria-label="Direct link to Работа с изображениями" title="Direct link to Работа с изображениями">​</a></h2>
@@ -75,7 +84,7 @@
 <img loading="lazy" src="/assets/images/photoCollage-6fa856caaba6e7d24669951615b4376f.png" title=":size=70%" width="852" height="796" class="img_ev3q"></li>
 <li>Вы можете скачать <a href="https://admin.pixlpark.com/content/pxp-template-download/18615422?secret=192996c433eb58e26487578f616b6668" target="_blank" rel="noopener noreferrer">пример макета</a> или <a href="https://demo.pixlpark.ru/printing/wall-calendars/a3-vert/template-6471446/editor" target="_blank" rel="noopener noreferrer">посмотреть его в редакторе</a>.</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="особенности-макетов-фотокниг">Особенности макетов фотокниг<a href="#особенности-макетов-фотокниг" class="hash-link" aria-label="Direct link to Особенности макетов фоток ниг" title="Direct link to Особенности макетов фотокниг">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="особенности-макетов-фотокниг">Особенности макетов фотокниг<a href="#особенности-макетов-фотокниг" class="hash-link" aria-label="Direct link to Особенности макетов фотокниг" title="Direct link to Особенности макетов фотокниг">​</a></h2>
 <ul>
 <li>Общий механизм подготовки макетов позволяет создавать дизайны фотокниг, однако макеты в этом случае должны быть дообрезных размеров под каждый формат и тип книги, т.е. содержать область загиба, вылет и корешок по умолчанию.</li>
 <li>Для оптимизации подготовки макетов, мы разработали технологию адаптивного дизайна фотокниг, которая позволяет использовать один макет для близких по размеру форматов вне зависимости от размеров вылета, корешка и загиба.</li>
@@ -106,7 +115,7 @@
 <li>Макет содержит слой, в котором будет располагаться календарная сетка.</li>
 <li>Календарная сетка формируется динамически в редакторе и отображается в дизайне в указанной области.</li>
 <li>Дизайн календарной сетки настраивается в панели управления Pixlpark.</li>
-<li>В ячейки календарной сетки в редакторе можно помещать фотографии или подписывать их (например, отметить памятное событие).</li>
+<li>В ячейки календарной сетки в редакторе можно помещать  фотографии или подписывать их (например, отметить памятное событие).</li>
 </ul>
 </li>
 <li>Для использования технологии необходимо:<!-- -->
