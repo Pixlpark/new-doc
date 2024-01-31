@@ -162,6 +162,10 @@ h1 .note {
   display: none;
 }
 
+ol {
+  list-style-type: decimal;
+}
+
 /* SOLIEV */
 
 #integratedCalculator {
