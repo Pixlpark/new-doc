@@ -40,7 +40,7 @@ sidebar_position: 1
     2. Создать контур с именем **pathName** и привязать к слою `[placeholder]`.
 * Фотография будет размещена в области `[path]` и заменит собой содержимое слоя `[placeholder]`.
 ![](../_media/design/photoWithoutDecor.png ':size=90%')
-* Вы можете скачать [пример макета](https://admin.pixlpark.com/content/pxp-template-download/14455577?secret=c7abd944b4aab70aa11b1fc4a9923fde) или [посмотреть его в редакторе](https://demo.pixlpark.ru/printing/softcover-layflat-photobooks/15x20-soft-180/template-5278231/editor?q=1&oq=0&p=11&ws=11819a1630fb09355d289f9fab3e335c).
+* Вы можете скачать [пример макета](https://admin.pixlpark.com/content/pxp-template-download/15760170?secret=2b82db6cd6f33b7d062dd2598fe05fcc) или [посмотреть его в редакторе](https://demo.pixlpark.ru/printing/softcover-layflat-photobooks/15x20-soft-180/template-5665774/editor).
 
 ### Фото с декором
 * Для размещения фотографии необходимо:
