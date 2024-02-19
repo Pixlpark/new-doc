@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.0.1">
-<title data-rh="true">Подготовка макетов | Документация Pixlpark</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://docs.pixlpark.ru/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://docs.pixlpark.ru/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://docs.pixlpark.ru/design/psd"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Подготовка макетов | Документация Pixlpark"><meta data-rh="true" name="description" content="Спецификация подготовки PSD-макетов"><meta data-rh="true" property="og:description" content="Спецификация подготовки PSD-макетов"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://docs.pixlpark.ru/design/psd"><link data-rh="true" rel="alternate" href="https://docs.pixlpark.ru/design/psd" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.pixlpark.ru/design/psd" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://CBISSLUS3P-dsn.algolia.net" crossorigin="anonymous"><link rel="search" type="application/opensearchdescription+xml" title="Документация Pixlpark" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.c617f99b.css">
-<script src="/assets/js/runtime~main.611e30ec.js" defer="defer"></script>
+<title data-rh="true">Подготовка макетов | Документация Pixlpark</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://docs.pixlpark.ru/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://docs.pixlpark.ru/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://docs.pixlpark.ru/design/psd"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Подготовка макетов | Документация Pixlpark"><meta data-rh="true" name="description" content="Спецификация подготовки PSD-макетов"><meta data-rh="true" property="og:description" content="Спецификация подготовки PSD-макетов"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://docs.pixlpark.ru/design/psd"><link data-rh="true" rel="alternate" href="https://docs.pixlpark.ru/design/psd" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.pixlpark.ru/design/psd" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://CBISSLUS3P-dsn.algolia.net" crossorigin="anonymous"><link rel="search" type="application/opensearchdescription+xml" title="Документация Pixlpark" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.299d465b.css">
+<script src="/assets/js/runtime~main.7dc85d6b.js" defer="defer"></script>
 <script src="/assets/js/main.ad1a7658.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -13,8 +13,8 @@
 <ul>
 <li><strong>Макет</strong> – это файл в формате PSD, содержащий только растровые, текстовые и векторные слои.</li>
 <li>Разрешение макета должно быть задано не ниже указанного в настройках продукта, для которого он готовится. Обычно используют разрешение 300dpi.</li>
-<li>В макете можно использовать только 8-битное цветовое пространство и любую цветовую модель, однако файл для печати будет сформирован в мо дели RGB.</li>
-<li>При подготовке макета недопустимо использовать эффекты, прозрачность и деформацию слоев без последующего растрирования.</li>
+<li>В макете можно использовать только 8-битное цветовое пространство и цветовую модель в RGB.</li>
+<li>При подготовке макета недопустимо использ овать эффекты, прозрачность и деформацию слоев без последующего растрирования.</li>
 <li>В редакторе отображение слоев будет соответствовать их расположению в макете, если не прописаны дополнительные ключи, влияющие на их поведение.</li>
 <li>В наименовании слоев можно использовать следующие ключи:<!-- -->
 <ul>
@@ -23,7 +23,7 @@
 <li><code>[locked]</code> – запрещает перемещать или удалять слой в редакторе;</li>
 <li><code>[align:Top | TopRight | Right | BottomRight | Bottom | BottomLeft | Left | TopLeft| CenterLeft | CenterRight | TopCenter | BottomCenter]</code> – задает выравнивание слоя по одному из указанных значений. Например, <code>[align:Left]</code> и <code>[align:Right]</code> используется для графических элементов на обложке фотокниги, чтобы с ростом корешка они оставались на прежнем месте на странице;</li>
 <li><code>[background]</code> – считает слой фоновым, т.е. располагает ниже всех слоев и заполняет им всю зону печати (при необходимости пропорционально масштабируя);</li>
-<li><code>[foreground]</code> – считает слой обложкой, т.е. располагает поверх всех слоев и запрещает с ним любые операции (редактирования, перемещения и удаления).</li>
+<li><code>[foreground]</code> – считает слой обложкой, т.е. располагает поверх всех  слоев и запрещает с ним любые операции (редактирования, перемещения и удаления).</li>
 </ul>
 </li>
 <li>А для текстовых слоев помимо ключей можно использовать и префиксы, которые автоматически устанавливают значение слоя данными клиента:<!-- -->
@@ -41,7 +41,7 @@
 <li>Размер текста устанавливать в Adobe Photoshop  нужно только при помощи изменения кегля.</li>
 <li>Короткий текст может содержать только одну строку и иметь выравнивание по центру, по левому или по правому краю.</li>
 <li>Блочный текст может содержать любое количество строк и иметь выравнивание только по левому краю.</li>
-<li>Для текстовых слоев можно использовать ключ <code>[optional]</code>, который не выводит слой в файле д ля печати, если он не был изменен в редакторе.</li>
+<li>Для текстовых слоев можно использовать ключ <code>[optional]</code>, который не выводит слой в файле для печати, если он не был изменен в редакторе.</li>
 <li>Для создания макета можно использовать любые шрифты. Однако, если шрифт не принадлежит коллекции Google Fonts, предварительно его нужно загрузить в систему и связать через механизм маппинга с названием шрифта в макете. Это можно выполнить в панели управления в разделе <a href="/print/designs">&quot;Печать / Дизайн / Шрифты&quot;</a>.</li>
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="работа-с-изображениями">Работа с изображениями<a href="#работа-с-изображениями" class="hash-link" aria-label="Direct link to Работа с изображениями" title="Direct link to Работа с изображениями">​</a></h2>
@@ -55,7 +55,7 @@
 </li>
 <li>Фотография будет размещена в области <code>[path]</code> и заменит собой содержимое слоя <code>[placeholder]</code>.
 <img loading="lazy" src="/assets/images/photoWithoutDecor-ad717a38b5bda6b30b186e9de9fe86ec.png" title=":size=90%" width="1230" height="749" class="img_ev3q"></li>
-<li>Вы можете скачать <a href="https://admin.pixlpark.com/content/pxp-template-download/14455577?secret=c7abd944b4aab70aa11b1fc4a9923fde" target="_blank" rel="noopener noreferrer">пример макета</a> или <a href="https://demo.pixlpark.ru/printing/softcover-layflat-photobooks/15x20-soft-180/template-5278231/editor?q=1&amp;oq=0&amp;p=11&amp;ws=11819a1630fb09355d289f9fab3e335c" target="_blank" rel="noopener noreferrer">посмотреть его в редакторе</a>.</li>
+<li>Вы можете скачать <a href="https://admin.pixlpark.com/content/pxp-template-download/15760170?secret=2b82db6cd6f33b7d062dd2598fe05fcc" target="_blank" rel="noopener noreferrer">пример макета</a> или <a href="https://demo.pixlpark.ru/printing/softcover-layflat-photobooks/15x20-soft-180/template-5665774/editor" target="_blank" rel="noopener noreferrer">посмотреть его в редакторе</a>.</li>
 </ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="фото-с-декором">Фото с декором<a href="#фото-с-декором" class="hash-link" aria-label="Direct link to Фото с декором" title="Direct link to Фото с декором">​</a></h3>
 <ul>
@@ -115,7 +115,7 @@
 <li>Макет содержит слой, в котором будет располагаться календарная сетка.</li>
 <li>Календарная сетка формируется динамически в редакторе и отображается в дизайне в указанной области.</li>
 <li>Дизайн календарной сетки настраивается в панели управления Pixlpark.</li>
-<li>В ячейки календарной сетки в редакторе можно помещать  фотографии или подписывать их (например, отметить памятное событие).</li>
+<li>В ячейки календарной сетки в редакторе можно помещать фотографии или подписывать их (например, отметить памятное событие).</li>
 </ul>
 </li>
 <li>Для использования технологии необходимо:<!-- -->
@@ -135,7 +135,7 @@
 </li>
 <li>Вы можете скачать примеры <a href="https://admin.pixlpark.com/content/pxp-template-download/18103595?secret=4e95f489f54f2fe625b8c8f9e34aee35" target="_blank" rel="noopener noreferrer">макета обложки</a> и <a href="https://admin.pixlpark.com/content/pxp-template-download/18103581?secret=5f086c92f92673a69bec6bce3716e6a2" target="_blank" rel="noopener noreferrer">страницы календаря</a> или <a href="https://demo.pixlpark.ru/printing/wall-calendars/a4-vert/template-6324454/editor?q=1&amp;oq=0&amp;p=13&amp;ws=d751713988987e9331980363e24189ce" target="_blank" rel="noopener noreferrer">посмотреть их в редакторе</a>.</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="советы-по-работе-с-adobe-photoshop">Советы по работе с Adobe Photoshop<a href="#советы-по-работе-с-adobe-photoshop" class="hash-link" aria-label="Direct link to Советы по работе с Adobe Photoshop" title="Direct link to Советы по работе с Adobe Photoshop">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="советы-по-работе-с-adobe-photoshop">Советы по работе с Adobe Photoshop<a href="#советы-по-работе-с-adobe-photoshop" class="hash-link" aria-label="Direct link to Советы по рабо те с Adobe Photoshop" title="Direct link to Советы по работе с Adobe Photoshop">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="создание-контура">Создание контура<a href="#создание-контура" class="hash-link" aria-label="Direct link to Создание контура" title="Direct link to Создание контура">​</a></h3>
 <ul>
 <li>Для добавления контура необходимо:<!-- -->
