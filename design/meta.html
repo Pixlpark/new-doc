@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.0.1">
 <title data-rh="true">Выпускные альбомы | Документация Pixlpark</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://docs.pixlpark.ru/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://docs.pixlpark.ru/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://docs.pixlpark.ru/design/meta"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Выпускные альбомы | Документация Pixlpark"><meta data-rh="true" name="description" content="Спецификация подготовки макетов выпускных альбомов"><meta data-rh="true" property="og:description" content="Спецификация подготовки макетов выпускных альбомов"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://docs.pixlpark.ru/design/meta"><link data-rh="true" rel="alternate" href="https://docs.pixlpark.ru/design/meta" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.pixlpark.ru/design/meta" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://CBISSLUS3P-dsn.algolia.net" crossorigin="anonymous"><link rel="search" type="application/opensearchdescription+xml" title="Документация Pixlpark" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.299d465b.css">
-<script src="/assets/js/runtime~main.7dc85d6b.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.bfaa3b87.js" defer="defer"></script>
 <script src="/assets/js/main.ad1a7658.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -13,7 +13,7 @@
 <li>Макет для выпускных альбом следует создавать согласно структуре, которая описана в статье <a href="/design/psd-general?id=%D0%9E%D1%81%D0%BE%D0%B1%D0%B5%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D0%B8-%D0%BC%D0%B0%D0%BA%D0%B5%D1%82%D0%BE%D0%B2-%D1%84%D0%BE%D1%82%D0%BE%D0%BA%D0%BD%D0%B8%D0%B3">&quot;Особенности макетов фотокниг&quot;</a>.</li>
 <li>Для автоматической верстки выпускных альбомов макет шаблона должен содержать в себе метаинформацию, по которой в дизайн будут подставляться реальный данные класса.</li>
 <li>Метаинформация в данном случае является набором ключей, которые необходимо использовать в названиях слоев или групп.</li>
-<li><strong><code>[school]</code></strong> - группа, содержащая информацию о школе. В ней можно использовать слои со сл едующими ключами:<!-- -->
+<li><strong><code>[meta:school]</code></strong> - группа, содержащая информацию о школе. В ней можно использовать слои со следующими ключами:<!-- -->
 <ul>
 <li><code>[name]</code> - название школы;</li>
 <li><code>[number]</code> - номер школы (например &quot;32&quot;);</li>
@@ -21,44 +21,39 @@
 <li><code>[photo]</code> - фотография школы.</li>
 </ul>
 </li>
-<li><strong><code>[class]</code></strong>  - группа, содержащая информация о классе. В ней можно использовать слои со следующими ключами:<!-- -->
+<li><strong><code>[meta:class]</code></strong>  - группа, содержащая информация о классе. В ней можно использовать слои со следующими ключами:<!-- -->
 <ul>
 <li><code>[number_letter]</code> - буква и номер класса слитно;</li>
 <li><code>[letter]</code> - буква класса;</li>
 <li><code>[number]</code> - номер класса;</li>
 <li><code>[year]</code> - год выпуска;</li>
-<li><code>[year-half1]</code> - первые две цифры года выпуска;</li>
-<li><code>[year-half2]</code> - вторые две цифры года выпуска;</li>
+<li><code>[year half1]</code> - первые две цифры года выпуска;</li>
+<li><code>[year half2]</code> - вторые две цифры года выпуска;</li>
 <li><code>[profile]</code> - профиль класса (например &quot;физико-математический&quot;);</li>
 <li><code>[photo]</code> - общая фотография класса.</li>
 </ul>
 </li>
-<li><strong><code>[teacher]</code>/<code>[teacher:classroom]</code></strong> - группа, содержащая информация об учителе/классном руководителе. В ней можно использовать слои со следующими ключами:<!-- -->
+<li><strong><code>[meta:teacher] / [meta:curator]</code></strong> - группа, содержащая информация об учителе/классном руководителе. В ней можно использовать слои со следующими ключами:<!-- -->
 <ul>
-<li><code>[lastname_firstname_middlename]</code>  - ФИО учителя;</li>
-<li><code>[firstname_middlename]</code> - имя и отчество учителя;</li>
 <li><code>[firstname]</code> - имя учителя;</li>
 <li><code>[lastname]</code> - фамилия учителя;</li>
 <li><code>[middlename]</code> - отчество учителя;</li>
+<li><code>[firstname middlename]</code> - имя и отчество учителя;</li>
 <li><code>[course]</code> - преподаваемый предмет;</li>
-<li><code>[position]</code> - должность учител я;</li>
+<li><code>[post]</code> - должность учителя;</li>
 <li><code>[photo]</code> - фотография учителя.</li>
 </ul>
 </li>
-<li><strong><code>[student]</code></strong> - группа, содержащая информация об ученике. В ней можно использовать слои со следующими ключами:<!-- -->
+<li><strong><code>[meta:student]</code></strong> - группа, содержащая информация об ученике. В ней можно использовать слои со следующими ключами:<!-- -->
 <ul>
-<li><code>[lastname_firstname_middlename]</code> - ФИО ученика;</li>
-<li><code>[firstname_lastname]</code> - имя и фамилия ученика;</li>
 <li><code>[firstname]</code> - имя ученика;</li>
 <li><code>[lastname]</code> - фамилия ученика;</li>
 <li><code>[middlename]</code> - отчество ученика;</li>
+<li><code>[firstname lastname]</code> - имя и фамилия ученика;</li>
 <li><code>[note]</code> - примечание от ученика;</li>
-<li><code>[photo-cover]</code> - фотография на обложку;</li>
-<li><code>[photo-custom]</code> - портретная фотография;</li>
-<li><code>[photo-frame]</code> - фотография на виньетку;</li>
-<li><code>[photo-custom]</code> - произвольная фотография ученика;</li>
-<li><code>[photo-friend]</code> - фотография друга ученика;</li>
-<li><code>[photo-friends]</code> - фотография ученика с друзьями.</li>
+<li><code>[cover]</code> - фотография на обложку;</li>
+<li><code>[frame]</code> - фотография на виньетку;</li>
+<li><code>[collage]</code> - произвольная фотография ученика.</li>
 </ul>
 </li>
 <li>Вы можете скачать примеры макетов:<!-- -->
