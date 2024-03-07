@@ -39,7 +39,4 @@ sidebar_position: 3
     + `[cover]` - фотография на обложку;
     + `[frame]` - фотография на виньетку;
     + `[collage]` - произвольная фотография ученика.
-* Вы можете скачать примеры макетов:
-    + [обложка](https://admin.pixlpark.com/content/pxp-template-download/18787588?secret=0db337eba8e77c7173b6d11a35fba64d);
-    + [разворот с виньетками](https://admin.pixlpark.com/content/pxp-template-download/18787480?secret=39b38791db315a550d1f8b490d311e6d);
-    + [разворот с фотографиями](https://admin.pixlpark.com/content/pxp-template-download/18787523?secret=c8c51e743fd93ed638d6b402aa4e9937).
+* **`[meta:classmates]`** - группа, содержащая информация об учениках, т.е. все группы `[meta:student]` должны быть расположены именно в ней.
