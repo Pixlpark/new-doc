@@ -1,7 +1,7 @@
 ---
 title: Этапы запуска сайта
 description: Последовательность действий по запуску сайта на Pixlpark
-sidebar_position: 4
+sidebar_position: 6
 ---
 
 # Этапы запуска сайта
