@@ -166,6 +166,10 @@ ol {
   list-style-type: decimal;
 }
 
+.markdown > p {
+  margin-bottom: 5px;
+}
+
 /* SOLIEV */
 
 #integratedCalculator {
