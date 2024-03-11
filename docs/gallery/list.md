@@ -1,7 +1,7 @@
 ---
 title: Иллюстрации
 description: Загрузка иллюстраций примеров работ по категориям
-sidebar_position: 1
+sidebar_position: 0
 ---
 
 # Иллюстрации

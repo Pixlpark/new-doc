@@ -1,7 +1,7 @@
 ---
 title: Группы печати
 description: Задание групп печати для расчета стоимости нанесенеия
-sidebar_position: 2
+sidebar_position: 1
 ---
 
 # Группы печати

@@ -1,7 +1,7 @@
 ---
 title: Статьи
 description: Подготовка и публикация тематических статей на сайте
-sidebar_position: 1
+sidebar_position: 0
 ---
 
 # База знаний

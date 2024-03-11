@@ -1,7 +1,7 @@
 ---
 title: Сообщения с формы
 description: Работа с отзывами, размещенными через форму контактов
-sidebar_position: 2
+sidebar_position: 1
 ---
 
 # Сообщения с формы

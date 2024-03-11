@@ -1,7 +1,7 @@
 ---
 title: Продукты
 description: Создание категорий и продуктов
-sidebar_position: 1
+sidebar_position: 0
 ---
 
 # Продукты

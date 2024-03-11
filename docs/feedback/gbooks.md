@@ -1,7 +1,7 @@
 ---
 title: Гостевая книга
 description: Работа с отзывами, размещенными через гостевую книгу
-sidebar_position: 1
+sidebar_position: 0
 ---
 
 # Гостевая книга

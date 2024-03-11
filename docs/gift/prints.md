@@ -1,7 +1,7 @@
 ---
 title: Виды нанесения
 description: Переименование стандартных видов нанесения на продукты
-sidebar_position: 3
+sidebar_position: 2
 ---
 
 # Виды нанесения

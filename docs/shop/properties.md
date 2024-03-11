@@ -1,7 +1,7 @@
 ---
 title: Свойства
 description: Создание списка свойств продуктов
-sidebar_position: 2
+sidebar_position: 1
 ---
 
 # Свойства

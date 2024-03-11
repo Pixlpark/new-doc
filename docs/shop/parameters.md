@@ -1,7 +1,7 @@
 ---
 title: Параметры
 description: Создание списка параметров продуктов
-sidebar_position: 3
+sidebar_position: 2
 ---
 
 # Параметры
