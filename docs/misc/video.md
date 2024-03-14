@@ -1,7 +1,7 @@
 ---
 title: Видеоуроки
 description: Видеоуроки по настройке сайта через панель управления
-sidebar_position: 0
+sidebar_position: 3
 ---
 
 # Видеоуроки по настройке сайте
@@ -12,13 +12,13 @@ sidebar_position: 0
 ## Редактирование страниц сайта
 <iframe width="840" height="473" src="https://www.youtube.com/embed/oz3NFaSBWAs?si=yO56YYUXjStnTvnr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-## Подключение онлайн-чата к сайту
-<iframe width="840" height="473" src="https://www.youtube.com/embed/fwO_SiWLUTA?si=ainvKvJ5NqErVvWk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
 ## Настройка мобильного приложения
 <iframe width="840" height="473" src="https://www.youtube.com/embed/mLJXB6rGB1E?si=WqZLNarYMGW1flm_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-## Настройка модуля доп. продаж
+## Как подключить онлайн-чат на сайт
+<iframe width="840" height="473" src="https://www.youtube.com/embed/fwO_SiWLUTA?si=ainvKvJ5NqErVvWk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+## Как запустить перекрестные продажи
 <iframe width="840" height="473" src="https://www.youtube.com/embed/glwlVNa1A90?si=KMEIz4Va3dt_ngIi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Как скопировать продукт с демо-сайта
@@ -32,3 +32,6 @@ sidebar_position: 0
 
 ## Как отредактировать заказ клиента
 <iframe width="840" height="473" src="https://www.youtube.com/embed/qgQyWihpZJA?si=c-yuzvwvElXwg9ih" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+## Как установить цены на бизнес-сувениры
+<iframe width="840" height="473" src="https://www.youtube.com/embed/go2B5--GI9s?si=EAxKkei4T1AKRYqb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
