@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.0.1">
 <title data-rh="true">Настройка | Документация Pixlpark</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://docs.pixlpark.ru/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://docs.pixlpark.ru/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://docs.pixlpark.ru/customers/settings"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Настройка | Документация Pixlpark"><meta data-rh="true" name="description" content="Настройка доп. полей и механизма регистрации на сайте"><meta data-rh="true" property="og:description" content="Настройка доп. полей и механизма регистрации на сайте"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://docs.pixlpark.ru/customers/settings"><link data-rh="true" rel="alternate" href="https://docs.pixlpark.ru/customers/settings" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.pixlpark.ru/customers/settings" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://CBISSLUS3P-dsn.algolia.net" crossorigin="anonymous"><link rel="search" type="application/opensearchdescription+xml" title="Документация Pixlpark" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.de945cdd.css">
-<script src="/assets/js/runtime~main.e40d87bd.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.805a4d8c.js" defer="defer"></script>
 <script src="/assets/js/main.b2cb046e.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -15,17 +15,34 @@
 <li>Основными среди них являются:<!-- -->
 <ul>
 <li><strong>Сервис получения данных для юр. лиц</strong> - получать реквизиты организации по ИНН или названию при регистрации на сайте в качестве юридического лица или при добавлении компании в личном кабинете.</li>
-<li><strong>Страница пользовательского соглашения</strong> - страница сайта с пользовательским соглашением, ссылка на которое выводится на странице регистрации или в формах отправки персональных данных.</li>
+<li><strong>Страница пользовательского соглашения</strong> - страница сайта с пользовательским соглашением, ссылка на которую выводится на странице регистрации или в формах отправки персональных данных.</li>
 <li><strong>Разрешить переход на страницу доставки без регистрации</strong> - активация механизма заказа без регистарции.</li>
 <li><strong>Разрешить сквозную авторизацию на поддоменах</strong> - считать пользователя авторизованным на сайте, если он уже авторизовался на другом сайте компании с аналогичным корневым доменом. Например, если у компании два сайта <code>subdomain-1.company.ru</code> и <code>subdomain-2.company.ru</code>, то авторизовавшись на одном из них он будет считаться авторизованным и на другом.</li>
 <li><strong>Переводить зарегистрированных пользователей в проверенных</strong> - изменять статус пользователя с &quot;Зарегистрирован&quot; на &quot;Проверен&quot; при регистрации на сайте.</li>
 </ul>
 </li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="настройки-регистрации">Настройки регистрации<a href="#настройки-регистрации" class="hash-link" aria-label="Direct link to Настройки регистрации" title="Direct link to Настройки регистрации">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="настройка-регистрации">Настройка регистрации<a href="#настройка-регистрации" class="hash-link" aria-label="Direct link to Настройка регистрации" title="Direct link to Настройка регистрации">​</a></h2>
 <ul>
-<li>В данном разделе представлены настройки, отвечающие за регистрацию на сайте. Уникальным идентификатором пользователя является эл. почта или телефон. Поэтому, одно из данных полей всегда обязательно для заполнения. Все остальные поля могут быть опциональными.</li>
-<li>Дополнительно можно указать, что телефон или эл. почта должны быть подтверждены при оформлении заказа. Для подтверждения телефона необходимо подключить сервис отправки смс-сообщений в разделе “<strong>Маркетинг / Уведомления / Настройка SMS</strong>”.</li>
+<li>В данном разделе представлены настройки, отвечающие за логику создани я учетной записи пользователя на сайта, которая реализована:<!-- -->
+<ul>
+<li>На странице регистрации;</li>
+<li>В быстром заказе (модальное окно на странице корзины);</li>
+<li>В заказе без регистрации (страница доставки).</li>
+</ul>
+</li>
+<li>Уникальным идентификатором пользователя является эл. почта или телефон. Поэтому, одно из полей всегда обязательно для заполнения. Все остальные поля могут быть опциональными.</li>
+<li>Рассмотрим настройки модуля регистрации:<!-- -->
+<ul>
+<li><strong>Разрешить вход по электронной почте/телефону</strong> - предлагать на сайте вход по эл. почте/телефону, отображать эти поля в быстром заказе и в заказе без регистрации. Одна из настроек является обязательной.</li>
+<li><strong>Использовать вход по телефону в качестве основного способа авторизации</strong> - открывать вкладку входа по телефону по умолчанию на странице авторизации, если разрешен вход и по эл. почте, и по телефону.</li>
+<li><strong>Требовать электронную почту/телефон при регистрации</strong> - требовать обязательного задания эл. почты/телефона при регистрации.</li>
+<li><strong>Требовать подтверждения электронной почты/телефона при заказе</strong> - требовать обязательного подтверж дения эл. почты/телефона при регистрации. Для подтверждения телефона необходимо подключить сервис отправки смс-сообщений в разделе “Маркетинг / Уведомления / Настройка SMS”.</li>
+<li><strong>Требовать имя/фамилии при регистрации</strong> - требовать обязательного задания имени/фамилии при регистрации.</li>
+<li><strong>Требовать задание имени и фамилии на кириллице</strong> - требовать обязательного задания имени и фамилии на кириллице при регистрации.</li>
+<li><strong>Использовать поле &quot;Отчество&quot; при регистрации</strong> - отображать поле задания отчества при регистрации. Оно не является обязательным.</li>
+</ul>
+</li>
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="дополнительные-поля">Дополнительные поля<a href="#дополнительные-поля" class="hash-link" aria-label="Direct link to Дополнительные поля" title="Direct link to Дополнительные поля">​</a></h2>
 <ul>
@@ -44,7 +61,7 @@
 </li>
 <li><strong>Поведение</strong>:<!-- -->
 <ul>
-<li><strong>Обязательное</strong> - обязательное для з аполнения;</li>
+<li><strong>Обязательное</strong> - обязательное для заполнения;</li>
 <li><strong>Скрытое</strong> - доступное для редактирования и просмотра только в панели управления;</li>
 <li><strong>Только чтение</strong> - доступное только для просмотра (редактируется в панели управления);</li>
 <li><strong>Для регистрации</strong> - отображается клиенту только на странице регистрации.</li>
@@ -52,6 +69,6 @@
 </li>
 </ul>
 </li>
-</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="theme-doc-footer-edit-meta-row row"><div class="col"><a href="https://github.com/Pixlpark/new-doc/tree/main/docs/customers/settings.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_vwxv"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/customers/groups"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Группы</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/customers/faq"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">FAQ</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#основная-информиация" class="table-of-contents__link toc-highlight">Основная информиация</a></li><li><a href="#настройки-регистрации" class="table-of-contents__link toc-highlight">Настройки регистрации</a></li><li><a href="#дополнительные-поля" class="table-of-contents__link toc-highlight">Дополнительные поля</a></li></ul></div></div></div></div></main></div></div></div></div>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="theme-doc-footer-edit-meta-row row"><div class="col"><a href="https://github.com/Pixlpark/new-doc/tree/main/docs/customers/settings.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_vwxv"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/customers/groups"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Группы</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/customers/faq"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">FAQ</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#основная-информиация" class="table-of-contents__link toc-highlight">Основная информиация</a></li><li><a href="#настройка-регистрации" class="table-of-contents__link toc-highlight">Настройка регистрации</a></li><li><a href="#дополнительные-поля" class="table-of-contents__link toc-highlight">Дополнительные поля</a></li></ul></div></div></div></div></main></div></div></div></div>
 </body>
 </html>
