@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.0.1">
 <title data-rh="true">Страницы | Документация Pixlpark</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://docs.pixlpark.ru/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://docs.pixlpark.ru/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://docs.pixlpark.ru/cms/pages"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Страницы | Документация Pixlpark"><meta data-rh="true" name="description" content="Редактирование страниц сайта и подключение скриптов"><meta data-rh="true" property="og:description" content="Редактирование страниц сайта и подключение скриптов"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://docs.pixlpark.ru/cms/pages"><link data-rh="true" rel="alternate" href="https://docs.pixlpark.ru/cms/pages" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.pixlpark.ru/cms/pages" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://CBISSLUS3P-dsn.algolia.net" crossorigin="anonymous"><link rel="search" type="application/opensearchdescription+xml" title="Документация Pixlpark" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.de945cdd.css">
-<script src="/assets/js/runtime~main.07cfe8dd.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.4ddde278.js" defer="defer"></script>
 <script src="/assets/js/main.b2cb046e.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -39,12 +39,29 @@
 <li><strong>Константа</strong> - это динамическая разметка, формируемая по специальному коду для объектов системы. Например, системный блок может выводить калькулятор для категории печати или последние новости.</li>
 <li><strong>Страница</strong> - пользовательская страница, которая может содержать все вышеописанные объекты. В панели управления все страницы сгруппированы по папкам в соответствии с их адресами. Обычно такое представление отражает иерархическую структуру сайта.</li>
 </ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="характеристики-страницы">Характеристики страницы<a href="#характеристики-страницы" class="hash-link" aria-label="Direct link to Характеристики страницы" title="Direct link to Характеристики страницы">​</a></h2>
+<ul>
+<li><strong>Название</strong> - название страницы, которое используется в панели управления и в хлебных крошках (если не задано специальное название).</li>
+<li><strong>Название в хлебных крошках</strong> - название страницы, которое используется в хлебных крошках. Если оно не задано, то используется “Название”.</li>
+<li><strong>Заголовок</strong> - заголовок страницы (H1), который отображается на странице только в случае отсутствия такого в разметке. Это одна из основных характеристик для поисковых систем.</li>
+<li><strong>Каноническая ссылка</strong> - адрес страницы, которую поисковые системы будут считать главной по отношению к текущей (а ее - дубликатом). Каноническую ссылку необходимо задавать, когда эту и другие страницы сайта считаются дубликатами из-за схожести содержимого. Если не определять главную страницу, то поисковые системы могут понижать сайт в выдачи и в произвольном порядке выдавать то одну, то другую страницу на один и тот же запрос.</li>
+<li><strong>Тип контента</strong> - тип содержимого страницы, который указывается в ответе сервера в заголовке &quot;content-type&quot;. Рекомендуем оставлять значение по умолчанию (HTML).</li>
+<li><strong>Шаблон страницы</strong> - предзаданный набор компоновки секций страницы:<!-- -->
+<ul>
+<li>Стандартный - страница со всеми секциями (рекомендуем использовать ее);</li>
+<li>Без шапки и подвала - страница без двух обязательных секций &quot;Шапка&quot; и &quot;Подвал&quot;;</li>
+<li>Пустой - страница с одной обязательной секцией &quot;Контент&quot; и без загрузки стандартных скриптов и стилей, которые необходимы для работы системных блоков.</li>
+<li>Хлебные крошки - переопределение навигационной цепочки для текущей страницы, которая выводится на странице через константу [$breadcrumbs$]. По умолчанию хлебные крошки формируются по вложенности текущей страницы относительно корня сайта (главной страницы).</li>
+</ul>
+</li>
+<li><strong>Метаинформация</strong> - задание метатегов: заголовка (Title), описания (Description) и ключевых слов (Keywords), которые используются поисковыми системами для ранжирования страниц сайта и отображения их в выдаче.</li>
+</ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="использование-констант">Использование констант<a href="#использование-констант" class="hash-link" aria-label="Direct link to Использование констант" title="Direct link to Использование констант">​</a></h2>
 <ul>
 <li><code>[$calculator(category:cUrl, product:pUrl, config:view)$]</code> - калькулятор для категории печати, где:<!-- -->
 <ul>
 <li>cUrl - адрес категории (обязательный параметр);</li>
-<li>pUrl - а дрес продукта, который будет выбран по умолчанию (опциональный параметр);</li>
+<li>pUrl - адрес продукта, который будет выбран по умолчанию (опциональный параметр);</li>
 <li>view - название представления калькулятора (опциональный параметр).</li>
 </ul>
 </li>
@@ -60,7 +77,7 @@
 <li><code>[$ pricePerItem(category:cUrl, product:pUrl, qantity:qVal, page:pVal, surface: sVal, zone: zVal)$]</code> - стоимость единицы продукта без учета опций.</li>
 <li><code>[$ priceString(...)$], [$ priceWithCustomWorksString(...)$], [$ pricePerItemString(...)$]</code> - стоимость вместе с валютой сайта.</li>
 <li><code>[$breadcrumbs$]</code> - хлебные крошки текущей страницы.</li>
-<li><code>[$lastNews$]</code> - список последних опубликованных новостей, где их количество задается в разделе “Новости / Настройка”.</li>
+<li><code>[$lastNews$]</code> - список последних опубликованных новостей, где  их количество задается в разделе “Новости / Настройка”.</li>
 <li><code>[$fullPath$]</code> - значение константы локализации, где fullPath - ее путь.</li>
 <li><code>[$websiteTitle$]</code> - название сайта из раздела “<strong>Маркетинг / Уведомления / Настройка почты</strong>”.</li>
 <li><code>[$websitePhone$]</code> - телефон из раздела “Маркетинг / Уведомления / Настройка почты”.</li>
@@ -120,24 +137,6 @@
 <li>Новость на отдельной странице: 850 x 450 px</li>
 </ul>
 </li>
-</ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="дополнительная-информация">Дополнительная информация<a href="#дополнительная-информация" class="hash-link" aria-label="Direct link to Дополнительная информация" title="Direct link to Дополнительная информация">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="видео-по-редактированию-страниц">Видео по редактированию страниц<a href="#видео-по-редактированию-страниц" class="hash-link" aria-label="Direct link to Видео по редактированию страниц" title="Direct link to Видео по редактированию страниц">​</a></h3>
-<iframe width="840" height="473" src="https://www.youtube.com/embed/oz3NFaSBWAs?si=yO56YYUXjStnTvnr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="видео-по-подключению-онлайн-чата">Видео по подключению онлайн-чата<a href="#видео-по-подключению-онлайн-чата" class="hash-link" aria-label="Direct link to Видео по подключению онлайн-чата" title="Direct link to Видео по подключению онлайн-чата">​</a></h3>
-<iframe width="840" height="473" src="https://www.youtube.com/embed/fwO_SiWLUTA?si=ainvKvJ5NqErVvWk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="инструкция-по-подключению-чата">Инструкция по подключению чата<a href="#инструкция-по-подключению-чата" class="hash-link" aria-label="Direct link to Инструкция по подключению чата" title="Direct link to Инструкция по подключению чата">​</a></h3>
-<ul>
-<li>Для подключения онлайн-чата, виджета обратного звонка или другого подобного сервиса необходимо разместить код данного виджета во <strong>втором поле</strong> раздела “<strong>CMS / Страницы / Скрипты</strong>”.</li>
-<li>Если же требуется, чтобы виджет отрабатывал не на всех страницах сайта, то тогда необходимо:<!-- -->
-<ul>
-<li>Перейти в раздел “<strong>CMS / Слои</strong>”;</li>
-<li>Создать новый слой, указав в нем маску с исключенными страницами;</li>
-<li>Разместить код виджета в <strong>секции “JavaScript”</strong>.</li>
-</ul>
-</li>
-<li>Например, на демо-сайте виджет онлайн-чата отображается на всех страницах кроме редактора. В этом случае в слое указывается маска: “<strong>-url(<em>/editor</em>)</strong>&quot;.</li>
-<li>Подробнее о форматировании маски можно прочитать в соответствующем разделе документации.</li>
-</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="theme-doc-footer-edit-meta-row row"><div class="col"><a href="https://github.com/Pixlpark/new-doc/tree/main/docs/cms/pages.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_vwxv"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/category/cms"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">CMS</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/cms/localization"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Локализация</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#типы-страниц" class="table-of-contents__link toc-highlight">Типы страниц</a></li><li><a href="#принцип-формирования-страницы" class="table-of-contents__link toc-highlight">Принцип формирования страницы</a></li><li><a href="#использование-констант" class="table-of-contents__link toc-highlight">Использование констант</a></li><li><a href="#задание-маски-слоя" class="table-of-contents__link toc-highlight">Задание маски слоя</a></li><li><a href="#работа-с-изображениями" class="table-of-contents__link toc-highlight">Работа с изображениями</a></li><li><a href="#дополнительная-информация" class="table-of-contents__link toc-highlight">Дополнительная информация</a><ul><li><a href="#видео-по-редактированию-страниц" class="table-of-contents__link toc-highlight">Видео по редактированию страниц</a></li><li><a href="#видео-по-подключению-онлайн-чата" class="table-of-contents__link toc-highlight">Видео по подключению онлайн-чата</a></li><li><a href="#инструкция-по-подключению-чата" class="table-of-contents__link toc-highlight">Инструкция по подключению чата</a></li></ul></li></ul></div></div></div></div></main></div></div></div></div>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="theme-doc-footer-edit-meta-row row"><div class="col"><a href="https://github.com/Pixlpark/new-doc/tree/main/docs/cms/pages.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_vwxv"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/category/cms"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">CMS</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/cms/localization"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Локализация</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#типы-страниц" class="table-of-contents__link toc-highlight">Типы страниц</a></li><li><a href="#принцип-формирования-страницы" class="table-of-contents__link toc-highlight">Принцип формирования страницы</a></li><li><a href="#характеристики-страницы" class="table-of-contents__link toc-highlight">Характеристики страницы</a></li><li><a href="#использование-констант" class="table-of-contents__link toc-highlight">Использование констант</a></li><li><a href="#задание-маски-слоя" class="table-of-contents__link toc-highlight">Задание маски слоя</a></li><li><a href="#работа-с-изображениями" class="table-of-contents__link toc-highlight">Работа с изображениями</a></li></ul></div></div></div></div></main></div></div></div></div>
 </body>
 </html>
