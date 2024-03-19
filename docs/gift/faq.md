@@ -33,5 +33,6 @@ sidebar_position: 5
 7. __Слайдер на главной__ редактируется в "CMS / Страницы / Блоки" → Блоки "Контент | главная - слайд 1(2/3)".
 8. __Популярные категории на главной__ редактируется в "CMS / Страницы / Блоки" → Блок "Контент | популярные категории".
 
-## Как установить цены на бизнес-сувениры
+## Видеоуроки
+### Как установить цены на сувениры
 <iframe width="840" height="473" src="https://www.youtube.com/embed/go2B5--GI9s?si=EAxKkei4T1AKRYqb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
