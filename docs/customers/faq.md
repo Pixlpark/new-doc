@@ -30,3 +30,7 @@ sidebar_position: 5
     + Телефон или эл. почта будут не просто обязательными, но и требовать подтверждения.
 * Если при быстром заказе или заказе без регистрации будут указаны почта или телефон существующих аккаунтов, то сайт потребует подтверждения данных вне зависимости от заданных настроек.
 * В заказе без регистрации обязательность имени, фамилии и отчества также может быть следствием необходимости этих данных для выбранной в качестве доставки транспортной компании. Даже если эти поля не являются обязательными в настройках.
+
+## Видеоуроки
+### Как подключить заказ без регистрации
+<iframe width="840" height="473" src="https://www.youtube.com/embed/8kHKlbYzVmU?si=HqvKwNdmeblVGQD6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

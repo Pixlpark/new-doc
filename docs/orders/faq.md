@@ -41,9 +41,16 @@ sidebar_position: 6
 * Если вам часто приходится создавать заказ с одинаковыми характеристиками, то вы можете сохранить его в виде шаблона (рядом с кнопкой “__Создать заказ__” нажать "__три точки__" и выбрать "__Создать шаблон__"). Затем при очередном создании заказа вы просто выберете его в правом верхнем углу.
 
 ## Видеоуроки
+### Как подключить быстрый заказ
+<iframe width="840" height="473" src="https://www.youtube.com/embed/8kHKlbYzVmU?si=HqvKwNdmeblVGQD6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+*
+*
 
 ### Как оформить заказ за клиента
 <iframe width="840" height="473" src="https://www.youtube.com/embed/24biaGFpxMA?si=Uz-FDiP2H7HVMuqu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+*
+*
 
 ### Как отредактировать заказ клиента
 <iframe width="840" height="473" src="https://www.youtube.com/embed/qgQyWihpZJA?si=c-yuzvwvElXwg9ih" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
