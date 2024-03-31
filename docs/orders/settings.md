@@ -1,7 +1,7 @@
 ---
 title: Настройка
 description: Настройка механизма офоромления и управления заказами
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 # Настройка

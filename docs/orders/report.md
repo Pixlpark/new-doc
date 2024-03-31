@@ -1,7 +1,7 @@
 ---
-title: Статистика продаж
+title: Статистика
 description: Просмотр статистики продаж по заданным фильтрам
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # Статистика продаж

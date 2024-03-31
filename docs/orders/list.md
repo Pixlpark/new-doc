@@ -1,7 +1,7 @@
 ---
-title: Список заказов
+title: Список
 description: Просмотр и управление оформленными заказами
-sidebar_position: 2
+sidebar_position: 1
 ---
 
 # Список заказов
