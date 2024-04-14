@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.0.1">
 <title data-rh="true">Подготовка макетов | Документация Pixlpark</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://docs.pixlpark.ru/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://docs.pixlpark.ru/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://docs.pixlpark.ru/design/psd"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Подготовка макетов | Документация Pixlpark"><meta data-rh="true" name="description" content="Спецификация подготовки PSD-макетов"><meta data-rh="true" property="og:description" content="Спецификация подготовки PSD-макетов"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://docs.pixlpark.ru/design/psd"><link data-rh="true" rel="alternate" href="https://docs.pixlpark.ru/design/psd" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.pixlpark.ru/design/psd" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://CBISSLUS3P-dsn.algolia.net" crossorigin="anonymous"><link rel="search" type="application/opensearchdescription+xml" title="Документация Pixlpark" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.956ab678.css">
-<script src="/assets/js/runtime~main.10099580.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.72ccc9d3.js" defer="defer"></script>
 <script src="/assets/js/main.91f447d0.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -99,7 +99,7 @@
 <ul>
 <li><code>[page][align:left]</code> – группа слоев, элементы которой вписываются в левую половину зоны печати;</li>
 <li><code>[page][align:right]</code> – группа слоев, элементы которой вписываются в правую половину зоны печати;</li>
-<li><code>[surface]</code> – группа слоев, элементы которой располагаются на всей зоне печати;</li>
+<li><code>[surface]</code> – группа слоев, элементы которой располагаются верхними слоями на всей зоне печати;</li>
 <li><code>[background]</code> – слой с фоновым изображением, который полностью заполняет зону печати.
 <img loading="lazy" src="/assets/images/photobookLayoutpng-0fb98785037c44348509f5e08c99f5c7.png" title=":size=90%" width="1298" height="690" class="img_ev3q"></li>
 </ul>
@@ -126,7 +126,7 @@
 </ol>
 <ul>
 <li><code>[template-preview]</code> – группа растровых слоев в первом макете, не отображающаяся в редакторе, элементы которой используются в качестве обложки шаблона. Каждый слой группы соответствует определенному году и называется <code>[year]</code> (например, [2023]), где <strong>year</strong> - год, заданный в панели управления в разделе <a href="/print/designs?id=%D0%A1%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0-%D1%88%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD%D0%B0">&quot;Печать / Дизайны / Шаблоны / Настройка&quot;</a>.</li>
-<li><code>[calendar-title]</code> – текстовый слой, содержимое которого будет заменено на начальный год календаря (например, использовать в слое <code>[template-preview]</code> для обложки);</li>
+<li><code>[calendar-title]</code> – текстовый слой, содержимое которого будет заменено на начальный го д календаря (например, использовать в слое <code>[template-preview]</code> для обложки);</li>
 <li><code>[calendar-title-range]</code> – текстовый слой, содержимое которого будет заменено на начальный и конечный год календаря через дефис, если календарь создается на несколько лет;</li>
 <li><code>[calendar][path:pathName]</code> – графический слой, содержимое которого будет заменено на календарную сетку, а <strong>pathName</strong> – название контура, привязанного к данному слою.
 <img loading="lazy" src="/assets/images/CalendarCover-711fcf3c9b17b99d7d4388d973ae06d9.png" title=":size=70%" width="1219" height="983" class="img_ev3q">
@@ -135,7 +135,43 @@
 </li>
 <li>Вы можете скачать примеры <a href="https://admin.pixlpark.com/content/pxp-template-download/18103595?secret=4e95f489f54f2fe625b8c8f9e34aee35" target="_blank" rel="noopener noreferrer">макета обложки</a> и <a href="https://admin.pixlpark.com/content/pxp-template-download/18103581?secret=5f086c92f92673a69bec6bce3716e6a2" target="_blank" rel="noopener noreferrer">страницы календаря</a> или <a href="https://demo.pixlpark.ru/printing/wall-calendars/a4-vert/template-6324454/editor?q=1&amp;oq=0&amp;p=13&amp;ws=d751713988987e9331980363e24189ce" target="_blank" rel="noopener noreferrer">посмотреть их в редакторе</a>.</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="советы-по-работе-с-adobe-photoshop">Советы по работе с Adobe Photoshop<a href="#советы-по-работе-с-adobe-photoshop" class="hash-link" aria-label="Direct link to Советы по рабо те с Adobe Photoshop" title="Direct link to Советы по работе с Adobe Photoshop">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="особенности-макетов-выпускных-альбомов">Особенности макетов выпускных альбомов<a href="#особенности-макетов-выпускных-альбомов" class="hash-link" aria-label="Direct link to Особенности макетов выпускных альбомов" title="Direct link to Особенности макетов выпускных альбомов">​</a></h2>
+<ul>
+<li>Общий механизм подготовки макетов позволяет создавать дизайны выпускных альбомов, но обладает следующими недостатками:<!-- -->
+<ul>
+<li>При наличии в дизайне разворота с виньетками пользователь самостоятельно создает раскладку учеников в редакторе, а затем подписывает каждого из них при размещении фотографии.</li>
+<li>Пользователь заново компонует дизайн альбома из доступных макетов, т.к.:<!-- -->
+<ul>
+<li>Шаблон может содержать взаимоисключающие макеты, которые по умолчанию загружаются в редактор;</li>
+<li>Если количество макетов меньше разворотов в альбоме, они размещаются повторно по кругу.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Для упрощения этой работы мы разработали технологию выпускных альбомов, суть которой заключается в следующем:<!-- -->
+<ul>
+<li>Макет содержит настройку, отвечающую за участие в автозаполнении при загрузке шаблона в редактор. Таким образом некоторые макеты можно исключить из дизайна по умолчанию.</li>
+<li>Обычно в многостраничных альбомах последние развороты заполняются коллажами из фотографий. Поэтому, если количество макетов, участвующих в автозаполнении, меньше разворотов альбома, то следующие развороты циклично заполняются макетами без каких-либо рамок (а не всеми поряд). А уже в самом редакторе к таким макетам автоматически применяются коллажи, которые размещаются выше фонового слоя, но ниже всех остальных.</li>
+<li>Макет может содержать дизайн разворота с виньетками под различное количество учеников. Для этого все слои размещаются в определенных группах с ключами <code>[frames-design:n]</code>, где <strong>n</strong> - количество учеников. В редактор из такого макета подгружаются лишь те слои, которые содержаться в группе для определенного количества учеников. А количества учеников задается в модальном окне при загрузке шаблона в редактор.</li>
+<li>При размещении фотографии в виньетку текстовые поля для ФИО могут быть автоматически заполнены из названия фотографии. Для этого необходимо, чтобы:<!-- -->
+<ul>
+<li>Название файла содержало комбинацию Имени, Фамилии и Отчества (опционально) через пробел;</li>
+<li>Слои для виньетки и ФИО находились в одной группе. Например, можно использовать следующие ключи:<!-- -->
+<ul>
+<li><code>[student]</code> - название группы слоев для одного ученика;</li>
+<li><code>[frame]</code> - слой с фотографией;</li>
+<li><code>[firstname]</code> - слой с Именем;</li>
+<li><code>[lastname]</code> - слой с Фамилией;</li>
+<li><code>[middlename]</code> - слой с Отчеством;</li>
+<li><code>[firstname lastname]</code> - слой с Именем и Фамилией.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="советы-по-работе-с-adobe-photoshop">Советы по работе с Adobe Photoshop<a href="#советы-по-работе-с-adobe-photoshop" class="hash-link" aria-label="Direct link to Советы по работе с Adobe Photoshop" title="Direct link to Советы по работе с Adobe Photoshop">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="создание-контура">Создание контура<a href="#создание-контура" class="hash-link" aria-label="Direct link to Создание контура" title="Direct link to Создание контура">​</a></h3>
 <ul>
 <li>Для добавления контура необходимо:<!-- -->
@@ -146,6 +182,6 @@
 <li>Повторить эту операцию для каждой рамки в макете.</li>
 </ol>
 </li>
-</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="theme-doc-footer-edit-meta-row row"><div class="col"><a href="https://github.com/Pixlpark/new-doc/tree/main/docs/design/psd.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_vwxv"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/category/дизайнерам"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Дизайнерам</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/design/3d"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Подготовка 3D-моделей</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#общая-информация" class="table-of-contents__link toc-highlight">Общая информация</a></li><li><a href="#работа-с-текстом" class="table-of-contents__link toc-highlight">Работа с текстом</a></li><li><a href="#работа-с-изображениями" class="table-of-contents__link toc-highlight">Работа с изображениями</a><ul><li><a href="#фото-без-декора" class="table-of-contents__link toc-highlight">Фото без декора</a></li><li><a href="#фото-с-декором" class="table-of-contents__link toc-highlight">Фото с декором</a></li><li><a href="#фотоколлажи" class="table-of-contents__link toc-highlight">Фотоколлажи</a></li></ul></li><li><a href="#особенности-макетов-фотокниг" class="table-of-contents__link toc-highlight">Особенности макетов фотокниг</a></li><li><a href="#особенности-макетов-календарей" class="table-of-contents__link toc-highlight">Особенности макетов календарей</a></li><li><a href="#советы-по-работе-с-adobe-photoshop" class="table-of-contents__link toc-highlight">Советы по работе с Adobe Photoshop</a><ul><li><a href="#создание-контура" class="table-of-contents__link toc-highlight">Создание контура</a></li></ul></li></ul></div></div></div></div></main></div></div></div></div>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="theme-doc-footer-edit-meta-row row"><div class="col"><a href="https://github.com/Pixlpark/new-doc/tree/main/docs/design/psd.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_vwxv"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/category/дизайнерам"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Дизайнерам</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/design/3d"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Подготовка 3D-моделей</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#общая-информация" class="table-of-contents__link toc-highlight">Общая информация</a></li><li><a href="#работа-с-текстом" class="table-of-contents__link toc-highlight">Работа с текстом</a></li><li><a href="#работа-с-изображениями" class="table-of-contents__link toc-highlight">Работа с изображениями</a><ul><li><a href="#фото-без-декора" class="table-of-contents__link toc-highlight">Фото без декора</a></li><li><a href="#фото-с-декором" class="table-of-contents__link toc-highlight">Фото с декором</a></li><li><a href="#фотоколлажи" class="table-of-contents__link toc-highlight">Фотоколлажи</a></li></ul></li><li><a href="#особенности-макетов-фотокниг" class="table-of-contents__link toc-highlight">Особенности макетов фотокниг</a></li><li><a href="#особенности-макетов-календарей" class="table-of-contents__link toc-highlight">Особенности макетов календарей</a></li><li><a href="#особенности-макетов-выпускных-альбомов" class="table-of-contents__link toc-highlight">Особенности макетов выпускных альбомов</a></li><li><a href="#советы-по-работе-с-adobe-photoshop" class="table-of-contents__link toc-highlight">Советы по работе с Adobe Photoshop</a><ul><li><a href="#создание-контура" class="table-of-contents__link toc-highlight">Создание контура</a></li></ul></li></ul></div></div></div></div></main></div></div></div></div>
 </body>
 </html>
