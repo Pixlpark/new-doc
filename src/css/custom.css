@@ -2222,3 +2222,7 @@ h2#Создание-har-файла,
   + blockquote {
   margin: 0;
 }
+
+ol ol, ul ol {
+  list-style-type: auto;
+}
