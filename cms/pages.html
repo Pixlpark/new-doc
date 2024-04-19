@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.0.1">
 <title data-rh="true">Страницы | Документация Pixlpark</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://docs.pixlpark.ru/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://docs.pixlpark.ru/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://docs.pixlpark.ru/cms/pages"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Страницы | Документация Pixlpark"><meta data-rh="true" name="description" content="Редактирование страниц сайта и подключение скриптов"><meta data-rh="true" property="og:description" content="Редактирование страниц сайта и подключение скриптов"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://docs.pixlpark.ru/cms/pages"><link data-rh="true" rel="alternate" href="https://docs.pixlpark.ru/cms/pages" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.pixlpark.ru/cms/pages" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://CBISSLUS3P-dsn.algolia.net" crossorigin="anonymous"><link rel="search" type="application/opensearchdescription+xml" title="Документация Pixlpark" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.a9fd1181.css">
-<script src="/assets/js/runtime~main.ae27a53a.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.79c69450.js" defer="defer"></script>
 <script src="/assets/js/main.91f447d0.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -80,6 +80,7 @@
 <li><code>[$lastNews$]</code> - список последних опубликованных новостей, где  их количество задается в разделе “Новости / Настройка”.</li>
 <li><code>[$fullPath$]</code> - значение константы локализации, где fullPath - ее путь.</li>
 <li><code>[$websiteTitle$]</code> - название бренда из раздела “<strong>Настройка / Регион → Контакты</strong>”.</li>
+<li><code>[$websiteCity$]</code> - город из раздела “Настройка / Регион → Контакты”.</li>
 <li><code>[$websiteAddress$]</code> - адрес из раздела “Настройка / Регион → Контакты”.</li>
 <li><code>[$websitePhone$]</code> - телефон из раздела “Настройка / Регион → Контакты”.</li>
 <li><code>[$websiteEmail$]</code> - эл. почта из раздела “Настройка / Регион → Контакты”.</li>
@@ -90,7 +91,7 @@
 <li>Для задания маски используются следующие термины и формулировки:<!-- -->
 <ul>
 <li>Регулярное выражение может состоять из нескольких правил. Если они прописаны в одну строку, то между ними применяется условие &quot;И&quot;, а если в несколько - &quot;ИЛИ&quot;.</li>
-<li><strong>Знак &quot;*&quot;</strong> - возможность следования любых символов в адресе искомой страницы (неточное совпадение).</li>
+<li><strong>Знак &quot;*&quot;</strong> - возможность следования любых символов в адресе иско мой страницы (неточное совпадение).</li>
 <li><code>url(адрес)</code> или <code>+url(адрес)</code> - задание страницы с указанием ее относительного адреса, к которой нужно применять слой. Пример: <code>url(/user/cart)</code>.</li>
 <li><code>-url(адрес)</code> - задание страницы с указанием ее относительного адреса, к которой не нужно применять слой (в то время как к остальным страницам его применять нужно ). Пример: <code>url(/user/*) -url(/user/cart)</code>.</li>
 <li><code>[auth]</code> – применение слоя только к авторизованным пользователям;</li>
@@ -105,7 +106,7 @@
 <ul>
 <li><code>url(*)</code> – применение слоя к любой странице сайта.</li>
 <li><code>url(*editor*)</code> – применение слоя к страницам, в адресе которых есть слово &quot;editor&quot;.</li>
-<li><code>url(*editor*) -url(*approve*)</code> – применение слоя к страницам, в адресе которых есть слово &quot;editor&quot;, за исключением страниц, в адресе которых есть слово &quot;approve&quot;. В данном примере слой будут выводиться на страницах всех редакторов, но не будет выводиться на страницах утверждения макета.</li>
+<li><code>url(*editor*) -url(*approve*)</code> – п рименение слоя к страницам, в адресе которых есть слово &quot;editor&quot;, за исключением страниц, в адресе которых есть слово &quot;approve&quot;. В данном примере слой будут выводиться на страницах всех редакторов, но не будет выводиться на страницах утверждения макета.</li>
 <li><code>url(/user/cart)</code> – применение слоя только к странице корзины.</li>
 <li><code>url(/news/*)</code> – применение слоя к любым страницам новостей, за исключением страницы списка новостей.</li>
 <li><code>url(/news*)</code> – применение слоя к любым страницам новостей, включая страницу списка новостей.</li>
