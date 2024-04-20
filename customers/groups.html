@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.0.1">
 <title data-rh="true">Группы | Документация Pixlpark</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://docs.pixlpark.ru/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://docs.pixlpark.ru/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://docs.pixlpark.ru/customers/groups"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Группы | Документация Pixlpark"><meta data-rh="true" name="description" content="Управление группами клиентов и их уровнями доступа"><meta data-rh="true" property="og:description" content="Управление группами клиентов и их уровнями доступа"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://docs.pixlpark.ru/customers/groups"><link data-rh="true" rel="alternate" href="https://docs.pixlpark.ru/customers/groups" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.pixlpark.ru/customers/groups" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://CBISSLUS3P-dsn.algolia.net" crossorigin="anonymous"><link rel="search" type="application/opensearchdescription+xml" title="Документация Pixlpark" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.a9fd1181.css">
-<script src="/assets/js/runtime~main.a62b8b8d.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.6e10cfbf.js" defer="defer"></script>
 <script src="/assets/js/main.91f447d0.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -16,7 +16,7 @@
 <ul>
 <li>Категории продуктов и опции;</li>
 <li>Способы оплата и доставки;</li>
-<li>Правила обработки заказов;</li>
+<li>Правила автоматизации;</li>
 <li>Страницы и блоки CMS;</li>
 <li>Персональные скидки;</li>
 <li>Пуш-уведомления;</li>
@@ -56,185 +56,56 @@
 <li><strong>Клиенты группы</strong> - частные лица и организации, состоящие в группе.</li>
 <li><img loading="lazy" src="/assets/images/groups04-00bcf7ea769d06cd89fa6e0019027dcc.png" width="934" height="269" class="img_ev3q"></li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="примеры-использования">Примеры использовани я<a href="#примеры-использования" class="hash-link" aria-label="Direct link to Примеры использования" title="Direct link to Примеры использования">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="автоматическая-печать">Автоматическая печать<a href="#автоматическая-печать" class="hash-link" aria-label="Direct link to Автоматическая печать" title="Direct link to Автоматическая печать">​</a></h3>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="примеры-использования">Примеры использования<a href="#примеры-использования" class="hash-link" aria-label="Direct link to Примеры использования" title="Direct link to Примеры использования">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="накопительные-скидки">Накопительные скидки<a href="#накопительные-скидки" class="hash-link" aria-label="Direct link to Накопительные скидки" title="Direct link to Накопительные скидки">​</a></h3>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="задача">Задача<a href="#задача" class="hash-link" aria-label="Direct link to Задача" title="Direct link to Задача">​</a></h4>
-<p>Настроить автоматическую печать заказов до 10 000 ₽ от надежных клиентов.</p>
+<ul>
+<li>Настроить накопительные скидки по сумме заказов за год:<!-- -->
+<ul>
+<li>Скидка 10% при обороте от 20 до 50 тыс. руб.;</li>
+<li>Скидка 20% при обороте от 50 до 100 тыс. руб.;</li>
+<li>Скидка 30% при обороте свыше 100 тыс. руб.</li>
+</ul>
+</li>
+</ul>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="решение">Решение<a href="#решение" class="hash-link" aria-label="Direct link to Решение" title="Direct link to Решение">​</a></h4>
 <ol>
-<li>Создаем группу “Надежные клиенты” без автоматического добавления клиентов. По мере надобности включаем в нее пользователей, которых считаем надежными.</li>
-</ol>
+<li>Создаем <strong>три группы</strong> (Серебряный статус (10%), Золотой статус (20%), Платиновый статус (30%)) с автоматическим добавлением клиентов, оформивших заказы за последний год на сумму:<!-- -->
 <ul>
-<li><img loading="lazy" src="/assets/images/groups05-5c7d69c46be9a34b71146f540a679fe5.png" width="934" height="446" class="img_ev3q"></li>
-</ul>
-<ol start="2">
-<li>В разделе “Заказы / Настройка / Обработка заказов” создаем правило со следующими характеристиками:<!-- -->
-<ul>
-<li>Статус оплаты: Ожидать оплату;</li>
-<li>Время нахождения в статусе более: 30 мин. (чтобы у клиента было время для отмены заказа);</li>
-<li>Стоимость заказа: до 10 000 ₽;</li>
-<li>Действие: смена статуса заказа на “В печать”.</li>
+<li><strong>от 20 000 до 50 000 ₽</strong>;
+<img loading="lazy" src="/assets/images/groups33-6140e205367ec1b86547e867e66abe56.png" width="870" height="497" class="img_ev3q"></li>
+<li><strong>от 50 000 до 100 000 ₽</strong>;
+<img loading="lazy" src="/assets/images/groups34-5e24120e36b5f437af5e0e9e50f5e977.png" width="870" height="497" class="img_ev3q"></li>
+<li><strong>свыше 100 000 ₽</strong>;
+<img loading="lazy" src="/assets/images/groups35-9d4b28f25bdeffc2c6268124770c67b5.png" width="870" height="478" class="img_ev3q"></li>
 </ul>
 </li>
-<li>В новом правиле устанавливаем ограничение по группам, задавая доступность для ранее созданной группы.</li>
-</ol>
-<ul>
-<li><img loading="lazy" src="/assets/images/groups06-74aa3d65ef4c514d1569a642ff71a446.png" width="934" height="650" class="img_ev3q"></li>
-</ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="тестирование-приложения">Тестирование приложения<a href="#тестирование-приложения" class="hash-link" aria-label="Direct link to Тестирование приложения" title="Direct link to Тестирование приложения">​</a></h3>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="задача-1">Задача<a href="#задача-1" class="hash-link" aria-label="Direct link to Задача" title="Direct link to Задача">​</a></h4>
-<p>Настроить отправку пуш-уведомлений только тестировщикам компании.</p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="решение-1">Решение<a href="#решение-1" class="hash-link" aria-label="Direct link to Решение" title="Direct link to Решение">​</a></h4>
-<ol>
-<li>Создаем группу “Тестировщики” без автоматического добавления клиентов, в которую включаем пользователей, отвечающих за тестирование мобильного приложения.</li>
-</ol>
-<ul>
-<li><img loading="lazy" src="/assets/images/groups07-b9b7a7373a58640e322b45f359a001d2.png" width="934" height="431" class="img_ev3q"></li>
-</ul>
-<ol start="2">
-<li>В настройках мобильного приложения в разделе “Уведомлени я” создаем персональное уведомление с необходимыми характеристиками.</li>
-<li>В новом уведомлении устанавливаем ограничение по группам, задавая доступность для ранее созданной группы.</li>
-</ol>
-<ul>
-<li><img loading="lazy" src="/assets/images/groups08-3b522c66ab31c0a701ead381fd65aff5.png" width="934" height="548" class="img_ev3q"></li>
-</ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="оплата-при-получении">Оплата при получении<a href="#оплата-при-получении" class="hash-link" aria-label="Direct link to Оплата при получении" title="Direct link to Оплата при получении">​</a></h3>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="задача-2">Задача<a href="#задача-2" class="hash-link" aria-label="Direct link to Задача" title="Direct link to Задача">​</a></h4>
-<p>Настроить доступность оплаты при получении только тем клиентам, кто суммарно заказал на сумму более 3 000 ₽.</p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="решение-2">Решение<a href="#решение-2" class="hash-link" aria-label="Direct link to Решение" title="Direct link to Решение">​</a></h4>
-<ol>
-<li>Создаем группу “Проверенные клиенты” с автоматическим добавлением клиентов, оформивших заказы за весь период более чем на 3 000 ₽.</li>
-</ol>
-<ul>
-<li><img loading="lazy" src="/assets/images/groups09-b03a350d220be613c258429369d0fef6.png" width="934" height="516" class="img_ev3q"></li>
-</ul>
-<ol start="2">
-<li>В разделе “Настройка / Оплата” выбираем оплату при получении и устанавливаем ограничение по группам, задавая доступность для ранее созданной группы.</li>
-</ol>
-<ul>
-<li><img loading="lazy" src="/assets/images/groups10-0abaf163f1ec802ad06d3a5a8b750345.png" width="934" height="530" class="img_ev3q"></li>
-</ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="перекрестные-продажи">Перекрестные продажи<a href="#перекрестные-продажи" class="hash-link" aria-label="Direct link to Перекрестные продажи" title="Direct link to Перекрестные продажи">​</a></h3>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="задача-3">Задача<a href="#задача-3" class="hash-link" aria-label="Direct link to Задача" title="Direct link to Задача">​</a></h4>
-<p>Выключить работу модуля перекрестных продаж для оптовых клиентов.</p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="решение-3">Решение<a href="#решение-3" class="hash-link" aria-label="Direct link to Решение" title="Direct link to Решение">​</a></h4>
-<ol>
-<li>В разделе “Маркетинг / Корзины / Настройка” устанавливаем ограничение по группам, задавая блокировку для групп оптовых клиентов.</li>
-</ol>
-<ul>
-<li><img loading="lazy" src="/assets/images/groups11-cdb516b9ac23d24d33d18d1db755a420.png" width="934" height="653" class="img_ev3q"></li>
-</ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="бесплатная-доставка">Бесплатная доставка<a href="#бесплатная-доставка" class="hash-link" aria-label="Direct link to Бесплатная доставка" title="Direct link to Бесплатная доставка">​</a></h3>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="задача-4">Задача<a href="#зад ача-4" class="hash-link" aria-label="Direct link to Задача" title="Direct link to Задача">​</a></h4>
-<p>Настроить бесплатную курьерскую доставку для оптовых клиентов.</p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="решение-1-1">Решение 1<a href="#решение-1-1" class="hash-link" aria-label="Direct link to Решение 1" title="Direct link to Решение 1">​</a></h4>
-<ol>
-<li>В разделе “Настройка / Доставка” дублируем курьерскую доставку и задаем ей другое имя.</li>
-<li>В исходной доставке устанавливаем ограничение по группам, задавая блокировку для групп оптовых клиентов.</li>
-</ol>
-<ul>
-<li><img loading="lazy" src="/assets/images/groups12-56a1053bd24e9dda5d133756b056c996.png" width="934" height="326" class="img_ev3q"></li>
-</ul>
-<ol start="3">
-<li>Во новой доставке устанавливаем ограничение по группам, задавая доступность для групп оптовых клиентов.</li>
-</ol>
-<ul>
-<li><img loading="lazy" src="/assets/images/groups13-da6afefe46abfedbad0e2634f2efcca6.png" width="934" height="329" class="img_ev3q"></li>
-</ul>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="решение-2-1">Решение 2<a href="#решение-2-1" class="hash-link" aria-label="Direct link to Решение 2" title="Direct link to Решение 2">​</a></h4>
-<ol>
-<li>Создаем группу “Оптовики” с автоматическим добавлением клиентов, оформивших заказы за последний год более чем на 500 000 ₽.</li>
-</ol>
-<ul>
-<li><img loading="lazy" src="/assets/images/groups14-f642da5bdeb7038b7dc8b8abfcc8e8d0.png" width="934" height="518" class="img_ev3q"></li>
-</ul>
-<ol start="2">
-<li>В разде ле “Маркетинг / Скидки” создаем скидку со следующими характеристиками:<!-- -->
-<ul>
-<li>Тип: персональная;</li>
-<li>Суммируется;</li>
-<li>Величина скидки на доставку: 100%.</li>
-</ul>
-</li>
-</ol>
-<ul>
-<li><img loading="lazy" src="/assets/images/groups15-961375ca1c3aa9eda70e1156603e83bd.png" width="934" height="53" class="img_ev3q"></li>
-</ul>
-<ol start="3">
-<li>В новой скидке во вкладке “Клиенты” добавляем ранее созданную группу.</li>
-</ol>
-<ul>
-<li><img loading="lazy" src="/assets/images/groups16-081a404c296d686728a6b56a1f69fbe9.png" width="934" height="223" class="img_ev3q"></li>
-</ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="актуальная-популярная-продукция">Актуальная популярная продукция<a href="#актуальная-популярная-продукция" class="hash-link" aria-label="Direct link to Актуальная популярная продукция" title="Direct link to Актуальная популярная продукция">​</a></h3>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="задача-5">Задача<a href="#задача-5" class="hash-link" aria-label="Direct link to Задача" title="Direct link to Задача">​</a></h4>
-<p>Для оптовых клиентов по фотопечати в блоке популярной продукции на главной выводить лишь товары из вкладки “Фотопечать”.</p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="решение-4">Решение<a href="#решение-4" class="hash-link" aria-label="Direct link to Решение" title="Direct link to Решение">​</a></h4>
-<ol>
-<li>В разделе “CMS / Страницы / Блоки” дублируем блок популярной продукции и задаем ему другое имя.</li>
-</ol>
-<ul>
-<li><img loading="lazy" src="/assets/images/groups17-0ff66c9a4e55872b5cdc62288c238fb6.png" width="934" height="259" class="img_ev3q"></li>
-</ul>
-<ol start="2">
-<li>В новом блоке изменяем разметку, оставляя лишь продукты из вкладки “Фотопечать”.</li>
-<li>Добавляем второй блок следом за первым в разметке главной страницы сайта.</li>
-</ol>
-<ul>
-<li><img loading="lazy" src="/assets/images/groups18-a7b89477b624c162759630ba169bda41.png" width="934" height="363" class="img_ev3q"></li>
-</ul>
-<ol start="4">
-<li>В исходном блоке устанавливаем ограничение по группам, задавая блокировку для группы оптовых клиентов.</li>
-</ol>
-<ul>
-<li><img loading="lazy" src="/assets/images/groups19-04ec3abc261f96721e91f1b488825745.png" width="934" height="402" class="img_ev3q"></li>
-</ul>
-<ol start="5">
-<li>В новом блоке устанавливаем ограничение по группам, задавая доступность для группы оптовых клиентов.Скидка для сотрудников</li>
-</ol>
-<ul>
-<li><img loading="lazy" src="/assets/images/groups20-e21e37b344ae7c01ed8d162944d3141d.png" width="934" height="407" class="img_ev3q"></li>
-</ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="скидка-для-сотрудников">Скидка для сотрудников<a href="#скидка-для-сотрудников" class="hash-link" aria-label="Direct link to Скидка для сотрудников" title="Direct link to Скидка для сотрудников">​</a></h3>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="задача-6">Задача<a href="#задача-6" class="hash-link" aria-label="Direct link to Задача" title="Direct link to Задача">​</a></h4>
-<p>Настроить скидку 20% для сотрудников на весь ассортимент.</p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="решение-5">Решение<a href="#решение-5" class="hash-link" aria-label="Direct link to Решение" title="Direct link to Решение">​</a></h4>
-<ol>
-<li>Создаем группу “Сотрудники” со стратегией “Добавлять сотрудников автоматически”. В нее попадут глобальные администраторы компании и сотрудники с любой ролью доступа к данному сайту.</li>
-</ol>
-<ul>
-<li><img loading="lazy" src="/assets/images/groups21-461becf79627760d12db0d430e520268.png" width="934" height="429" class="img_ev3q"></li>
-</ul>
-<ol start="2">
-<li>В разделе “Маркетинг / Скидки” создаем скидку со следующими характеристиками:<!-- -->
+<li>В разделе “<strong>Маркетинг / Скидки</strong>” создаем три скидки со следующими характеристиками:<!-- -->
 <ul>
 <li>Тип: персональная;</li>
 <li>Не суммируется;</li>
-<li>Величина скидки на продукты: 20%.</li>
+<li>Величина скидки на продукты: 10%, 20%, 30%.</li>
 </ul>
 </li>
 </ol>
 <ul>
-<li><img loading="lazy" src="/assets/images/groups22-8e3144f4527f94a19290a238c35abb8e.png" width="934" height="53" class="img_ev3q"></li>
+<li><img loading="lazy" src="/assets/images/groups36-c242845c7604057e075f8e4d177f6700.png" width="934" height="158" class="img_ev3q"></li>
 </ul>
 <ol start="3">
-<li>В новой скидке во вкладке “Клиенты” добавляем ранее созданную группу.</li>
+<li>В новых скидках во вкладке “Клиенты” добавляем соответствующие ранее созданные группы.</li>
 </ol>
-<ul>
-<li><img loading="lazy" src="/assets/images/groups23-ecd87f1bc6c9e4e9cb04bbea344b9c80.png" width="934" height="262" class="img_ev3q"></li>
-</ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="оптовая-печать-фотографий">Оптовая печать фотографий<a href="#оптовая-печать-фотографий" class="hash-link" aria-label="Direct link to Оптовая печать фотографий" title="Direct link to Оптовая печать фотографий">​</a></h3>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="задача-7">Задача<a href="#задача-7" class="hash-link" aria-label="Direct link to Задача" title="Direct link to Задача">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="задача-1">Задача<a href="#задача-1" class="hash-link" aria-label="Direct link to Задача" title="Direct link to Задача">​</a></h4>
 <p>Настроить скидку 50% на фотопечать для тех клиентов, кто за год заказывает их на сумму более 300 000 ₽.</p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="решение-6">Решение<a href="#решение-6" class="hash-link" aria-label="Direct link to Решение" title="Direct link to Решение">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="решение-1">Решение<a href="#решение-1" class="hash-link" aria-label="Direct link to Решение" title="Direct link to Решение">​</a></h4>
 <ol>
-<li>Создаем группу “Оптовики по фотопечати” с автоматическим добавлением клиентов, оформивших заказы на печать фотографий за последний год более чем на 300 000 ₽.</li>
+<li>Создаем группу “<strong>Оптовики по фотопечати</strong>” с автоматическим добавлением клиентов, оформивших заказы на печать фотографий за последний год более чем на 300 000 ₽.</li>
 </ol>
 <ul>
 <li><img loading="lazy" src="/assets/images/groups24-ecaabdb0d8bd7bba513494346cff4a78.png" width="934" height="612" class="img_ev3q"></li>
 </ul>
 <ol start="2">
-<li>В разделе “Маркетинг / Скидки” создаем скидку со следующими характеристиками:<!-- -->
+<li>В разделе “<strong>Маркетинг / Скидки</strong>” создаем скидку со следующими характеристиками:<!-- -->
 <ul>
 <li>Тип: персональная;</li>
 <li>Не суммируется;</li>
@@ -253,17 +124,17 @@
 <li><img loading="lazy" src="/assets/images/groups26-c9decab59188edca23774733d0728821.png" width="934" height="254" class="img_ev3q"></li>
 </ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="оптовая-печать-фотокниг">Оптовая печать фотокниг<a href="#оптовая-печать-фотокниг" class="hash-link" aria-label="Direct link to Оптовая печать фотокниг" title="Direct link to Оптовая печать фотокниг">​</a></h3>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="задача-8">Задача<a href="#задача-8" class="hash-link" aria-label="Direct link to Задача" title="Direct link to Задача">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="задача-2">Задача<a href="#задача-2" class="hash-link" aria-label="Direct link to Задача" title="Direct link to Задача">​</a></h4>
 <p>Настроить оптовые цены на печать фотокниг для тех клиентов, кто за год заказывает их на сумму более 400 000 ₽.</p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="решение-7">Решение<a href="#решение-7" class="hash-link" aria-label="Direct link to Решение" title="Direct link to Решение">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="решение-2">Решение<a href="#решение-2" class="hash-link" aria-label="Direct link to Решение" title="Direct link to Решение">​</a></h4>
 <ol>
-<li>В разделе “Печать / Продукты” дублируем категорию фотокниг с шаблонами и опциями, а затем для новой задаем оптовые цены (которые, например, невозможно эмулировать применением скидки в процентах).</li>
+<li>В разделе “<strong>Печать / Продукты</strong>” дублируем категорию фотокниг с шаблонами и опциями, а затем для новой задаем оптовые цены (которые, например, невозможно эмулировать применением скидки в процентах).</li>
 </ol>
 <ul>
 <li><img loading="lazy" src="/assets/images/groups27-430f204850b9e186b3a443deebeaf3a9.png" width="934" height="279" class="img_ev3q"></li>
 </ul>
 <ol start="2">
-<li>Создаем группу “Оптовики по фотокнигам” с автоматическим добавлением клиентов, оформивших заказы на печать фотокниг по двум категориям за последний год более чем на 400 000 ₽.</li>
+<li>Создаем группу “<strong>Оптовики по фотокнигам</strong>” с автоматическим добавлением клиентов, оформивших заказы на печать фотокниг по двум категориям за последний год более чем на 400 000 ₽.</li>
 </ol>
 <ul>
 <li><img loading="lazy" src="/assets/images/groups28-44a4ac72616364d6ccd6ec70d1907951.png" width="934" height="665" class="img_ev3q"></li>
@@ -281,7 +152,7 @@
 <li><img loading="lazy" src="/assets/images/groups30-1ddd2324fefb53647cfad5f9bc9f6836.png" width="375" height="78" class="img_ev3q"></li>
 </ul>
 <ol start="5">
-<li>В разделе “CMS / Страницы / Блоки” создаем блок:<!-- -->
+<li>В разделе “<strong>CMS / Страницы / Блоки</strong>” создаем блок:<!-- -->
 <ul>
 <li>Размещаем в нем калькулятор новой категории;</li>
 <li>Добавляем дополнительную информацию;</li>
@@ -298,55 +169,104 @@
 <ul>
 <li><img loading="lazy" src="/assets/images/groups32-34a36083f32e1be69107b2337bf1e84a.png" width="934" height="523" class="img_ev3q"></li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="накопительные-скидки">Накопительные скидки<a href="#накопительные-скидки" class="hash-link" aria-label="Direct link to Накопительные скидки" title="Direct link to Накопительные скидки">​</a></h3>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="задача-9">Задача<a href="#задача-9" class="hash-link" aria-label="Direct link to Задача" title="Direct link to Задача">​</a></h4>
-<ul>
-<li>Настроить накопительные скидки по сумме заказов за год:<!-- -->
-<ul>
-<li>Скидка 10% при обороте от 20 до 50 тыс. руб.;</li>
-<li>Скидка 20% при обороте от 50 до 100 тыс. руб.;</li>
-<li>Скидка 30% при обороте свыше 100 тыс. руб.</li>
-</ul>
-</li>
-</ul>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="решение-8">Решение<a href="#решение-8" class="hash-link" aria-label="Direct link to Решение" title="Direct link to Решение">​</a></h4>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="бесплатная-доставка">Бесплатная доставка<a href="#бесплатная-доставка" class="hash-link" aria-label="Direct link to Бесплатная доставка" title="Direct link to Бесплатная доставка">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="задача-3">Задача<a href="#задача-3" class="hash-link" aria-label="Direct link to Задача" title="Direct link to Задача">​</a></h4>
+<p>Настроить бесплатную курьерскую доставку для оптовых клиентов.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="решение-1-1">Решение 1<a href="#решение-1-1" class="hash-link" aria-label="Direct link to Решение 1" title="Direct link to Решение 1">​</a></h4>
 <ol>
-<li>Создаем три группы (Серебряный статус (10%), Золотой статус (20%), Платиновый статус (30%)) с автоматическим добавлением клиентов, оформивших заказы за последний год на сумму:<!-- -->
+<li>В разделе “<strong>Настройка / Доставка</strong>” дублируем курьерскую доста вку и задаем ей другое имя.</li>
+<li>В исходной доставке устанавливаем ограничение по группам, задавая блокировку для групп оптовых клиентов.</li>
+</ol>
 <ul>
-<li>от 20 000 до 50 000 ₽;
-<img loading="lazy" src="/assets/images/groups33-6140e205367ec1b86547e867e66abe56.png" width="870" height="497" class="img_ev3q"></li>
-<li>от 50 000 до 100 000 ₽;
-<img loading="lazy" src="/assets/images/groups34-5e24120e36b5f437af5e0e9e50f5e977.png" width="870" height="497" class="img_ev3q"></li>
-<li>свыше 100 000 ₽;
-<img loading="lazy" src="/assets/images/groups35-9d4b28f25bdeffc2c6268124770c67b5.png" width="870" height="478" class="img_ev3q"></li>
+<li><img loading="lazy" src="/assets/images/groups12-56a1053bd24e9dda5d133756b056c996.png" width="934" height="326" class="img_ev3q"></li>
+</ul>
+<ol start="3">
+<li>Во новой доставке устанавливаем ограничение по группам, задавая доступность для групп оптовых клиентов.</li>
+</ol>
+<ul>
+<li><img loading="lazy" src="/assets/images/groups13-da6afefe46abfedbad0e2634f2efcca6.png" width="934" height="329" class="img_ev3q"></li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="решение-2-1">Решение 2<a href="#решение-2-1" class="hash-link" aria-label="Direct link to Решение 2" title="Direct link to Решение 2">​</a></h4>
+<ol>
+<li>Создаем группу “<strong>Оптовики</strong>” с автоматическим добавлением клиентов, оформивших заказы за последний год более чем на 500 000 ₽.</li>
+</ol>
+<ul>
+<li><img loading="lazy" src="/assets/images/groups14-f642da5bdeb7038b7dc8b8abfcc8e8d0.png" width="934" height="518" class="img_ev3q"></li>
+</ul>
+<ol start="2">
+<li>В разделе “<strong>Маркетинг / Скидки</strong>” создаем скидку со следующими характеристиками:<!-- -->
+<ul>
+<li>Тип: персональная;</li>
+<li>Суммируется;</li>
+<li>Величина скидки на доставку: 100%.</li>
 </ul>
 </li>
-<li>В разделе “Маркетинг / Скидки” создаем три скидки со следующими характеристиками:<!-- -->
+</ol>
+<ul>
+<li><img loading="lazy" src="/assets/images/groups15-961375ca1c3aa9eda70e1156603e83bd.png" width="934" height="53" class="img_ev3q"></li>
+</ul>
+<ol start="3">
+<li>В новой скидке во вкладке “Клиенты” добавляем ранее созданную группу.</li>
+</ol>
+<ul>
+<li><img loading="lazy" src="/assets/images/groups16-081a404c296d686728a6b56a1f69fbe9.png" width="934" height="223" class="img_ev3q"></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="оплата-при-получении">Оплата при получении<a href="#оплата-при-получении" class="hash-link" aria-label="Direct link to Оплата при получении" title="Direct link to Оплата при получении">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="задача-4">Задача<a href="#задача-4" class="hash-link" aria-label="Direct link to Задача" title="Direct link to Задача">​</a></h4>
+<p>Настроить доступность оплаты при получении только тем клиентам, кто суммарно заказал на сумму более 3 000 ₽.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="решение-3">Решение<a href="#решение-3" class="hash-link" aria-label="Direct link to Решение" title="Direct link to Решение">​</a></h4>
+<ol>
+<li>Создаем группу “<strong>Проверенные клиенты</strong>” с автоматическим добавлением клиентов, оформивших заказы за весь период более чем на 3 000 ₽.</li>
+</ol>
+<ul>
+<li><img loading="lazy" src="/assets/images/groups09-b03a350d220be613c258429369d0fef6.png" width="934" height="516" class="img_ev3q"></li>
+</ul>
+<ol start="2">
+<li>В разделе “<strong>Настройка / Оплата</strong>” выбираем оплату при получении и устанавливаем ограничение по группам, задавая доступность для ранее созданной группы.</li>
+</ol>
+<ul>
+<li><img loading="lazy" src="/assets/images/groups10-0abaf163f1ec802ad06d3a5a8b750345.png" width="934" height="530" class="img_ev3q"></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="скидка-для-сотрудников">Скидка для сотрудников<a href="#скидка-для-сотрудников" class="hash-link" aria-label="Direct link to Скидка для сотрудников" title="Direct link to Скидка для сотрудников">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="задача-5">Задача<a href="#задача-5" class="hash-link" aria-label="Direct link to Задача" title="Direct link to Задача">​</a></h4>
+<p>Настроить скидку 20% для сотрудников на весь ассортимент.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="решение-4">Решение<a href="#решение-4" class="hash-link" aria-label="Direct link to Решение" title="Direct link to Решение">​</a></h4>
+<ol>
+<li>Создаем группу “<strong>Сотрудники</strong>” со стратегией “Добавлять сотрудников автоматически”. В нее попадут глобальные администраторы компании и сотрудники с любой ролью доступа к данному сайту.</li>
+</ol>
+<ul>
+<li><img loading="lazy" src="/assets/images/groups21-461becf79627760d12db0d430e520268.png" width="934" height="429" class="img_ev3q"></li>
+</ul>
+<ol start="2">
+<li>В разделе “<strong>Маркетинг / Скидки</strong>” создаем скидку со следующими характеристиками:<!-- -->
 <ul>
 <li>Тип: персональная;</li>
 <li>Не суммируется;</li>
-<li>Величина скидки на продукты: 10%, 20%, 30%.</li>
+<li>Величина скидки на продукты: 20%.</li>
 </ul>
 </li>
 </ol>
 <ul>
-<li><img loading="lazy" src="/assets/images/groups36-c242845c7604057e075f8e4d177f6700.png" width="934" height="158" class="img_ev3q"></li>
+<li><img loading="lazy" src="/assets/images/groups22-8e3144f4527f94a19290a238c35abb8e.png" width="934" height="53" class="img_ev3q"></li>
 </ul>
 <ol start="3">
-<li>В новых скидках во вкладке “Клиенты” добавляем соответствующие ранее созданные группы.</li>
+<li>В новой скидке во вкладке “Клиенты” добавляем ранее созданную группу.</li>
 </ol>
+<ul>
+<li><img loading="lazy" src="/assets/images/groups23-ecd87f1bc6c9e4e9cb04bbea344b9c80.png" width="934" height="262" class="img_ev3q"></li>
+</ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="скидка-в-день-регистрации">Скидка в день регистрации<a href="#скидка-в-день-регистрации" class="hash-link" aria-label="Direct link to Скидка в день регистрации" title="Direct link to Скидка в день регистрации">​</a></h3>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="задача-10">Задача<a href="#задача-10" class="hash-link" aria-label="Direct link to Задача" title="Direct link to Задача">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="задача-6">Задача<a href="#задача-6" class="hash-link" aria-label="Direct link to Задача" title="Direct link to Задача">​</a></h4>
 <p>Настроить скидку 20% на фотопечать в день регистрации.</p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="решение-9">Решение<a href="#решение-9" class="hash-link" aria-label="Direct link to Решение" title="Direct link to Решение">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="решение-5">Решение<a href="#решение-5" class="hash-link" aria-label="Direct link to Решение" title="Direct link to Решение">​</a></h4>
 <ol>
-<li>Создаем группу “Новички” с автоматическим добавление клиентов, зарегистрировавшихся за последний день.</li>
+<li>Создаем группу “<strong>Новички</strong>” с автоматическим добавление клиентов, зарегистрировавшихся за последний день.</li>
 </ol>
 <ul>
 <li><img loading="lazy" src="/assets/images/groups37-a4611d43ce60963e4a096f50d0f5dadd.png" width="934" height="422" class="img_ev3q"></li>
 </ul>
 <ol start="2">
-<li>В разделе “Маркетинг / Скидки” создаем скидку со следующими характеристиками:<!-- -->
+<li>В разделе “<strong>Маркетинг / Скидки</strong>” создаем скидку со следующими характеристиками:<!-- -->
 <ul>
 <li>Тип: персональная;</li>
 <li>Не суммируется;</li>
@@ -373,23 +293,23 @@
 </li>
 </ol>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="скидка-для-возврата-клиента">Скидка для возврата клиента<a href="#скидка-для-возврата-клиента" class="hash-link" aria-label="Direct link to Скидка для возврата клиента" title="Direct link to Скидка для возврата клиента">​</a></h3>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="задача-11">Задача<a href="#задача-11" class="hash-link" aria-label="Direct link to Задача" title="Direct link to Задача">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="задача-7">Задача<a href="#задача-7" class="hash-link" aria-label="Direct link to Задача" title="Direct link to Задача">​</a></h4>
 <p>Предложить клиенту скидку 20% на всю интерьерную печать через 3 месяца с момента последнего посещения сайта.</p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="решение-10">Решение<a href="#решение-10" class="hash-link" aria-label="Direct link to Решение" title="Direct link to Решение">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="решение-6">Решение<a href="#решение-6" class="hash-link" aria-label="Direct link to Решение" title="Direct link to Решение">​</a></h4>
 <ol>
-<li>В разделе “Маркетинг / Уведомления / Шаблоны” создаем собственное уведомление с информацией о предоставляемой клиенту скидке, которое дейс твует в течении 24 часов.</li>
+<li>В разделе “<strong>Маркетинг / Уведомления / Шаблоны</strong>” создаем собственное уведомление с информа цией о предоставляемой клиенту скидке, которое действует в течении 24 часов.</li>
 </ol>
 <ul>
 <li><img loading="lazy" src="/assets/images/groups40-1f7a7bf77a94c18291fea4bb6785b437.png" width="934" height="195" class="img_ev3q"></li>
 </ul>
 <ol start="2">
-<li>Создаем группу “Замершие” с автоматическим добавление клиентов, заходивших на сайт в последние 3 месяца, и выбираем созданное выше уведомление для отправки на факт исключения клиента из группы.</li>
+<li>Создаем группу “<strong>Замершие</strong>” с автоматическим добавление клиентов, заходивших на сайт в последние 3 месяца, и выбираем созданное выше уведомление для отправки на факт исключения клиента из группы.</li>
 </ol>
 <ul>
 <li><img loading="lazy" src="/assets/images/groups41-20b727c43670551ab2455488ae407fbb.png" width="934" height="448" class="img_ev3q"></li>
 </ul>
 <ol start="3">
-<li>В разделе “Маркетинг / Скидки” создаем скидку со следующими характеристиками:<!-- -->
+<li>В разделе “<strong>Маркетинг / Скидки</strong>” создаем скидку со следующими характеристиками:<!-- -->
 <ul>
 <li>Тип: персональная;</li>
 <li>Не суммируется;</li>
@@ -406,6 +326,86 @@
 </ol>
 <ul>
 <li><img loading="lazy" src="/assets/images/groups43-f08fb6926debb626ba8c498e14febc18.png" width="934" height="256" class="img_ev3q"></li>
-</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="theme-doc-footer-edit-meta-row row"><div class="col"><a href="https://github.com/Pixlpark/new-doc/tree/main/docs/customers/groups.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_vwxv"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/customers/b2b"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Организации</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/customers/settings"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Настройка</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#описание" class="table-of-contents__link toc-highlight">Описание</a></li><li><a href="#характеристики-группы" class="table-of-contents__link toc-highlight">Характеристики группы</a></li><li><a href="#примеры-использования" class="table-of-contents__link toc-highlight">Примеры использования</a><ul><li><a href="#автоматическая-печать" class="table-of-contents__link toc-highlight">Автоматическая печать</a></li><li><a href="#тестирование-приложения" class="table-of-contents__link toc-highlight">Тестирование приложения</a></li><li><a href="#оплата-при-получении" class="table-of-contents__link toc-highlight">Оплата при получении</a></li><li><a href="#перекрестные-продажи" class="table-of-contents__link toc-highlight">Перекрестные продажи</a></li><li><a href="#бесплатная-доставка" class="table-of-contents__link toc-highlight">Бесплатная доставка</a></li><li><a href="#актуальная-популярная-продукция" class="table-of-contents__link toc-highlight">Актуальная популярная продукция</a></li><li><a href="#скидка-для-сотрудников" class="table-of-contents__link toc-highlight">Скидка для сотрудников</a></li><li><a href="#оптовая-печать-фотографий" class="table-of-contents__link toc-highlight">Оптовая печать фотографий</a></li><li><a href="#оптовая-печать-фотокниг" class="table-of-contents__link toc-highlight">Оптовая печать фотокниг</a></li><li><a href="#накопительные-скидки" class="table-of-contents__link toc-highlight">Накопительные скидки</a></li><li><a href="#скидка-в-день-регистрации" class="table-of-contents__link toc-highlight">Скидка в день регистрации</a></li><li><a href="#скидка-для-возврата-клиента" class="table-of-contents__link toc-highlight">Скидка для возврата клиента</a></li></ul></li></ul></div></div></div></div></main></div></div></div></div>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="автоматическая-печать">Автоматическая печать<a href="#автоматическая-печать" class="hash-link" aria-label="Direct link to Автоматическая печать" title="Direct link to Автоматическая печать">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="задача-8">Задача<a href="#задача-8" class="hash-link" aria-label="Direct link to Задача" title="Direct link to Задача">​</a></h4>
+<p>Настроить автоматическую печать заказов до 10 000 ₽ от надежных клиентов.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="решение-7">Решение<a href="#решение-7" class="hash-link" aria-label="Direct link to Решение" title="Direct link to Решение">​</a></h4>
+<ol>
+<li>Создаем группу “<strong>Надежные клиенты</strong>” без автоматического добавления клиентов. По мере надобности включаем в нее пользователей, которых считаем надежными.</li>
+</ol>
+<ul>
+<li><img loading="lazy" src="/assets/images/groups05-5c7d69c46be9a34b71146f540a679fe5.png" width="934" height="446" class="img_ev3q"></li>
+</ul>
+<ol start="2">
+<li>В разделе “<strong>Заказы / Настройка / Правила автоматизации</strong>” создаем правило со следующими характеристиками:<!-- -->
+<ul>
+<li>Статус оплаты: Ожидать оплату;</li>
+<li>Время нахождения в статусе более: 30 мин. (чтобы у клиента было время для отмены заказа);</li>
+<li>Стоимость заказа: до 10 000 ₽;</li>
+<li>Действие: смена статуса заказа на “В печать”.</li>
+</ul>
+</li>
+<li>В новом правиле устанавливаем ограничение по группам, задавая доступность для ранее созданной группы.</li>
+</ol>
+<ul>
+<li><img loading="lazy" src="/assets/images/groups06-74aa3d65ef4c514d1569a642ff71a446.png" width="934" height="650" class="img_ev3q"></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="перекрестные-продажи">Перекрестные продажи<a href="#перекрестные-продажи" class="hash-link" aria-label="Direct link to Перекрестные продажи" title="Direct link to Перекрестные продажи">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="задача-9">Задача<a href="#задача-9" class="hash-link" aria-label="Direct link to Задача" title="Direct link to Задача">​</a></h4>
+<p>Выключить работу модуля перекрестных продаж для оптовых клиентов.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="решение-8">Решение<a href="#решение-8" class="hash-link" aria-label="Direct link to Решение" title="Direct link to Решение">​</a></h4>
+<ol>
+<li>В разделе “<strong>Маркетинг / Корзины / Настройка</strong>” устанавливаем ограничение по группам, задавая блокировку для групп оптовых клиентов.</li>
+</ol>
+<ul>
+<li><img loading="lazy" src="/assets/images/groups11-cdb516b9ac23d24d33d18d1db755a420.png" width="934" height="653" class="img_ev3q"></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="актуальная-популярная-продукция">Актуальная популярная продукция<a href="#актуальная-популярная-продукция" class="hash-link" aria-label="Direct link to Актуальная популярная продукция" title="Direct link to Актуальная популярная продукция">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="задача-10">Задача<a href="#задача-10" class="hash-link" aria-label="Direct link to Задача" title="Direct link to Задача">​</a></h4>
+<p>Для оптовых клиентов по фотопечати в блоке популярной продукции на главной выводить лишь товары из вкладки “Фотопечать”.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="решение-9">Решение<a href="#решение-9" class="hash-link" aria-label="Direct link to Решение" title="Direct link to Решение">​</a></h4>
+<ol>
+<li>В разделе “<strong>CMS / Страницы / Блоки</strong>” дублируем блок популярной продукции и задаем ему другое имя.</li>
+</ol>
+<ul>
+<li><img loading="lazy" src="/assets/images/groups17-0ff66c9a4e55872b5cdc62288c238fb6.png" width="934" height="259" class="img_ev3q"></li>
+</ul>
+<ol start="2">
+<li>В новом блоке изменяем разметку, оставляя лишь продукты из вкладки “Фотопечать”.</li>
+<li>Добавляем второй блок следом за первым в разметке главной страницы сайта.</li>
+</ol>
+<ul>
+<li><img loading="lazy" src="/assets/images/groups18-a7b89477b624c162759630ba169bda41.png" width="934" height="363" class="img_ev3q"></li>
+</ul>
+<ol start="4">
+<li>В исходном блоке устанавливаем ограничение по группам, задавая блокировку для группы оптовых клиентов.</li>
+</ol>
+<ul>
+<li><img loading="lazy" src="/assets/images/groups19-04ec3abc261f96721e91f1b488825745.png" width="934" height="402" class="img_ev3q"></li>
+</ul>
+<ol start="5">
+<li>В новом блоке устанавливаем ограничение по группам, задавая доступность для группы оптовых клиентов.Скидка для сотрудников</li>
+</ol>
+<ul>
+<li><img loading="lazy" src="/assets/images/groups20-e21e37b344ae7c01ed8d162944d3141d.png" width="934" height="407" class="img_ev3q"></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="тестирование-приложения">Тестирование приложения<a href="#тестирование-приложения" class="hash-link" aria-label="Direct link to Тестирование приложения" title="Direct link to Тестирование приложения">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="задача-11">Задача<a href="#задача-11" class="hash-link" aria-label="Direct link to Задача" title="Direct link to Задача">​</a></h4>
+<p>Настроить отправку пуш-уведомлений только тестировщикам компании.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="решение-10">Решение<a href="#решение-10" class="hash-link" aria-label="Direct link to Решение" title="Direct link to Решение">​</a></h4>
+<ol>
+<li>Создаем группу “<strong>Тестировщики</strong>” без автоматического добавления клиентов, в которую включаем пользователей, отвечающих за тестирование мобильного приложения.</li>
+</ol>
+<ul>
+<li><img loading="lazy" src="/assets/images/groups07-b9b7a7373a58640e322b45f359a001d2.png" width="934" height="431" class="img_ev3q"></li>
+</ul>
+<ol start="2">
+<li>В настройках мобильного приложения в разделе “<strong>Уведомления</strong>” создаем персональное уведомление с необходимыми характеристиками.</li>
+<li>В новом уведомлении устанавливаем ограничение по группам, задавая доступность для ранее созданной группы.</li>
+</ol>
+<ul>
+<li><img loading="lazy" src="/assets/images/groups08-3b522c66ab31c0a701ead381fd65aff5.png" width="934" height="548" class="img_ev3q"></li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="theme-doc-footer-edit-meta-row row"><div class="col"><a href="https://github.com/Pixlpark/new-doc/tree/main/docs/customers/groups.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_vwxv"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/customers/b2b"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Организации</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/customers/settings"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Настройка</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#описание" class="table-of-contents__link toc-highlight">Описание</a></li><li><a href="#характеристики-группы" class="table-of-contents__link toc-highlight">Характеристики группы</a></li><li><a href="#примеры-использования" class="table-of-contents__link toc-highlight">Примеры использования</a><ul><li><a href="#накопительные-скидки" class="table-of-contents__link toc-highlight">Накопительные скидки</a></li><li><a href="#оптовая-печать-фотографий" class="table-of-contents__link toc-highlight">Оптовая печать фотографий</a></li><li><a href="#оптовая-печать-фотокниг" class="table-of-contents__link toc-highlight">Оптовая печать фотокниг</a></li><li><a href="#бесплатная-доставка" class="table-of-contents__link toc-highlight">Бесплатная доставка</a></li><li><a href="#оплата-при-получении" class="table-of-contents__link toc-highlight">Оплата при получении</a></li><li><a href="#скидка-для-сотрудников" class="table-of-contents__link toc-highlight">Скидка для сотрудников</a></li><li><a href="#скидка-в-день-регистрации" class="table-of-contents__link toc-highlight">Скидка в день регистрации</a></li><li><a href="#скидка-для-возврата-клиента" class="table-of-contents__link toc-highlight">Скидка для возврата клиента</a></li><li><a href="#автоматическая-печать" class="table-of-contents__link toc-highlight">Автоматическая печать</a></li><li><a href="#перекрестные-продажи" class="table-of-contents__link toc-highlight">Перекрестные продажи</a></li><li><a href="#актуальная-популярная-продукция" class="table-of-contents__link toc-highlight">Актуальная популярная продукция</a></li><li><a href="#тестирование-приложения" class="table-of-contents__link toc-highlight">Тестирование приложения</a></li></ul></li></ul></div></div></div></div></main></div></div></div></div>
 </body>
 </html>
