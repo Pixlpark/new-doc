@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.0.1">
 <title data-rh="true">Подготовка макетов | Документация Pixlpark</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://docs.pixlpark.ru/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://docs.pixlpark.ru/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://docs.pixlpark.ru/design/psd"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Подготовка макетов | Документация Pixlpark"><meta data-rh="true" name="description" content="Спецификация подготовки PSD-макетов"><meta data-rh="true" property="og:description" content="Спецификация подготовки PSD-макетов"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://docs.pixlpark.ru/design/psd"><link data-rh="true" rel="alternate" href="https://docs.pixlpark.ru/design/psd" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.pixlpark.ru/design/psd" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://CBISSLUS3P-dsn.algolia.net" crossorigin="anonymous"><link rel="search" type="application/opensearchdescription+xml" title="Документация Pixlpark" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.a9fd1181.css">
-<script src="/assets/js/runtime~main.2bde6717.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.40e41421.js" defer="defer"></script>
 <script src="/assets/js/main.b93deb03.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -20,10 +20,11 @@
 <ul>
 <li><code>[template-preview]</code> – не отображает слой в редакторе, однако использует его в качестве обложки шаблона;</li>
 <li><code>[nonprintable]</code> – отображает слой в редакторе, но не включает его в итоговый файл для печати;</li>
+<li><code>[optional]</code> – если данный текстовый слой не был изменен пользователем в редакторе, он не будет отображаться в выходном изображении;</li>
 <li><code>[locked]</code> – запрещает перемещать или удалять слой в редакторе;</li>
 <li><code>[align:Top | TopRight | Right | BottomRight | Bottom | BottomLeft | Left | TopLeft| CenterLeft | CenterRight | TopCenter | BottomCenter]</code> – задает выравнивание слоя по одному из указанных значений. Например, <code>[align:Left]</code> и <code>[align:Right]</code> используется для графических элементов на обложке фотокниги, чтобы с ростом корешка они оставались на прежнем месте на странице;</li>
 <li><code>[background]</code> – считает слой фоновым, т.е. располагает ниже всех слоев и заполняет им всю зону печати (при необходимости пропорционально масштабируя);</li>
-<li><code>[foreground]</code> – считает слой обложкой, т.е. располагает поверх всех  слоев и запрещает с ним любые операции (редактирования, перемещения и удаления).</li>
+<li><code>[foreground]</code> – считает слой обложкой, т.е. располагает поверх всех слоев и запрещает с ним любые операции (редактирования, перемещения и удаления).</li>
 </ul>
 </li>
 <li>А для текстовых слоев помимо ключей можно использовать и префиксы, которые автоматически устанавливают значение слоя данными клиента:<!-- -->
@@ -125,7 +126,7 @@
 <li>В макете использовать следующие ключи:<!-- -->
 <ul>
 <li><code>[template-preview]</code> – группа растровых слоев в первом макете, не отображающаяся в редакторе, элементы которой используются в качестве обложки шаблона. Каждый слой группы соответствует определенному году и называется <code>[year]</code> (например, [2023]), где <strong>year</strong> - год, заданный в панели управления в разделе <a href="/print/designs?id=%D0%A1%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0-%D1%88%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD%D0%B0">&quot;Печать / Дизайны / Шаблоны / Настройка&quot;</a>.</li>
-<li><code>[calendar-title]</code> – текстовый слой, содержимое которого будет заменено на начальный год  календаря (например, использовать в слое <code>[template-preview]</code> для обложки);</li>
+<li><code>[calendar-title]</code> – текстовый слой, содержимое которого будет заменено на начальный год календаря (например, использовать в слое <code>[template-preview]</code> для обложки);</li>
 <li><code>[calendar-title-range]</code> – текстовый слой, содержимое которого будет заменено на начальный и конечный год календаря через дефис, если календарь создается на несколько лет;</li>
 <li><code>[calendar][path:pathName]</code> – графический слой, содержимое которого будет заменено на календарную сетку, а <strong>pathName</strong> – название контура, привязанного к данному слою.
 <img loading="lazy" src="/assets/images/CalendarCover-711fcf3c9b17b99d7d4388d973ae06d9.png" title=":size=70%" width="1219" height="983" class="img_ev3q">
@@ -151,7 +152,7 @@
 </li>
 <li>Для упрощения этой работы мы разработали технологию выпускных альбомов, суть которой заключается в следующем:<!-- -->
 <ul>
-<li>Макет содержит настройку, отвечающую за участие в автозаполнении при загрузке шаблона в редактор. Таким образом некоторые макеты можно исключить из дизайна по умолчанию.</li>
+<li>Макет содержит настройку, отвечающую за участие в автозаполнении при загрузке шаблона в редактор. Таким  образом некоторые макеты можно исключить из дизайна по умолчанию.</li>
 <li>Обычно в многостраничных альбомах последние развороты заполняются коллажами из фотографий. Поэтому, если количество макетов, участвующих в автозаполнении, меньше разворотов альбома, то следующие развороты циклично заполняются макетами без каких-либо рамок (а не всеми поряд). А уже в самом редакторе к таким макетам автоматически применяются коллажи, которые размещаются выше фонового слоя, но ниже всех остальных.</li>
 <li>Макет может содержать дизайн разворота с виньетками под различное количество учеников. Для этого все слои, относящиеся к определеному количеству учеников, размещаются в отдельных группах с наименованием <code>[students:n]</code>, где <strong>n</strong> - количество учеников (например: <code>[students:20]</code>). В редактор в этом случае будет подгружаться нужная раскладка учеников по заданному их количеству в модальном окне инициализации редактора.</li>
 <li>Макет может содержать следующие слои:<!-- -->
