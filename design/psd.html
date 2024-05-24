@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.0.1">
 <title data-rh="true">Подготовка макетов | Документация Pixlpark</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://docs.pixlpark.ru/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://docs.pixlpark.ru/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://docs.pixlpark.ru/design/psd"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Подготовка макетов | Документация Pixlpark"><meta data-rh="true" name="description" content="Спецификация подготовки PSD-макетов"><meta data-rh="true" property="og:description" content="Спецификация подготовки PSD-макетов"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://docs.pixlpark.ru/design/psd"><link data-rh="true" rel="alternate" href="https://docs.pixlpark.ru/design/psd" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.pixlpark.ru/design/psd" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://CBISSLUS3P-dsn.algolia.net" crossorigin="anonymous"><link rel="search" type="application/opensearchdescription+xml" title="Документация Pixlpark" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.a9fd1181.css">
-<script src="/assets/js/runtime~main.1e2a94a4.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.1f6491ea.js" defer="defer"></script>
 <script src="/assets/js/main.b93deb03.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -154,7 +154,8 @@
 <ul>
 <li>Макет содержит настройку, отвечающую за участие в автозаполнении при загрузке шаблона в редактор. Таким  образом некоторые макеты можно исключить из дизайна по умолчанию.</li>
 <li>Обычно в многостраничных альбомах последние развороты заполняются коллажами из фотографий. Поэтому, если количество макетов, участвующих в автозаполнении, меньше разворотов альбома, то следующие развороты циклично заполняются макетами без каких-либо рамок (а не всеми поряд). А уже в самом редакторе к таким макетам автоматически применяются коллажи, которые размещаются выше фонового слоя, но ниже всех остальных.</li>
-<li>Макет может содержать дизайн разворота с виньетками под различное количество учеников. Для этого все слои, относящиеся к определеному количеству учеников, размещаются в отдельных группах с наименованием <code>[students:n]</code>, где <strong>n</strong> - количество учеников (например: <code>[students:20]</code>). В редактор в этом случае будет подгружаться нужная раскладка учеников по заданному их количеству в модальном окне инициализации редактора. Аналогично дизайн может содержать разворот с учителями. В этом случае вместо <code>students</code> надо использовать ключ <code>teachers</code>.</li>
+<li>Макет может содержать дизайн разворота с виньетками под различное количество учеников. Для этого все слои, относящиеся к определеному количеству учеников, размещаются в отдельных группах с наименованием <code>[students:n]</code>, где <strong>n</strong> - количество учеников (например: <code>[students:20]</code>). В редактор в этом случае будет подгружаться нужная раскладка учеников по заданному их количеству в модальном окне инициализации редактора.</li>
+<li>Макет может содержать дизайн разворота с виньетками под различное количество учителей. По аналогии с предыдущим пунктом макет должен содержать группу с наименованием <code>[teachers:n]</code>, внутри кото рой будут группы учителей с наименованиями <code>[teacher]</code> (учитель), <code>[curator]</code> (классный руководитель) и <code>[director]</code> (директор).</li>
 <li>Макет может содержать следующие слои:<!-- -->
 <ul>
 <li><code>[school name]</code> - название школы;</li>
@@ -184,7 +185,7 @@
 </ul>
 </li>
 <li><img loading="lazy" src="/assets/images/photobook-trioPage-9255cfb0d2ff323dbdacc9cc6c3d298d.png" width="934" height="525" class="img_ev3q"></li>
-<li>Вы можете скачать <a href="https://pixlpark.ru//content/upload/download/template-photobooks-folding.rar" target="_blank" rel="noopener noreferrer"> пример шаблона</a> или <a href="https://demo.pixlpark.ru/printing/trio-photobooks/20x30/template-6867720/editor" target="_blank" rel="noopener noreferrer">посмотреть его в редакторе</a>.</li>
+<li>Вы можете скачать <a href="https://pixlpark.ru//content/upload/download/template-photobooks-folding.rar" target="_blank" rel="noopener noreferrer">пример шаблона</a> или <a href="https://demo.pixlpark.ru/printing/trio-photobooks/20x30/template-6867720/editor" target="_blank" rel="noopener noreferrer">посмотреть его в редакторе</a>.</li>
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="советы-по-работе-с-adobe-photoshop">Советы по работе с Adobe Photoshop<a href="#советы-по-работе-с-adobe-photoshop" class="hash-link" aria-label="Direct link to Советы по работе с Adobe Photoshop" title="Direct link to Советы по работе с Adobe Photoshop">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="создание-контура">Создание контура<a href="#создание-контура" class="hash-link" aria-label="Direct link to Создание контура" title="Direct link to Создание контура">​</a></h3>
@@ -193,7 +194,7 @@
 <ol>
 <li>Создать новый слой с уникальным именем в панели &quot;Контуры&quot; (например <code>&quot;path_N&quot;</code>).</li>
 <li>Выбрать инструмент &quot;Перо&quot; (горячая клавиша – &quot;P&quot;).</li>
-<li>Начертить контур с помощью пера так, чтобы последняя точка замыкалась с первой. При использовании слоя <code>[mask]</code>, точки нужно ставить примерно посередине самой рамки, чтобы она закрывала границы фотографии.</li>
+<li>Начертить контур с помощью пера так, чтобы последняя точка замыкалась с первой. При использовании слоя <code>[mask]</code>, точки нужно ставить примерно посередине самой рамки, чтобы она закрывала границ ы фотографии.</li>
 <li>Повторить эту операцию для каждой рамки в макете.</li>
 </ol>
 </li>
