@@ -144,7 +144,6 @@ const designEditorConfig = {
     },
     ui: {
         layoutMode: "auto",
-        //header: null
     },
     events: {
         onError: (error) => { onPxpError(error); },
@@ -190,9 +189,7 @@ function onPxpLoaded() {
         const container = document.getElementById('editorContainer');
         const designEditorConfig = {
         product: {
-            id: materialId, 
-            design: {
-            },
+            id: materialId,
         },
         auth: {
             getToken: () => {
@@ -207,7 +204,6 @@ function onPxpLoaded() {
         },
         ui: {
             layoutMode: "auto",
-            //header: null
         },
         events: {
             onError: (error) => { onPxpError(error); },
@@ -243,15 +239,15 @@ function onPxpError(error) {
 }
 // Изменение продукта в редакторе
 function updateMaterial(){
-			var fieldset = document.getElementById("materialSelector");
-			var materialId = [...fieldset.querySelectorAll("input")].find((input)=> input.checked).value;
-			if (materialId != null){
-				if (window.editor != null && window.editor.editor != null){
-					window.editor.editor.destroy();
-				}
-				initEditor(parseInt(materialId));
-			}	
-		}
+    var fieldset = document.getElementById("materialSelector");
+    var materialId = Array.from(fieldset.querySelectorAll("input")).find((input)=> input.checked).value;
+    if (materialId != null){
+	    if (window.editor != null && window.editor.editor != null){
+            window.editor.editor.destroy();
+        }
+		initEditor(parseInt(materialId));		
+    }
+}
 document.getElementById("materialSelector").addEventListener("change", updateMaterial);
 updateMaterial();
 ```
@@ -400,6 +396,19 @@ interface IVectorEditorSurfacePriceInfo {
     // Заполненность зоны печати
     isFilled: Boolean;
 }
+
+// Конфигурация дизайна
+interface IDesignEditorState {
+    // Идентификатор дизайна
+    id: number | null;
+    // Тип дизайна
+    type: 'cartItem' | 'design' | 'orderDetail'; // cartItem - позиция в корзине; design - дизайн из личного кабинета; orderDetail - позиция заказа
+    // Пароль от дизайна (если дизайн имеет общий доступ)
+    designPassphrase?: string;
+    // Название дизайна
+    title?: string | null;
+}
+
 ```
 
 ## Получение файлов к печати
