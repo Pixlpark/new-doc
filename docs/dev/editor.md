@@ -303,19 +303,28 @@ interface IDesignEditorConfig {
     // События редактора
     events?: {
         // Вызывается после того, как товар был добавлен в корзину.
-        onCartItemCreated?: (state: { redirectUrl: string; shoppingCartItemId: number; userId: number;}) => void,
+        onCartItemCreated?: (state: { redirectUrl: string; shoppingCartItemId: number; userId: number;}) => void
 
         // Вызывается при изменениях в редакторе
-        onStateChanged?: (event: HistoryEvent) => void,
+        onStateChanged?: (event: HistoryEvent) => void
 
         // Вызывается после того как редактор загружен и готов к работе
-        onReady?: () => void,
+        onReady?: () => void
 
         // Вызывается при изменении цены
-        onPriceChanged?: (newPrice: { totalPrice: number; totalPriceString: string; quantity: number; }) => void,
+        onPriceChanged?: (newPrice: { totalPrice: number; totalPriceString: string; quantity: number; }) => void
 
         // Вызывается при возникновении непредвиденной ошибки
-        onError?: (error: string) => void,
+        onError?: (error: string) => void
+
+        // Вызывается при смене продукта
+        onMaterialChange: (currentMaterialId: number) => void
+
+        // Вызывается при возникновении непредвиденной ошибки в момент получения дизайна
+        onLoadStateFailed: (designId: number) => void
+
+        // Вызывается при сохранении дизайна
+        onProjectSave: (designId: number) => void
     },
 
     // Настройка товара
