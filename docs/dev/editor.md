@@ -318,13 +318,13 @@ interface IDesignEditorConfig {
         onError?: (error: string) => void
 
         // Вызывается при смене продукта
-        onMaterialChange: (currentMaterialId: number) => void
+        onMaterialChange?: (currentMaterialId: number) => void
 
         // Вызывается при возникновении непредвиденной ошибки в момент получения дизайна
-        onLoadStateFailed: (designId: number) => void
+        onLoadStateFailed?: (designId: number) => void
 
         // Вызывается при сохранении дизайна
-        onProjectSave: (designId: number) => void
+        onProjectSave?: (designId: number) => void
     },
 
     // Настройка товара
