@@ -1,7 +1,7 @@
 ---
 title: Файлы
 description: Загрузка файлов для использования на страницах сайта
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 # Менеджер файлов

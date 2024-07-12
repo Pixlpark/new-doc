@@ -1,7 +1,7 @@
 ---
 title: Дизайн
 description: Загрузка логотипа, иконки и задание цветовой схемы сайта
-sidebar_position: 4
+sidebar_position: 5
 ---
 
 # Дизайн сайта

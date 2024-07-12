@@ -1,7 +1,7 @@
 ---
 title: Настройка
 description: Настройка работы модуля CMS на сайте
-sidebar_position: 6
+sidebar_position: 7
 ---
 
 

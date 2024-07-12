@@ -1,7 +1,7 @@
 ---
 title: Языки
 description: Добавление нескольких языков на сайт
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # Языки сайта
