@@ -2226,3 +2226,45 @@ h2#Создание-har-файла,
 ol ol, ul ol {
   list-style-type: auto;
 }
+
+/* calc */
+.totalPriceContainer .totalPriceContainerInner .price-total-without-discount {
+  display: inline;
+}
+.totalPriceContainer .price-total-without-discount {
+  color: #888;
+  text-decoration: line-through;
+  margin: 0 6px;
+  font-size: 13px;
+}
+#pxpProducCalc .pxp-total-price .sticky-block .info.price-button {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  flex-direction: row-reverse;
+}
+@media screen and (min-width: 601px) {
+  #pxpProducCalc .pxp-total-price .sticky-block .info .total-price__formatted {
+      display: block !important;
+      font-size: 24px;
+      color: black;
+  }
+}
+@media screen and (min-width: 601px) {
+  #pxpProducCalc .pxp-total-price .sticky-block .info .customContinueButton {
+      width: 33.3333%;
+      max-width: 120px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+  }
+}
+@media screen and (min-width: 601px) {
+  #pxpProducCalc .pxp-total-price .sticky-block .info .btn.customContinueButton>span {
+      display: none;
+  }
+}
+/*  */
