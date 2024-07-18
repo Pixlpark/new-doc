@@ -15,6 +15,11 @@ sidebar_position: 7
 * `[$fullPath$]` - значение константы локализации, где fullPath - ее путь.
 * `[$appLinks$]` - кнопки мобильных приложений со ссылкаминаних в Google Play и App Store.
 
+### Доставка
+* `[$delivery:external$]` - карта со всеми способами доставки.
+* `[$delivery:pickPointMap$]` - карта с собственными точками выдачи.
+* `[$delivery:locationSelector$]` - выбор города в шапке сайта.
+
 ### Категория
 * `[$categories(group:photobooks)$]` - список категорий печати с URL группы __photobooks__.
 * `[$categories(isPopular:true, max:8)$]` - список из 8 популярных групп печати, упорядоченных по порядку панели управления.
