@@ -51,7 +51,7 @@ sidebar_position: 7
 * `[$requisite:account$]` - расчетный счет.
 * `[$requisite:correspondent_account$]` - корреспондентский счёт.
 * `[$requisite:legal_address$]` - юридический адрес.
-* `[$requisite:postal_address$]` - юридический адрес.
+* `[$requisite:postal_address$]` - почтовый адрес.
 * `[$requisite:stamp_url$]` - ссылка на иллюстрацию епечати.
 * `[$requisite:signature_url$]` - ссылка на иллюстрацию подписи.
 
