@@ -16,7 +16,7 @@ sidebar_position: 7
 * `[$appLinks$]` - кнопки мобильных приложений со ссылкаминаних в Google Play и App Store.
 
 ### Категория
-* `[$categories(group:photobooks)$]` - список категорий печати группы с URL __photobooks__.
+* `[$categories(group:photobooks)$]` - список категорий печати с URL группы __photobooks__.
 * `[$categories(isPopular:true, max:8)$]` - список из 8 популярных групп печати, упорядоченных по порядку панели управления.
 * `[$calculator(category:cUrl, product:pUrl, config:view)$]` - калькулятор для категории печати, где:
     + cUrl - адрес категории (обязательный параметр);
@@ -41,7 +41,7 @@ sidebar_position: 7
 * `[$websiteLogo$]` - абсолютная ссылка на логотип сайта из раздела “__CMS / Дизайн__”.
 
 ### Реквизиты
-* `[$requisite:name$]` - название юридического лица.
+* `[$requisite:name$]` - название юридического лица из раздела "__Настройка / Оплата / Реквизиты__".
 * `[$requisite:owner_full_name$]` - директор.
 * `[$requisite:kpp$]` - КПП.
 * `[$requisite:inn$]` - ИНН.
