@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.0.1">
 <title data-rh="true">FAQ | Документация Pixlpark</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://docs.pixlpark.ru/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://docs.pixlpark.ru/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://docs.pixlpark.ru/cms/faq"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="FAQ | Документация Pixlpark"><meta data-rh="true" name="description" content="Ответы на популярные вопросы по работе с разделом"><meta data-rh="true" property="og:description" content="Ответы на популярные вопросы по работе с разделом"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://docs.pixlpark.ru/cms/faq"><link data-rh="true" rel="alternate" href="https://docs.pixlpark.ru/cms/faq" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.pixlpark.ru/cms/faq" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://CBISSLUS3P-dsn.algolia.net" crossorigin="anonymous"><link rel="search" type="application/opensearchdescription+xml" title="Документация Pixlpark" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.b0b92ecc.css">
-<script src="/assets/js/runtime~main.b4782b4e.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.a3d29499.js" defer="defer"></script>
 <script src="/assets/js/main.2344abe5.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -26,32 +26,9 @@
 <li><code>[$delivery:pickPointMap$]</code> - карта с собственными точками выдачи.</li>
 <li><code>[$delivery:locationSelector$]</code> - выбор города в шапке сайта.</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="категория">Категория<a href="#категория" class="hash-link" aria-label="Direct link to Категория" title="Direct link to Категория">​</a></h3>
-<ul>
-<li><code>[$categories(group:photobooks)$]</code> - список категорий печати, где <strong>photobooks</strong> - URL группы категорий.</li>
-<li><code>[$categories(isPopular:true, max:8)$]</code> - список из 8 популярных групп печати, упорядоченных по порядку панели управления.</li>
-<li><code>[$calculator(category:cUrl, product:pUrl, config:view)$]</code> - калькулятор для категории печати, где:<!-- -->
-<ul>
-<li>cUrl - адрес категории (обязательный параметр);</li>
-<li>pUrl - адрес продукта, который будет выбран по умолчанию (опциональный параметр);</li>
-<li>view - название представления калькулятора (опциональный параметр).</li>
-</ul>
-</li>
-<li><code>[$price(category:cUrl, product:pUrl, quantity:qVal, page:pVal, surface: sVal, zone: zVal)$]</code> - стоимость продукта без учета опций, где:<!-- -->
-<ul>
-<li>cUrl и pUrl - описаны выше (обязательные параметры);</li>
-<li>qVal - количество продуктов (опциональный параметр, по умолчанию = 1);</li>
-<li>pVal - количество поверхностей печати (опциональный параметр, по умолчанию = 1);</li>
-<li>sVal и zVal - порядковые номера поверхности и зоны печати, для которых нужно произвести расчет стоимости; используется вместе и без параметра “page”; например, если требуется рассчитать стоимость печати футболки на спине А4  (опциональные параметры).</li>
-</ul>
-</li>
-<li><code>[$ priceWithCustomWorks(category:cUrl, product:pUrl, qantity:qVal, page:pVal, surface: sVal, zone: zVal)$]</code> - стоимость продукта с учетом обязательных опций.</li>
-<li><code>[$ pricePerItem(category:cUrl, product:pUrl, qantity:qVal, page:pVal, surface: sVal, zone: zVal)$]</code> - стоимость единицы продукта без учета опций.</li>
-<li><code>[$ priceString(...)$], [$ priceWithCustomWorksString(...)$], [$ pricePerItemString(...)$]</code> - стоимость вместе с валютой сайта.</li>
-</ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="контакты">Контакты<a href="#контакты" class="hash-link" aria-label="Direct link to Контакты" title="Direct link to Контакты">​</a></h3>
 <ul>
-<li><code>[$websiteTitle$]</code> - название бренда из раздела “<strong>Настройка / Регион → Контакты</strong>”.</li>
+<li><code>[$websiteTitle$]</code> - название бренда из раздела “<strong> Настройка / Регион → Контакты</strong>”.</li>
 <li><code>[$websiteCity$]</code> - город из раздела “Настройка / Регион → Контакты”.</li>
 <li><code>[$websiteAddress$]</code> - адрес из раздела “Настройка / Регион → Контакты”.</li>
 <li><code>[$websiteEmail$]</code> - эл. почта из раздела “Настройка / Регион → Контакты”.</li>
@@ -71,9 +48,37 @@
 <li><code>[$requisite:account$]</code> - расчетный счет.</li>
 <li><code>[$requisite:correspondent_account$]</code> - корреспондентский счёт.</li>
 <li><code>[$requisite:legal_address$]</code> - юридический адрес.</li>
-<li><code>[$requisite:postal_address$]</code> - почтовый адрес.</li>
+<li><code>[$requisite:postal_address$]</code> -  почтовый адрес.</li>
 <li><code>[$requisite:stamp_url$]</code> - ссылка на иллюстрацию епечати.</li>
 <li><code>[$requisite:signature_url$]</code> - ссылка на иллюстрацию подписи.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="магазин">Магазин<a href="#магазин" class="hash-link" aria-label="Direct link to Магазин" title="Direct link to Магазин">​</a></h3>
+<ul>
+<li><code>[$gifts$]</code> - список категорий и подкатегорий из раздела &quot;<strong>Магазин / Сувениры</strong>&quot; без функции поиска.</li>
+<li><code>[$gifts(isSearchable:true)$]</code> - список категорий и подкатегорий из раздела с функцией поиска.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="печать">Печать<a href="#печать" class="hash-link" aria-label="Direct link to Печать" title="Direct link to Печать">​</a></h3>
+<ul>
+<li><code>[$categories(group:photobooks)$]</code> - список категорий печати из раздела &quot;<strong>Печать / Продукты</strong>&quot;, где <strong>photobooks</strong> - URL группы категорий.</li>
+<li><code>[$categories(isPopular:true, max:8)$]</code> - список из 8 популярных групп печати, упорядоченных по порядку панели управления.</li>
+<li><code>[$calculator(category:cUrl, product:pUrl, config:view)$]</code> - калькулятор для категории печати, где:<!-- -->
+<ul>
+<li>cUrl - адрес категории (обязательный параметр);</li>
+<li>pUrl - адрес продукта, который будет выбран по умолчанию (опциональный параметр);</li>
+<li>view - название представления калькулятора (опционал ьный параметр).</li>
+</ul>
+</li>
+<li><code>[$price(category:cUrl, product:pUrl, quantity:qVal, page:pVal, surface: sVal, zone: zVal)$]</code> - стоимость продукта без учета опций, где:<!-- -->
+<ul>
+<li>cUrl и pUrl - описаны выше (обязательные параметры);</li>
+<li>qVal - количество продуктов (опциональный параметр, по умолчанию = 1);</li>
+<li>pVal - количество поверхностей печати (опциональный параметр, по умолчанию = 1);</li>
+<li>sVal и zVal - порядковые номера поверхности и зоны печати, для которых нужно произвести расчет стоимости; используется вместе и без параметра “page”; например, если требуется рассчитать стоимость печати футболки на спине А4  (опциональные параметры).</li>
+</ul>
+</li>
+<li><code>[$ priceWithCustomWorks(category:cUrl, product:pUrl, qantity:qVal, page:pVal, surface: sVal, zone: zVal)$]</code> - стоимость продукта с учетом обязательных опций.</li>
+<li><code>[$ pricePerItem(category:cUrl, product:pUrl, qantity:qVal, page:pVal, surface: sVal, zone: zVal)$]</code> - стоимость единицы продукта без учета опций.</li>
+<li><code>[$ priceString(...)$], [$ priceWithCustomWorksString(...)$], [$ pricePerItemString(...)$]</code> - стоимость вместе с валютой сайта.</li>
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="как-подключить-онлайн-чат-на-сайт">Как подключить онлайн-чат на сайт<a href="#как-подключить-онлайн-чат-на-сайт" class="hash-link" aria-label="Direct link to Как подключить онлайн-чат на сайт" title="Direct link to Как подключить онлайн-чат на сайт">​</a></h2>
 <ul>
@@ -99,9 +104,9 @@
 <li>Подробнее о форматировании маски можно прочитать в соответствующем <a href="/cms/pages#%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BC%D0%B0%D1%81%D0%BA%D0%B8-%D1%81%D0%BB%D0%BE%D1%8F">разделе документации</a>.</li>
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="видеоуроки">Видеоуроки<a href="#видеоуроки" class="hash-link" aria-label="Direct link to Видеоуроки" title="Direct link to Видеоуроки">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="редактирование-страниц-сайта">Редактирование страниц сайта<a href="#редактирование-страниц-сайта" class="hash-link" aria-label="Direct link to Редактирование стр аниц сайта" title="Direct link to Редактирование страниц сайта">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="редактирование-страниц-сайта">Редактирование страниц сайта<a href="#редактирование-страниц-сайта" class="hash-link" aria-label="Direct link to Редактирование страниц сайта" title="Direct link to Редактирование страниц сайта">​</a></h3>
 <iframe width="840" height="473" src="https://www.youtube.com/embed/oz3NFaSBWAs?si=yO56YYUXjStnTvnr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="как-подключить-онлайн-чат-на-сайт-1">Как подключить онлайн-чат на сайт<a href="#как-подключить-онлайн-чат-на-сайт-1" class="hash-link" aria-label="Direct link to Как подключить онлайн-чат на сайт" title="Direct link to Как подключить онлайн-чат на сайт">​</a></h3>
-<iframe width="840" height="473" src="https://www.youtube.com/embed/fwO_SiWLUTA?si=ainvKvJ5NqErVvWk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="theme-doc-footer-edit-meta-row row"><div class="col"><a href="https://github.com/Pixlpark/new-doc/tree/main/docs/cms/faq.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_vwxv"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/cms/files"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Файлы</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/cms/settings"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Настройка</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#как-использовать-константы" class="table-of-contents__link toc-highlight">Как использовать константы</a><ul><li><a href="#cms" class="table-of-contents__link toc-highlight">CMS</a></li><li><a href="#доставка" class="table-of-contents__link toc-highlight">Доставка</a></li><li><a href="#категория" class="table-of-contents__link toc-highlight">Категория</a></li><li><a href="#контакты" class="table-of-contents__link toc-highlight">Контакты</a></li><li><a href="#реквизиты" class="table-of-contents__link toc-highlight">Реквизиты</a></li></ul></li><li><a href="#как-подключить-онлайн-чат-на-сайт" class="table-of-contents__link toc-highlight">Как подключить онлайн-чат на сайт</a></li><li><a href="#видеоуроки" class="table-of-contents__link toc-highlight">Видеоуроки</a><ul><li><a href="#редактирование-страниц-сайта" class="table-of-contents__link toc-highlight">Редактирование страниц сайта</a></li><li><a href="#как-подключить-онлайн-чат-на-сайт-1" class="table-of-contents__link toc-highlight">Как подключить онлайн-чат на сайт</a></li></ul></li></ul></div></div></div></div></main></div></div></div></div>
+<iframe width="840" height="473" src="https://www.youtube.com/embed/fwO_SiWLUTA?si=ainvKvJ5NqErVvWk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="theme-doc-footer-edit-meta-row row"><div class="col"><a href="https://github.com/Pixlpark/new-doc/tree/main/docs/cms/faq.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_vwxv"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/cms/files"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Файлы</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/cms/settings"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Настройка</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#как-использовать-константы" class="table-of-contents__link toc-highlight">Как использовать константы</a><ul><li><a href="#cms" class="table-of-contents__link toc-highlight">CMS</a></li><li><a href="#доставка" class="table-of-contents__link toc-highlight">Доставка</a></li><li><a href="#контакты" class="table-of-contents__link toc-highlight">Контакты</a></li><li><a href="#реквизиты" class="table-of-contents__link toc-highlight">Реквизиты</a></li><li><a href="#магазин" class="table-of-contents__link toc-highlight">Магазин</a></li><li><a href="#печать" class="table-of-contents__link toc-highlight">Печать</a></li></ul></li><li><a href="#как-подключить-онлайн-чат-на-сайт" class="table-of-contents__link toc-highlight">Как подключить онлайн-чат на сайт</a></li><li><a href="#видеоуроки" class="table-of-contents__link toc-highlight">Видеоуроки</a><ul><li><a href="#редактирование-страниц-сайта" class="table-of-contents__link toc-highlight">Редактирование страниц сайта</a></li><li><a href="#как-подключить-онлайн-чат-на-сайт-1" class="table-of-contents__link toc-highlight">Как подключить онлайн-чат на сайт</a></li></ul></li></ul></div></div></div></div></main></div></div></div></div>
 </body>
 </html>
