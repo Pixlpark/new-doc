@@ -31,13 +31,13 @@ sidebar_position: 7
 
 ### Реквизиты
 * `[$requisite:name$]` - название юридического лица из раздела "__Настройка / Оплата / Реквизиты__".
-* `[$requisite:owner_full_name$]` - директор.
+* `[$requisite:ceo$]` - директор.
 * `[$requisite:kpp$]` - КПП.
 * `[$requisite:inn$]` - ИНН.
 * `[$requisite:ogrn$]` - ОГРН.
-* `[$requisite:bank_name$]` - наименование банка.
+* `[$requisite:bank$]` - наименование банка.
 * `[$requisite:bic$]` - БИК.
-* `[$requisite:account$]` - расчетный счет.
+* `[$requisite:payment_account$]` - расчетный счет.
 * `[$requisite:correspondent_account$]` - корреспондентский счёт.
 * `[$requisite:legal_address$]` - юридический адрес.
 * `[$requisite:postal_address$]` - почтовый адрес.
