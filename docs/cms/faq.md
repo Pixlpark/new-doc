@@ -37,12 +37,12 @@ sidebar_position: 7
 * `[$requisite:ogrn$]` - ОГРН.
 * `[$requisite:bank$]` - наименование банка.
 * `[$requisite:bic$]` - БИК.
-* `[$requisite:payment_account$]` - расчетный счет.
-* `[$requisite:correspondent_account$]` - корреспондентский счёт.
-* `[$requisite:legal_address$]` - юридический адрес.
-* `[$requisite:postal_address$]` - почтовый адрес.
-* `[$requisite:stamp_url$]` - ссылка на иллюстрацию епечати.
-* `[$requisite:signature_url$]` - ссылка на иллюстрацию подписи.
+* `[$requisite:paymentAccount$]` - расчетный счет.
+* `[$requisite:correspondentAccount$]` - корреспондентский счёт.
+* `[$requisite:legalAddress$]` - юридический адрес.
+* `[$requisite:postalAddress$]` - почтовый адрес.
+* `[$requisite:stampUrl$]` - ссылка на иллюстрацию епечати.
+* `[$requisite:signatureUrl$]` - ссылка на иллюстрацию подписи.
 
 ### Магазин
 * `[$shop$]` - список категорий из раздела "__Магазин / Продукты__".
@@ -55,6 +55,7 @@ sidebar_position: 7
 ### Печать
 * `[$categories(group:photobooks)$]` - список категорий печати из раздела "__Печать / Продукты__", где __photobooks__ - URL группы категорий.
 * `[$categories(isPopular:true, max:8)$]` - список из 8 популярных групп печати, упорядоченных по порядку панели управления.
+* `[$ categoryCover(prints) $]` - иллюстрация обложки категории, где __prints__ - URL категории.
 * `[$calculator(category:cUrl, product:pUrl, config:view)$]` - калькулятор для категории печати, где:
     + cUrl - адрес категории (обязательный параметр);
     + pUrl - адрес продукта, который будет выбран по умолчанию (опциональный параметр);
