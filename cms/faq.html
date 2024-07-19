@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.0.1">
 <title data-rh="true">FAQ | Документация Pixlpark</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://docs.pixlpark.ru/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://docs.pixlpark.ru/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://docs.pixlpark.ru/cms/faq"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="FAQ | Документация Pixlpark"><meta data-rh="true" name="description" content="Ответы на популярные вопросы по работе с разделом"><meta data-rh="true" property="og:description" content="Ответы на популярные вопросы по работе с разделом"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://docs.pixlpark.ru/cms/faq"><link data-rh="true" rel="alternate" href="https://docs.pixlpark.ru/cms/faq" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.pixlpark.ru/cms/faq" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://CBISSLUS3P-dsn.algolia.net" crossorigin="anonymous"><link rel="search" type="application/opensearchdescription+xml" title="Документация Pixlpark" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.b0b92ecc.css">
-<script src="/assets/js/runtime~main.63a572dd.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.af9ee6d2.js" defer="defer"></script>
 <script src="/assets/js/main.2344abe5.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -39,16 +39,16 @@
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="реквизиты">Реквизиты<a href="#реквизиты" class="hash-link" aria-label="Direct link to Реквизиты" title="Direct link to Реквизиты">​</a></h3>
 <ul>
 <li><code>[$requisite:name$]</code> - название юридического лица из раздела &quot;<strong>Настройка / Оплата / Реквизиты</strong>&quot;.</li>
-<li><code>[$requisite:owner_full_name$]</code> - директор.</li>
+<li><code>[$requisite:ceo$]</code> - директор.</li>
 <li><code>[$requisite:kpp$]</code> - КПП.</li>
 <li><code>[$requisite:inn$]</code> - ИНН.</li>
 <li><code>[$requisite:ogrn$]</code> - ОГРН.</li>
-<li><code>[$requisite:bank_name$]</code> - наименование банка.</li>
+<li><code>[$requisite:bank$]</code> - наименование банка.</li>
 <li><code>[$requisite:bic$]</code> - БИК.</li>
-<li><code>[$requisite:account$]</code> - расчетный счет.</li>
+<li><code>[$requisite:payment_account$]</code> - расчетный счет.</li>
 <li><code>[$requisite:correspondent_account$]</code> - корреспондентский счёт.</li>
 <li><code>[$requisite:legal_address$]</code> - юридический адрес.</li>
-<li><code>[$requisite:postal_address$]</code> -  почтовый адрес.</li>
+<li><code>[$requisite:postal_address$]</code> - почтовый адрес.</li>
 <li><code>[$requisite:stamp_url$]</code> - ссылка на иллюстрацию епечати.</li>
 <li><code>[$requisite:signature_url$]</code> - ссылка на иллюстрацию подписи.</li>
 </ul>
@@ -65,7 +65,7 @@
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="печать">Печать<a href="#печать" class="hash-link" aria-label="Direct link to Печать" title="Direct link to Печать">​</a></h3>
 <ul>
 <li><code>[$categories(group:photobooks)$]</code> - список категорий печати из раздела &quot;<strong>Печать / Продукты</strong>&quot;, где <strong>photobooks</strong> - URL группы категорий.</li>
-<li><code>[$categories(isPopular:true, max:8)$]</code> - список из 8 популярных групп печати, упорядоченных по порядку панели управления.</li>
+<li><code>[$categories(isPopular:true, max:8)$]</code> - список из 8 популярных групп печати, упорядоченных по порядку панели упра вления.</li>
 <li><code>[$calculator(category:cUrl, product:pUrl, config:view)$]</code> - калькулятор для категории печати, где:<!-- -->
 <ul>
 <li>cUrl - адрес категории (обязательный параметр);</li>
