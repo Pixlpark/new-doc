@@ -42,7 +42,7 @@ sidebar_position: 7
 * `[$requisite:correspondentAccount$]` - корреспондентский счёт.
 * `[$requisite:legalAddress$]` - юридический адрес.
 * `[$requisite:postalAddress$]` - почтовый адрес.
-* `[$requisite:stampUrl$]` - ссылка на иллюстрацию епечати.
+* `[$requisite:stampUrl$]` - ссылка на иллюстрацию печати.
 * `[$requisite:signatureUrl$]` - ссылка на иллюстрацию подписи.
 
 ### Магазин
