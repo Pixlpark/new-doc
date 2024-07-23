@@ -53,22 +53,36 @@ sidebar_position: 7
 * `[$gifts$]` - список категорий и подкатегорий из раздела "__Сувениры / Продукты__" без функции поиска.
 * `[$gifts(isSearchable:true)$]` - список категорий и подкатегорий с функцией поиска.
 
+### Дизайны
+* `templates(type:templates, category:cUrl, product:pUrl, title:"Дизайны", count:4)` - произвольные шаблоны из раздела "__Печать / Дизайны / Шаблоны__", где:
+    + cUrl - URL категории;
+    + pUrl  - URL продукта;
+    + Дизайны  - опциональный заголовок блока;
+    + 4 - количество шаблонов.
+* `templates(type:cliparts, category:cUrl, product:pUrl, title:"Дизайны", count:4)` - произвольные клипарты.
+
 ### Печать
-* `[$categories(group:photobooks)$]` - список категорий печати из раздела "__Печать / Продукты__", где __photobooks__ - URL группы категорий.
+* `[$categories(group:gUrl)$]` - список категорий печати из раздела "__Печать / Продукты__", где __gUrl__ - URL группы категорий.
 * `[$categories(isPopular:true, max:8)$]` - список из 8 популярных групп печати, упорядоченных по порядку панели управления.
-* `[$ categoryCover(prints) $]` - иллюстрация обложки категории, где __prints__ - URL категории.
-* `[$calculator(category:cUrl, product:pUrl, config:view)$]` - калькулятор для категории печати, где:
-    + cUrl - адрес категории (обязательный параметр);
-    + pUrl - адрес продукта, который будет выбран по умолчанию (опциональный параметр);
-    + view - название представления калькулятора (опциональный параметр).
+* `[$categoryCover(cUrl)$]` - обложка категории, где __cUrl__ - URL категории.
+* `[$getProductName(category:cUrl, product:pUrl)$]` - название продукта, __cUrl__ - URL категории, а __pUrl__ - URL продукта.
+* `[getAvailableProductUrl(category: cUrl)$]` ссылка на редактор для первого доступного продукта, где __cUrl__ - URL категории.
 * `[$price(category:cUrl, product:pUrl, quantity:qVal, page:pVal, surface: sVal, zone: zVal)$]` - стоимость продукта без учета опций, где:
     + cUrl и pUrl - описаны выше (обязательные параметры);
     + qVal - количество продуктов (опциональный параметр, по умолчанию = 1);
     + pVal - количество поверхностей печати (опциональный параметр, по умолчанию = 1);
     + sVal и zVal - порядковые номера поверхности и зоны печати, для которых нужно произвести расчет стоимости; используется вместе и без параметра “page”; например, если требуется рассчитать стоимость печати футболки на спине А4  (опциональные параметры).
-* `[$ priceWithCustomWorks(category:cUrl, product:pUrl, qantity:qVal, page:pVal, surface: sVal, zone: zVal)$]` - стоимость продукта с учетом обязательных опций.
-* `[$ pricePerItem(category:cUrl, product:pUrl, qantity:qVal, page:pVal, surface: sVal, zone: zVal)$]` - стоимость единицы продукта без учета опций.
-* `[$ priceString(...)$], [$ priceWithCustomWorksString(...)$], [$ pricePerItemString(...)$]` - стоимость вместе с валютой сайта.
+* `[$priceWithCustomWorks(category:cUrl, product:pUrl, qantity:qVal, page:pVal, surface: sVal, zone: zVal)$]` - стоимость продукта с учетом обязательных опций.
+* `[$pricePerItem(category:cUrl, product:pUrl, qantity:qVal, page:pVal, surface: sVal, zone: zVal)$]` - стоимость единицы продукта без учета опций.
+* `[$priceString(...)$], [$ priceWithCustomWorksString(...)$], [$ pricePerItemString(...)$]` - стоимость вместе с валютой сайта.
+* `[$calculator(category:cUrl, product:pUrl, config:view)$]` - калькулятор для категории печати, где:
+    + cUrl - URL категории (обязательный параметр);
+    + pUrl - URL продукта, который будет выбран по умолчанию (опциональный параметр);
+    + view - название представления калькулятора (опциональный параметр).
+* `[$axiomcalculator(category:cUrl, product:pUrl)$]` - калькулятор для категории печати с подключенной ERP Axiom.
+* `[$poly1ccalculator(category:cUrl, product:pUrl)$]` - калькулятор для категории печати с подключенной ERP 1С:Полиграфия.
+* `[$asystemcalculator(category:cUrl, product:pUrl)$]` - калькулятор для категории печати с подключенной ERP ASystem.
+* `[$helloprintcalculator(category:cUrl, product:pUrl)$]` - калькулятор для категории печати с подключенной ERP HelloPrint.
 
 ## Как подключить онлайн-чат на сайт
 * Для подключения онлайн-чата, виджета обратного звонка или другого подобного сервиса необходимо разместить код данного виджета во __втором поле__ раздела “__CMS / Страницы / Скрипты__”.
