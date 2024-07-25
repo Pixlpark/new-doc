@@ -61,6 +61,7 @@ sidebar_position: 7
     + Дизайны  - опциональный заголовок блока;
     + 4 - количество шаблонов.
 * `templates(type:cliparts, category:cUrl, product:pUrl, title:"Дизайны", count:4)` - произвольные клипарты.
+* `templates(type:pictures, category:cUrl, product:pUrl, title:"Дизайны", count:4)` - произвольные картины.
 
 ### Печать
 * `[$categories(group:gUrl)$]` - список категорий печати из раздела "__Печать / Продукты__", где __gUrl__ - URL группы категорий.
