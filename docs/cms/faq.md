@@ -61,13 +61,14 @@ sidebar_position: 7
     + "Дизайны"  - опциональный заголовок блока, который по умолчанию использует значение из локализации;
     + 4 - количество шаблонов.
 * `templates(type:cliparts, category:cUrl, product:pUrl, title:"Дизайны", count:4)` - произвольные клипарты.
+* `templates(type:pictures, category:cUrl, product:pUrl, title:"Дизайны", count:4)` - произвольные картины.
 
 ### Печать
 * `[$categories(group:gUrl)$]` - список категорий печати из раздела "__Печать / Продукты__", где __gUrl__ - URL группы категорий.
 * `[$categories(isPopular:true, max:8)$]` - список из 8 популярных групп печати, упорядоченных по порядку панели управления.
-* `[$categoryCover(cUrl)$]` - обложка категории, где __cUrl__ - URL категории.
-* `[$getProductName(category:cUrl, product:pUrl)$]` - название продукта, __cUrl__ - URL категории, а __pUrl__ - URL продукта.
-* `[getAvailableProductUrl(category: cUrl)$]` ссылка на редактор для первого доступного продукта, где __cUrl__ - URL категории.
+* `[$categoryCover(category:cUrl)$]` - обложка категории, где __cUrl__ - URL категории.
+* `[$categoryEditorUrl(category:cUrl)$]` ссылка на редактор, где __cUrl__ - URL категории.
+* `[$productName(category:cUrl, product:pUrl)$]` - название продукта, __cUrl__ - URL категории, а __pUrl__ - URL продукта.
 * `[$price(category:cUrl, product:pUrl, quantity:qVal, page:pVal, surface: sVal, zone: zVal)$]` - стоимость продукта без учета опций, где:
     + cUrl и pUrl - описаны выше (обязательные параметры);
     + qVal - количество продуктов (опциональный параметр, по умолчанию = 1);
