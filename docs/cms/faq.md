@@ -55,13 +55,13 @@ sidebar_position: 7
 * `[$gifts(isSearchable:true)$]` - список категорий и подкатегорий с функцией поиска.
 
 ### Дизайны
-* `templates(type:templates, category:cUrl, product:pUrl, title:"Дизайны", count:4)` - произвольные шаблоны из раздела "__Печать / Дизайны / Шаблоны__", где:
+* `[$templates(type:templates, category:cUrl, product:pUrl, title:"Дизайны", count:4)$]` - произвольные шаблоны из раздела "__Печать / Дизайны / Шаблоны__", где:
     + cUrl - URL категории;
     + pUrl  - URL продукта;
     + "Дизайны"  - опциональный заголовок блока, который по умолчанию использует значение из локализации;
     + 4 - количество шаблонов.
-* `templates(type:cliparts, category:cUrl, product:pUrl, title:"Дизайны", count:4)` - произвольные клипарты.
-* `templates(type:pictures, category:cUrl, product:pUrl, title:"Дизайны", count:4)` - произвольные картины.
+* `[$templates(type:cliparts, category:cUrl, product:pUrl, title:"Дизайны", count:4)$]` - произвольные клипарты.
+* `[$templates(type:pictures, category:cUrl, product:pUrl, title:"Дизайны", count:4)$]` - произвольные картины.
 
 ### Печать
 * `[$categories(group:gUrl)$]` - список категорий печати из раздела "__Печать / Продукты__", где __gUrl__ - URL группы категорий.
