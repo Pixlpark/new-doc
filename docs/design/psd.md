@@ -60,7 +60,7 @@ sidebar_position: 1
     1. Создать контур с именем **pathName** и привязать к слою `[collage:n]`.
 * Допустимо вместо `[collage:n]` использовать ключ `[collage]`. Тогда количество фотографий будет произвольным в соответствии с настройками категории. Коллаж будет вписан в растровый слой и заменит собой его содержимое.
 ![](../_media/design/photoCollage.png ':size=70%')
-* Вы можете скачать [пример макета](https://admin.pixlpark.com/content/pxp-template-download/18615422?secret=192996c433eb58e26487578f616b6668) или [посмотреть его в редакторе](https://demo.pixlpark.ru/printing/wall-calendars/a3-vert/template-6471446/editor).
+* Вы можете скачать [пример макета](https://admin.pixlpark.com/content/pxp-template-download/18664133?secret=a02739a6a3e1ca2e6d25483071a564fa) или [посмотреть его в редакторе](https://demo.pixlpark.ru/printing/wall-calendars/a3-vert/template-6471446/editor).
 
 ## Особенности макетов фотокниг
 * Общий механизм подготовки макетов позволяет создавать дизайны фотокниг, однако макеты в этом случае должны быть дообрезных размеров под каждый формат и тип книги, т.е. содержать область загиба, вылет и корешок по умолчанию.
