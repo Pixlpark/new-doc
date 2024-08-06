@@ -69,6 +69,7 @@ sidebar_position: 7
 * `[$categories(isPopular:true, max:8)$]` - список из 8 популярных групп печати, упорядоченных по порядку панели управления.
 * `[$categoryCover(category:cUrl)$]` - обложка категории, где __cUrl__ - URL категории.
 * `[$categoryDescription(category:cUrl)$]` - описание категории, где __cUrl__ - URL категории.
+* `[$categoryDescriptionExtended(category:cUrl)$]` - расширенное описание категории с иллюстрацией, где __cUrl__ - URL категории.
 * `[$categoryEditorUrl(category:cUrl)$]` ссылка на редактор, где __cUrl__ - URL категории.
 * `[$productName(category:cUrl, product:pUrl)$]` - название продукта, __cUrl__ - URL категории, а __pUrl__ - URL продукта.
 * `[$price(category:cUrl, product:pUrl, quantity:qVal, page:pVal, surface: sVal, zone: zVal)$]` - стоимость продукта без учета опций, где:
