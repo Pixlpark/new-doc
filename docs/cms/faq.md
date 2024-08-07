@@ -9,6 +9,7 @@ sidebar_position: 7
 ### CMS
 * `[$navigation(main)$]` - меню из раздела "__CMS / Навигация__", где __main__ - идентификатор навигации.
 * `[$slider(main)$]` - баннер из раздела "__CMS / Баннеры__", где __main__ - идентификатор баннера.
+* `[$slider(category:cUrl)$]` - баннер категории, где __cUrl__ - URL категории.
 * `[$fullPath$]` - значение константы локализации из раздела "__CMS / Локализация__", где __fullPath__ - ее путь.
 * `[$breadcrumbs$]` - хлебные крошки текущей страницы из раздела "__CMS / Страницы / Страницы__".
 * `[$portfolio(category:cUrl) $]` - примеры работ из раздела "__Фотогалерея / Иллюстрации__", где __cUrl__ - URL категории фотогалереи или категории печати.
@@ -68,7 +69,6 @@ sidebar_position: 7
 * `[$categories(groups)$]` - список категорий печати всех групп.
 * `[$categories(isPopular:true, max:8)$]` - список из 8 популярных групп печати, упорядоченных по порядку панели управления.
 * `[$categoryCover(category:cUrl)$]` - обложка категории, где __cUrl__ - URL категории.
-* `[$categorySlider(category:cUrl)$]` - баннер категории, где __cUrl__ - URL категории.
 * `[$categoryDescription(category:cUrl)$]` - описание категории, где __cUrl__ - URL категории.
 * `[$categoryDescriptionExtended(category:cUrl)$]` - расширенное описание категории с иллюстрацией, где __cUrl__ - URL категории.
 * `[$categoryEditorUrl(category:cUrl)$]` ссылка на редактор, где __cUrl__ - URL категории.
