@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.0.1">
 <title data-rh="true">FAQ | Документация Pixlpark</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://docs.pixlpark.ru/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://docs.pixlpark.ru/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://docs.pixlpark.ru/cms/faq"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="FAQ | Документация Pixlpark"><meta data-rh="true" name="description" content="Ответы на популярные вопросы по работе с разделом"><meta data-rh="true" property="og:description" content="Ответы на популярные вопросы по работе с разделом"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://docs.pixlpark.ru/cms/faq"><link data-rh="true" rel="alternate" href="https://docs.pixlpark.ru/cms/faq" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.pixlpark.ru/cms/faq" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://CBISSLUS3P-dsn.algolia.net" crossorigin="anonymous"><link rel="search" type="application/opensearchdescription+xml" title="Документация Pixlpark" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.b0b92ecc.css">
-<script src="/assets/js/runtime~main.d4916812.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.4d33c1b9.js" defer="defer"></script>
 <script src="/assets/js/main.2344abe5.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -14,6 +14,7 @@
 <ul>
 <li><code>[$navigation(main)$]</code> - меню из раздела &quot;<strong>CMS / Навигация</strong>&quot;, где <strong>main</strong> - идентификатор навигации.</li>
 <li><code>[$slider(main)$]</code> - баннер из раздела &quot;<strong>CMS / Баннеры</strong>&quot;, где <strong>main</strong> - идентификатор баннера.</li>
+<li><code>[$slider(category:cUrl)$]</code> - баннер категории, где <strong>cUrl</strong> - URL категории.</li>
 <li><code>[$fullPath$]</code> - значение константы локализации из раздела &quot;<strong>CMS / Локализация</strong>&quot;, где <strong>fullPath</strong> - ее путь.</li>
 <li><code>[$breadcrumbs$]</code> - хлебные крошки текущей страницы из раздела &quot;<strong>CMS / Страницы / Страницы</strong>&quot;.</li>
 <li><code>[$portfolio(category:cUrl) $]</code> - примеры работ из раздела &quot;<strong>Фотогалерея / Иллюстрации</strong>&quot;, где <strong>cUrl</strong> - URL категории фотогалереи или категории печати.</li>
@@ -38,7 +39,7 @@
 <li><code>[$websiteLogo$]</code> - абсолютная ссылка на логотип сайта из раздела “<strong>CMS / Дизайн</strong>”.</li>
 <li><code>[$websiteDomain$]</code> - доменное имя сайта из раздела “<strong>Настройка / Домены</strong>”.</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="реквизиты">Реквизиты<a href="#реквизиты" class="hash-link" aria-label="Direct link to Реквизиты" title="Direct link to Реквизиты"> ​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="реквизиты">Реквизиты<a href="#реквизиты" class="hash-link" aria-label="Direct link to Реквизиты" title="Direct link to Реквизиты">​</a></h3>
 <ul>
 <li><code>[$requisite:name$]</code> - название юридического лица из раздела &quot;<strong>Настройка / Оплата / Реквизиты</strong>&quot;.</li>
 <li><code>[$requisite:ceo$]</code> - директор.</li>
@@ -61,7 +62,7 @@
 </ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="сувениры">Сувениры<a href="#сувениры" class="hash-link" aria-label="Direct link to Сувениры" title="Direct link to Сувениры">​</a></h3>
 <ul>
-<li><code>[$gifts$]</code> - список категорий и подкатегорий из раздела &quot;<strong>Сувениры / П родукты</strong>&quot; без функции поиска.</li>
+<li><code>[$gifts$]</code> - список категорий и подкатегорий из раздела &quot;<strong>Сувениры / Продукты</strong>&quot; без функции поиска.</li>
 <li><code>[$gifts(isSearchable:true)$]</code> - список категорий и подкатегорий с функцией поиска.</li>
 </ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="дизайны">Дизайны<a href="#дизайны" class="hash-link" aria-label="Direct link to Дизайны" title="Direct link to Дизайны">​</a></h3>
@@ -81,9 +82,8 @@
 <ul>
 <li><code>[$categories(group:gUrl)$]</code> - список категорий печати из раздела &quot;<strong>Печать / Продукты</strong>&quot;, где <strong>gUrl</strong> - URL группы категорий.</li>
 <li><code>[$categories(groups)$]</code> - список категорий печати всех групп.</li>
-<li><code>[$categories(isPopular:true, max:8)$]</code> - спи сок из 8 популярных групп печати, упорядоченных по порядку панели управления.</li>
+<li><code>[$categories(isPopular:true, max:8)$]</code> - список из 8 популярных групп печати, упорядоченных по порядку панели управления.</li>
 <li><code>[$categoryCover(category:cUrl)$]</code> - обложка категории, где <strong>cUrl</strong> - URL категории.</li>
-<li><code>[$categorySlider(category:cUrl)$]</code> - баннер категории, где <strong>cUrl</strong> - URL категории.</li>
 <li><code>[$categoryDescription(category:cUrl)$]</code> - описание категории, где <strong>cUrl</strong> - URL категории.</li>
 <li><code>[$categoryDescriptionExtended(category:cUrl)$]</code> - расширенное описание категории с иллюстрацией, где <strong>cUrl</strong> - URL категории.</li>
 <li><code>[$categoryEditorUrl(category:cUrl)$]</code> ссылка на редактор, где <strong>cUrl</strong> - URL категории.</li>
@@ -93,7 +93,7 @@
 <li>cUrl и pUrl - описаны выше (обязательные параметры);</li>
 <li>qVal - количество продуктов (опциональный параметр, по умолчанию = 1);</li>
 <li>pVal - количество поверхностей печати (опциональный параметр, по умолчанию = 1);</li>
-<li>sVal и zVal - порядковые номера поверхности и зоны печати, для которых нужно произвести расчет стоимости; используется вместе и без параметра “page”; например, если требуется рассчитать стоимость печати футболки на спине А4  (опциональные параметры).</li>
+<li>sVal и zVal - порядковые номера поверхности и зоны печати, для которых нужно произвести расчет стоимости; используется вместе и без параметра “page”; например, если требуется рассчи тать стоимость печати футболки на спине А4  (опциональные параметры).</li>
 </ul>
 </li>
 <li><code>[$priceWithCustomWorks(category:cUrl, product:pUrl, qantity:qVal, page:pVal, surface: sVal, zone: zVal)$]</code> - стоимость продукта с учетом обязательных опций.</li>
@@ -131,7 +131,7 @@
 </ul>
 </li>
 <li><img loading="lazy" src="/assets/images/faq04-d992d9fdb0e1fbfe9e464eaa7f100a9c.png" width="934" height="247" class="img_ev3q"></li>
-<li>Например, на демо-сайте виджет онлайн-чата отображается на всех страницах кроме редактора. В этом случае в слое указывается маска: “<strong>-url(<em>/editor</em>)</strong>&quot;.</li>
+<li>Например, на демо-сайте виджет онлайн-чата отображается на всех страницах кроме редактора. В это м случае в слое указывается маска: “<strong>-url(<em>/editor</em>)</strong>&quot;.</li>
 <li>Подробнее о форматировании маски можно прочитать в соответствующем <a href="/cms/pages#%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BC%D0%B0%D1%81%D0%BA%D0%B8-%D1%81%D0%BB%D0%BE%D1%8F">разделе документации</a>.</li>
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="видеоуроки">Видеоуроки<a href="#видеоуроки" class="hash-link" aria-label="Direct link to Видеоуроки" title="Direct link to Видеоуроки">​</a></h2>
