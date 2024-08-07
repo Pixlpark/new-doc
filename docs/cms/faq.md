@@ -68,6 +68,7 @@ sidebar_position: 7
 * `[$categories(groups)$]` - список категорий печати всех групп.
 * `[$categories(isPopular:true, max:8)$]` - список из 8 популярных групп печати, упорядоченных по порядку панели управления.
 * `[$categoryCover(category:cUrl)$]` - обложка категории, где __cUrl__ - URL категории.
+* `[$categorySlider(category:cUrl)$]` - баннер категории, где __cUrl__ - URL категории.
 * `[$categoryDescription(category:cUrl)$]` - описание категории, где __cUrl__ - URL категории.
 * `[$categoryDescriptionExtended(category:cUrl)$]` - расширенное описание категории с иллюстрацией, где __cUrl__ - URL категории.
 * `[$categoryEditorUrl(category:cUrl)$]` ссылка на редактор, где __cUrl__ - URL категории.
