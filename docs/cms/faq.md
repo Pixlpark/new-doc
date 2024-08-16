@@ -69,7 +69,7 @@ sidebar_position: 7
 ### Печать
 * `[$categories(group:gUrl)$]` - список категорий печати из раздела "__Печать / Продукты__", где __gUrl__ - URL группы категорий.
 * `[$categories(groups)$]` - список категорий печати всех групп.
-* `[$categories(isPopular:true, max:8)$]` - список из 8 популярных групп печати, упорядоченных по порядку панели управления.
+* `[$categories(isPopular:true, max:N)$]` - список популярных групп печати в количестве N штук, упорядоченных по порядку панели управления.
 * `[$categoryCover(category:cUrl)$]` - обложка категории, где __cUrl__ - URL категории.
 * `[$categoryDescription(category:cUrl)$]` - описание категории, где __cUrl__ - URL категории.
 * `[$categoryDescriptionExtended(category:cUrl)$]` - расширенное описание категории с иллюстрацией, где __cUrl__ - URL категории.
