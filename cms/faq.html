@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.0.1">
 <title data-rh="true">FAQ | Документация Pixlpark</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://docs.pixlpark.ru/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://docs.pixlpark.ru/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://docs.pixlpark.ru/cms/faq"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="FAQ | Документация Pixlpark"><meta data-rh="true" name="description" content="Ответы на популярные вопросы по работе с разделом"><meta data-rh="true" property="og:description" content="Ответы на популярные вопросы по работе с разделом"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://docs.pixlpark.ru/cms/faq"><link data-rh="true" rel="alternate" href="https://docs.pixlpark.ru/cms/faq" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.pixlpark.ru/cms/faq" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://CBISSLUS3P-dsn.algolia.net" crossorigin="anonymous"><link rel="search" type="application/opensearchdescription+xml" title="Документация Pixlpark" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.b0b92ecc.css">
-<script src="/assets/js/runtime~main.0a307add.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.0843dbd4.js" defer="defer"></script>
 <script src="/assets/js/main.2344abe5.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -84,7 +84,7 @@
 <ul>
 <li><code>[$categories(group:gUrl)$]</code> - список категорий печати из раздела &quot;<strong>Печать / Продукты</strong>&quot;, где <strong>gUrl</strong> - URL группы категорий.</li>
 <li><code>[$categories(groups)$]</code> - список категорий печати всех групп.</li>
-<li><code>[$categories(isPopular:true, max:8)$]</code> - список из 8 популярных групп печати, упорядоченных по порядку панели управления.</li>
+<li><code>[$categories(isPopular:true, max:N)$]</code> - список популярных групп печати в количестве N штук, упорядоченных по порядку панели управления.</li>
 <li><code>[$categoryCover(category:cUrl)$]</code> - обложка категории, где <strong>cUrl</strong> - URL категории.</li>
 <li><code>[$categoryDescription(category:cUrl)$]</code> - описание категории, где <strong>cUrl</strong> - URL категории.</li>
 <li><code>[$categoryDescriptionExtended(category:cUrl)$]</code> - расширенное описание категории с иллюстрацией, где <strong>cUrl</strong> - URL категории.</li>
@@ -95,7 +95,7 @@
 <li>cUrl и pUrl - описаны выше (обязательные параметры);</li>
 <li>qVal - количество продуктов (опциональный параметр, по умолчанию = 1);</li>
 <li>pVal - количество поверхностей печати (опциональный параметр, по умолчанию = 1);</li>
-<li>sVal и zVal - порядковые номера п оверхности и зоны печати, для которых нужно произвести расчет стоимости; используется вместе и без параметра “page”; например, если требуется рассчитать стоимость печати футболки на спине А4  (опциональные параметры).</li>
+<li>sVal и zVal - поря дковые номера поверхности и зоны печати, для которых нужно произвести расчет стоимости; используется вместе и без параметра “page”; например, если требуется рассчитать стоимость печати футболки на спине А4  (опциональные параметры).</li>
 </ul>
 </li>
 <li><code>[$priceWithCustomWorks(category:cUrl, product:pUrl, qantity:qVal, page:pVal, surface: sVal, zone: zVal)$]</code> - стоимость продукта с учетом обязательных опций.</li>
@@ -110,7 +110,7 @@
 </li>
 <li><code>[$axiomcalculator(category:cUrl, product:pUrl)$]</code> - калькулятор для категории печати с подключенной ERP Axiom.</li>
 <li><code>[$poly1ccalculator(category:cUrl, product:pUrl)$]</code> - калькулятор для категории печати с подключенной ERP 1С:Полиграфия.</li>
-<li><code>[$asystemcalculator(category:cUrl, product:pUrl)$]</code> - калькулятор для категории печати с подключенной ERP ASystem.</li>
+<li><code>[$asystemcalculator(category:cUrl, product:pUrl)$]</code> - калькулятор для кате гории печати с подключенной ERP ASystem.</li>
 <li><code>[$helloprintcalculator(category:cUrl, product:pUrl)$]</code> - калькулятор для категории печати с подключенной ERP HelloPrint.</li>
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="как-подключить-онлайн-чат-на-сайт">Как подключить онлайн-чат на сайт<a href="#как-подключить-онлайн-чат-на-сайт" class="hash-link" aria-label="Direct link to Как подключить онлайн-чат на сайт" title="Direct link to Как подключить онлайн-чат на сайт">​</a></h2>
