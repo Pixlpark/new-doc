@@ -1,7 +1,7 @@
 ---
 title: FAQ
 description: Ответы на популярные вопросы по работе с разделом
-sidebar_position: 7
+sidebar_position: 9
 ---
 
 # Ответы на популярные вопросы
