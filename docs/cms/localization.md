@@ -1,7 +1,7 @@
 ---
 title: Локализация
 description: Редактирование различных фраз интерфейса сайта
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # Локализация сайта
