@@ -216,7 +216,7 @@ sidebar_position: 3
 ```
 
 ## 5. Калькулятор для мерча
-* Код интеграции для [продукции с готовым дизайном](#/print/merch):
+* Код интеграции для [продукции с готовым дизайном](https://docs.pixlpark.ru/print/merch):
 ```js
 <div id="merchCalculator"></div>
 <script src="https://demo.pixlpark.ru/api/categories/variant/external"></script>
