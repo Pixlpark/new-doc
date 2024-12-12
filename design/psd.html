@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.0.1">
 <title data-rh="true">Подготовка макетов | Документация Pixlpark</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://docs.pixlpark.ru/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://docs.pixlpark.ru/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://docs.pixlpark.ru/design/psd"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Подготовка макетов | Документация Pixlpark"><meta data-rh="true" name="description" content="Спецификация подготовки PSD-макетов"><meta data-rh="true" property="og:description" content="Спецификация подготовки PSD-макетов"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://docs.pixlpark.ru/design/psd"><link data-rh="true" rel="alternate" href="https://docs.pixlpark.ru/design/psd" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.pixlpark.ru/design/psd" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://CBISSLUS3P-dsn.algolia.net" crossorigin="anonymous"><link rel="search" type="application/opensearchdescription+xml" title="Документация Pixlpark" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.b0b92ecc.css">
-<script src="/assets/js/runtime~main.5953abfd.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.5e8741e6.js" defer="defer"></script>
 <script src="/assets/js/main.b54af52d.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -98,9 +98,9 @@
 <li>Каждая из страниц макета вписывается в левую или правую половину зоны печати, фоновое изображение заполняет всю зону печати с вылетами, а прочие объекты располагаются на развороте по центру.</li>
 </ul>
 </li>
-<li>Для использования технологии в <a href="/print/designs?id=%D0%A1%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0-%D1%88%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD%D0%B0">настройках шаблона</a> параметр <strong>&quot;Инициализации шаблона&quot;</strong> должен иметь значение <strong>&quot;Шаблон постранично вписывается в страницы зоны печати без вылетов&quot;</strong>, а макет соответствовать следующей структуре:<!-- -->
+<li>Для использования технологии в <a href="/print/designs#%D1%85%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8-%D1%88%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD%D0%B0">настройках шаблона</a> параметр <strong>&quot;Инициализации шаблона&quot;</strong> должен иметь значение <strong>&quot;Шаблон постранично вписывается в страницы зоны печати без вылетов&quot;</strong>, а макет соответствовать следующей структуре:<!-- -->
 <ul>
-<li><code>[page][align:left]</code> – группа слоев, элементы которой вписываются в л евую половину зоны печати;</li>
+<li><code>[page][align:left]</code> – группа слоев, элементы котор ой вписываются в левую половину зоны печати;</li>
 <li><code>[page][align:right]</code> – группа слоев, элементы которой вписываются в правую половину зоны печати;</li>
 <li><code>[surface]</code> – группа слоев, элементы которой располагаются верхними слоями на всей зоне печати;</li>
 <li><code>[background]</code> – слой с фоновым изображением, который полностью заполняет зону печати.
@@ -112,7 +112,7 @@
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="особенности-макетов-календарей">Особенности макетов календарей<a href="#особенности-макетов-календарей" class="hash-link" aria-label="Direct link to Особенности макетов календарей" title="Direct link to Особенности макетов календарей">​</a></h2>
 <ul>
 <li>Общий механизм подготовки макетов позволяет создавать дизайны календарей, однако макеты в этом случае должны содержать календарные сетки на каждый месяц.</li>
-<li>Для оптимизации подготовки макетов, мы разработали тех нологию умного дизайна календаря, которая позволяет использовать в дизайне автоматически формируемые календарные сетки на любой месяц.</li>
+<li>Для оптимизации подготовки макетов, мы разработали технологию умного дизайна календаря, которая позволяет использовать в дизайне автоматически формируемые календарные сетки на любой месяц.</li>
 <li>Суть технологии заключается в следующем:<!-- -->
 <ul>
 <li>Макет содержит слой, в котором будет располагаться календарная сетка.</li>
@@ -123,11 +123,11 @@
 </li>
 <li>Для использования технологии необходимо:<!-- -->
 <ol>
-<li>В панели управления Pixlpark в разделе <a href="/print/designs?id=%D0%9A%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80%D0%B8">&quot;Печать / Дизайн / Календари&quot;</a> создать собственные дизайны календарных сеток или оставить для использования системные.</li>
-<li>В <a href="/print/designs?id=%D0%A1%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0-%D1%88%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD%D0%B0">настройках шаблона</a> параметру <strong>&quot;Тип шаблона&quot;</strong> задать значение <strong>&quot;Календарь&quot;</strong>, а параметру <strong>&quot;Сетка по умолчанию&quot;</strong> - название наиболее подходящей календарной сетки для данного шаблона.</li>
+<li>В панели управления Pixlpark в разделе <a href="/print/designs#%D0%BA%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80%D0%B8">&quot;Печать / Дизайн / Календари&quot;</a> создать собственные дизайны календарных сеток или оставить для использования системные.</li>
+<li>В <a href="/print/designs#%D1%85%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8-%D1%88%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD%D0%B0">настройках шаблона</a> параметру <strong>&quot;Тип шаблона&quot;</strong> задать значение <strong>&quot;Календарь&quot;</strong>, а параметру <strong>&quot;Сетка по умолчанию&quot;</strong> - название наиболее подходящей календарной сетки для данного шаблона.</li>
 <li>В макете использовать следующие ключи:<!-- -->
 <ul>
-<li><code>[template-preview]</code> – группа растровых слоев в первом макете, не отображающаяся в редакторе, элементы которой используются в качестве обложки шаблона. Каждый слой группы соответствует определенному году и называется <code>[year]</code> (например, [2023]), где <strong>year</strong> - год, заданный в панели управления в разделе <a href="/print/designs?id=%D0%A1%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0-%D1%88%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD%D0%B0">&quot;Печать / Дизайны / Шаблоны / Настройка&quot;</a>.</li>
+<li><code>[template-preview]</code> – группа растровых слоев в первом макете, не отображающаяся в редакторе, элементы которой используются в качестве обложки шаблона. Каждый слой группы соответствует определенному году и называется <code>[year]</code> (например, [2023]), где <strong>year</strong> - год, заданный в панели управления в разделе <a href="/print/designs#%D1%85%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8-%D1%88%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD%D0%B0">&quot;Печать / Дизайны / Шаблоны / Настройка&quot;</a>.</li>
 <li><code>[calendar-title]</code> – текстовый слой, содержимое которого будет заменено на начальный год календаря (например, использовать в слое <code>[template-preview]</code> для обложки);</li>
 <li><code>[calendar-title-range]</code> – текстовый слой, содержимое которого будет заменено на начальный и конечный год календаря через дефис, если календарь создается на несколько лет;</li>
 <li><code>[calendar][path:pathName]</code> – графический слой, содержимое которого будет заменено на календарную сетку, а <strong>pathName</strong> – название контура, привязанного к данному слою.
@@ -156,7 +156,7 @@
 <ul>
 <li>Макет содержит настройку, отвечающую за участие в автозаполнении при загрузке шаблона в редактор. Таким образом некоторые макеты можно исключить из дизайна по умолчанию.</li>
 <li>Обычно в многостраничных альбомах последние развороты заполняются коллажами из фотографий. Поэтому, если количество макетов, участвующих в автозаполнении, меньше разворотов альбома, то следующие развороты циклично заполняются макетами без каких-либо рамок (а не всеми поряд). А уже в самом редакторе к таким макетам автоматически применяются коллажи, которые размещаются выше фонового слоя, но ниже всех остальных.</li>
-<li>Макет может содержать дизайн разворота с виньетками под различное количество учеников. Для этого все слои, относящиеся к определеному количеству учеников, размещаются в отдельных группах с наименованием <code>[students:n]</code>, где <strong>n</strong> - количество учеников (например: <code>[students:20]</code>). В редактор в этом случае будет подгружаться нужная раскладка учеников по заданному их количеству в модальном окне инициализации редактора.</li>
+<li>Макет может содержать дизайн разворота с виньетками под различное количество учеников. Для этого все слои, относящиеся к определеному к оличеству учеников, размещаются в отдельных группах с наименованием <code>[students:n]</code>, где <strong>n</strong> - количество учеников (например: <code>[students:20]</code>). В редактор в этом случае будет подгружаться нужная раскладка учеников по заданному их количеству в модальном окне инициализации редактора.</li>
 <li>Макет может содержать дизайн разворота с виньетками под различное количество учителей. По аналогии с предыдущим пунктом макет должен содержать группу с наименованием <code>[teachers:n]</code>, внутри которой будут группы учителей с наименованиями <code>[teacher]</code> (учитель), <code>[curator]</code> (классный руководитель) и <code>[director]</code> (директор).</li>
 <li>Макет может содержать следующие слои:<!-- -->
 <ul>
@@ -191,8 +191,8 @@
 <li><img loading="lazy" src="/assets/images/photobook-trioPage-9255cfb0d2ff323dbdacc9cc6c3d298d.png" width="934" height="525" class="img_ev3q"></li>
 <li>Вы можете скачать <a href="https://pixlpark.ru//content/upload/download/template-photobooks-folding.rar" target="_blank" rel="noopener noreferrer">пример шаблона</a> или <a href="https://demo.pixlpark.ru/printing/trio-photobooks/20x30/template-6867720/editor" target="_blank" rel="noopener noreferrer">посмотреть его в редакторе</a>.</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="советы-по-работе-с-adobe-photoshop">Советы по работе с Adobe Photoshop<a href="#советы-по-работе-с-adobe-photoshop" class="hash-link" aria-label="Direct link to Советы по работе с Adobe Photoshop" title="Direct link to Советы по работе с Adobe Photoshop">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="создан ие-контура">Создание контура<a href="#создание-контура" class="hash-link" aria-label="Direct link to Создание контура" title="Direct link to Создание контура">​</a></h3>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="советы-по-работе-с-adobe-photoshop">Советы по работе с Adobe Photoshop<a href="#советы-по-работе-с-adobe-photoshop" class="hash-link" aria-label="Direct link to Советы по работе с Adobe Photoshop" title="Direct link to Советы по работе  с Adobe Photoshop">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="создание-контура">Создание контура<a href="#создание-контура" class="hash-link" aria-label="Direct link to Создание контура" title="Direct link to Создание контура">​</a></h3>
 <ul>
 <li>Для добавления контура необходимо:<!-- -->
 <ol>
