@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.0.1">
 <title data-rh="true">Подготовка макетов | Документация Pixlpark</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://docs.pixlpark.ru/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://docs.pixlpark.ru/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://docs.pixlpark.ru/design/psd"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Подготовка макетов | Документация Pixlpark"><meta data-rh="true" name="description" content="Спецификация подготовки PSD-макетов"><meta data-rh="true" property="og:description" content="Спецификация подготовки PSD-макетов"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://docs.pixlpark.ru/design/psd"><link data-rh="true" rel="alternate" href="https://docs.pixlpark.ru/design/psd" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.pixlpark.ru/design/psd" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://CBISSLUS3P-dsn.algolia.net" crossorigin="anonymous"><link rel="search" type="application/opensearchdescription+xml" title="Документация Pixlpark" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.b0b92ecc.css">
-<script src="/assets/js/runtime~main.3f80baac.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.b1ae43a5.js" defer="defer"></script>
 <script src="/assets/js/main.b54af52d.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -46,6 +46,9 @@
 <li>Для создания макета можно использовать любые шрифты. Однако, если шрифт не принадлежит коллекции Google Fonts, предварительно его нужно загрузить в систему и связать через механизм маппинга с названием шрифта в макете. Это можно выполнить в панели управления в разделе <a href="/print/designs">&quot;Печать / Дизайн / Шрифты&quot;</a>.</li>
 <li>Цвет текста может быть не только однотонным, но и градиентным. Для задания градиента необходимо использовать ключ <code>[gradient: 45deg, rgba(0, 255, 0, 1) 10, rgba(255, 0, 0, 1) 90]</code>, где  <code>45</code> - это угол наклона градиента, <code>rgba(0, 255, 0, 1)</code> - это цвет, <code>10</code> - точка останова цвета. Цветов в градиенте должно быть не менее двух.</li>
 <li>Также можно задать обводку текста в формате <code>[outline: rgba(255, 0, 0, 1) 5]</code>, где  <code>rgba(255, 0, 0, 1)</code> - это цвет, <code>5</code> - толщина.</li>
+<li>Тень текста задается в формате <code>[shadow: x:-10 y:20 blur:6 rgba(22, 22, 22, 1)]</code>, где <code>x</code> - это смещениие тени по горизонтали, <code>y</code> - это смещениие тени по вертикали, <code>blur</code> - это радиус размытия, <code>rgba(22, 22, 22, 1)</code> - это цвет тени.</li>
+<li>Парение те кста задается в формате <code>[hover: 50]</code>, где <code>hover</code> - значение интенсивности парения.</li>
+<li>Фон текста задается в формате <code>[text-background: padding: 50 radius: 50 rgba(222, 222, 0, 1)]</code>, где <code>padding</code> - это внутренний отступ со всех сторон от текста, <code>radius</code> - это степень скругления углов фона текста, <code>rgba(222, 222, 0, 1)</code> - это цвет фона.</li>
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="работа-с-изображениями">Работа с изображениями<a href="#работа-с-изображениями" class="hash-link" aria-label="Direct link to Работа с изображениями" title="Direct link to Работа с изображениями">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="фото-без-декора">Фото без декора<a href="#фото-без-декора" class="hash-link" aria-label="Direct link to Фото без декора" title="Direct link to Фото без декора">​</a></h3>
@@ -65,7 +68,7 @@
 <li>Для размещения фотографии необходимо:<!-- -->
 <ol>
 <li>Создать группу с ключом <code>[placeholder]</code>.</li>
-<li>В группе создать замкнутый растровый слой с ключом <code>[mask]</code> и п розрачностью по центру для отображения фотографии.</li>
+<li>В группе создать замкнутый растровый слой с ключом <code>[mask]</code> и прозрачностью по центру для отображения фотографии.</li>
 <li>В группе создать растровый слой с двумя ключами <code>[content]</code> и <code>[path:pathName]</code>, где <strong>pathName</strong> – название контура.</li>
 <li>Создать контур с именем <strong>pathName</strong> и привязать к слою <code>[content]</code>.</li>
 </ol>
@@ -100,7 +103,7 @@
 </li>
 <li>Для использования технологии в <a href="/print/designs#%D1%85%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8-%D1%88%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD%D0%B0">настройках шаблона</a> параметр <strong>&quot;Инициализации шаблона&quot;</strong> должен иметь значение <strong>&quot;Шаблон постранично вписывается в страницы зоны печати без вылетов&quot;</strong>, а макет соответствовать следующей структуре:<!-- -->
 <ul>
-<li><code>[page][align:left]</code> – группа слоев, элементы котор ой вписываются в левую половину зоны печати;</li>
+<li><code>[page][align:left]</code> – группа слоев, элементы которой вписываются в левую половину зоны печати;</li>
 <li><code>[page][align:right]</code> – группа слоев, элементы которой вписываются в правую половину зоны печати;</li>
 <li><code>[surface]</code> – группа слоев, элементы которой располагаются верхними слоями на всей зоне печати;</li>
 <li><code>[background]</code> – слой с фоновым изображением, который полностью заполняет зону печати.
@@ -128,7 +131,7 @@
 <li>В макете использовать следующие ключи:<!-- -->
 <ul>
 <li><code>[template-preview]</code> – группа растровых слоев в первом макете, не отображающаяся в редакторе, элементы которой используются в качестве обложки шаблона. Каждый слой группы соответствует определенному году и называется <code>[year]</code> (например, [2023]), где <strong>year</strong> - год, заданный в панели управления в разделе <a href="/print/designs#%D1%85%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8-%D1%88%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD%D0%B0">&quot;Печать / Дизайны / Шаблоны / Настройка&quot;</a>.</li>
-<li><code>[calendar-title]</code> – текстовый слой, содержимое которого будет заменено на начальный год календаря (например, использовать в слое <code>[template-preview]</code> для обложки);</li>
+<li><code>[calendar-title]</code> – тексто вый слой, содержимое которого будет заменено на начальный год календаря (например, использовать в слое <code>[template-preview]</code> для обложки);</li>
 <li><code>[calendar-title-range]</code> – текстовый слой, содержимое которого будет заменено на начальный и конечный год календаря через дефис, если календарь создается на несколько лет;</li>
 <li><code>[calendar][path:pathName]</code> – графический слой, содержимое которого будет заменено на календарную сетку, а <strong>pathName</strong> – название контура, привязанного к данному слою.
 <img loading="lazy" src="/assets/images/CalendarCover-711fcf3c9b17b99d7d4388d973ae06d9.png" title=":size=70%" width="1219" height="983" class="img_ev3q">
@@ -156,7 +159,7 @@
 <ul>
 <li>Макет содержит настройку, отвечающую за участие в автозаполнении при загрузке шаблона в редактор. Таким образом некоторые макеты можно исключить из дизайна по умолчанию.</li>
 <li>Обычно в многостраничных альбомах последние развороты заполняются коллажами из фотографий. Поэтому, если количество макетов, участвующих в автозаполнении, меньше разворотов альбома, то следующие развороты циклично заполняются макетами без каких-либо рамок (а не всеми поряд). А уже в самом редакторе к таким макетам автоматически применяются коллажи, которые размещаются выше фонового слоя, но ниже всех остальных.</li>
-<li>Макет может содержать дизайн разворота с виньетками под различное количество учеников. Для этого все слои, относящиеся к определеному к оличеству учеников, размещаются в отдельных группах с наименованием <code>[students:n]</code>, где <strong>n</strong> - количество учеников (например: <code>[students:20]</code>). В редактор в этом случае будет подгружаться нужная раскладка учеников по заданному их количеству в модальном окне инициализации редактора.</li>
+<li>Макет может содержать дизайн разворота с виньетками под различное количество учеников. Для этого все слои, относящиеся к определеному количеству учеников, размещаются в отдельных группах с наименованием <code>[students:n]</code>, где <strong>n</strong> - количество учеников (например: <code>[students:20]</code>). В редактор в этом случае будет подгружаться нужная раскладка учеников по заданному их количеству в модальном окне инициализации редактора.</li>
 <li>Макет может содержать дизайн разворота с виньетками под различное количество учителей. По аналогии с предыдущим пунктом макет должен содержать группу с наименованием <code>[teachers:n]</code>, внутри которой будут группы учителей с наименованиями <code>[teacher]</code> (учитель), <code>[curator]</code> (классный руководитель) и <code>[director]</code> (директор).</li>
 <li>Макет может содержать следующие слои:<!-- -->
 <ul>
@@ -191,7 +194,7 @@
 <li><img loading="lazy" src="/assets/images/photobook-trioPage-9255cfb0d2ff323dbdacc9cc6c3d298d.png" width="934" height="525" class="img_ev3q"></li>
 <li>Вы можете скачать <a href="https://pixlpark.ru//content/upload/download/template-photobooks-folding.rar" target="_blank" rel="noopener noreferrer">пример шаблона</a> или <a href="https://demo.pixlpark.ru/printing/trio-photobooks/20x30/template-6867720/editor" target="_blank" rel="noopener noreferrer">посмотреть его в редакторе</a>.</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="советы-по-работе-с-adobe-photoshop">Советы по работе с Adobe Photoshop<a href="#советы-по-работе-с-adobe-photoshop" class="hash-link" aria-label="Direct link to Советы по работе с Adobe Photoshop" title="Direct link to Советы по работе  с Adobe Photoshop">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="советы-по-работе-с-adobe-photoshop">Советы по работе с Adobe Photoshop<a href="#советы-по-работе-с-adobe-photoshop" class="hash-link" aria-label="Direct link to Советы по работе с Adobe Photoshop" title="Direct link to Советы по работе с Adobe Photoshop">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="создание-контура">Создание контура<a href="#создание-контура" class="hash-link" aria-label="Direct link to Создание контура" title="Direct link to Создание контура">​</a></h3>
 <ul>
 <li>Для добавления контура необходимо:<!-- -->
