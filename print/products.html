@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.0.1">
 <title data-rh="true">Продукты | Документация Pixlpark</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://docs.pixlpark.ru/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://docs.pixlpark.ru/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://docs.pixlpark.ru/print/products"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Продукты | Документация Pixlpark"><meta data-rh="true" name="description" content="Настройка категорий, продуктов, цен и редакторов для сайта"><meta data-rh="true" property="og:description" content="Настройка категорий, продуктов, цен и редакторов для сайта"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://docs.pixlpark.ru/print/products"><link data-rh="true" rel="alternate" href="https://docs.pixlpark.ru/print/products" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.pixlpark.ru/print/products" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://CBISSLUS3P-dsn.algolia.net" crossorigin="anonymous"><link rel="search" type="application/opensearchdescription+xml" title="Документация Pixlpark" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.b0b92ecc.css">
-<script src="/assets/js/runtime~main.f9d85519.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.e301d6b8.js" defer="defer"></script>
 <script src="/assets/js/main.b54af52d.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -126,7 +126,7 @@
 </ul>
 </li>
 <li>
-<p>Отметим, что по умолчанию доступен лишь <strong>Калькулятор Pixlpark</strong>, а остальные подключаются в разделе &quot;<a href="/orders/settings?id=erp-%D0%B8-crm-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D1%8B">Заказы / Настройка / Выгрузка заказов / ERP и CRM системы</a>&quot;.</p>
+<p>Отметим, что по умолчанию доступен лишь <strong>Калькулятор Pixlpark</strong>, а остальные подключаются в разделе &quot;<a href="/orders/settings#erp-%D0%B8-crm-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D1%8B">Заказы / Настройка / Выгрузка заказов / ERP и CRM системы</a>&quot;.</p>
 </li>
 </ul>
 <blockquote>
@@ -134,7 +134,7 @@
 </blockquote>
 <ul>
 <li>
-<p>Для каждой категории можно определить несколько вариантов поведения калькулятора. Например, для настольной и мобильной версии внешний вид и логика может отл ичаться. Наборы настроек для каждого варианта поведения называются представлениями.</p>
+<p>Для каждой категории можно определить несколько вариантов поведения калькулятора. Например, для настольной и мобильной версии внешний вид и логика может отличаться. Наборы настроек для каждого варианта поведения называются представлениями.</p>
 </li>
 <li>
 <p>Калькулятор устанавливается на страницы сайта путем размещение одного из нескольких скриптов:</p>
@@ -149,7 +149,7 @@
 <ul>
 <li><code>[$asystemcalculator(category:%URL-Category%)$]</code> - где <code>%URL-Category%</code> - задаваемая часть адреса страницы категории.</li>
 <li><code>[$asystemcalculator(category:%URL-Category%, materialId:%Product-ID%)$]</code> - где <code>%URL-Category%</code> - задаваемая часть адреса страницы категории, <code>%Product-ID%</code> - идентификатор продукта, с которым должен запуститься калькулятор.</li>
-<li><code>[$asystemcalculator(category:%URL-Category%, materialId:%Product-ID%, afterLoadFunction)$]</code> - где <code>%URL-Category%</code> - задаваемая часть адреса страницы категории, <code>%Product-ID%</code> - идентификатор продукта, с которым должен запуститься калькулятор, <code>afterLoadFunction</code> - JS-функция, запускаемая п осле создания калькулятора на странице сайта.</li>
+<li><code>[$asystemcalculator(category:%URL-Category%, materialId:%Product-ID%, afterLoadFunction)$]</code> - где <code>%URL-Category%</code> - задаваемая часть адреса страницы категории, <code>%Product-ID%</code> - идентификатор продукта, с которым должен запуститься калькулятор, <code>afterLoadFunction</code> - JS-функция, запускаемая пос ле создания калькулятора на странице сайта.</li>
 </ul>
 </li>
 <li><strong>Калькулятор 1С:Полиграфия</strong>:<!-- -->
@@ -163,7 +163,7 @@
 <ul>
 <li><code>[$axiomculator(category:%URL-Category%)$]</code> - где <code>%URL-Category%</code> - задаваемая часть адреса страницы категории.</li>
 <li><code>[$axiomculator(category:%URL-Category%, materialId:%Product-ID%)$]</code> - где <code>%URL-Category%</code> - задаваемая часть адреса страницы категории, <code>%Product-ID%</code> - идентификатор продукта, с которым должен запуститься калькулятор.</li>
-<li><code>[$axiomculator(category:%URL-Category%, materialId:%Product-ID%, afterLoadFunction)$]</code> - где <code>%URL-Category%</code> - задаваемая часть адреса страницы категории, <code>%Product-ID%</code> - идентификатор продукта, с которым должен запуститься калькулятор, <code>afterLoadFunction</code> - JS-функция, запускаемая после создания калькулятора на странице сайта.</li>
+<li><code>[$axiomculator(category:%URL-Category%, materialId:%Product-ID%, afterLoadFunction)$]</code> - где <code>%URL-Category%</code> - з адаваемая часть адреса страницы категории, <code>%Product-ID%</code> - идентификатор продукта, с которым должен запуститься калькулятор, <code>afterLoadFunction</code> - JS-функция, запускаемая после создания калькулятора на странице сайта.</li>
 </ul>
 </li>
 <li><strong>Калькулятор HelloPrint</strong>:<!-- -->
@@ -183,7 +183,7 @@
 <p>Об установке калькулятора на внешний сайт можно узнать в <a href="/dev/calc-install">разделе</a>.</p>
 </blockquote>
 <ul>
-<li>Настройки калькулятора сгруппирован ы в несколько блоков:<!-- -->
+<li>Настройки калькулятора сгруппированы  в несколько блоков:<!-- -->
 <ul>
 <li><strong>Основная информация</strong> - задаются общие настройки калькулятора.
 <img loading="lazy" src="/assets/images/category-calc-general-7028c5f8c556542c0765858e280d7c08.png" width="984" height="842" class="img_ev3q"></li>
@@ -199,7 +199,7 @@
 </ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="атрибуты">Атрибуты<a href="#атрибуты" class="hash-link" aria-label="Direct link to Атрибуты" title="Direct link to Атрибуты">​</a></h3>
 <ul>
-<li><strong>Атрибуты</strong> - это характеристики продукта, описывающие его семантику. Использование атрибутов упрощает выбор нужного продукта в калькуляторе или редакторе - вместо выбора нужного продукта из длинного списка посетителю сайта потребуется лишь выбрать значения нескольких атрибутов.</li>
+<li><strong>Атрибуты</strong> - это характеристики продукта, описывающие его семантику. Использование атрибутов упрощает выбор нужного продукта в калькуляторе или редакторе - вм есто выбора нужного продукта из длинного списка посетителю сайта потребуется лишь выбрать значения нескольких атрибутов.</li>
 <li>Например, на демонстрационном сайте Pixlpark есть категория &quot;Холсты в раму&quot;, содержащая 288 продуктов. Вместо неудобного выбора нужного продукта из большого списка требуется лишь выбрать значения нескольких атрибутов: ориентация, размер, цвет рамы и паспорту.</li>
 <li>В данном разделе задается список атрибутов для всех продуктов категории, а также их логика отображения и поведения на сайте. Значения атрибутов задаются в карточках продуктов.</li>
 <li><img loading="lazy" src="/assets/images/category-attributes-96f0f9eba782bddf69812725850ef39f.png" width="983" height="675" class="img_ev3q"></li>
@@ -222,21 +222,21 @@
 <ul>
 <li><strong>Содержание</strong>
 <ul>
-<li><a href="/print/products?id=%D0%91%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D1%8F-%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D1%8F-1">Базовая информация</a></li>
-<li><a href="/print/products?id=%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D0%B0%D1%8F-%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D1%8F-1">Основная информация</a></li>
-<li><a href="/print/products?id=%D0%A2%D0%B8%D1%80%D0%B0%D0%B6%D0%BD%D0%BE%D1%81%D1%82%D1%8C">Тиражность</a></li>
-<li><a href="/print/products?id=%D0%9E%D0%BF%D1%86%D0%B8%D0%B8-1">Опции</a></li>
-<li><a href="/print/products?id=%D0%90%D1%80%D1%82%D0%B8%D0%BA%D1%83%D0%BB%D1%8B">Артикулы</a></li>
-<li><a href="/print/products?id=%D0%A8%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD-%D0%BA%D0%B0%D0%BB%D1%8C%D0%BA%D1%83%D0%BB%D1%8F%D1%82%D0%BE%D1%80%D0%B0">Шаблон калькулятора</a></li>
-<li><a href="/print/products?id=%D0%A0%D0%B5%D0%B4%D0%B0%D0%BA%D1%82%D0%BE%D1%80-1">Редактор</a></li>
-<li><a href="/print/products?id=_3d-%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D1%8C">3D-модель</a></li>
-<li><a href="/print/products?id=%D0%9A%D0%B0%D0%BB%D1%8C%D0%BA%D1%83%D0%BB%D1%8F%D1%82%D0%BE%D1%80-1">Калькулятор</a></li>
-<li><a href="/print/products?id=%D0%90%D1%82%D1%80%D0%B8%D0%B1%D1%83%D1%82%D1%8B-1">Атрибуты</a></li>
+<li><a href="/print/products#%D0%B1%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D1%8F-%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D1%8F-1">Базовая информация</a></li>
+<li><a href="/print/products#%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D0%B0%D1%8F-%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D1%8F-1">Основная информация</a></li>
+<li><a href="/print/products#%D1%82%D0%B8%D1%80%D0%B0%D0%B6%D0%BD%D0%BE%D1%81%D1%82%D1%8C">Тиражность</a></li>
+<li><a href="/print/products#%D0%BE%D0%BF%D1%86%D0%B8%D0%B8-1">Опции</a></li>
+<li><a href="/print/products#%D0%B0%D1%80%D1%82%D0%B8%D0%BA%D1%83%D0%BB%D1%8B">Артикулы</a></li>
+<li><a href="/print/products#%D1%88%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD-%D0%BA%D0%B0%D0%BB%D1%8C%D0%BA%D1%83%D0%BB%D1%8F%D1%82%D0%BE%D1%80%D0%B0">Шаблон калькулятора</a></li>
+<li><a href="/print/products#%D1%80%D0%B5%D0%B4%D0%B0%D0%BA%D1%82%D0%BE%D1%80-1">Редактор</a></li>
+<li><a href="/print/products#3d-%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D1%8C">3D-модель</a></li>
+<li><a href="/print/products#%D0%BA%D0%B0%D0%BB%D1%8C%D0%BA%D1%83%D0%BB%D1%8F%D1%82%D0%BE%D1%80-1">Калькулятор</a></li>
+<li><a href="/print/products#%D0%B0%D1%82%D1%80%D0%B8%D0%B1%D1%83%D1%82%D1%8B-1">Атрибуты</a></li>
 </ul>
 </li>
 <li>
 <blockquote>
-<p>Подробное описание настройки калькулятора для продукта категории можно посмотреть в <a href="/calculators/sheet-printing">разделе</a>.</p>
+<p>Подробное описание настройки калькулятора для продукта категории можно посмотреть в <a href="/calculators/printing">разделе</a>.</p>
 </blockquote>
 </li>
 </ul>
@@ -258,13 +258,13 @@
 <li><strong>Название в панели управления</strong> - название продукта в панели управления. В отличие от названия на сайте, может содержать в себе дополнительную техническую информацию (например, значение атрибутов).</li>
 <li><strong>Название в папке заказа</strong> - название продукта (на латинице), которое может использоваться вместе &quot;названия на сайте&quot; при формировании названия папки элемента заказа.</li>
 <li><strong>Название в имени выходного файла</strong> - название продукта на латинице, которое может использоваться вместе &quot;названия на сайте&quot; при формировании имени выходного файла при включенной настройке категории &quot;Использовать опции для формирования имен выходных файлов&quot;.</li>
-<li><strong>Описание в системной странице категории</strong> - описание, которое выводится в таблице  выбора продуктов на системной странице категории.</li>
+<li><strong>Описание в системной странице категории</strong> - описание, которое выводится в таблице выбора продуктов на с истемной странице категории.</li>
 <li><strong>Описание в калькуляторе</strong> - описание, которое выводится у товара в калькуляторе в случае выбора параметра &quot;Внешний вид товаров&quot; в &quot;Описание для калькулятора&quot;.</li>
 <li><strong>Вывод цены на странице</strong> - константа вывода стоимости продукта (с заданным тиражом и количеством страниц) на произвольную страницу CMS.</li>
 <li><strong>Вывод цены с опциями</strong> - константа вывода стоимости продукта вместе с минимально возможными значениями по цене и обязательными к выбору опциями на произвольную страницу CMS.</li>
 <li><strong>Вывод цены за единицу товара</strong> - константа вывода стоимости единицы продукта (с заданным тиражом и количеством страниц) на произвольную страницу CMS.</li>
 <li><strong>Адрес в интернете</strong> - адрес страницы редактора на сайте для текущего продукта; здесь задается уникальный идентификатор продукта, который участвует в формировании адреса. Допустимо использовать цифры <code>[0-9]</code>, латиницу в нижнем регистре <code>[a-z]</code>, нижнее подчеркивание <code>[_]</code>, дефис <code>[-]</code> и точку <code>[.]</code>.</li>
-<li><strong>Вес продукта</strong> - вес продукта, который учитывается при  расчете стоимости доставки.</li>
+<li><strong>Вес продукта</strong> - вес продукта, который учитывается при расчете стоимости доставки.</li>
 <li><strong>Обложка</strong> - иллюстрация, которая отображается в корзине для позиции заказа; используется для всех редакторов, кроме текущего и старого редактора дизайнов, а также редактора интерьера.</li>
 <li><img loading="lazy" src="/assets/images/product-general-7f172ffe68d698deeb01c9f8378164e2.png" width="984" height="797" class="img_ev3q"></li>
 </ul>
@@ -278,7 +278,7 @@
 <li><strong>Тиражи другого продукта</strong> - в этом случае продукт использует настройки тиражности другого выбранного продукта.</li>
 </ul>
 </li>
-<li>Для многостраничных продуктов (например, фотокниг) можно задать минимальное и максим альное количество страниц с шагом роста и дополнительной стоимостью одной страницы. При этом при задании цены в вариантах тиражности учитывается стоимость продукта с минимальным количеством страниц.</li>
+<li>Для многостраничных продуктов (например, фотокниг) можно задать минимальное и максимальное количество стр аниц с шагом роста и дополнительной стоимостью одной страницы. При этом при задании цены в вариантах тиражности учитывается стоимость продукта с минимальным количеством страниц.</li>
 <li><img loading="lazy" src="/assets/images/product-items-3416e0918d2d449cf32402f7e2451bce.png" width="981" height="492" class="img_ev3q"></li>
 </ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="опции-1">Опции<a href="#опции-1" class="hash-link" aria-label="Direct link to Опции" title="Direct link to Опции">​</a></h3>
@@ -294,7 +294,7 @@
 </ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="шаблон-калькулятора">Шаблон калькулятора<a href="#шаблон-калькулятора" class="hash-link" aria-label="Direct link to Шаблон калькулятора" title="Direct link to Шаблон калькулятора">​</a></h3>
 <ul>
-<li>Данный раздел отображается только если подключена интеграция с одной из <a href="/orders/settings?id=erp-%D0%B8-crm-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D1%8B">перечисленных ERP-систем</a>.</li>
+<li>Данный ра здел отображается только если подключена интеграция с одной из <a href="/orders/settings#erp-%D0%B8-crm-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D1%8B">перечисленных ERP-систем</a>.</li>
 <li>В нем можно либо выбрать шаблон продукта, полученный с сервера учетной системы, либо загрузить его самостоятельно (1С:Полиграфия).</li>
 <li><img loading="lazy" src="/assets/images/product-cacl-template-9ef289e3784a9469bb5c8b302a327ca0.png" width="609" height="266" class="img_ev3q"></li>
 </ul>
@@ -306,7 +306,7 @@
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="3d-модель">3D-модель<a href="#3d-модель" class="hash-link" aria-label="Direct link to 3D-модель" title="Direct link to 3D-модель">​</a></h3>
 <ul>
 <li>В данном разделе задается 3D-макет продукта, который используется для визуализации как на странице списка шаблонов и принтов, так и в онлайн-редакторе.</li>
-<li>Подробнее о подготовке 3D-моделей можно почитать в разделе документации &quot;<a href="/design/3d-models">Дизайнерам / 3D-модели для предпросмотра</a>&quot;.</li>
+<li>Подробнее о подготовке 3D-моделей можно почитать в разделе документации &quot;<a href="/design/3d">Дизайнерам / 3D-модели для предпросмотра</a>&quot;.</li>
 <li><img loading="lazy" src="/assets/images/product-3d-43f2320df38a3e3d10950bc33b1765b8.png" width="986" height="456" class="img_ev3q"></li>
 </ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="калькулятор-1">Калькулятор<a href="#калькулятор-1" class="hash-link" aria-label="Direct link to Калькулятор" title="Direct link to Калькулятор">​</a></h3>
@@ -323,7 +323,7 @@
 <ul>
 <li><strong>Для калькулятора</strong> - выводится в калькуляторе под значением атрибута (только если продукты выбираются через кнопки).</li>
 <li><strong>Для подсказки калькулятора</strong> - выводится в калькуляторе в поп-ап окне, появляющемся при наведении на иконку вопроса у позиции.</li>
-<li><strong>Для редактора</strong> - выводится в редакторе под значением атриб ута, если их переключение настроено в виде радио-кнопок.</li>
+<li><strong>Для редактора</strong> - выводится в редакторе под значением атрибута, если их переключение н астроено в виде радио-кнопок.</li>
 </ul>
 </li>
 </ul>
@@ -362,7 +362,7 @@
 <li>Изменить данные в эксель-файле:<!-- -->
 <ul>
 <li>Во вкладке &quot;<strong>Категории</strong>&quot; можно изменить название и URL-адрес категорий.</li>
-<li>Во вкладке &quot;<strong>Товары</strong>&quot; можно изменить название, URL-адрес, тиражность и стоимос ть товаров.</li>
+<li>Во вкладке &quot;<strong>Товары</strong>&quot; можно изменить название, URL-адрес, тиражность и стоимость товаров.</li>
 <li>Во вкладке &quot;<strong>Опции</strong>&quot; можно изменить название опций, а также название и стоимость их позиций.</li>
 </ul>
 </li>
@@ -424,6 +424,6 @@
 </ul>
 </li>
 <li><img loading="lazy" src="/assets/images/groups-f773601d7be39a383fa890a90e739f2d.png" width="934" height="484" class="img_ev3q"></li>
-</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="theme-doc-footer-edit-meta-row row"><div class="col"><a href="https://github.com/Pixlpark/new-doc/tree/main/docs/print/products.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_vwxv"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/category/печать"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Печать</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/print/calculations"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Калькуляция</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#карточка-категории" class="table-of-contents__link toc-highlight">Карточка категории</a><ul><li><a href="#базовая-информация" class="table-of-contents__link toc-highlight">Базовая инфо рмация</a></li><li><a href="#список-продуктов" class="table-of-contents__link toc-highlight">Список продуктов</a></li><li><a href="#основная-информация" class="table-of-contents__link toc-highlight">Основная информация</a></li><li><a href="#страница-категории" class="table-of-contents__link toc-highlight">Страница категории</a></li><li><a href="#хлебные-крошки" class="table-of-contents__link toc-highlight">Хлебные крошки</a></li><li><a href="#опции" class="table-of-contents__link toc-highlight">Опции</a></li><li><a href="#заголовки-полей" class="table-of-contents__link toc-highlight">Заголовки полей</a></li><li><a href="#метаинформация" class="table-of-contents__link toc-highlight">Метаинформация</a></li><li><a href="#редактор" class="table-of-contents__link toc-highlight">Редактор</a></li><li><a href="#калькулятор" class="table-of-contents__link toc-highlight">Калькулятор</a></li><li><a href="#атрибуты" class="table-of-contents__link toc-highlight">Атрибуты</a></li><li><a href="#дизайны" class="table-of-contents__link toc-highlight">Дизайны</a></li></ul></li><li><a href="#карточка-продукта" class="table-of-contents__link toc-highlight">Карточка продукта</a><ul><li><a href="#базовая-информация-1" class="table-of-contents__link toc-highlight">Базовая информация</a></li><li><a href="#основная-информация-1" class="table-of-contents__link toc-highlight">Основная информация</a></li><li><a href="#тиражность" class="table-of-contents__link toc-highlight">Тиражность</a></li><li><a href="#опции-1" class="table-of-contents__link toc-highlight">Опции</a></li><li><a href="#артикулы" class="table-of-contents__link toc-highlight">Артикулы</a></li><li><a href="#шаблон-калькулятора" class="table-of-contents__link toc-highlight">Шаблон калькулятора</a></li><li><a href="#редактор-1" class="table-of-contents__link toc-highlight">Редактор</a></li><li><a href="#3d-модель" class="table-of-contents__link toc-highlight">3D-модель</a></li><li><a href="#калькулятор-1" class="table-of-contents__link toc-highlight">Калькулятор</a></li><li><a href="#атрибуты-1" class="table-of-contents__link toc-highlight">Атрибуты</a></li></ul></li><li><a href="#список-категорий" class="table-of-contents__link toc-highlight">Список категорий</a></li><li><a href="#группы" class="table-of-contents__link toc-highlight">Группы</a></li></ul></div></div></div></div></main></div></div></div></div>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="theme-doc-footer-edit-meta-row row"><div class="col"><a href="https://github.com/Pixlpark/new-doc/tree/main/docs/print/products.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_vwxv"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/category/печать"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Печать</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/print/calculations"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Калькуляция</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#карточка-категории" class="table-of-contents__link toc-highlight">Карточка категории</a><ul><li><a href="#базовая-информация" class="table-of-contents__link toc-highlight">Базовая информация</a></li><li><a href="#список-п родуктов" class="table-of-contents__link toc-highlight">Список продуктов</a></li><li><a href="#основная-информация" class="table-of-contents__link toc-highlight">Основная информация</a></li><li><a href="#страница-категории" class="table-of-contents__link toc-highlight">Страница категории</a></li><li><a href="#хлебные-крошки" class="table-of-contents__link toc-highlight">Хлебные крошки</a></li><li><a href="#опции" class="table-of-contents__link toc-highlight">Опции</a></li><li><a href="#заголовки-полей" class="table-of-contents__link toc-highlight">Заголовки полей</a></li><li><a href="#метаинформация" class="table-of-contents__link toc-highlight">Метаинформация</a></li><li><a href="#редактор" class="table-of-contents__link toc-highlight">Редактор</a></li><li><a href="#калькулятор" class="table-of-contents__link toc-highlight">Калькулятор</a></li><li><a href="#атрибуты" class="table-of-contents__link toc-highlight">Атрибуты</a></li><li><a href="#дизайны" class="table-of-contents__link toc-highlight">Дизайны</a></li></ul></li><li><a href="#карточка-продукта" class="table-of-contents__link toc-highlight">Карточка продукта</a><ul><li><a href="#базовая-информация-1" class="table-of-contents__link toc-highlight">Базовая информация</a></li><li><a href="#основная-информация-1" class="table-of-contents__link toc-highlight">Основная информация</a></li><li><a href="#тиражность" class="table-of-contents__link toc-highlight">Тиражность</a></li><li><a href="#опции-1" class="table-of-contents__link toc-highlight">Опции</a></li><li><a href="#артикулы" class="table-of-contents__link toc-highlight">Артикулы</a></li><li><a href="#шабл он-калькулятора" class="table-of-contents__link toc-highlight">Шаблон калькулятора</a></li><li><a href="#редактор-1" class="table-of-contents__link toc-highlight">Редактор</a></li><li><a href="#3d-модель" class="table-of-contents__link toc-highlight">3D-модель</a></li><li><a href="#калькулятор-1" class="table-of-contents__link toc-highlight">Калькулятор</a></li><li><a href="#атрибуты-1" class="table-of-contents__link toc-highlight">Атрибуты</a></li></ul></li><li><a href="#список-категорий" class="table-of-contents__link toc-highlight">Список категорий</a></li><li><a href="#группы" class="table-of-contents__link toc-highlight">Группы</a></li></ul></div></div></div></div></main></div></div></div></div>
 </body>
 </html>
