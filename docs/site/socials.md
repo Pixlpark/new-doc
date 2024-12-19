@@ -8,10 +8,10 @@ sidebar_position: 5
 * В данном разделе задаются ключи доступа к внешним сервисам для настройки интеграции с ними.
 
 * Перечисленные ниже сервисы позволяют либо авторизоваться, либо импортировать файлы из них:
-    + [ВКонтакте](/integration/socials?id=ВКонтакте)
-    + [Одноклассники](/integration/socials?id=Одноклассники)
-    + [Google](/integration/socials?id=google)
-    + [Яндекс](/integration/socials?id=Яндекс)
+    + [ВКонтакте](/integration/socials#вконтакте)
+    + [Одноклассники](/integration/socials#одноклассники)
+    + [Google](/integration/socials#google)
+    + [Яндекс](/integration/socials#яндекс)
     + [Авторизация OAuth 2.0](https://oauth.net/)
 * ![](../_media/site/services.png)
-> Подробнее о настройке интеграции с внешними сервисами можно узнать в __[разделе](/integration/socials?id=ВКонтакте)__.
+> Подробнее о настройке интеграции с внешними сервисами можно узнать в __[разделе](/integration/socials)__.
