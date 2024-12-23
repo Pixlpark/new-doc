@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.0.1">
 <title data-rh="true">Платежные системы | Документация Pixlpark</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://docs.pixlpark.ru/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://docs.pixlpark.ru/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://docs.pixlpark.ru/integration/payments"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Платежные системы | Документация Pixlpark"><meta data-rh="true" name="description" content="Сбербанк, Тинькофф, Robokassa, ЮKassa"><meta data-rh="true" property="og:description" content="Сбербанк, Тинькофф, Robokassa, ЮKassa"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://docs.pixlpark.ru/integration/payments"><link data-rh="true" rel="alternate" href="https://docs.pixlpark.ru/integration/payments" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.pixlpark.ru/integration/payments" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://CBISSLUS3P-dsn.algolia.net" crossorigin="anonymous"><link rel="search" type="application/opensearchdescription+xml" title="Документация Pixlpark" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.b0b92ecc.css">
-<script src="/assets/js/runtime~main.6316385c.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.f5ab5910.js" defer="defer"></script>
 <script src="/assets/js/main.b54af52d.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -28,10 +28,10 @@
 <p>После настройки основного магазина необходимо проверить корректность настроек в тестовом режиме оплаты при помощи <a href="https://yookassa.ru/docs/support/merchant/payments/implement/test-store" target="_blank" rel="noopener noreferrer">тестового магазина</a>. В разделе &quot;<strong>Интеграция /  HTTP - уведомления</strong>&quot; тестового магазина в личном кабинете ЮKassa необходимо указать URL для уведомления из панели управления Pixlpark в формате: <code>https://frontend-XXXX.pixlpark.com/api/payment/yookassa-api/check</code> , а так же включить: <strong>payment.succeeded</strong>, <strong>payment.waiting_for_capture</strong> и <strong>payment.canceled</strong>. В тестовом магазине возможно протестировать два вида оплаты: банковские карты и ЮMoney.</p>
 </blockquote>
 <ul>
-<li>Для настройки тестового режима оплаты заказов в панели управления Pixlpark необходимо  перейти в раздел &quot;<strong>Настройка / Оплата</strong>&quot; и в подразделе &quot;<strong>Способы оплаты</strong>&quot; перейти в <a href="https://docs.pixlpark.ru/#/site/payments?id=%d0%9a%d0%b0%d1%80%d1%82%d0%be%d1%87%d0%ba%d0%b0-%d0%be%d0%bf%d0%bb%d0%b0%d1%82%d1%8b" target="_blank" rel="noopener noreferrer">карточку оплаты</a> &quot;<strong>ЮKassa</strong>&quot;.</li>
+<li>Для настройки тестового режима оплаты заказов в панели управления Pixlpark необходимо  перейти в раздел &quot;<strong>Настройка / Оплата</strong>&quot; и в подразделе &quot;<strong>Способы оплаты</strong>&quot; перейти в <a href="/site/payments#%D0%BA%D0%B0%D1%80%D1%82%D0%BE%D1%87%D0%BA%D0%B0-%D0%BE%D0%BF%D0%BB%D0%B0%D1%82%D1%8B">карточку оплаты</a> &quot;<strong>ЮKassa</strong>&quot;.</li>
 </ul>
 <blockquote>
-<p>В случае, если при переходе в подраздел &quot;<strong>Способы оплаты</strong>&quot;  в списке отсутствует &quot;<strong>ЮKassa</strong>&quot;, необходимо выбрать значение &quot;<strong>Не учитывать</strong>&quot; в подразделе &quot;<strong>Доступность</strong>&quot;.</p>
+<p>В случае, если при переходе в подраздел &quot;<strong>Способы оплаты</strong>&quot;  в списке отсутс твует &quot;<strong>ЮKassa</strong>&quot;, необходимо выбрать значение &quot;<strong>Не учитывать</strong>&quot; в подразделе &quot;<strong>Доступность</strong>&quot;.</p>
 </blockquote>
 <ul>
 <li><img loading="lazy" src="/assets/images/sber_02-ff06ad89e1eee45be41c6a4435300a41.png" width="1332" height="295" class="img_ev3q"></li>
@@ -52,7 +52,7 @@
 </blockquote>
 <ul>
 <li><img loading="lazy" src="/assets/images/yookassa-03-a7ff4decd11c90b133d6fe34b1539512.png" width="2174" height="1068" class="img_ev3q"></li>
-<li>В подразделе &quot;<strong>Настро йки платежной системы</strong>&quot; заполнить поля, указав:<!-- -->
+<li>В подразделе &quot;<strong>Настройки платежной системы</strong>&quot; заполни ть поля, указав:<!-- -->
 <ul>
 <li>&quot;<strong>Идентификатор магазина</strong>&quot; - Shop ID тестового магазина в ЮKassa.</li>
 <li>&quot;<strong>Секретный ключ</strong>&quot; - секретный ключ тестового магазина в ЮKassa.</li>
@@ -77,7 +77,7 @@
 <ul>
 <li>Далее, нажать кнопку &quot;<strong>Сохранить</strong>&quot; и сбросить кэш сайта.</li>
 <li>После, осуществить платеж на сайте выбрав &quot;<strong>ЮKassa</strong>&quot; в качестве способа оплаты заказа. Для осуществления платежа использовать <a href="https://yookassa.ru/developers/payment-acceptance/testing-and-going-live/testing#test-bank-card-data" target="_blank" rel="noopener noreferrer">тестовые карты</a>.</li>
-<li>При успешном завершении платежа информация дополнительно будет отражена в подразделе &quot;<strong>Оплата заказа</strong>&quot; <a href="https://docs.pixlpark.ru/#/orders/edit?id=%d0%9e%d0%bf%d0%bb%d0%b0%d1%82%d0%b0-%d0%b7%d0%b0%d0%ba%d0%b0%d0%b7%d0%b0" target="_blank" rel="noopener noreferrer">карточки заказа</a> в панели управления Pixlpark.
+<li>При успешном завершении платежа информация дополнительно будет отражена в подразделе &quot;<strong>Оплата заказа</strong>&quot; <a href="/orders/list#%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D1%8F-%D0%BE%D0%B1-%D0%BE%D0%BF%D0%BB%D0%B0%D1%82%D0%B5-1">карточки заказа</a> в панели управления Pixlpark.
 <img loading="lazy" src="/assets/images/yookassa-05-aa595262c835db0f91d7679d1171b814.png" title=":size=40%" width="1089" height="639" class="img_ev3q"></li>
 </ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="настройка-рабочего-режима-оплаты">Настройка рабочего режима оплаты<a href="#настройка-рабочего-режима-оплаты" class="hash-link" aria-label="Direct link to Настройка рабочего режима оплаты" title="Direct link to Настройка рабочего режима оплаты">​</a></h3>
@@ -88,7 +88,7 @@
 <li>&quot;<strong>Идентификатор магазина</strong>&quot; - Shop ID магазина в ЮKassa.</li>
 <li>&quot;<strong>Секретный ключ</strong>&quot; - секретный ключ магазина в ЮKassa.</li>
 <li>&quot;<strong>Идентификатор магазина (мобильное приложение)</strong>&quot; - Shop ID магазина для мобильного приложения в ЮKassa.</li>
-<li>&quot;<strong>Секретный ключ (мобил ьное приложение)</strong>&quot; - секретный ключ магазина для мобильного приложения в ЮKassa.</li>
+<li>&quot;<strong>Секретный ключ (мобильное приложение)</strong>&quot; - секретный ключ магазина для м обильного приложения в ЮKassa.</li>
 <li>&quot;<strong>Ключ для мобильного SDK</strong>&quot; - ключ для мобильного SDK в ЮKassa (создается при необходимости приема платежей в мобильном приложении).</li>
 <li>&quot;<strong>Название сертификата ApplePay</strong>&quot; - сертификат ApplePay для ЮKassa.</li>
 <li>&quot;<strong>Идентификатор, полученный при регистрации приложения (Client ID)</strong>&quot; - Client ID, полученный при регистрации приложения на сайте <a href="https://yookassa.ru/oauth/v2/client" target="_blank" rel="noopener noreferrer">https://yookassa.ru</a>
@@ -149,14 +149,14 @@
 </ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="требования-к-оформлению-сайта-1">Требования к оформлению сайта<a href="#требования-к-оформлению-сайта-1" class="hash-link" aria-label="Direct link to Требования к оформлению сайта" title="Direct link to Требования к оформлению сайта">​</a></h3>
 <ul>
-<li>Для подключения платежной системы необходимо привести сайт в соответствии с <a href="https://www.tinkoff.ru/kassa/solution/classic/help/how-work/connection-conditions/#q3" target="_blank" rel="noopener noreferrer">требованиями</a>.</li>
+<li>Для подключения платежной системы необходимо привести сайт в соответс твии с <a href="https://www.tinkoff.ru/kassa/solution/classic/help/how-work/connection-conditions/#q3" target="_blank" rel="noopener noreferrer">требованиями</a>.</li>
 </ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="настройка-тестового-режима-оплаты-1">Настройка тестового режима оплаты<a href="#настройка-тестового-режима-оплаты-1" class="hash-link" aria-label="Direct link to Настройка тестового режима оплаты" title="Direct link to Настройка тестового режима оплаты">​</a></h3>
 <blockquote>
 <p>Предварительно необходимо <a href="https://www.tinkoff.ru/kassa/solution/classic/help/how-involve/payment/#q8" target="_blank" rel="noopener noreferrer">настроить</a> тестовый терминал в личном кабинете интернет-эквайринга Тинькофф.</p>
 </blockquote>
 <ul>
-<li>Для настройки тестового режима оплаты заказов в панели управления Pixlpark необходимо  перейти в раздел &quot;<strong>Настройка / Оплата</strong>&quot; и в подразделе &quot;<strong>Способы оплаты</strong>&quot; перейти в <a href="https://docs.pixlpark.ru/#/site/payments?id=%d0%9a%d0%b0%d1%80%d1%82%d0%be%d1%87%d0%ba%d0%b0-%d0%be%d0%bf%d0%bb%d0%b0%d1%82%d1%8b" target="_blank" rel="noopener noreferrer">карточку оплаты</a> &quot;<strong>Тинькофф</strong>&quot;.</li>
+<li>Для настройки тестового режима оплаты заказов в панели управления Pixlpark необходимо  перейти в раздел &quot;<strong>Настройка / Оплата</strong>&quot; и в подразделе &quot;<strong>Способы оплаты</strong>&quot; перейти в <a href="/site/payments#%D0%BA%D0%B0%D1%80%D1%82%D0%BE%D1%87%D0%BA%D0%B0-%D0%BE%D0%BF%D0%BB%D0%B0%D1%82%D1%8B">карточку оплаты</a> &quot;<strong>Тинькофф</strong>&quot;.</li>
 </ul>
 <blockquote>
 <p>В случае, если при переходе в подраздел &quot;<strong>Способы оплаты</strong>&quot;  в списке отсутствует &quot;<strong>Тинькофф</strong>&quot;, необходимо выбрать значение &quot;<strong>Не учитывать</strong>&quot; в подразделе &quot;<strong>Доступность</strong>&quot;.</p>
@@ -183,7 +183,7 @@
 <li>В подразделе &quot;<strong>Настройки платежной системы</strong>&quot; заполнить поля, указав:<!-- -->
 <ul>
 <li>&quot;<strong>Terminal ID</strong>&quot; - номер тестового терминала.</li>
-<li>&quot;<strong>Пароль</strong>&quot; - парол ь тестового терминала.</li>
+<li>&quot;<strong>Пароль</strong>&quot; - пароль тестового терминала.</li>
 </ul>
 </li>
 <li><img loading="lazy" src="/assets/images/tinkoff_03-13b94f0ae704a809d551fb1f410b0023.png" width="2663" height="409" class="img_ev3q"></li>
@@ -194,12 +194,12 @@
 <p>Подробную информацию о тестировании можно узнать на <a href="https://www.tinkoff.ru/kassa/solution/classic/help/how-involve/payment/#q10" target="_blank" rel="noopener noreferrer">странице</a>.</p>
 </blockquote>
 <ul>
-<li>При успешном завершении платежа информация дополнительно будет отражена в подразделе &quot;<strong>Оплата заказа</strong>&quot; <a href="https://docs.pixlpark.ru/#/orders/edit?id=%d0%9e%d0%bf%d0%bb%d0%b0%d1%82%d0%b0-%d0%b7%d0%b0%d0%ba%d0%b0%d0%b7%d0%b0" target="_blank" rel="noopener noreferrer">карточки заказа</a> в панели управления Pixlpark.
+<li>При успешном завершении платежа информация дополнительно будет отражена в подразделе &quot;<strong>Оплата заказа</strong>&quot; <a href="/orders/list#%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D1%8F-%D0%BE%D0%B1-%D0%BE%D0%BF%D0%BB%D0%B0%D1%82%D0%B5-1">карточки заказа</a> в панели управления Pixlpark.
 <img loading="lazy" src="/assets/images/tinkoff_04-4f9d8f697481751f32661a1e9c3c0afb.png" width="580" height="333" class="img_ev3q"></li>
 </ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="настройка-рабочего-режима-оплаты-1">Настройка рабочего режима оплаты<a href="#настройка-рабочего-режима-оплаты-1" class="hash-link" aria-label="Direct link to Настройка рабочего режима оплаты" title="Direct link to Настройка рабочего режима оплаты">​</a></h3>
 <blockquote>
-<p>Для осуществления настроек предварительно необходимо настроить рабочий терминал в личном кабинете Тинькофф, а также убедится в его активации сотрудниками банка.</p>
+<p>Для осуществления настроек предвар ительно необходимо настроить рабочий терминал в личном кабинете Тинькофф, а также убедится в его активации сотрудниками банка.</p>
 </blockquote>
 <ul>
 <li>Для настройки рабочего режима оплаты заказов необходимо перейти в раздел &quot;<strong>Настройка / Оплата</strong>&quot; и в подразделе &quot;<strong>Способы оплаты</strong>&quot; перейти в &quot;<strong>Тинькофф</strong>&quot;.</li>
@@ -214,7 +214,7 @@
 </ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="настройка-возврата-платежа-1">Настройка возврата платежа<a href="#настройка-возврата-платежа-1" class="hash-link" aria-label="Direct link to Настройка возврата платежа" title="Direct link to Настройка возврата платежа">​</a></h3>
 <ul>
-<li>Для включения механизма возврата платежей в подразделе &quot;<strong>Основная информаци я</strong>&quot; раздела &quot;<strong>Настройка / Оплата / Настройка</strong>&quot; необходимо включить &quot;<strong>Разрешить возврат платежей в панели управления</strong>&quot;.
+<li>Для включения механизма возврата платежей в подразделе &quot;<strong>Основная информация</strong>&quot; раздела &quot;<strong>Настройка / Оплата / Настройка</strong>&quot; необходимо включить &quot;<strong>Разрешить возврат платежей в панели управления</strong>&quot;.
 <img loading="lazy" src="/assets/images/tinkoff_06-e0736236122dd85042731f296f2380c1.png" width="1020" height="389" class="img_ev3q"></li>
 <li>Возврат платежей из панели управления осуществляется несколькими способами.<!-- -->
 <ul>
@@ -259,7 +259,7 @@
 <ul>
 <li>Для подключения платежной системы необходимо привести сайт в соответствии с <a href="https://robokassa.com/content/trebovaniya.html" target="_blank" rel="noopener noreferrer">требованиями</a>.</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="настройка-тестового-режима-оплаты-2">Настройка тестового режима оплаты<a href="#настройка-тестового-режима-оплаты-2" class="hash-link" aria-label="Direct link to Настройка тестового режима оплаты" title="Direct link to Настройка тестового режима оплаты">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="настройка-тестового-режима-оплаты-2">Настройка тестового режима оплаты<a href="#настройка-тестового-режима-оплаты-2" class="hash-link" aria-label="Direct link to Настройк а тестового режима оплаты" title="Direct link to Настройка тестового режима оплаты">​</a></h3>
 <blockquote>
 <p>Предварительно необходимо <a href="https://robokassa.com/content/podklyuchenie-k-cms-ili-crm.html" target="_blank" rel="noopener noreferrer">создать и настроить магазин</a>  в личном кабинете Robokassa. При осуществлении настроек задать параметры:</p>
 <ul>
@@ -273,7 +273,7 @@
 </ul>
 </blockquote>
 <ul>
-<li>Для настройки тестового режима оплаты заказов в панели управления Pixlpark необходимо  перейти в ра здел &quot;<strong>Настройка / Оплата</strong>&quot; и в подразделе &quot;<strong>Способы оплаты</strong>&quot; перейти в <a href="https://docs.pixlpark.ru/#/site/payments?id=%d0%9a%d0%b0%d1%80%d1%82%d0%be%d1%87%d0%ba%d0%b0-%d0%be%d0%bf%d0%bb%d0%b0%d1%82%d1%8b" target="_blank" rel="noopener noreferrer">карточку оплаты</a> &quot;<strong>Robokassa</strong>&quot;.</li>
+<li>Для настройки тестового режима оплаты заказов в панели управления Pixlpark необходимо  перейти в раздел &quot;<strong>Настройка / Оплата</strong>&quot; и в подразделе &quot;<strong>Способы оплаты</strong>&quot; перейти в <a href="/site/payments#%D0%BA%D0%B0%D1%80%D1%82%D0%BE%D1%87%D0%BA%D0%B0-%D0%BE%D0%BF%D0%BB%D0%B0%D1%82%D1%8B">карточку оплаты</a> &quot;<strong>Robokassa</strong>&quot;.</li>
 </ul>
 <blockquote>
 <p>В случае, если при переходе в подраздел &quot;<strong>Способы оплаты</strong>&quot;  в списке отсутствует &quot;<strong>Robokassa</strong>&quot;, необходимо выбрать значение &quot;<strong>Не учитывать</strong>&quot; в подразделе &quot;<strong>Доступность</strong>&quot;.</p>
@@ -308,7 +308,7 @@
 <li><img loading="lazy" src="/assets/images/robokassa-04-ac6adb14063ab799333d3bba667e8c95.png" width="1055" height="210" class="img_ev3q"></li>
 <li>Далее, нажать кнопку &quot;<strong>Сохранить</strong>&quot; и сбросить кэш сайта.</li>
 <li>После, осуществить платеж на сайте выбрав &quot;<strong>Robokassa</strong>&quot; в качестве способа оплаты заказа.</li>
-<li>При успешном завершении платежа информация дополнительно будет отражена в подразделе &quot;<strong>Оплата заказа</strong>&quot; <a href="https://docs.pixlpark.ru/#/orders/edit?id=%d0%9e%d0%bf%d0%bb%d0%b0%d1%82%d0%b0-%d0%b7%d0%b0%d0%ba%d0%b0%d0%b7%d0%b0" target="_blank" rel="noopener noreferrer">карточки заказа</a> в панели управления Pixlpark.
+<li>При успешном завершении платежа информация дополнительно будет отражена в подразделе &quot;<strong>Оплата заказа</strong>&quot; <a href="/orders/list#%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D1%8F-%D0%BE%D0%B1-%D0%BE%D0%BF%D0%BB%D0%B0%D1%82%D0%B5-1">карточки заказа</a> в панели управления Pixlpark.
 <img loading="lazy" src="/assets/images/robokassa-03-f0a366a57e4097c828398cfee57666c6.png" title=":size=40%" width="548" height="285" class="img_ev3q"></li>
 </ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="настройка-рабочего-режима-оплаты-2">Настройка рабочего режима оплаты<a href="#настройка-рабочего-режима-оплаты-2" class="hash-link" aria-label="Direct link to Настройка рабочего режима оплаты" title="Direct link to Настройка рабочего режима оплаты">​</a></h3>
@@ -336,7 +336,7 @@
 <p>Для настройки платежной системы необходимо выполнить следующие действия.</p>
 </li>
 <li>
-<p>В панели управления Pixlpark необходимо  перейти в раздел &quot;<strong>Настройка / Оплата</strong>&quot; и в подразделе &quot;<strong>Способы оплаты</strong>&quot; перейти в <a href="https://docs.pixlpark.ru/#/site/payments?id=%d0%9a%d0%b0%d1%80%d1%82%d0%be%d1%87%d0%ba%d0%b0-%d0%be%d0%bf%d0%bb%d0%b0%d1%82%d1%8b" target="_blank" rel="noopener noreferrer">карточку оплаты</a> &quot;<strong>Банковский перевод</strong>&quot;.</p>
+<p>В панели управления Pixlpark необходимо  перейти в раздел &quot;<strong>Настройка / Оплата</strong>&quot; и в подразделе &quot;<strong>Способы оплаты</strong>&quot; перейти в <a href="/site/payments#%D0%BA%D0%B0%D1%80%D1%82%D0%BE%D1%87%D0%BA%D0%B0-%D0%BE%D0%BF%D0%BB%D0%B0%D1%82%D1%8B">карточку оплаты</a> &quot;<strong>Банковский перевод</strong>&quot;.</p>
 </li>
 </ul>
 <blockquote>
@@ -349,7 +349,7 @@
 <li><strong>Название на сайте</strong>.</li>
 <li><strong>Название в панели управления</strong>.</li>
 <li><strong>Платежная система доступна на сайте</strong> - необходимо включить.</li>
-<li><strong>Платежная система доступна в мобильном приложении</strong> - включить при необходимости.</li>
+<li><strong>Платежная система доступна в мобильном приложении</strong> - включить  при необходимости.</li>
 <li><strong>Платежная система используется по умолчанию</strong> - включить при необходимости.</li>
 </ul>
 </li>
@@ -386,12 +386,12 @@
 <li><img loading="lazy" src="/assets/images/bank-transfer-04-d9709c786c83987fc87f52da54332694.png" width="1298" height="325" class="img_ev3q"></li>
 <li>Далее, при необходимости, включить ограничения в подразделе &quot;<strong>Ограничения</strong>&quot; платежного документа.</li>
 <li><img loading="lazy" src="/assets/images/bank-transfer-05-c9ef43a5d3db8a785ce056154e61ea24.png" width="1062" height="380" class="img_ev3q"></li>
-<li>Затем, в подразделе &quot;<strong>Документ</strong>&quot; добавить текстовое содержимое платежного докумен та.</li>
+<li>Затем, в подразделе &quot;<strong>Документ</strong>&quot; добавить текстовое содержимое платежного документа.</li>
 <li><img loading="lazy" src="/assets/images/bank-transfer-06-bdca1f37693c0083cd245f91e567b1e2.png" width="1067" height="701" class="img_ev3q"></li>
 <li>Далее, нажать кнопку &quot;<strong>Сохранить</strong>&quot; и сбросить кэш сайта.</li>
 <li>После, осуществить платеж на сайте выбрав &quot;<strong>Банковский перевод</strong>&quot; в качестве способа оплаты заказа. При переходе на страницу оплаты выбрать необходимый бланк счета и нажать кнопку &quot;<strong>Распечатать</strong>&quot;.</li>
 <li><img loading="lazy" src="/assets/images/bank-transfer-07-41ac03eb4688557eb106a2b6a7ed4bd5.png" width="981" height="571" class="img_ev3q"></li>
-<li>Информация о платеже дополнительно будет отражена в подразделе &quot;<strong>Оплата заказа</strong>&quot; <a href="https://docs.pixlpark.ru/#/orders/edit?id=%d0%9e%d0%bf%d0%bb%d0%b0%d1%82%d0%b0-%d0%b7%d0%b0%d0%ba%d0%b0%d0%b7%d0%b0" target="_blank" rel="noopener noreferrer">карточки заказа</a> в панели управления Pixlpark.
+<li>Информация о платеже дополнительно будет отражена в подразделе &quot;<strong>Оплата заказа</strong>&quot; <a href="/orders/list#%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D1%8F-%D0%BE%D0%B1-%D0%BE%D0%BF%D0%BB%D0%B0%D1%82%D0%B5-1">карточки заказа</a> в панели управления Pixlpark.
 <img loading="lazy" src="/assets/images/bank-transfer-08-68c7c7162b42db9ca16fe21d7cde9123.png" title=":size=40%" width="441" height="519" class="img_ev3q"></li>
 </ul>
 <blockquote>
@@ -405,6 +405,6 @@
 </blockquote>
 <ul>
 <li><img loading="lazy" src="/assets/images/bank-transfer-10-942a76b01acb1e972133121f38dbc722.png" title=":size=40%" width="437" height="510" class="img_ev3q"></li>
-</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="theme-doc-footer-edit-meta-row row"><div class="col"><a href="https://github.com/Pixlpark/new-doc/tree/main/docs/integration/payments.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_vwxv"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/category/интеграции"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Интеграции</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/integration/shippings"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Транспортные компании</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#юkassa" class="table-of-contents__link toc-highlight">ЮKassa</a><ul><li><a href="#получение-доступа" class="table-of-contents__link toc-highlight">Получение доступа</a></li><li><a href="#требования-к-оформлению-сайта" class="table-of-contents__link toc-highlight">Требования к оформлению сайта</a></li><li><a href="#настройка-тестового-режима-оплаты" class="table-of-contents__link toc-highlight">Настройка тестового режима оплаты</a></li><li><a href="#настройка-рабочего-режима-оплаты" class="table-of-contents__link toc-highlight">Настройка рабочего режима оплаты</a></li><li><a href="#настройка-возврата-платежа" class="table-of-contents__link toc-highlight">Настройка возврата платежа</a></li></ul></li><li><a href="#тинькофф" class="table-of-contents__link toc-highlight">Тинькофф</a><ul><li><a href="#получение-доступа-1" class="table-of-contents__link toc-highlight">Получение доступа</a></li><li><a href="#требования-к-оформлению-сайта-1" class="table-of-contents__link toc-highlight">Требования к оформлению сайта</a></li><li><a href="#настройка-тестового-режима-оплаты-1" class="table-of-contents__link toc-highlight">Настройка тестового режима оплаты</a></li><li><a href="#настройка-рабочего-режима-оплаты-1" class="table-of-contents__link toc-highlight">Настройка рабочего режима оплаты</a></li><li><a href="#настройка-возврата-платежа-1" class="table-of-contents__link toc-highlight">Настройка возврата платежа</a></li></ul></li><li><a href="#robokassa" class="table-of-contents__link toc-highlight">Robokassa</a><ul><li><a href="#получение-доступа-2" class="table-of-contents__link toc-highlight">Получение доступа</a></li><li><a href="#требо вания-к-оформлению-сайта-2" class="table-of-contents__link toc-highlight">Требования к оформлению сайта</a></li><li><a href="#настройка-тестового-режима-оплаты-2" class="table-of-contents__link toc-highlight">Настройка тестового режима оплаты</a></li><li><a href="#настройка-рабочего-режима-оплаты-2" class="table-of-contents__link toc-highlight">Настройка рабочего режима оплаты</a></li></ul></li><li><a href="#банковский-перевод" class="table-of-contents__link toc-highlight">Банковский перевод</a></li></ul></div></div></div></div></main></div></div></div></div>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="theme-doc-footer-edit-meta-row row"><div class="col"><a href="https://github.com/Pixlpark/new-doc/tree/main/docs/integration/payments.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_vwxv"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/category/интеграции"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Интеграции</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/integration/shippings"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Транспортные компании</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#юkassa" class="table-of-contents__link toc-highlight">ЮKassa</a><ul><li><a href="#получение-доступа" class="table-of-contents__link toc-highlight">Получение доступа</a></li><li><a href="#требования-к-оформлению-сайта" class="table-of-contents__link toc-highlight">Требования к оформлению сайта</a></li><li><a href="#настройка-тестового-режима-оплаты" class="table-of-contents__link toc-highlight">Настройка тестового режима оплат ы</a></li><li><a href="#настройка-рабочего-режима-оплаты" class="table-of-contents__link toc-highlight">Настройка рабочего режима оплаты</a></li><li><a href="#настройка-возврата-платежа" class="table-of-contents__link toc-highlight">Настройка возврата платежа</a></li></ul></li><li><a href="#тинькофф" class="table-of-contents__link toc-highlight">Тинькофф</a><ul><li><a href="#получение-доступа-1" class="table-of-contents__link toc-highlight">Получение доступа</a></li><li><a href="#требования-к-оформлению-сайта-1" class="table-of-contents__link toc-highlight">Требования к оформлению сайта</a></li><li><a href="#настройка-тестового-режима-оплаты-1" class="table-of-contents__link toc-highlight">Настройка тестового режима оплаты</a></li><li><a href="#настройка-рабочего-режима-оплаты-1" class="table-of-contents__link toc-highlight">Настройка рабочего режима оплаты</a></li><li><a href="#настройка-возврата-платежа-1" class="table-of-contents__link toc-highlight">Настройка возврата платежа</a></li></ul></li><li><a href="#robokassa" class="table-of-contents__link toc-highlight">Robokassa</a><ul><li><a href="#получение-доступа-2" class="table-of-contents__link toc-highlight">Получение доступа</a></li><li><a href="#требования-к-оформлению-сайта-2" class="table-of-contents__link toc-highlight">Требования к оформлению сайта</a></li><li><a href="#настройка-тестового-режима-оплаты-2" class="table-of-contents__link toc-highlight">Настройка тестового режима оплаты</a></li><li><a href="#настройка-рабочего-р ежима-оплаты-2" class="table-of-contents__link toc-highlight">Настройка рабочего режима оплаты</a></li></ul></li><li><a href="#банковский-перевод" class="table-of-contents__link toc-highlight">Банковский перевод</a></li></ul></div></div></div></div></main></div></div></div></div>
 </body>
 </html>
