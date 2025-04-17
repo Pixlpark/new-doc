@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.0.1">
 <title data-rh="true">Подготовка макетов | Документация Pixlpark</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://docs.pixlpark.ru/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://docs.pixlpark.ru/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://docs.pixlpark.ru/design/psd"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Подготовка макетов | Документация Pixlpark"><meta data-rh="true" name="description" content="Спецификация подготовки PSD-макетов"><meta data-rh="true" property="og:description" content="Спецификация подготовки PSD-макетов"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://docs.pixlpark.ru/design/psd"><link data-rh="true" rel="alternate" href="https://docs.pixlpark.ru/design/psd" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.pixlpark.ru/design/psd" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://CBISSLUS3P-dsn.algolia.net" crossorigin="anonymous"><link rel="search" type="application/opensearchdescription+xml" title="Документация Pixlpark" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.b0b92ecc.css">
-<script src="/assets/js/runtime~main.284c9540.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.28467983.js" defer="defer"></script>
 <script src="/assets/js/main.b54af52d.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -25,6 +25,7 @@
 <li><code>[align:Top | TopRight | Right | BottomRight | Bottom | BottomLeft | Left | TopLeft| CenterLeft | CenterRight | TopCenter | BottomCenter]</code> – задает выравнивание слоя по одному из указанных значений. Например, <code>[align:Left]</code> и <code>[align:Right]</code> используется для графических элементов на обложке фотокниги, чтобы с ростом корешка они оставались на прежнем месте на странице;</li>
 <li><code>[background]</code> – считает слой фоновым, т.е. располагает ниже всех слоев и заполняет им всю зону печати (при необходимости пропорционально масштабируя);</li>
 <li><code>[foreground]</code> – считает слой обложкой, т.е. располагает поверх всех слоев и запрещает с ним любые операции (редактирования, перемещения и удаления).</li>
+<li><code>[frame: width:3 shadow:3 borderRadius:3 rgb(255, 255, 255)]</code> - параметр для рамки типа &quot;Обводка&quot;, где <code>width:3</code> - это толщина рамки со значением 3, <code>shadow:3</code> - это интенсивность тени рамки со значением 3, <code>borderRadius:3</code> - это закругление углов рамки со значением 3, <code>rgba(255, 255, 255)</code> - это цвет рамки.</li>
 </ul>
 </li>
 <li>А для текстовых слоев помимо ключей можно использовать и префиксы, которые автоматически устанавливают значение слоя данными клиента:<!-- -->
@@ -47,7 +48,7 @@
 <li>Цвет текста может быть не только однотонным, но и градиентным. Для задания градиента необходимо использовать ключ <code>[gradient: 45deg, rgba(0, 255, 0, 1) 10, rgba(255, 0, 0, 1) 90]</code>, где  <code>45</code> - это угол наклона градиента, <code>rgba(0, 255, 0, 1)</code> - это цвет, <code>10</code> - точка останова цвета. Цветов в градиенте должно быть не менее двух.</li>
 <li>Также можно задать обводку текста в формате <code>[outline: rgba(255, 0, 0, 1) 5]</code>, где  <code>rgba(255, 0, 0, 1)</code> - это цвет, <code>5</code> - толщина.</li>
 <li>Тень текста задается в формате <code>[shadow: x:-10 y:20 blur:6 rgba(22, 22, 22, 1)]</code>, где <code>x</code> - это смещениие тени по горизонтали, <code>y</code> - это смещениие тени по вертикали, <code>blur</code> - это радиус размытия, <code>rgba(22, 22, 22, 1)</code> - это цвет тени.</li>
-<li>Парение те кста задается в формате <code>[hover: 50 rgba(22, 22, 22, 1)]</code>, где <code>hover</code> - значение интенсивности парения, <code>rgba(22, 22, 22, 1)</code> - это цвет.</li>
+<li>Парение текста задается в формате <code>[hover: 50 rgba(22, 22, 22, 1)]</code>, где <code>hover</code> - значение интенсивности парения, <code>rgba(22, 22, 22, 1)</code> - это цвет.</li>
 <li>Фон текста задается в формате <code>[text-background: padding: 50 radius: 50 rgba(222, 222, 0, 1)]</code>, где <code>padding</code> - это внутренний отступ со всех сторон от текста, <code>radius</code> - это степень скругления углов фона текста, <code>rgba(222, 222, 0, 1)</code> - это цвет фона.</li>
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="работа-с-изображениями">Работа с изображениями<a href="#работа-с-изображениями" class="hash-link" aria-label="Direct link to Работа с изображениями" title="Direct link to Работа с изображениями">​</a></h2>
@@ -93,7 +94,7 @@
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="особенности-макетов-фотокниг">Особенности макетов фотокниг<a href="#особенности-макетов-фотокниг" class="hash-link" aria-label="Direct link to Особенности макетов фотокниг" title="Direct link to Особенности макетов фотокниг">​</a></h2>
 <ul>
 <li>Общий механизм подготовки макетов позволяет создавать дизайны фотокниг, однако макеты в этом случае должны быть дообрезных размеров под каждый формат и тип книги, т.е. содержать область загиба, вылет и корешок по умолчанию.</li>
-<li>Для оптимизации подготовки макетов, мы разработали технологию адаптивного дизайна фотокниг, которая позволяет использовать один макет для близких по размеру форматов вне зависимости от размеров вылета, корешка и загиба.</li>
+<li>Для оптимизации подготовки макетов, мы разработали технологию адаптивного дизайна фотокниг, которая позволяет использовать один макет для близких по размеру форматов вне зависи мости от размеров вылета, корешка и загиба.</li>
 <li>Суть технологии заключается в следующем:<!-- -->
 <ul>
 <li>Макет не содержит вылета, корешка и загиба.</li>
@@ -121,7 +122,7 @@
 <li>Макет содержит слой, в котором будет располагаться календарная сетка.</li>
 <li>Календарная сетка формируется динамически в редакторе и отображается в дизайне в указанной области.</li>
 <li>Дизайн календарной сетки настраивается в панели управления Pixlpark.</li>
-<li>В ячейки календарной сетки в редакторе можно помещать фотог рафии или подписывать их (например, отметить памятное событие).</li>
+<li>В ячейки календарной сетки в редакторе можно помещать фотографии или подписывать их (например, отметить памятное событие).</li>
 </ul>
 </li>
 <li>Для использования технологии необходимо:<!-- -->
@@ -130,7 +131,7 @@
 <li>В <a href="/print/designs#%D1%85%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8-%D1%88%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD%D0%B0">настройках шаблона</a> параметру <strong>&quot;Тип шаблона&quot;</strong> задать значение <strong>&quot;Календарь&quot;</strong>, а параметру <strong>&quot;Сетка по умолчанию&quot;</strong> - название наиболее подходящей календарной сетки для данного шаблона.</li>
 <li>В макете использовать следующие ключи:<!-- -->
 <ul>
-<li><code>[template-preview]</code> – группа растровых слоев в первом макете, не отображающаяся в редакторе, элементы которой используются в качестве обложки шаблона. Каждый слой группы соответствует определенному году и называется <code>[year]</code> (например, [2023]), где <strong>year</strong> - год, заданный в панели управления в разделе <a href="/print/designs#%D1%85%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8-%D1%88%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD%D0%B0">&quot;Печать / Дизайны / Шаблоны / Настро йка&quot;</a>.</li>
+<li><code>[template-preview]</code> – группа растровых слоев в первом макете, не отображающаяся в редакторе, элементы которой используются в качестве облож ки шаблона. Каждый слой группы соответствует определенному году и называется <code>[year]</code> (например, [2023]), где <strong>year</strong> - год, заданный в панели управления в разделе <a href="/print/designs#%D1%85%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8-%D1%88%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD%D0%B0">&quot;Печать / Дизайны / Шаблоны / Настройка&quot;</a>.</li>
 <li><code>[calendar-title]</code> – текстовый слой, содержимое которого будет заменено на начальный год календаря (например, использовать в слое <code>[template-preview]</code> для обложки);</li>
 <li><code>[calendar-title-range]</code> – текстовый слой, содержимое которого будет заменено на начальный и конечный год календаря через дефис, если календарь создается на несколько лет;</li>
 <li><code>[calendar][path:pathName]</code> – графический слой, содержимое которого будет заменено на календарную сетку, а <strong>pathName</strong> – название контура, привязанного к данному слою.
@@ -176,7 +177,7 @@
 <li>При размещении фотографии в виньетку текстовые поля для ФИО могут быть автоматически заполнены из названия фотографии. Для этого необходимо, чтобы:<!-- -->
 <ul>
 <li>Название файла содержало комбинацию Имени, Фамилии и Отчества (опционально) через пробел;</li>
-<li>Слои для виньетки и ФИО находились в одной группе. Например, можно использовать следующие ключи:<!-- -->
+<li>Слои для виньетки и ФИО находились в одной группе. Например, можно использовать следующ ие ключи:<!-- -->
 <ul>
 <li><code>[student]</code> - название группы слоев для одного ученика;</li>
 <li><code>[current-student]</code> - название группы слоев для текущего ученика в группе <code>[students:n]</code>;</li>
@@ -199,9 +200,9 @@
 <ul>
 <li>Для добавления контура необходимо:<!-- -->
 <ol>
-<li>Создать новый слой с уникальным именем в панели &quot;Контуры&quot; (например <code>&quot;path_N&quot;</code>).</li>
+<li>Созд ать новый слой с уникальным именем в панели &quot;Контуры&quot; (например <code>&quot;path_N&quot;</code>).</li>
 <li>Выбрать инструмент &quot;Перо&quot; (горячая клавиша – &quot;P&quot;).</li>
-<li>Начертить контур с помощью пера так, чтобы последняя точка замыкалась с первой. При использовании слоя <code>[mask]</code>, точки нужно ста вить примерно посередине самой рамки, чтобы она закрывала границы фотографии.</li>
+<li>Начертить контур с помощью пера так, чтобы последняя точка замыкалась с первой. При использовании слоя <code>[mask]</code>, точки нужно ставить примерно посередине самой рамки, чтобы она закрывала границы фотографии.</li>
 <li>Повторить эту операцию для каждой рамки в макете.</li>
 </ol>
 </li>
