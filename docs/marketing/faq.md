@@ -22,5 +22,5 @@ sidebar_position: 8
 ## Видеоуроки
 
 ### Как запустить перекрестные продажи
-<iframe width="840" height="473" src="https://www.youtube.com/embed/glwlVNa1A90?si=KMEIz4Va3dt_ngIi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="720" height="405" src="https://rutube.ru/play/embed/8b1f1a7224b9d462963deaea382e832f/" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 

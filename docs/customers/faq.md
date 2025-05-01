@@ -33,4 +33,4 @@ sidebar_position: 5
 
 ## Видеоуроки
 ### Как подключить заказ без регистрации
-<iframe width="840" height="473" src="https://www.youtube.com/embed/8kHKlbYzVmU?si=HqvKwNdmeblVGQD6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="720" height="405" src="https://rutube.ru/play/embed/6b78beb72ddd87210b994f30be8fa5fb/" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>

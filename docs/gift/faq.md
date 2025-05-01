@@ -100,4 +100,4 @@ sidebar_position: 5
 
 ## Видеоуроки
 ### Как установить цены на сувениры
-<iframe width="840" height="473" src="https://www.youtube.com/embed/go2B5--GI9s?si=EAxKkei4T1AKRYqb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="720" height="405" src="https://rutube.ru/play/embed/1b7dd83f27bce3a65f6a9064955e134d/" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>

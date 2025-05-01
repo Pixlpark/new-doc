@@ -52,7 +52,7 @@ sidebar_position: 8
 
 ## Видеоуроки
 ### Как скопировать продукт с демо-сайта
-<iframe width="840" height="473" src="https://www.youtube.com/embed/kGlXFqytv0k?si=n90VGRVaZmw274xQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="720" height="405" src="https://rutube.ru/play/embed/a41cdd43e9d7928f29f10ffd729adb94/" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 
 ### Как скопировать шаблоны с демо-сайта
-<iframe width="840" height="473" src="https://www.youtube.com/embed/l9xadqqxB_o?si=JxN7DowFrs8fgvDn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="720" height="405" src="https://rutube.ru/play/embed/005777c72d1f07c35427426135dadeb1/" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>

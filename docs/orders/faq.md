@@ -42,15 +42,15 @@ sidebar_position: 7
 
 ## Видеоуроки
 ### Как подключить быстрый заказ
-<iframe width="840" height="473" src="https://www.youtube.com/embed/8kHKlbYzVmU?si=HqvKwNdmeblVGQD6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="720" height="405" src="https://rutube.ru/play/embed/6b78beb72ddd87210b994f30be8fa5fb/" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 *
 *
 
 ### Как оформить заказ за клиента
-<iframe width="840" height="473" src="https://www.youtube.com/embed/24biaGFpxMA?si=Uz-FDiP2H7HVMuqu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="720" height="405" src="https://rutube.ru/play/embed/43f4da226d3d3a12bf1ff2cbc0d590c1/" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 *
 *
 
 ### Как отредактировать заказ клиента
-<iframe width="840" height="473" src="https://www.youtube.com/embed/qgQyWihpZJA?si=c-yuzvwvElXwg9ih" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="720" height="405" src="https://rutube.ru/play/embed/4c5ee4f0915ffb568e94533326282378/" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 

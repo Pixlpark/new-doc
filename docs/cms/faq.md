@@ -108,7 +108,7 @@ sidebar_position: 9
 
 ## Видеоуроки
 ### Редактирование страниц сайта
-<iframe width="840" height="473" src="https://www.youtube.com/embed/oz3NFaSBWAs?si=yO56YYUXjStnTvnr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="720" height="405" src="https://rutube.ru/play/embed/70558fdd6b43fcdf07875bdd819af774/" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 
 ### Как подключить онлайн-чат на сайт
-<iframe width="840" height="473" src="https://www.youtube.com/embed/fwO_SiWLUTA?si=ainvKvJ5NqErVvWk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="720" height="405" src="https://rutube.ru/play/embed/9ade21aca92af66951a820d023ec42ac/" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
