@@ -119,6 +119,8 @@ sidebar_position: 7
     + __Template Selection Modal Empty Template (Выбор пустого шаблона)__: Пользователь выбирает пустой шаблон в модальном окне.
     + __Template Selection Modal Apply Template (Применение шаблона из модального окна)__: Пользователь применяет шаблон из модального окна.
 
+![](../_media/dev/event12.png)
+
 ## Действия с фоном
 * 
     + __Add Background (Добавление фона)__: Пользователь добавляет фон.
