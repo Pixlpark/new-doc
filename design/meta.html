@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.0.1">
 <title data-rh="true">Выпускные альбомы | Документация Pixlpark</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://docs.pixlpark.ru/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://docs.pixlpark.ru/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://docs.pixlpark.ru/design/meta"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Выпускные альбомы | Документация Pixlpark"><meta data-rh="true" name="description" content="Спецификация подготовки макетов выпускных альбомов"><meta data-rh="true" property="og:description" content="Спецификация подготовки макетов выпускных альбомов"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://docs.pixlpark.ru/design/meta"><link data-rh="true" rel="alternate" href="https://docs.pixlpark.ru/design/meta" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.pixlpark.ru/design/meta" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://CBISSLUS3P-dsn.algolia.net" crossorigin="anonymous"><link rel="search" type="application/opensearchdescription+xml" title="Документация Pixlpark" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.b0b92ecc.css">
-<script src="/assets/js/runtime~main.078da550.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.cfb47b6b.js" defer="defer"></script>
 <script src="/assets/js/main.ee8c5ce4.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -16,7 +16,8 @@
 <li>Метаинформация в данном случае является набором ключей, которые необходимо использовать в названиях слоев или групп.</li>
 <li><strong><code>[meta:school]</code></strong> - группа, содержащая информацию о школе. В ней можно использовать слои со следующими ключами:<!-- -->
 <ul>
-<li><code>[meta:name]</code> - наименование учебного заведения без номера;</li>
+<li><code>[meta:name]</code> - наименование учебного заведения;</li>
+<li><code>[meta:letter]</code> - наименование учебного заведения без номера;</li>
 <li><code>[meta:number]</code> - номер учебного заведения;</li>
 <li><code>[meta:city]</code> - название города;</li>
 <li><code>[meta:photo]</code> - фотография учебного заведения.</li>
@@ -35,7 +36,7 @@
 <li><code>[meta:qr]</code> - куар-код для скачивания программы по оживлению.</li>
 </ul>
 </li>
-<li><strong><code>[meta:class years]</code></strong>  - группа, содержащая информацию о годе выпуска в виде растровых изображений. В ней можно использов ать слои со следующими ключами:<!-- -->
+<li><strong><code>[meta:class years]</code></strong>  - группа, содержащая информацию о годе выпуска в виде растровых изображений. В ней можно использовать слои со следующими ключами:<!-- -->
 <ul>
 <li><code>[meta:year]</code> - год выпуска, где year - год;</li>
 <li><code>[meta:year half1]</code> - первые две цифры года выпуска, где year - год;</li>
@@ -98,7 +99,7 @@
 <ul>
 <li>Шаблон должен содержать следующие макеты (<a href="https://demo.pixlpark.ru/content/docs/templates/mladshie_klassi.rar?v=8B43A9BD16F9F436898A6ADF0A963476" target="_blank" rel="noopener noreferrer">пример макета</a> / <a href="https://demo.pixlpark.ru/printing/graduation-photobooks-template/21x30/template-6813784/editor" target="_blank" rel="noopener noreferrer">пример в редакторе</a>):<!-- -->
 <ul>
-<li><strong>Четыре обложки</strong>: без фото, с фото в рамке, с фото на всю страницу, с  фото без фона;</li>
+<li><strong>Четыре обложки</strong>: без фото, с фото в рамке, с фото на всю страницу, с фото без фона;</li>
 <li><strong>Персональный разворот</strong>: большое фото, среднее фото и пожелание ученика;</li>
 <li><strong>Виньетки с учениками</strong>: фото классного руководителя, его пожелание и фото учеников (20-30 человек);</li>
 <li><strong>Четыре разворота с учениками</strong>: от 1 до 4 фото с пожеланиями на странице;</li>
@@ -112,8 +113,8 @@
 <ul>
 <li>Шаблон должен содержать следующие макеты (<a href="https://demo.pixlpark.ru/content/docs/templates/detskyi_sad.rar?v=D984BE3405E6A2DEDC3195220067DE05" target="_blank" rel="noopener noreferrer">пример макета</a> / <a href="https://demo.pixlpark.ru/printing/graduation-photobooks-template/21x30/template-6884651/editor" target="_blank" rel="noopener noreferrer">пример в редакторе</a>):<!-- -->
 <ul>
-<li><strong>Четыре обложки</strong>: без фото, с фото в рамке, с фото на всю страницу, с фото без фона;</li>
-<li><strong>Персо нальный разворот</strong>: большое фото, среднее фото и пожелание ребенка;</li>
+<li><strong>Четыре обложки</strong>: без фото, с фото в рамке,  с фото на всю страницу, с фото без фона;</li>
+<li><strong>Персональный разворот</strong>: большое фото, среднее фото и пожелание ребенка;</li>
 <li><strong>Виньетки с детьми</strong>: три фото воспитателей и фото детей (15-30 человек);</li>
 <li><strong>Два разворота с друзьями</strong>: от 4 до 7 рамок под фото;</li>
 <li><strong>Два разворота под коллажи</strong>: фон и элементы декора по краям;</li>
