@@ -104,6 +104,10 @@ sidebar_position: 8
   - Убедитесь, что шрифт поддерживает нужный язык (кириллица/латиница).
   - Нажмите «(изменить)» в списке шрифтов для настройки языков.
 
+## Руководство пользователя
+### [Онлайн-редактор фотокниг Pixlpark](https://docs.google.com/document/d/1f3y24N0ENLe_Gw7VbH4X2nvsfRHW_7A6rsPkbwmiiig/edit?tab=t.0)
+
+
 ## Видеоуроки
 ### Как скопировать продукт с демо-сайта
 <iframe width="720" height="405" src="https://rutube.ru/play/embed/a41cdd43e9d7928f29f10ffd729adb94/" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
