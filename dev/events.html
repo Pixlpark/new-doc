@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.0.1">
 <title data-rh="true">События аналитики в редакторе | Документация Pixlpark</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://docs.pixlpark.ru/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://docs.pixlpark.ru/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://docs.pixlpark.ru/dev/events"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="События аналитики в редакторе | Документация Pixlpark"><meta data-rh="true" name="description" content="Анализ поведения пользователей в редакторе"><meta data-rh="true" property="og:description" content="Анализ поведения пользователей в редакторе"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://docs.pixlpark.ru/dev/events"><link data-rh="true" rel="alternate" href="https://docs.pixlpark.ru/dev/events" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.pixlpark.ru/dev/events" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://CBISSLUS3P-dsn.algolia.net" crossorigin="anonymous"><link rel="search" type="application/opensearchdescription+xml" title="Документация Pixlpark" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.b0b92ecc.css">
-<script src="/assets/js/runtime~main.ba914853.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.20f8c47e.js" defer="defer"></script>
 <script src="/assets/js/main.ee8c5ce4.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -29,18 +29,18 @@
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="пример-анализа-данных">Пример анализа данных<a href="#пример-анализа-данных" class="hash-link" aria-label="Direct link to Пример анализа данных" title="Direct link to Пример анализа данных">​</a></h2>
 <ul>
-<li>Рассмотрим в отчёте поведение пользователей на примере такого действия в редакторе, как добавление изображения на поверхность.
-<img loading="lazy" src="/assets/images/event13-6ad093d5f122db7ec81b41ff64ad886c.png" width="987" height="448" class="img_ev3q"></li>
-<li>За указанный период все пользователи при работе на сайте в Desktop версии добавили на поверхность 30 изображений.</li>
-<li>Из них:<!-- -->
+<li>Рассмотрим в отчёте поведение пользователей на примере реакции пользователей на модальное окно автозаполнения. Окно появляется при открытии редактора, если в дизайне не используетс шаблон.
+<img loading="lazy" src="/assets/images/event13-66efb1e8a84e83e2ed5737d55544a096.png" width="1689" height="458" class="img_ev3q"></li>
+<li>За указанный период все пользователи при работе на сайте в Desktop версии реагировали следующим образом:<!-- -->
 <ul>
-<li>22 раза методом &quot;Drag&amp;Drop&quot; (перетаскивание мышкой),</li>
-<li>5 раз нажали на кнопку в верхней панели,</li>
-<li>3 раза нажали на кнопку добавления изображения в боковой панели.</li>
+<li>330 раз модальное окно закрыли,</li>
+<li>315 раз выбрали вариант &quot;Расставить самому&quot;,</li>
+<li>82 раза выбрали вариант &quot;1 фото на страницу&quot;,</li>
+<li>27 раз выбрали использовать автоматические коллажи редактора.</li>
 </ul>
 </li>
-<li>При этом аналогичное действие в мобильной версии сайта выполнили всего 11 раз, и все пользователи добавляли изображение методом нажатия кнопки в верхней панели.
-<img loading="lazy" src="/assets/images/event14-213a382133854de53c10f2150cc93c05.png" width="984" height="286" class="img_ev3q"></li>
+<li>При этом аналогичное действие в мобильной версии сайта выполнили 1105 раз, что говорит о том, что в адаптивной версии сайта чаще используют редактор без шаблона.
+<img loading="lazy" src="/assets/images/event14-bbf8525c2698290bad6b026bdc59bab0.png" width="1689" height="294" class="img_ev3q"></li>
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="события-аналитики">События аналитики<a href="#события-аналитики" class="hash-link" aria-label="Direct link to События аналитики" title="Direct link to События аналитики">​</a></h2>
 <ul>
@@ -56,7 +56,7 @@
 <li><strong>Element Paste (Вставка элемента)</strong>: Пользователь вставляет элемент на поверхность.</li>
 <li><strong>Element Remove (Удаление элемента)</strong>: Пользователь удаляет элемент с поверхности.</li>
 <li><strong>Element Backward (Перемещение элемента назад)</strong>: Пользователь перемещает элемент на задний план.</li>
-<li><strong>Element Forward (Перемещение элемента вперед)</strong>: Пользователь перемещает элемент на передний план.</li>
+<li><strong>Element Forward (Перемещение элеме нта вперед)</strong>: Пользователь перемещает элемент на передний план.</li>
 <li><strong>Element Position Change (Изменение позиции элемента)</strong>: Пользователь изменяет позицию элемента.
 <img loading="lazy" src="/assets/images/event01-c73749f163814108dd57bd0b8b0fda99.png" width="1367" height="709" class="img_ev3q"></li>
 </ul>
@@ -110,11 +110,11 @@
 </ul>
 </li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="действия-с-навигатором">Действия с навигатором<a href="#действия-с-навигатором" class="hash-link" aria-label="Direct link to Действия с навигатором" title="Direct link to Действия с навигатором">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="действия-с-навигатором">Действия с навигатором<a href="#действия-с-навигатором" class="hash-link" aria-label="Direct link to Действия с навигат ором" title="Direct link to Действия с навигатором">​</a></h3>
 <ul>
 <li>
 <ul>
-<li><strong>Navigator Show Toggle (Пер еключение видимости навигатора)</strong>: Пользователь показывает или скрывает навигатор.</li>
+<li><strong>Navigator Show Toggle (Переключение видимости навигатора)</strong>: Пользователь показывает или скрывает навигатор.</li>
 <li><strong>Navigator Duplicate Surface (Дублирование поверхности в навигаторе)</strong>: Пользователь дублирует поверхность через навигатор.</li>
 <li><strong>Navigator Clear Surface (Очистка поверхности в навигаторе)</strong>: Пользователь очищает поверхность через навигатор.</li>
 <li><strong>Navigator Delete Surface (Удаление поверхности в навигаторе)</strong>: Пользователь удаляет поверхность через навигатор.</li>
@@ -129,7 +129,7 @@
 <li><strong>Zoom Out (Уменьшение масштаба)</strong>: Пользователь уменьшает масштаб.</li>
 <li><strong>Zoom Fit (Сбрасывание масштаба)</strong>: Пользователь сбрасывает масштаб под содержимое.</li>
 <li><strong>Zoom To Zone (Масштаб к зоне)</strong>: Пользователь приближает определенную зону.</li>
-<li><strong>Zoom To Grid (Масштаб к сетке)</strong>: Пользователь переключает масштаб на вид с календарной сеткой.</li>
+<li><strong>Zoom To Grid (Масштаб к сетке)</strong>: Пользователь переключает масшт аб на вид с календарной сеткой.</li>
 <li><strong>Zoom To Not Grid (Масштаб без сетки)</strong>: Пользователь переключает масштаб на вид без календарной сетки.</li>
 </ul>
 </li>
@@ -145,7 +145,7 @@
 <li><strong>Frame Setted (Установка рамки)</strong>: Пользователь применяет рамку к изображению.</li>
 <li><strong>Image Replace (Замена изображения)</strong>: Пользователь заменяет изображение.</li>
 <li><strong>Image Opacity (Прозрачность изображения)</strong>: Пользователь изменяет прозрачность изображения.</li>
-<li><strong>Image Mirror (Зеркальное отображение изображения)</strong>: Пользователь зеркально отражает изображение.</li>
+<li><strong>Image Mirror (Зеркальное отображение изо бражения)</strong>: Пользователь зеркально отражает изображение.</li>
 <li><strong>Image Filter Shown (Показан фильтр изображения)</strong>: Пользователь открывает настройки фильтров изображения.</li>
 <li><strong>Image Filter Change (Изменение фильтра изображения)</strong>: Пользователь изменяет фильтр изображения.</li>
 <li><strong>Image Moving Hand Used (Использование инструмента перемещения)</strong>: Пользователь перемещает содержимое изображения с помощью &quot;руки&quot;.</li>
@@ -162,7 +162,7 @@
 <li><strong>Text Style Change (Изменение стиля текста)</strong>: Пользователь изменяет стиль текста (например, жирный, курсив).</li>
 <li><strong>Text Font Size Change (Изменение размера шрифта)</strong>: Пользователь изменяет размер шрифта.</li>
 <li><strong>Text Color Change (Изменение цвета текста)</strong>: Пользователь изменяет цвет текста.</li>
-<li><strong>Text Settings Shown (Показаны настро йки текста)</strong>: Пользователь открывает настройки текста.</li>
+<li><strong>Text Settings Shown (Показаны настройки текста)</strong>: Пользователь открывает настройки текста.</li>
 <li><strong>Text Line Height Change (Изменение высоты строки)</strong>: Пользователь изменяет высоту строки текста.</li>
 <li><strong>Text Align Change (Изменение выравнивания текста)</strong>: Пользователь изменяет выравнивание текста.</li>
 <li><strong>Text Effect Shown (Показаны эффекты текста)</strong>: Пользователь открывает настройки эффектов текста.</li>
@@ -194,8 +194,8 @@
 <ul>
 <li>
 <ul>
-<li><strong>Add Background (Добавление фона)</strong>: Пользователь добавляет фон.</li>
-<li><strong>Accept Fill Backgrounds (Принятие заливки фона)</strong>: Пол ьзователь подтверждает заливку фоном всего проекта.</li>
+<li><strong>Add Background (Добавление фона)</strong>: Пол ьзователь добавляет фон.</li>
+<li><strong>Accept Fill Backgrounds (Принятие заливки фона)</strong>: Пользователь подтверждает заливку фоном всего проекта.</li>
 <li><strong>Reject Fill Backgrounds (Отклонение заливки фона)</strong>: Пользователь отклоняет заливку фоном всего проекта.</li>
 <li><strong>Add Background Color (Добавление цвета фона)</strong>: Пользователь добавляет цвет фона.</li>
 <li><strong>Background Flip (Переворот фона)</strong>: Пользователь отзеркаливает фон.</li>
@@ -225,7 +225,7 @@
 </ul>
 </li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="действия-с-календарями">Действия с календарями<a href="#действия-с-календарями" class="hash-link" aria-label="Direct link to Действия с календарями" title="Direct link to Действия с календарями">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="действия-с-кален дарями">Действия с календарями<a href="#действия-с-календарями" class="hash-link" aria-label="Direct link to Действия с календарями" title="Direct link to Действия с календарями">​</a></h3>
 <ul>
 <li>
 <ul>
@@ -260,9 +260,9 @@
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="контексты-событий-analiticeventscontext">Контексты событий (AnaliticEventsContext)<a href="#контексты-событий-analiticeventscontext" class="hash-link" aria-label="Direct link to Контексты событий (AnaliticEventsContext)" title="Direct link to Контексты событий (AnaliticEventsContext)">​</a></h2>
 <ul>
-<li>Контексты указывают, как или откуда было инициировано событие. Они помогают понять, каким способом пользователь взаимодействует с приложением.<!-- -->
+<li>Контексты указывают, как или откуда было инициировано событие. Они помогают понять, каким способом пользователь взаимодействует с прилож ением.<!-- -->
 <ul>
-<li><strong>Short Cut (Горячая клавиша)</strong>: Действие выполнено с помощью кл авиатурной комбинации.</li>
+<li><strong>Short Cut (Горячая клавиша)</strong>: Действие выполнено с помощью клавиатурной комбинации.</li>
 <li><strong>Context Menu (Контекстное меню)</strong>: Действие выбрано из контекстного меню (например, правый клик).</li>
 <li><strong>Context Panel (Контекстная панель)</strong>: Действие инициировано из панели, появляющейся над элементом.</li>
 <li><strong>Top Panel (Верхняя панель)</strong>: Действие выполнено из верхней панели интерфейса.</li>
