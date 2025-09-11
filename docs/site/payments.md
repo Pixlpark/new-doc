@@ -1,7 +1,7 @@
 ---
 title: Оплата
 description: Настройка возможных способов оплаты заказов на сайте
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 # Оплата

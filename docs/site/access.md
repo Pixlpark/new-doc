@@ -1,7 +1,7 @@
 ---
 title: Доступ
 description: Определение доступности сайта и правил переадресации
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # Настройки доступа

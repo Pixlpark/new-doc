@@ -1,7 +1,7 @@
 ---
 title: Доставка
 description: Настройка возможных способов доставки заказов на сайте
-sidebar_position: 4
+sidebar_position: 5
 ---
 
 # Доставка

@@ -1,7 +1,7 @@
 ---
 title: Сервисы
 description: Интеграция с соц. сетями для авторизации и импорта фото
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 # Настройка интеграций

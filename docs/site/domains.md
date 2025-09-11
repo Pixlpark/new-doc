@@ -1,7 +1,7 @@
 ---
 title: Домены
 description: Добавление одного или нескольких доменных имен для сайта
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # Доменные имена
