@@ -23,3 +23,4 @@ sidebar_position: 2
 * `[$city:phoneNumber$]` - телефон города (только цифры).
 * `[$city:email$]` - эл. почта города.
 * `[$city:address$]` - адрес города.
+* `[$city:pageAvailableFor$]` - список городов для которых доступна текущая страница.
