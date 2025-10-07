@@ -17,6 +17,12 @@ sidebar_position: 2
 
 ## Константы для CMS
 * `[$city:name$]` - название города на кирилице. 
+    * `[$city:cityInCase(Nominative)$]` - название города на кирилице, в именительном падеже.
+    * `[$city:cityInCase(Genitive)$] ` - название города на кирилице, в родительном падеже.
+    * `[$city:cityInCase(Dative)$]` - название города на кирилице, в дательном падеже.
+    * `[$city:cityInCase(Accusative)$]` - название города на кирилице, в винительном падеже.
+    * `[$city:cityInCase(Instrumental)$]` - название города на кирилице, в творительном падеже.
+    * `[$city:cityInCase(Prepositional)$] ` - название города на кирилице, в предложном падеже.
 * `[$city:slug$]` - название города на латинице без пробелов (используется для ссылок).
 * `[$city:id$]` - идентификатор города.
 * `[$city:phone$]` - телефон города с учётом маски.
@@ -24,3 +30,5 @@ sidebar_position: 2
 * `[$city:email$]` - эл. почта города.
 * `[$city:address$]` - адрес города.
 * `[$city:pageAvailableFor$]` - список городов для которых доступна текущая страница.
+* `[$city:isVisibleFor(spb,tomsk)$]` - отображает элемент CMS для городов с ссылкой spb и tomsk (Пример использования `style="[$city:isVisibleFor(spb,tomsk)$]"`).
+* `[$city:isHiddenFor(spb,tomsk)$]` - скрывает элемент CMS для городов с ссылкой spb и tomsk (Пример использования `style="[$city:isHiddenFor(spb,tomsk)$]"`).
