@@ -604,53 +604,6 @@ onOrderCreated?: (state: {
 ```
 </details>
 
-| Поле            | Тип         | Описание                                                     |
-| --- | ---  |--- |
-| `Id`            | `number`    | Внутренний идентификатор заказа в Pixlpark                   |
-| `DownloadLink   | `string`    | Ссылка на скачивание заказа                                  |
-| `PhotolabId`    | `number`    | Идентификатор фотолаба                                       |
-| `CustomId`      | `string`    | Пользовательский ID заказа (если задан)                      |
-| `SourceOrderId` | `number?`   | ID исходного заказа (например, при копировании)              |
-| `Title`         | `string`    | Название заказа                                              |
-| `Status`        | `string`    | Текущий статус заказа                                        |
-| `PaymentStatus` | `string`    | Статус оплаты                                                |
-| `RenderStatus`  | `string`    | Статус рендеринга                                            |
-| `StatusDate`    | `DateTime?` | Дата последнего изменения статуса                            |
-| `DateCreated`   | `DateTime`  | Дата создания заказа                                         |
-| `DateModified`  | `DateTime`  | Дата последнего изменения                                    |
-| `DatePaid`      | `DateTime?` | Дата оплаты                                                  |
-| `DateReady`     | `DateTime?` | Дата готовности                                              |
-| `PreviewImageUrl` | `string` | Ссылка на превью заказа                                       |
-
-* Данные доставки
-
-| Поле              | Тип           | Описание                         |
-| ---  | ---  | ---  |
-| `DeliveryAddress` | `AddressDTO`  | Адрес доставки                   |
-| `Shipping`        | `ShippingDTO` | Информация о способе доставки    |
-| `TrackingUrl`     | `string`      | Ссылка для отслеживания доставки |
-| `TrackingNumber`  | `string`      | Трек-номер                       |
-
-* Информация о пользователе
-
-| Поле                    | Тип                     | Описание                                 |
-| --- | --- | --- |
-| `UserId`                | `number?`               | ID пользователя                          |
-| `UserAdditionalInfo`    | `UserAdditionalInfoDto` | Дополнительная информация о пользователе |
-| `UserCompanyAccountId`  | `number?`               | ID корпоративного аккаунта               |
-| `UserCompanyAccountINN` | `string`                | ИНН компании                             |
-
-* Цены и суммы
-
-| Поле            | Тип       | Описание                    |
-| --- | --- | --- |
-| `Price`         | `decimal` | Базовая стоимость           |
-| `DiscountPrice` | `decimal` | Скидка                      |
-| `DeliveryPrice` | `decimal` | Стоимость доставки          |
-| `TotalPrice`    | `decimal` | Итоговая стоимость          |
-| `PaidPrice`     | `decimal` | Оплаченная сумма            |
-| `DiscountTitle` | `string`  | Название применённой скидки |
-
 ## Пример готовой страницы
 ### Редактор дизайнов
 ```html
