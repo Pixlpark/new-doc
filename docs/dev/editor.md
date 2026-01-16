@@ -25,53 +25,7 @@ sidebar_position: 5
     + "__ID__" - уникальный идентификатор продукта. При удалении с сайта на платформе Pixlpark продукта с указанным во встраиваемом редакторе ID, на внешнем сайте редактор работать не будет.
     + "__categoryUrlName__" и "__productUrlName__" - идентификатор категории продукта и идентификатор продукта в URL. При отсутствии указания "__productUrlName__" редактор будет инициализирован первым доступным продуктом категории продукта.
 
-## Создание дизайна
-* Можно реализовать 2 варианта создания дизайна в редакторе:
-    1. Дизайн создается на анонимного пользователя. В этом случае, если не создать заказ, то дизайн хранится в системе всего 14 дней.
-    2. Дизайн создается на зарегистрированного пользователя и будет хранится согласно настройкам аккаунта. В этом случае процесс аутентификации необходимо пройти перед загрузкой редактора.
-* Рассмотрим их подробнее.
 
-### На анонимного пользователя (без регистрации)
-* Если необходимо создать дизайн пользователя, который не зарегистрирован (или не авторизован) на сайте, то применяется сценарий создания дизайна без аутентификации пользователя. Он приведен далее.
-* Обратите внимание, что в данном случае кнопка "__Заказать__" в редакторе работать не будет. Поэтому вам необходимо создать свою аналогичную кнопку и разместить её вне блока редактора.
-1. Клиент нажимает на вашу кнопку "__Заказать__" — вызывается функция:
-   ```js
-   saveProjectCustomProductFile({ ignoreErrors?: boolean }) : Promise<ISaveDesignResult>
-   ```
-   Параметр `ignoreErrors` по умолчанию имеет значение `true`. Возвращаемый результат:
-   ```js
-   interface ISaveDesignResult {
-       designId: number;
-       userId: number;
-       previews: [
-           { surfaceIndex: 0; previewUrl: "https://.../0.jpg" },
-           { surfaceIndex: 1; previewUrl: "https://.../1.jpg" },
-           ...
-       ];
-   }
-   ```
-2. Показываем модальное окно с предупреждениями, если это нужно (не обязательно).
-3. Сохраняете `designId` и используете его по своему сценарию. Если в течении 14 дней из этого дизайна не будет создан заказ, мы автоматически его удаляем.
-4. На сервере вызываете запрос:
-   ```
-   POST api.pixlpark.com/orders/createByDesign?designIds=123,321,435
-   ```
-   В ответ получите `orderId`.
-5. После создания заказа Pixlpark автоматически запускает рендеринг (в среднем процесс формирования файлов печати занимает от 5 до 20 минут).
-6. По завершении рендеринга вы получите уведомление через вебхук, адрес которого можно настроить в панели управления в разделе "__Маркетинг / Уведомления / Настройка вебхуков__".
-7. Получив уведомление, вы можете запросить информацию о заказе через __API api.pixlpark.com__ — в ответе получите ссылку на архив с готовыми файлами.
-
-### На зарегистрированного пользователя (реализация аутентификации)
-* Внешний редактор запускается в двух режимах: __Гость__ и __Пользователь__.
-    + __Гость__ <br/> В данном режиме доступны все функции редактора, за исключением сохранения дизайнов. Перед сохранением дизайна редактор запрашивает токен пользователя при помощи вызова метода `config.auth.getToken` (должен возвращать `Promise <string>`). Режим запускается при условии установления параметра `config.auth.userToken = null` в конфигурации редактора. Также, для данного режима необходимо реализовать метод `config.auth.getToken()` перед сохранением дизайна для получения токена пользователя.
-    + __Пользователь__ <br/> В данном режиме доступны все функции редактора. Режим запускается при условии установления параметра `config.auth.userToken` отличного от пустой строки или от `null` в конфигурации редактора. Далее, указанный токен будет проверен на сервере. В случае, если валидация токена не осуществится, редактор прекратит свою работу.
-* Для получения токена пользователя необходимо реализовать взаимодействие с API Pixlpark.
-* В случае, если пользователь аутентифицирован на внешнем сайте, необходимо получить или создать (при отсутствии данного пользователя на сайте в сервисе Pixlpark) через API Pixlpark и получить внешний токен:
-    + `GET api.pixlpark.com/users/byEmail` и/или `POST api.pixlpark.com/users/create`.
-    + `GET /users/{id}/frontendToken`.
-* В случае, если пользователь не аутентифицирован на внешнем сайте, необходимо его зарегистрировать и создать его копию на сайте в сервисе Pixlpark.
-    + `GET api.pixlpark.com/users/byEmail` и/или `POST api.pixlpark.com/users/create`.
-    + `GET /users/{id}/frontendToken`.
 
 ## Встраивание редактора на страницу сайта
 * Редактор встраивается в три этапа:
@@ -80,229 +34,19 @@ sidebar_position: 5
     3. [Описание конфигурационного файла](/dev/editor#получение-файлов-к-печати).
 
 ### Подготовка страницы внешнего сайта
-
-#### Для одного продукта
 * Для встраивания редактора на страницу внешнего сайта необходимо создать контейнер согласно коду
 ```html
-    <div id="editorContainer" class="editor-container loading-wheel"></div>
+    <div id="editorContainer"></div>
 ```
 * и добавить его в разметку страницы внешнего сайта. Редактор заполнит весь размер контейнера.
-* Далее, добавить на страницу стилевые правила: 
-```css
- .btn {background: #fff;border: solid 1px #ccc !important;box-shadow: #ddd 0 0 3px;color: #000 !important;}
-
- body {font-family: sans-serif;padding: 10px 40px}
- @keyframes cssload-spin {100% {transform: rotate(360deg);transform: rotate(360deg)}}
-
- .editor-container.error {border: solid 1px #983a3a;box-shadow: #e15959 0 0 3px;}
- .editor-container .error-message {position: relative;margin: 20px;text-align: left;color: #000000;font-family: monospace;
-            z-index: 1000000000;background: #ffcece;padding: 10px 20px;border: solid 1px #a52020;}
-
- .editor-container {width: 65%; height: 600px; position: relative; border: solid 1px #ccc; box-shadow: #efefef 0 0 14px;}
- .loading-wheel:before {
-        position:absolute;top:50%;left:50%;content:'';z-index:1112;display:block;width:32px;height:32px;margin:-16px 0 0 -16px;
-        border: 2px solid rgb(117,117,117);border-radius: 50%;border-left-color: transparent;border-right-color: transparent;
-        animation: cssload-spin 500ms infinite linear;
-  }
- .loading-wheel:after{position:absolute;top:0;left:0;bottom:0;right:0;content:'';background:#fff;z-index:1111;opacity:.9;display:block}
-```
 * Затем, добавить скрипт для загрузки редактора на страницу внешнего сайта.
 ```js
     <script src="https://ваш-сайт-в-Pixlpark/api/externalEditor/js" onerror="onPxpError('Error while loading init script')" onload="onPxpLoaded()"></script>
 ```
 > Скрипт необходимо расположить ближе к подвалу в разметке страницы.
 
-#### Для нескольких продуктов
-* Для встраивания редактора с несколькими продуктами на страницу внешнего сайта необходимо создать разметку согласно коду
-```html
-    <fieldset id="materialSelector" class="editor-products">
-        <label class="editor-products__label">
-            <input type="radio" name="editor" value="ID" checked> <!-- ID - id продукта 1-->
-            Продукт 1
-        </label>
-
-        <label class="editor-products__label">
-            <input type="radio" name="editor" value="ID"> <!-- ID - id продукта 2-->
-            Продукт 2
-        </label>
-    </fieldset>
-    <div id="editorContainer" class="editor-container loading-wheel"></div>
-```
-* и добавить еe в разметку страницы внешнего сайта. Редактор заполнит весь размер контейнера.
-* Далее, добавить на страницу стилевые правила: 
-```css
- .btn {background: #fff;border: solid 1px #ccc !important;box-shadow: #ddd 0 0 3px;color: #000 !important;}
-
- body {font-family: sans-serif;padding: 10px 40px}
- @keyframes cssload-spin {100% {transform: rotate(360deg);transform: rotate(360deg)}}
-
- .editor-products {box-sizing:border-box;display:flex;flex-wrap:wrap;align-items:baseline;padding:10px}
- .editor-products__label {margin: 0 15px}
-
- .editor-container.error {border: solid 1px #983a3a;box-shadow: #e15959 0 0 3px;}
- .editor-container .error-message {position: relative;margin: 20px;text-align: left;color: #000000;font-family: monospace;
-            z-index: 1000000000;background: #ffcece;padding: 10px 20px;border: solid 1px #a52020;}
- .editor-container {width: 65%; height: 600px; position: relative; border: solid 1px #ccc; box-shadow: #efefef 0 0 14px;}
- .loading-wheel:before {
-        position:absolute;top:50%;left:50%;content:'';z-index:1112;display:block;width:32px;height:32px;margin:-16px 0 0 -16px;
-        border: 2px solid rgb(117,117,117);border-radius: 50%;border-left-color: transparent;border-right-color: transparent;
-        animation: cssload-spin 500ms infinite linear;
-  }
- .loading-wheel:after{position:absolute;top:0;left:0;bottom:0;right:0;content:'';background:#fff;z-index:1111;opacity:.9;display:block}
-```
-* Затем, добавить скрипт для загрузки редактора на страницу внешнего сайта.
-```js
-    <script src="https://ваш-сайт-в-Pixlpark/api/externalEditor/js" onerror="onPxpError('Error while loading init script')"></script>
-```
-> Скрипт необходимо расположить ближе к подвалу в разметке страницы.
 
 ## Редактор дизайнов
-
-### Определение конфигурации редактора
-* Для получения токена пользователя необходимо реализовать взаимодействие с API Pixlpark.
-* В случае, если пользователь аутентифицирован на внешнем сайте, необходимо получить или создать (при отсутствии данного пользователя на сайте в сервисе Pixlpark) через API Pixlpark и получить внешний токен:
-    + `GET api.pixlpark.com/users/byEmail` и/или `POST api.pixlpark.com/users/create`.
-    + `GET /users/{id}/frontendToken`.
-* В случае, если пользователь не аутентифицирован на внешнем сайте, необходимо его зарегистрировать и создать его копию на сайте в сервисе Pixlpark.
-    + `GET api.pixlpark.com/users/byEmail` и/или `POST api.pixlpark.com/users/create`.
-    + `GET /users/{id}/frontendToken`.
-#### Для одного продукта
-* Определить конфигурацию редактора на странице внешнего сайта необходимо при помощи кода:
-```js
-const container = document.getElementById('editorContainer');
-const designEditorConfig = {
-    product: {
-        productUrlName: "идентификатор_продукта", //например, "50x90-one-sided"
-        categoryUrlName: "идентификатор_категории_продукта", //например, "businesscards-template"
-        //либо id: <ID товара>
-    },
-    auth: {
-        // В этом методе необходимо найти или создать пользователя на стороне Pixlpark,
-        // связать его с авторизованным пользователем вашей платформы
-        //  и вернуть его token на платформе Pixlpark
-        getToken: () => {
-            return new Promise((resolve, reject) => {
-                var token = prompt('Enter user auth token:');
-                if (token.length > 0)
-                    resolve(token);
-                else
-                    reject();
-            })
-        }
-    },
-    ui: {
-        layoutMode: "auto",
-    },
-    events: {
-        onError: (error) => { onPxpError(error); },
-        onReady: () => {
-            console.log("Editor ready");
-            container.classList.remove("loading-wheel")
-            console.log("Current user", window.editor.userInfo);
-        },
-        onCartItemCreated: (response) => {
-            var confirm = window.confirm(`Положили товар: ${response.shoppingCartItemId}. Перейти в корзину?`);
-            if (confirm) {
-                window.location.href = originUrl + response.redirectUrl;
-            }
-        },
-        onPriceChanged: (newPrice) => {
-            console.log("New price recieved", newPrice);
-            document.getElementById("externalPrice").innerHTML = newPrice.totalPriceString
-        }
-    },
-}
-// Обработчик ошибок
-function onPxpError(error) {
-    container.classList.remove("loading-wheel")
-    container.classList.add("error")
-    const errorDiv = document.createElement("div");
-    errorDiv.className = "error-message"
-    errorDiv.innerText = error;
-    container.appendChild(errorDiv)
-}
-// Этот код вызывается после загрузки скрипта редактора
-function onPxpLoaded() {
-    var editor = pxp.external.createDesignEditor(container, designEditorConfig);
-    editor.render();
-    window.editor = editor;
-}
-```
-> Скрипт необходимо расположить после скрипта загрузки редактора.
-#### Для нескольких продуктов
-* Определить конфигурацию редактора на странице внешнего сайта необходимо при помощи кода:
-```js
-    function initEditor(materialId) {
-        const container = document.getElementById('editorContainer');
-        const designEditorConfig = {
-        product: {
-            id: materialId,
-        },
-        auth: {
-             // В этом методе необходимо найти или создать пользователя на стороне Pixlpark,
-            // связать его с авторизованным пользователем вашей платформы
-            //  и вернуть его token на платформе Pixlpark
-            getToken: () => {
-                return new Promise((resolve, reject) => {
-                    var token = prompt('Enter user auth token:');
-                    if (token.length > 0)
-                        resolve(token);
-                    else
-                        reject();
-                })
-            }
-        },
-        ui: {
-            layoutMode: "auto",
-        },
-        events: {
-            onError: (error) => { onPxpError(error); },
-            onReady: () => {
-                console.log("Editor ready");
-                container.classList.remove("loading-wheel")
-                console.log("Current user", window.editor.userInfo);
-            },
-            onCartItemCreated: (response) => {
-                var confirm = window.confirm(`Положили товар: ${response.shoppingCartItemId}. Перейти в корзину?`);
-                if (confirm) {
-                    window.location.href = originUrl + response.redirectUrl;
-                }
-            },
-            onPriceChanged: (newPrice) => {
-                console.log("New price recieved", newPrice);
-                document.getElementById("externalPrice").innerHTML = newPrice.totalPriceString
-            }
-        },
-        };       
-        var editor = pxp.external.createDesignEditor(container, designEditorConfig);
-        editor.render();
-        window.editor = editor;
-    }
-// Обработчик ошибок
-function onPxpError(error) {
-    container.classList.remove("loading-wheel")
-    container.classList.add("error")
-    const errorDiv = document.createElement("div");
-    errorDiv.className = "error-message"
-    errorDiv.innerText = error;
-    container.appendChild(errorDiv)
-}
-// Изменение продукта в редакторе
-function updateMaterial(){
-    var fieldset = document.getElementById("materialSelector");
-    var materialId = Array.from(fieldset.querySelectorAll("input")).find((input)=> input.checked).value;
-    if (materialId != null){
-	    if (window.editor != null && window.editor.editor != null){
-            window.editor.editor.destroy();
-        }
-		initEditor(parseInt(materialId));		
-    }
-}
-document.getElementById("materialSelector").addEventListener("change", updateMaterial);
-updateMaterial();
-```
-> Скрипт необходимо расположить после скрипта загрузки редактора.
-
 ### Описание конфигурационного файла
 
 ```js
@@ -480,9 +224,8 @@ interface IDesignEditorState {
 }
 
 ```
-## Редактор фотопечати
-
 ### Определение конфигурации редактора
+* Редактор работает с определенным пользователем.
 * Для получения токена пользователя необходимо реализовать взаимодействие с API Pixlpark.
 * В случае, если пользователь аутентифицирован на внешнем сайте, необходимо получить или создать (при отсутствии данного пользователя на сайте в сервисе Pixlpark) через API Pixlpark и получить внешний токен:
     + `GET api.pixlpark.com/users/byEmail` и/или `POST api.pixlpark.com/users/create`.
@@ -490,26 +233,34 @@ interface IDesignEditorState {
 * В случае, если пользователь не аутентифицирован на внешнем сайте, необходимо его зарегистрировать и создать его копию на сайте в сервисе Pixlpark.
     + `GET api.pixlpark.com/users/byEmail` и/или `POST api.pixlpark.com/users/create`.
     + `GET /users/{id}/frontendToken`.
+* Информацию о работе данных методов вы можете получить на странице https://api.pixlpark.com
+
+#### Конфигурация
 * Определить конфигурацию редактора на странице внешнего сайта необходимо при помощи кода:
 ```js
 const container = document.getElementById('editorContainer');
 const designEditorConfig = {
     product: {
-        id: 554547 // ID товара
+        productUrlName: "идентификатор_продукта", //например, "50x90-one-sided"
+        categoryUrlName: "идентификатор_категории_продукта", //например, "businesscards-template"
+        //либо id: <ID товара>
     },
     auth: {
+        // Этот метод будет вызван если не задан userToken и необходим зарегистрированный пользователь
         // В этом методе необходимо найти или создать пользователя на стороне Pixlpark,
         // связать его с авторизованным пользователем вашей платформы
         //  и вернуть его token на платформе Pixlpark
         getToken: () => {
             return new Promise((resolve, reject) => {
-                var token = prompt('Enter user auth token:');
-                if (token.length > 0)
-                    resolve(token);
-                else
-                    reject();
+                //`GET api.pixlpark.com/users/byEmail` и/или `POST api.pixlpark.com/users/create`
+                //`GET /users/{id}/frontendToken`
+                resolve('token');
             })
-        }
+        },
+        // Токен зарегистрированного пользователя
+        // При его указании редактор попробует войти под этим токеном
+        // Если не получится, редактор завершит работу с ошибкой
+        userToken: undefined,
     },
     ui: {
         layoutMode: "auto",
@@ -518,39 +269,79 @@ const designEditorConfig = {
         onError: (error) => { onPxpError(error); },
         onReady: () => {
             console.log("Editor ready");
-            container.classList.remove("loading-wheel")
-            console.log("Current user", window.editor.userInfo);
         },
         onCartItemCreated: (response) => {
-            var confirm = window.confirm(`Положили товар: ${response.shoppingCartItemId}. Перейти в корзину?`);
-            if (confirm) {
-                window.location.href = originUrl + response.redirectUrl;
-            }
+            console.log(`Положили товар в корзину: ${response.shoppingCartItemId}.`);
+        },
+        onOrderCreated: (response) => {
+            console.log(`Создали заказ: ${response.orderId}`);
         },
         onPriceChanged: (newPrice) => {
             console.log("New price recieved", newPrice);
-            document.getElementById("externalPrice").innerHTML = newPrice.totalPriceString
         }
     },
 }
 // Обработчик ошибок
 function onPxpError(error) {
-    container.classList.remove("loading-wheel")
-    container.classList.add("error")
-    const errorDiv = document.createElement("div");
-    errorDiv.className = "error-message"
-    errorDiv.innerText = error;
-    container.appendChild(errorDiv)
+
 }
 // Этот код вызывается после загрузки скрипта редактора
 function onPxpLoaded() {
-    var editor = pxp.external.createPhotoEditor(container, designEditorConfig);
+    var editor = pxp.external.createDesignEditor(container, designEditorConfig);
     editor.render();
     window.editor = editor;
 }
 ```
 > Скрипт необходимо расположить после скрипта загрузки редактора.
+### Создание дизайна
+* Можно реализовать 2 варианта создания дизайна в редакторе:
+    1. Дизайн создается на анонимного пользователя. В этом случае, если не создать заказ, то дизайн хранится в системе всего 14 дней.
+    2. Дизайн создается на зарегистрированного пользователя и будет хранится согласно настройкам аккаунта. В этом случае процесс аутентификации необходимо пройти перед загрузкой редактора.
+* Рассмотрим их подробнее.
 
+#### На анонимного пользователя (без регистрации)
+* Если необходимо создать дизайн пользователя, который не зарегистрирован (или не авторизован) на сайте, то применяется сценарий создания дизайна без аутентификации пользователя. Он приведен далее.
+* Обратите внимание, что в данном случае кнопка "__Заказать__" в редакторе работать не будет. Поэтому вам необходимо создать свою аналогичную кнопку и разместить её вне блока редактора.
+1. Клиент нажимает на вашу кнопку "__Заказать__" — вызывается функция:
+   ```js
+   saveProjectCustomProductFile({ ignoreErrors?: boolean }) : Promise<ISaveDesignResult>
+   ```
+   Параметр `ignoreErrors` по умолчанию имеет значение `true`. Возвращаемый результат:
+   ```js
+   interface ISaveDesignResult {
+       designId: number;
+       userId: number;
+       previews: [
+           { surfaceIndex: 0; previewUrl: "https://.../0.jpg" },
+           { surfaceIndex: 1; previewUrl: "https://.../1.jpg" },
+           ...
+       ];
+   }
+   ```
+2. Показываем модальное окно с предупреждениями, если это нужно (не обязательно).
+3. Сохраняете `designId` и используете его по своему сценарию. Если в течении 14 дней из этого дизайна не будет создан заказ, мы автоматически его удаляем.
+4. На сервере вызываете запрос:
+   ```
+   POST api.pixlpark.com/orders/createByDesign?designIds=123,321,435
+   ```
+   В ответ получите `orderId`.
+5. После создания заказа Pixlpark автоматически запускает рендеринг (в среднем процесс формирования файлов печати занимает от 5 до 20 минут).
+6. По завершении рендеринга вы получите уведомление через вебхук, адрес которого можно настроить в панели управления в разделе "__Маркетинг / Уведомления / Настройка вебхуков__".
+7. Получив уведомление, вы можете запросить информацию о заказе через __API api.pixlpark.com__ — в ответе получите ссылку на архив с готовыми файлами.
+
+#### На зарегистрированного пользователя (реализация аутентификации)
+* Внешний редактор запускается в двух режимах: __Гость__ и __Пользователь__.
+    + __Гость__ <br/> В данном режиме доступны все функции редактора, за исключением сохранения дизайнов. Перед сохранением дизайна редактор запрашивает токен пользователя при помощи вызова метода `config.auth.getToken` (должен возвращать `Promise <string>`). Режим запускается при условии установления параметра `config.auth.userToken = null` в конфигурации редактора. Также, для данного режима необходимо реализовать метод `config.auth.getToken()` перед сохранением дизайна для получения токена пользователя.
+    + __Пользователь__ <br/> В данном режиме доступны все функции редактора. Режим запускается при условии установления параметра `config.auth.userToken` отличного от пустой строки или от `null` в конфигурации редактора. Далее, указанный токен будет проверен на сервере. В случае, если валидация токена не осуществится, редактор прекратит свою работу.
+* Для получения токена пользователя необходимо реализовать взаимодействие с API Pixlpark.
+* В случае, если пользователь аутентифицирован на внешнем сайте, необходимо получить или создать (при отсутствии данного пользователя на сайте в сервисе Pixlpark) через API Pixlpark и получить внешний токен:
+    + `GET api.pixlpark.com/users/byEmail` и/или `POST api.pixlpark.com/users/create`.
+    + `GET /users/{id}/frontendToken`.
+* В случае, если пользователь не аутентифицирован на внешнем сайте, необходимо его зарегистрировать и создать его копию на сайте в сервисе Pixlpark.
+    + `GET api.pixlpark.com/users/byEmail` и/или `POST api.pixlpark.com/users/create`.
+    + `GET /users/{id}/frontendToken`.
+* Информацию о работе данных методов вы можете получить на странице https://api.pixlpark.com
+## Редактор фотопечати
 ### Описание конфигурационного файла
 
 ```js
@@ -638,6 +429,76 @@ interface IPhotoEditorConfig {
 }
 
 ```
+### Определение конфигурации редактора
+* Редактор работает с определенным пользователем.
+* Для получения токена пользователя необходимо реализовать взаимодействие с API Pixlpark.
+* В случае, если пользователь аутентифицирован на внешнем сайте, необходимо получить или создать (при отсутствии данного пользователя на сайте в сервисе Pixlpark) через API Pixlpark и получить внешний токен:
+    + `GET api.pixlpark.com/users/byEmail` и/или `POST api.pixlpark.com/users/create`.
+    + `GET /users/{id}/frontendToken`.
+* В случае, если пользователь не аутентифицирован на внешнем сайте, необходимо его зарегистрировать и создать его копию на сайте в сервисе Pixlpark.
+    + `GET api.pixlpark.com/users/byEmail` и/или `POST api.pixlpark.com/users/create`.
+    + `GET /users/{id}/frontendToken`.
+* Определить конфигурацию редактора на странице внешнего сайта необходимо при помощи кода:
+```js
+const container = document.getElementById('editorContainer');
+const photoEditorConfig = {
+    product: {
+        id: 554547 // ID товара
+    },
+    auth: {
+        // Этот метод будет вызван если не задан userToken и необходим зарегистрированный пользователь
+        // В этом методе необходимо найти или создать пользователя на стороне Pixlpark,
+        // связать его с авторизованным пользователем вашей платформы
+        //  и вернуть его token на платформе Pixlpark
+        getToken: () => {
+            return new Promise((resolve, reject) => {
+                //`GET api.pixlpark.com/users/byEmail` и/или `POST api.pixlpark.com/users/create`
+                //`GET /users/{id}/frontendToken`
+                resolve('token');
+            })
+        },
+        // Токен зарегистрированного пользователя
+        // При его указании редактор попробует войти под этим токеном
+        // Если не получится, редактор завершит работу с ошибкой
+        userToken: undefined,
+    },
+    ui: {
+        layoutMode: "auto",
+    },
+    events: {
+        onError: (error) => { onPxpError(error); },
+        onReady: () => {
+            console.log("Editor ready");
+            container.classList.remove("loading-wheel")
+            console.log("Current user", window.editor.userInfo);
+        },
+        onCartItemCreated: (response) => {
+            var confirm = window.confirm(`Положили товар: ${response.shoppingCartItemId}. Перейти в корзину?`);
+            if (confirm) {
+                window.location.href = originUrl + response.redirectUrl;
+            }
+        },
+        onOrderCreated: (response) => {
+            console.log(`Создали заказ: ${response.orderId}.`);
+        },
+        onPriceChanged: (newPrice) => {
+            console.log("New price recieved", newPrice);
+        }
+    },
+}
+// Обработчик ошибок
+function onPxpError(error) {
+}
+// Этот код вызывается после загрузки скрипта редактора
+function onPxpLoaded() {
+    var editor = pxp.external.createPhotoEditor(container, photoEditorConfig);
+    editor.render();
+    window.editor = editor;
+}
+```
+> Скрипт необходимо расположить после скрипта загрузки редактора.
+
+
 ## Получение файлов к печати
 ### Добавление в корзину и создание заказа
 
@@ -745,16 +606,16 @@ onOrderCreated?: (state: {
 | `DiscountTitle` | `string`  | Название применённой скидки |
 ```
 
-#### Пример готовой страницы
+### Пример готовой страницы
 ```html
 <script async src="https://ВАШ_САЙТ_НА_PIXLPARK/api/externalEditor/js"
     onerror="onPxpError('Error while loading init script')"
     onload="onPxpLoaded()">
 </script>
-<div id="photo-editor" style="position: relative; width: 100%; height: 800px"></div>
+<div id="photo-editor"></div>
 <script>
     var pxpEditorContainer = document.getElementById('photo-editor');
-    var designEditorConfig = {
+    var photoEditorConfig = {
         editorType: "site",
         product: {
             id: 554547,
@@ -769,13 +630,6 @@ onOrderCreated?: (state: {
                 console.log(response)
             },
             onReady: function () {
-                var loadingCap = document.getElementById("loading_body_cap");
-                if (loadingCap != null) {
-                    if (loadingCap.parentElement != null) {
-                        loadingCap.parentElement.removeChild(loadingCap);
-                    }
-                }
-                document.body.style.overflow = "";
             },
         },
         auth:{
@@ -794,15 +648,9 @@ onOrderCreated?: (state: {
     }
 
     function onPxpError(error) {
-        pxpEditorContainer.classList.remove("loading-wheel")
-        pxpEditorContainer.classList.add("error")
-        var errorDiv = document.createElement("div");
-        errorDiv.className = "error-message"
-        errorDiv.innerText = error;
-        pxpEditorContainer.appendChild(errorDiv)
     }
     function onPxpLoaded() {
-        var externalEditor = pxp.external.createPhotoEditor(pxpEditorContainer, designEditorConfig);
+        var externalEditor = pxp.external.createPhotoEditor(pxpEditorContainer, photoEditorConfig);
         externalEditor.render();
         window.photoEditor = externalEditor;
     }    
