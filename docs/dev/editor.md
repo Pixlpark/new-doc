@@ -374,15 +374,6 @@ interface IPhotoEditorConfig {
 
         // Вызывается при изменениях в редакторе
         onPrintsChange?: () => void
-
-        onPriceNeedRecalculate?: (states: {MaterialId: number;EditorStateJson: string;}[]) => void;
-
-        onFileManagerClosed?: () => void;
-        onFileManagerOpened?: () => void;
-        onFormatModalOpened?: () => void;
-        onFormatModalClosed?: () => void;
-        onPrintEditorClosed?: () => void;
-        onPrintEditorOpened?: () => void;
     },
     // Конфигуратор интерфейса редактора 
     ui?: {
