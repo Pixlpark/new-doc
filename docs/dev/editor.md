@@ -156,9 +156,16 @@ sidebar_position: 5
 ```
 > Скрипт необходимо расположить ближе к подвалу в разметке страницы.
 
+## Редактор дизайнов
 
 ### Определение конфигурации редактора
-
+* Для получения токена пользователя необходимо реализовать взаимодействие с API Pixlpark.
+* В случае, если пользователь аутентифицирован на внешнем сайте, необходимо получить или создать (при отсутствии данного пользователя на сайте в сервисе Pixlpark) через API Pixlpark и получить внешний токен:
+    + `GET api.pixlpark.com/users/byEmail` и/или `POST api.pixlpark.com/users/create`.
+    + `GET /users/{id}/frontendToken`.
+* В случае, если пользователь не аутентифицирован на внешнем сайте, необходимо его зарегистрировать и создать его копию на сайте в сервисе Pixlpark.
+    + `GET api.pixlpark.com/users/byEmail` и/или `POST api.pixlpark.com/users/create`.
+    + `GET /users/{id}/frontendToken`.
 #### Для одного продукта
 * Определить конфигурацию редактора на странице внешнего сайта необходимо при помощи кода:
 ```js
@@ -167,8 +174,12 @@ const designEditorConfig = {
     product: {
         productUrlName: "идентификатор_продукта", //например, "50x90-one-sided"
         categoryUrlName: "идентификатор_категории_продукта", //например, "businesscards-template"
+        //либо id: <ID товара>
     },
     auth: {
+        // В этом методе необходимо найти или создать пользователя на стороне Pixlpark,
+        // связать его с авторизованным пользователем вашей платформы
+        //  и вернуть его token на платформе Pixlpark
         getToken: () => {
             return new Promise((resolve, reject) => {
                 var token = prompt('Enter user auth token:');
@@ -218,7 +229,6 @@ function onPxpLoaded() {
 }
 ```
 > Скрипт необходимо расположить после скрипта загрузки редактора.
-
 #### Для нескольких продуктов
 * Определить конфигурацию редактора на странице внешнего сайта необходимо при помощи кода:
 ```js
@@ -229,6 +239,9 @@ function onPxpLoaded() {
             id: materialId,
         },
         auth: {
+             // В этом методе необходимо найти или создать пользователя на стороне Pixlpark,
+            // связать его с авторизованным пользователем вашей платформы
+            //  и вернуть его token на платформе Pixlpark
             getToken: () => {
                 return new Promise((resolve, reject) => {
                     var token = prompt('Enter user auth token:');
@@ -294,76 +307,6 @@ updateMaterial();
 
 ```js
 interface IDesignEditorConfig {
-    // Конфигуратор интерфейса редактора 
-    ui?: {
-        // Задает тип интерфейса: обычный или мобильный
-        // Возможные значения: "auto", "desktop", "mobile"
-        // Значение по умолчанию: "auto"
-        layoutMode: "auto" | "desktop" | "mobile" | null;
-
-        // Выводит предупреждение при покидании страницы
-        // Значение по умолчанию: true
-        captureWindowUnload?: boolean;
-
-        // Настройка верхней панели редактора. При значении null панель не выводится.
-        header?: {
-            // Отображать кнопку домой
-            // Значение по умолчанию: true
-            homeButton?: boolean;
-
-            // Изображение для кнопки домой. Если значение не указано или равно null будет установлен логотип из настройки сайта
-            // Значение по умолчанию: null
-            homeButtonImageUrl?: string | null;
-
-            // Отображение хлебных крошек
-            // Значение по умолчанию: true
-            breadCrumbs?: boolean;
-
-            // Отображение кнопки "Сохранить"
-            // Значение по умолчанию: true
-            saveButton?: boolean;
-
-            // Отображение кнопки "Предпросмотр"
-            // Значение по умолчанию: true
-            previewButton?: boolean;
-
-            // Отображение кнопки "Заказать"
-            // Значение по умолчанию: true
-            addToCartButton?: boolean;
-
-            // Отображение цены в кнопке "Заказать"
-            // Значение по умолчанию: true
-            price?: boolean;
-        } | null;
-    },
-
-    // События редактора
-    events?: {
-        // Вызывается после того, как товар был добавлен в корзину.
-        onCartItemCreated?: (state: { redirectUrl: string; shoppingCartItemId: number; userId: number;}) => void
-
-        // Вызывается при изменениях в редакторе
-        onStateChanged?: (event: HistoryEvent) => void
-
-        // Вызывается после того как редактор загружен и готов к работе
-        onReady?: () => void
-
-        // Вызывается при изменении цены
-        onPriceChanged?: (newPrice: { totalPrice: number; totalPriceString: string; quantity: number; }) => void
-
-        // Вызывается при возникновении непредвиденной ошибки
-        onError?: (error: string) => void
-
-        // Вызывается при смене продукта
-        onMaterialChange?: (currentMaterialId: number) => void
-
-        // Вызывается при возникновении непредвиденной ошибки в момент получения дизайна
-        onLoadStateFailed?: (designId: number) => void
-
-        // Вызывается при сохранении дизайна
-        onProjectSave?: (designId: number) => void
-    },
-
     // Настройка товара
     product: {
         // ID продукта. Можно указать ID либо categoryUrlName и productUrlName
@@ -403,16 +346,97 @@ interface IDesignEditorConfig {
         }
     }
 
-    // Аутентификация
+    // Аутентификация, если на момент открытия редактора известен пользователь,
+    //  то используйте userToken, иначе getToken
     auth: {
         // Этот метод будет вызван если не задан userToken и необходим зарегистрированный пользователь
-        getToken: () => Promise<string>,
+        // В этом методе необходимо найти или создать пользователя на стороне Pixlpark,
+        // связать его с авторизованным пользователем вашей платформы
+        //  и вернуть его token на платформе Pixlpark
+        getToken: (currentUserId?: number | null) => Promise<string>,
 
         // Токен зарегистрированного пользователя
         // При его указании редактор попробует войти под этим токеном
         // Если не получится, редактор завершит работу с ошибкой
         userToken?: string,
     }
+    
+    // События редактора
+    events?: {
+        // Вызывается после того, как товар был добавлен в корзину.
+        onCartItemCreated?: (state: { redirectUrl: string; shoppingCartItemId: number; userId: number;}) => void
+
+        // Вызывается после того, как был создан заказ.
+        onOrderCreated?: (state: { redirectUrl: string; orderId: number; userId: number;}) => void
+
+        // Вызывается при изменениях в редакторе
+        onStateChanged?: (event: HistoryEvent) => void
+
+        // Вызывается после того как редактор загружен и готов к работе
+        onReady?: () => void
+
+        // Вызывается при изменении цены
+        onPriceChanged?: (newPrice: { totalPrice: number; totalPriceString: string; quantity: number; }) => void
+
+        // Вызывается при возникновении непредвиденной ошибки
+        onError?: (error: string) => void
+
+        // Вызывается при смене продукта
+        onMaterialChange?: (currentMaterialId: number) => void
+
+        // Вызывается при возникновении непредвиденной ошибки в момент получения дизайна
+        onLoadStateFailed?: (designId: number) => void
+
+        // Вызывается при сохранении дизайна
+        onProjectSave?: (designId: number) => void
+    },
+    // Конфигуратор интерфейса редактора 
+    ui?: {
+        // Задает тип интерфейса: обычный или мобильный
+        // Возможные значения: "auto", "desktop", "mobile"
+        // Значение по умолчанию: "auto"
+        layoutMode: "auto" | "desktop" | "mobile" | null;
+
+        //Действие кнопки "Заказать". Если выбрано 'createOrder' - будет создан заказ,
+        //  'addToCart' - товар будет добавлен в корзину. По умолчанию 'addToCart'.
+        nextStepButtonAction?: 'addToCart' | 'createOrder';
+
+        // Выводит предупреждение при покидании страницы
+        // Значение по умолчанию: true
+        captureWindowUnload?: boolean;
+
+        // Настройка верхней панели редактора. При значении null панель не выводится.
+        header?: {
+            // Отображать кнопку домой
+            // Значение по умолчанию: true
+            homeButton?: boolean;
+
+            // Изображение для кнопки домой. Если значение не указано или равно null будет установлен логотип из настройки сайта
+            // Значение по умолчанию: null
+            homeButtonImageUrl?: string | null;
+
+            // Отображение хлебных крошек
+            // Значение по умолчанию: true
+            breadCrumbs?: boolean;
+
+            // Отображение кнопки "Сохранить"
+            // Значение по умолчанию: true
+            saveButton?: boolean;
+
+            // Отображение кнопки "Предпросмотр"
+            // Значение по умолчанию: true
+            previewButton?: boolean;
+
+            // Отображение кнопки "Заказать"
+            // Значение по умолчанию: true
+            addToCartButton?: boolean;
+
+            // Отображение цены в кнопке "Заказать"
+            // Значение по умолчанию: true
+            price?: boolean;
+        } | null;
+    },
+
 }
 
 // Конфигурация для внешней калькуляции стоимости
@@ -456,8 +480,183 @@ interface IDesignEditorState {
 }
 
 ```
+## Редактор фотопечати
 
+### Определение конфигурации редактора
+* Для получения токена пользователя необходимо реализовать взаимодействие с API Pixlpark.
+* В случае, если пользователь аутентифицирован на внешнем сайте, необходимо получить или создать (при отсутствии данного пользователя на сайте в сервисе Pixlpark) через API Pixlpark и получить внешний токен:
+    + `GET api.pixlpark.com/users/byEmail` и/или `POST api.pixlpark.com/users/create`.
+    + `GET /users/{id}/frontendToken`.
+* В случае, если пользователь не аутентифицирован на внешнем сайте, необходимо его зарегистрировать и создать его копию на сайте в сервисе Pixlpark.
+    + `GET api.pixlpark.com/users/byEmail` и/или `POST api.pixlpark.com/users/create`.
+    + `GET /users/{id}/frontendToken`.
+* Определить конфигурацию редактора на странице внешнего сайта необходимо при помощи кода:
+```js
+const container = document.getElementById('editorContainer');
+const designEditorConfig = {
+    product: {
+        id: 554547 // ID товара
+    },
+    auth: {
+        // В этом методе необходимо найти или создать пользователя на стороне Pixlpark,
+        // связать его с авторизованным пользователем вашей платформы
+        //  и вернуть его token на платформе Pixlpark
+        getToken: () => {
+            return new Promise((resolve, reject) => {
+                var token = prompt('Enter user auth token:');
+                if (token.length > 0)
+                    resolve(token);
+                else
+                    reject();
+            })
+        }
+    },
+    ui: {
+        layoutMode: "auto",
+    },
+    events: {
+        onError: (error) => { onPxpError(error); },
+        onReady: () => {
+            console.log("Editor ready");
+            container.classList.remove("loading-wheel")
+            console.log("Current user", window.editor.userInfo);
+        },
+        onCartItemCreated: (response) => {
+            var confirm = window.confirm(`Положили товар: ${response.shoppingCartItemId}. Перейти в корзину?`);
+            if (confirm) {
+                window.location.href = originUrl + response.redirectUrl;
+            }
+        },
+        onPriceChanged: (newPrice) => {
+            console.log("New price recieved", newPrice);
+            document.getElementById("externalPrice").innerHTML = newPrice.totalPriceString
+        }
+    },
+}
+// Обработчик ошибок
+function onPxpError(error) {
+    container.classList.remove("loading-wheel")
+    container.classList.add("error")
+    const errorDiv = document.createElement("div");
+    errorDiv.className = "error-message"
+    errorDiv.innerText = error;
+    container.appendChild(errorDiv)
+}
+// Этот код вызывается после загрузки скрипта редактора
+function onPxpLoaded() {
+    var editor = pxp.external.createPhotoEditor(container, designEditorConfig);
+    editor.render();
+    window.editor = editor;
+}
+```
+> Скрипт необходимо расположить после скрипта загрузки редактора.
+
+### Описание конфигурационного файла
+
+```js
+interface IPhotoEditorConfig {
+    // Настройка товара
+    product: {
+        // ID продукта.
+        id?: number,
+
+        // Внешняя калькуляция цены. При самостоятельном расчете цены необходимо реализовать этот метод
+        // Метод необходимо вызвать, когда нужно отобразить цену
+        calculatePrice?: (state: {materialId: number; count: number;}) => Promise<{ totalPrice: number; quantity: number; }>,
+    }
+
+    // Аутентификация, если на момент открытия редактора известен пользователь,
+    //  то используйте userToken, иначе getToken
+    auth: {
+        // Этот метод будет вызван если не задан userToken и необходим зарегистрированный пользователь
+        // В этом методе необходимо найти или создать пользователя на стороне Pixlpark,
+        // связать его с авторизованным пользователем вашей платформы
+        //  и вернуть его token на платформе Pixlpark
+        getToken: (currentUserId?: number | null) => Promise<string>,
+
+        // Токен зарегистрированного пользователя
+        // При его указании редактор попробует войти под этим токеном
+        // Если не получится, редактор завершит работу с ошибкой
+        userToken?: string,
+    }
+    
+    // События редактора
+    events?: {
+        // Вызывается после того, как товар был добавлен в корзину.
+        onCartItemCreated?: (state: { redirectUrl: string; shoppingCartItemId: number; userId: number;}) => void
+
+        // Вызывается после того, как был создан заказ.
+        onOrderCreated?: (state: { redirectUrl: string; orderId: number; userId: number;}) => void
+
+        // Вызывается после того как редактор загружен и готов к работе
+        onReady?: () => void
+
+        //Произошла ошибка при добавлении в корзину, или создании заказа
+        onCartItemCreateFailed?: (id: number) => void;
+
+        // Вызывается при смене продукта
+        onMaterialChange?: (currentMaterialId: number) => void
+
+        // Вызывается при изменении цены
+        onPriceChanged?: (newPrice: { totalPrice: number; totalPriceString: string; quantity: number; }) => void
+
+        // Вызывается при возникновении непредвиденной ошибки
+        onError?: (error: string) => void
+
+        // Вызывается при изменениях в редакторе
+        onPrintsChange?: () => void
+
+        onPriceNeedRecalculate?: (states: {MaterialId: number;EditorStateJson: string;}[]) => void;
+
+        onFileManagerClosed?: () => void;
+        onFileManagerOpened?: () => void;
+        onFormatModalOpened?: () => void;
+        onFormatModalClosed?: () => void;
+        onPrintEditorClosed?: () => void;
+        onPrintEditorOpened?: () => void;
+    },
+    // Конфигуратор интерфейса редактора 
+    ui?: {
+        // Задает тип интерфейса: обычный или мобильный
+        // Возможные значения: "auto", "desktop", "mobile"
+        // Значение по умолчанию: "auto"
+        layoutMode: "auto" | "desktop" | "mobile" | null;
+
+        //Действие кнопки "Заказать". Если выбрано 'createOrder' - будет создан заказ,
+        // 'addToCart' - товар будет добавлен в корзину. По умолчанию 'addToCart'.
+        nextStepButtonAction?: 'addToCart' | 'createOrder';
+
+        isMobileApp: boolean;
+        isMultiformat: boolean;
+        hideHeader: boolean;
+        hideBreadcrumbs?: boolean;
+        hideCalculator: boolean;
+        hideHome: boolean;
+        hideSidebar: boolean;
+    },
+
+}
+
+```
 ## Получение файлов к печати
+### Добавление в корзину и создание заказа
+
+* Редактор поддерживает два сценария оформления:
+    + Добавление в корзину (поведение по умолчанию)
+    + Автоматическое создание заказа (минуя корзину)
+
+Тип сценария задаётся в конфигурации в секции ui:
+```js
+ui: {
+    nextStepButtonAction?: 'addToCart' | 'createOrder';
+}
+```
+`addToCart` – стандартное поведение, товар добавляется в корзину.
+`createOrder` – заказ создаётся сразу, без добавления в корзину.
+По умолчанию используется `addToCart`.
+
+
+### Сценарий 1: Добавление в корзину (addToCart)
 * После нажатия кнопки "__Заказать__" в модальном окне утверждения дизайна редактора, заказываемый продукт добавляется в корзину Pixlpark. Затем отображается реализованный на внешнем сайте хэндлер `onCartItemCreated`, в который передается идентификатор пользователя (`userId`) и идентификатор позиции корзины (`shoppingCartItemId`) Pixlpark.
 * Далее, в `onCartItemCreated` необходимо:
     + Закрыть редактор (например, если он был в div-элементе).
@@ -465,9 +664,149 @@ interface IDesignEditorState {
     + Инициировать подготовку файлов для печати.
 * При желании к позиции корзины внешнего сайта можно прикрепить превью созданного дизайна, которое находится у соответствующего элемента корзины Pixlpark. Для этого нужно с помощью [API-метода](https://docs.pixlpark.ru/dev/api) __Get By UserId__ (`/cart/{userId}`) получить всю корзину, а уже затем найти интересующий элемент по `shoppingCartItemId`.
 * Отметим, что корзина Pixlpark хранится ровно 14 дней. После чего ее содержимое удаляется. Поэтому, на внешнем сайте надо либо предусмотреть аналогичную логику с уведомлением клиента об очистке корзины, либо в этот срок инициировать подготовку файлов для печати.
-* Подготовка файлов к печати в свою очередь состоит из нескольких этапов:
-1. С помощью [API-метода](https://docs.pixlpark.ru/dev/api) __Create Order__ (/orders/create) необходимо создать заказ, передав в качестве его параметров __userId__, __shoppingCartItemId__ и __shippingId__, где __shippingId__ - это идентификатор любой активной доставки, определенной в панели управления Pixlpark в разделе "__Настройка / Доставка / Способы доставки__".
+* Для создания заказа необходимо:
+    + С помощью [API-метода](https://docs.pixlpark.ru/dev/api) __Create Order__ (/orders/create) необходимо создать заказ, передав в качестве его параметров __userId__, __shoppingCartItemId__ и __shippingId__, где __shippingId__ - это идентификатор любой активной доставки, определенной в панели управления Pixlpark в разделе "__Настройка / Доставка / Способы доставки__".
 ![](../_media/dev/editor-shipping-id.png ':size=80%')
-2. В панели управления Pixlpark в разделе "__Маркетинг / Уведомления / Настройка вебхуков__" добавить вебхук "__Заказ: статус рендеринга изменен__", указав URL-адрес для отправки информации о появлении нового готового к печати заказа.
+
+### Сценарий 2: Автоматическое создание заказа (createOrder)
+* При использовании режима `createOrder` товар не добавляется в корзину, а заказ создаётся сразу.
+* Как это работает:
+    + После нажатия кнопки `Заказать` редактор сразу создаёт заказ в Pixlpark.
+
+После успешного создания вызывается обработчик `onOrderCreated`.
+```js
+onOrderCreated?: (state: {
+    redirectUrl: string;
+    orderId: number;
+    userId: number;
+}) => void
+```
+
+* Что нужно сделать в `onOrderCreated`:
+    + Закрыть редактор.
+    + Зафиксировать заказ на вашем сайте (если требуется).
+
+* При необходимости выполнить редирект по redirectUrl.
+
+### Получение информации о новом заказе
+* В панели управления Pixlpark в разделе "__Маркетинг / Уведомления / Настройка вебхуков__" добавить вебхук "__Заказ: статус рендеринга изменен__", указав URL-адрес для отправки информации о появлении нового готового к печати заказа.
 ![](../_media/dev/editor-webhook.png)
-3. Реализовать обработчик для вебхука выше, который будет содержать ссылку на архив заказа с файлами для печати (`DownloadLink`). 
+* Реализовать обработчик для вебхука выше, который будет содержать ссылку на архив заказа с файлами для печати (`DownloadLink`). 
+* При срабатывании вебхука «Заказ: статус рендеринга изменен» сервер Pixlpark отправляет объект `OrderMessageDTO`.
+Этот объект содержит всю основную информацию о заказе, его статусах, пользователе, доставке и ссылку для печати.
+```
+| Поле            | Тип         | Описание                                                     |
+| --------------- | ----------- | -------------------------------------------------------------|
+| `Id`            | `number`    | Внутренний идентификатор заказа в Pixlpark                   |
+| `DownloadLink   | `string`    | Ссылка на скачивание заказа                                  |
+| `PhotolabId`    | `number`    | Идентификатор фотолаба                                       |
+| `CustomId`      | `string`    | Пользовательский ID заказа (если задан)                      |
+| `SourceOrderId` | `number?`   | ID исходного заказа (например, при копировании)              |
+| `Title`         | `string`    | Название заказа                                              |
+| `Status`        | `string`    | Текущий статус заказа                                        |
+| `PaymentStatus` | `string`    | Статус оплаты                                                |
+| `RenderStatus`  | `string`    | Статус рендеринга                                            |
+| `StatusDate`    | `DateTime?` | Дата последнего изменения статуса                            |
+| `DateCreated`   | `DateTime`  | Дата создания заказа                                         |
+| `DateModified`  | `DateTime`  | Дата последнего изменения                                    |
+| `DatePaid`      | `DateTime?` | Дата оплаты                                                  |
+| `DateReady`     | `DateTime?` | Дата готовности                                              |
+| `PreviewImageUrl` | `string` | Ссылка на превью заказа                                       |
+```
+* Данные доставки
+```
+| Поле              | Тип           | Описание                         |
+| ----------------- | ------------- | -------------------------------- |
+| `DeliveryAddress` | `AddressDTO`  | Адрес доставки                   |
+| `Shipping`        | `ShippingDTO` | Информация о способе доставки    |
+| `TrackingUrl`     | `string`      | Ссылка для отслеживания доставки |
+| `TrackingNumber`  | `string`      | Трек-номер                       |
+
+```
+* Информация о пользователе
+```
+| Поле                    | Тип                     | Описание                                 |
+| ----------------------- | ----------------------- | ---------------------------------------- |
+| `UserId`                | `number?`               | ID пользователя                          |
+| `UserAdditionalInfo`    | `UserAdditionalInfoDto` | Дополнительная информация о пользователе |
+| `UserCompanyAccountId`  | `number?`               | ID корпоративного аккаунта               |
+| `UserCompanyAccountINN` | `string`                | ИНН компании                             |
+
+```
+* Цены и суммы
+```
+| Поле            | Тип       | Описание                    |
+| --------------- | --------- | --------------------------- |
+| `Price`         | `decimal` | Базовая стоимость           |
+| `DiscountPrice` | `decimal` | Скидка                      |
+| `DeliveryPrice` | `decimal` | Стоимость доставки          |
+| `TotalPrice`    | `decimal` | Итоговая стоимость          |
+| `PaidPrice`     | `decimal` | Оплаченная сумма            |
+| `DiscountTitle` | `string`  | Название применённой скидки |
+```
+
+#### Пример готовой страницы
+```html
+<script async src="https://ВАШ_САЙТ_НА_PIXLPARK/api/externalEditor/js"
+    onerror="onPxpError('Error while loading init script')"
+    onload="onPxpLoaded()">
+</script>
+<div id="photo-editor" style="position: relative; width: 100%; height: 800px"></div>
+<script>
+    var pxpEditorContainer = document.getElementById('photo-editor');
+    var designEditorConfig = {
+        editorType: "site",
+        product: {
+            id: 554547,
+        },
+        ui: {
+            layoutMode: "auto",
+            nextStepButtonAction:'createOrder',
+            hideBreadcrumbs:true
+        },
+        events: {
+            onOrderCreated: function (response) {
+                console.log(response)
+            },
+            onReady: function () {
+                var loadingCap = document.getElementById("loading_body_cap");
+                if (loadingCap != null) {
+                    if (loadingCap.parentElement != null) {
+                        loadingCap.parentElement.removeChild(loadingCap);
+                    }
+                }
+                document.body.style.overflow = "";
+            },
+        },
+        auth:{
+            getToken: ()=>{
+                return new Promise((resolve) => {
+                    setTimeout(() => {
+                        //1. если пользователя не существует 
+                        //api.pixlpark.com/api/users/create => id
+                        //2. api.pixlpark.com/users/{id}/frontendToken => token
+                        resolve("token");
+                        }, 1000);
+                    });
+                },
+            },
+        isExternal: true,
+    }
+
+    function onPxpError(error) {
+        pxpEditorContainer.classList.remove("loading-wheel")
+        pxpEditorContainer.classList.add("error")
+        var errorDiv = document.createElement("div");
+        errorDiv.className = "error-message"
+        errorDiv.innerText = error;
+        pxpEditorContainer.appendChild(errorDiv)
+    }
+    function onPxpLoaded() {
+        var externalEditor = pxp.external.createPhotoEditor(pxpEditorContainer, designEditorConfig);
+        externalEditor.render();
+        window.photoEditor = externalEditor;
+    }    
+	
+</script>
+
+```
