@@ -574,7 +574,7 @@ onOrderCreated?: (state: {
 ## Пример готовой страницы
 ### Редактор дизайнов
 ```html
-<script async src="https://ВАШ_САЙТ_НА_PIXLPARK/api/externalEditor/js"
+<script async src="https://demo.pixlpark.ru/api/externalEditor/js"
     onerror="onPxpError('Error while loading init script')"
     onload="onPxpLoaded()">
 </script>
@@ -584,7 +584,7 @@ onOrderCreated?: (state: {
     var vectorEditorConfig = {
         editorType: "site",
         product: {
-            id: 554547,
+            id: 1594332,
         },
         ui: {
             layoutMode: "auto",
@@ -627,7 +627,7 @@ onOrderCreated?: (state: {
 ```
 ### Редактор фотопечати
 ```html
-<script async src="https://ВАШ_САЙТ_НА_PIXLPARK/api/externalEditor/js"
+<script async src="https://demo.pixlpark.ru/api/externalEditor/js"
     onerror="onPxpError('Error while loading init script')"
     onload="onPxpLoaded()">
 </script>
