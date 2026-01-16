@@ -64,7 +64,7 @@ window.editor = editor;
 interface IDesignEditorConfig {
     // Настройка товара
     product: {
-        // ID продукта. Можно указать ID либо categoryUrlName и productUrlName
+        // ID продукта. Можно указать ID или categoryUrlName и productUrlName
         id?: number,
         // Количество разворотов у продукта
         pages?: number | null,
@@ -256,7 +256,7 @@ interface IDesignEditorState {
 	const designEditorConfig = {
 		product: {
 			id: ID_товара
-			//либо
+			//или
 			//productUrlName: "идентификатор_продукта", //например, "50x90-one-sided"
 			//categoryUrlName: "идентификатор_категории_продукта", //например, "businesscards-template"
 		},
@@ -427,7 +427,7 @@ interface IPhotoEditorConfig {
 	const photoEditorConfig = {
 		product: {
 			id: ID_товара
-			//либо
+			//или
 			//productUrlName: "идентификатор_продукта", //например, "50x90-one-sided"
 			//categoryUrlName: "идентификатор_категории_продукта", //например, "businesscards-template"
 		},
@@ -504,7 +504,7 @@ ui: {
 
 
 ### Сценарий 1: Добавление в корзину (addToCart)
-* После нажатия кнопки "__Заказать__" либо вызова `window.editor.addToCart()` (для редактора фотопечати: `window.editor.createOrder()`) в модальном окне утверждения дизайна редактора, заказываемый продукт добавляется в корзину Pixlpark. Затем отображается реализованный на внешнем сайте хэндлер `onCartItemCreated`, в который передается идентификатор пользователя (`userId`) и идентификатор позиции корзины (`shoppingCartItemId`) Pixlpark.
+* После нажатия кнопки "__Заказать__" или вызова `window.editor.addToCart()` (для редактора фотопечати: `window.editor.createOrder()`) в модальном окне утверждения дизайна редактора, заказываемый продукт добавляется в корзину Pixlpark. Затем отображается реализованный на внешнем сайте хэндлер `onCartItemCreated`, в который передается идентификатор пользователя (`userId`) и идентификатор позиции корзины (`shoppingCartItemId`) Pixlpark.
 * Далее, в `onCartItemCreated` необходимо:
     + Закрыть редактор (например, если он был в div-элементе).
     + Добавить позицию в корзину внешнего сайта.
@@ -518,7 +518,7 @@ ui: {
 ### Сценарий 2: Автоматическое создание заказа (createOrder)
 * При использовании режима `createOrder` товар не добавляется в корзину, а заказ создаётся сразу.
 * Как это работает:
-    + После нажатия кнопки "__Заказать__" либо вызова `window.editor.createOrderForce()` редактор сразу создаёт заказ в Pixlpark.
+    + После нажатия кнопки "__Заказать__" или вызова `window.editor.createOrderForce()` редактор сразу создаёт заказ в Pixlpark.
 
 После успешного создания вызывается обработчик `onOrderCreated`.
 ```js
