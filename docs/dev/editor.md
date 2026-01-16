@@ -231,7 +231,7 @@ interface IDesignEditorState {
 * Необходимо получить или создать (при отсутствии данного пользователя на сайте в сервисе Pixlpark) через API Pixlpark и получить внешний токен:
     + `GET api.pixlpark.com/users/byEmail` и/или `POST api.pixlpark.com/users/create`.
     + `GET api.pixlpark.com/users/{id}/frontendToken`.
-* Информацию о работе данных методов вы можете получить на странице https://api.pixlpark.com
+* Информацию о работе данных методов вы можете получить на [странице API](/dev/api#работа-с-api)
 
 #### Конфигурация
 * Определить конфигурацию редактора на странице внешнего сайта необходимо при помощи кода:
@@ -404,7 +404,7 @@ interface IPhotoEditorConfig {
 * Необходимо получить или создать (при отсутствии данного пользователя на сайте в сервисе Pixlpark) через API Pixlpark и получить внешний токен:
     + `GET api.pixlpark.com/users/byEmail` и/или `POST api.pixlpark.com/users/create`.
     + `GET api.pixlpark.com/users/{id}/frontendToken`.
-* Информацию о работе данных методов вы можете получить на странице https://api.pixlpark.com
+* Информацию о работе данных методов вы можете получить на [странице API](/dev/api#работа-с-api)
 #### Конфигурация
 * Определить конфигурацию редактора на странице внешнего сайта необходимо при помощи кода:
 ```html
