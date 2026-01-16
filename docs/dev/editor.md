@@ -10,7 +10,7 @@ sidebar_position: 5
     1. [Настройка платформы Pixlpark](/dev/editor#настройка-платформы-pixlpark).
     2. [Встраивание редактора на страницу сайта](/dev/editor#встраивание-редактора-на-страницу-сайта).
     3. [Получение файлов к печати](/dev/editor#получение-файлов-к-печати).
-
+* [Пример готовой страницы](/dev/editor#пример-готовой-страницы).
 ## Настройка платформы Pixlpark
 * Для того, чтобы встроить редактор дизайнов в сторонний сайт, вам необходимо следующим образом подготовить сайт на платформе Pixlpark (откуда подтягиваются все настройки для редактора):
     + Содержит доступную и настроенную категорию продукта и продукт с уникальной ссылкой в редактор, который необходимо интегрировать.
@@ -572,6 +572,60 @@ onOrderCreated?: (state: {
 | `DiscountTitle` | `string`  | Название применённой скидки |
 
 ## Пример готовой страницы
+### Редактор дизайнов
+```html
+<script async src="https://ВАШ_САЙТ_НА_PIXLPARK/api/externalEditor/js"
+    onerror="onPxpError('Error while loading init script')"
+    onload="onPxpLoaded()">
+</script>
+<div id="vector-editor"></div>
+<script>
+    var pxpEditorContainer = document.getElementById('vector-editor');
+    var vectorEditorConfig = {
+        editorType: "site",
+        product: {
+            id: 554547,
+        },
+        ui: {
+            layoutMode: "auto",
+            nextStepButtonAction:'createOrder',
+            header:
+            {
+                breadCrumbs:false
+            }
+        },
+        events: {
+            onOrderCreated: function (response) {
+                console.log(response)
+            },
+            onReady: function () {
+            },
+        },
+        auth:{
+            getToken: ()=>{
+                return new Promise((resolve) => {
+                    setTimeout(() => {
+                        //1. если пользователя не существует 
+                        //api.pixlpark.com/api/users/create => id
+                        //2. api.pixlpark.com/users/{id}/frontendToken => token
+                        resolve("token");
+                        }, 1000);
+                    });
+                },
+            },
+        isExternal: true,
+    }
+
+    function onPxpError(error) {    }
+    function onPxpLoaded() {
+        var externalEditor = pxp.external.createDesignEditor(pxpEditorContainer, vectorEditorConfig);
+        externalEditor.render();
+        window.editor = externalEditor;
+    }    
+	
+</script>
+```
+### Редактор фотопечати
 ```html
 <script async src="https://ВАШ_САЙТ_НА_PIXLPARK/api/externalEditor/js"
     onerror="onPxpError('Error while loading init script')"
@@ -619,5 +673,4 @@ onOrderCreated?: (state: {
     }    
 	
 </script>
-
 ```
