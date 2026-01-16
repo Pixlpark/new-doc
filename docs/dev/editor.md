@@ -575,8 +575,8 @@ onOrderCreated?: (state: {
         "Type": "Point"
     },
     "CommentsCount": 0,
-    "DownloadLink": "https://demo.pixlpark.ru/content/order-download/1111?secret=secret&photolab=1164",
-    "PreviewImageUrl": "https://demo.pixlpark.ru/content/pxp-order-preview/11111?secret=secret",
+    "DownloadLink": "https://editor.site.ru/content/order-download/1111?secret=secret&photolab=1164",
+    "PreviewImageUrl": "https://editor.site.ru/content/pxp-order-preview/11111?secret=secret",
     "Price": 1200,
     "DiscountPrice": 0,
     "DeliveryPrice": 400,
@@ -614,7 +614,7 @@ onOrderCreated?: (state: {
 ## Пример готовой страницы
 ### Редактор дизайнов
 ```html
-<script async src="https://demo.pixlpark.ru/api/externalEditor/js"
+<script async src="https://editor.site.ru/api/externalEditor/js"
     onerror="onPxpError('Error while loading init script')"
     onload="onPxpLoaded()">
 </script>
@@ -667,7 +667,7 @@ onOrderCreated?: (state: {
 ```
 ### Редактор фотопечати
 ```html
-<script async src="https://demo.pixlpark.ru/api/externalEditor/js"
+<script async src="https://editor.site.ru/api/externalEditor/js"
     onerror="onPxpError('Error while loading init script')"
     onload="onPxpLoaded()">
 </script>
