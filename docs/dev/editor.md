@@ -18,6 +18,7 @@ sidebar_position: 5
     + В подразделе "__Доступность API__" раздела "__Настройки / Доступ__" включена опция "__Разрешить доступ к данным через API__".
     + Находится на поддомене внешнего сайта, куда необходимо интегрировать редактор. Подробнее о настройках доменного имени можно узнать на [странице](https://docs.pixlpark.ru/site/domains).
 * Внешний сайт должен работать на протоколе HTTPS.
+![](../_media/dev/api-settings.png ':size=80%')
 * Интеграция необходимого редактора с внешним сайтом осуществляется при помощи идентификатора продукта, который может быть двух видов:
     + "__ID__" - уникальный идентификатор продукта. При удалении с сайта на платформе Pixlpark продукта с указанным во встраиваемом редакторе ID, на внешнем сайте редактор работать не будет.
     + "__categoryUrlName__" и "__productUrlName__" - идентификатор категории продукта и идентификатор продукта в URL. При отсутствии указания "__productUrlName__" редактор будет инициализирован первым доступным продуктом категории продукта.
@@ -33,15 +34,13 @@ sidebar_position: 5
 ### Подготовка страницы внешнего сайта
 * Для встраивания редактора на страницу внешнего сайта необходимо создать контейнер согласно коду
 ```html
-    <div id="editorContainer"></div>
+<div id="editorContainer"></div>
 ```
 * и добавить его в разметку страницы внешнего сайта. Редактор заполнит весь размер контейнера.
 * Затем, добавить скрипт для загрузки редактора на страницу внешнего сайта.
 ```js
-    <script src="https://ваш-сайт-в-Pixlpark/api/externalEditor/js" onerror="onPxpError('Error while loading init script')" onload="onPxpLoaded()"></script>
+<script src="https://ваш-сайт-в-Pixlpark/api/externalEditor/js" onerror="onPxpError('Error')" onload="onPxpLoaded()"></script>
 ```
-> Скрипт необходимо расположить ближе к подвалу в разметке страницы.
-
 
 ## Редактор дизайнов
 ### Описание конфигурационного файла
@@ -277,9 +276,7 @@ const designEditorConfig = {
     },
 }
 // Обработчик ошибок
-function onPxpError(error) {
-
-}
+function onPxpError(error) {}
 // Этот код вызывается после загрузки скрипта редактора
 function onPxpLoaded() {
     var editor = pxp.external.createDesignEditor(container, designEditorConfig);
@@ -497,7 +494,7 @@ ui: {
 
 
 ### Сценарий 1: Добавление в корзину (addToCart)
-* После нажатия кнопки "__Заказать__" в модальном окне утверждения дизайна редактора, заказываемый продукт добавляется в корзину Pixlpark. Затем отображается реализованный на внешнем сайте хэндлер `onCartItemCreated`, в который передается идентификатор пользователя (`userId`) и идентификатор позиции корзины (`shoppingCartItemId`) Pixlpark.
+* После нажатия кнопки "__Заказать__" либо вызове `window.editor.addToCart()` (для редактора фотопечати: `window.editor.createOrder()`) в модальном окне утверждения дизайна редактора, заказываемый продукт добавляется в корзину Pixlpark. Затем отображается реализованный на внешнем сайте хэндлер `onCartItemCreated`, в который передается идентификатор пользователя (`userId`) и идентификатор позиции корзины (`shoppingCartItemId`) Pixlpark.
 * Далее, в `onCartItemCreated` необходимо:
     + Закрыть редактор (например, если он был в div-элементе).
     + Добавить позицию в корзину внешнего сайта.
@@ -505,13 +502,13 @@ ui: {
 * При желании к позиции корзины внешнего сайта можно прикрепить превью созданного дизайна, которое находится у соответствующего элемента корзины Pixlpark. Для этого нужно с помощью [API-метода](https://docs.pixlpark.ru/dev/api) __Get By UserId__ (`/cart/{userId}`) получить всю корзину, а уже затем найти интересующий элемент по `shoppingCartItemId`.
 * Отметим, что корзина Pixlpark хранится ровно 14 дней. После чего ее содержимое удаляется. Поэтому, на внешнем сайте надо либо предусмотреть аналогичную логику с уведомлением клиента об очистке корзины, либо в этот срок инициировать подготовку файлов для печати.
 * Для создания заказа необходимо:
-    + С помощью [API-метода](https://docs.pixlpark.ru/dev/api) __Create Order__ (/orders/create) необходимо создать заказ, передав в качестве его параметров __userId__, __shoppingCartItemId__ и __shippingId__, где __shippingId__ - это идентификатор любой активной доставки, определенной в панели управления Pixlpark в разделе "__Настройка / Доставка / Способы доставки__".
+    + С помощью [API-метода](https://docs.pixlpark.ru/dev/api) __Create Order__ (https://api.pixlpark.com/orders/create) необходимо создать заказ, передав в качестве его параметров __userId__, __shoppingCartItemId__ и __shippingId__, где __shippingId__ - это идентификатор любой активной доставки, определенной в панели управления Pixlpark в разделе "__Настройка / Доставка / Способы доставки__".
 ![](../_media/dev/editor-shipping-id.png ':size=80%')
 
 ### Сценарий 2: Автоматическое создание заказа (createOrder)
 * При использовании режима `createOrder` товар не добавляется в корзину, а заказ создаётся сразу.
 * Как это работает:
-    + После нажатия кнопки `Заказать` редактор сразу создаёт заказ в Pixlpark.
+    + После нажатия кнопки "__Заказать__" либо вызове `window.editor.createOrderForce()` редактор сразу создаёт заказ в Pixlpark.
 
 После успешного создания вызывается обработчик `onOrderCreated`.
 ```js
@@ -602,7 +599,6 @@ onOrderCreated?: (state: {
         ui: {
             layoutMode: "auto",
             nextStepButtonAction:'createOrder',
-            hideBreadcrumbs:true
         },
         events: {
             onOrderCreated: function (response) {
@@ -626,12 +622,11 @@ onOrderCreated?: (state: {
         isExternal: true,
     }
 
-    function onPxpError(error) {
-    }
+    function onPxpError(error) {    }
     function onPxpLoaded() {
         var externalEditor = pxp.external.createPhotoEditor(pxpEditorContainer, photoEditorConfig);
         externalEditor.render();
-        window.photoEditor = externalEditor;
+        window.editor = externalEditor;
     }    
 	
 </script>
