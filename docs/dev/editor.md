@@ -112,7 +112,7 @@ interface IDesignEditorConfig {
         getToken: (currentUserId?: number | null) => Promise<string>,
 
         // Токен зарегистрированного пользователя
-        // При его указании редактор попробует войти под этим токеном
+        // Если задан, то редактор попробует войти под этим токеном
         // Если не получится, редактор завершит работу с ошибкой
         userToken?: string,
     }
@@ -274,7 +274,7 @@ interface IDesignEditorState {
 				})
 			},
 			// Токен зарегистрированного пользователя
-			// При его указании редактор попробует войти под этим токеном
+			// Если задан, то редактор попробует войти под этим токеном
 			// Если не получится, редактор завершит работу с ошибкой
 			userToken: undefined,
 		},
@@ -344,7 +344,7 @@ interface IPhotoEditorConfig {
         getToken: (currentUserId?: number | null) => Promise<string>,
 
         // Токен зарегистрированного пользователя
-        // При его указании редактор попробует войти под этим токеном
+        // Если задан, то редактор попробует войти под этим токеном
         // Если не получится, редактор завершит работу с ошибкой
         userToken?: string,
     }
@@ -395,15 +395,17 @@ interface IPhotoEditorConfig {
         // 'addToCart' - товар будет добавлен в корзину. По умолчанию 'addToCart'.
         nextStepButtonAction?: 'addToCart' | 'createOrder';
 
-        isMobileApp: boolean;
-        isMultiformat: boolean;
+        //Скрывать шапку
         hideHeader: boolean;
+        //Скрывать хлебные крошки
         hideBreadcrumbs?: boolean;
+        //Скрывать калькулятор
         hideCalculator: boolean;
+        //Скрывать иконку домашней страницы
         hideHome: boolean;
+        //Скрывать боковую панель
         hideSidebar: boolean;
     },
-
 }
 
 ```
@@ -449,7 +451,7 @@ const photoEditorConfig = {
     },
 
     // Токен зарегистрированного пользователя
-    // При его указании редактор попробует войти под этим токеном
+    // Если задан, то редактор попробует войти под этим токеном
     // Если не получится, редактор завершит работу с ошибкой
     userToken: undefined
   },
