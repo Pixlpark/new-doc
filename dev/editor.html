@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.0.1">
 <title data-rh="true">Внедрение онлайн-редактора | Документация Pixlpark</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://docs.pixlpark.ru/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://docs.pixlpark.ru/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://docs.pixlpark.ru/dev/editor"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Внедрение онлайн-редактора | Документация Pixlpark"><meta data-rh="true" name="description" content="Внедрение редактора во внешний интернет-магазин с собственной корзиной, оплатой и доставкой"><meta data-rh="true" property="og:description" content="Внедрение редактора во внешний интернет-магазин с собственной корзиной, оплатой и доставкой"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://docs.pixlpark.ru/dev/editor"><link data-rh="true" rel="alternate" href="https://docs.pixlpark.ru/dev/editor" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.pixlpark.ru/dev/editor" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://CBISSLUS3P-dsn.algolia.net" crossorigin="anonymous"><link rel="search" type="application/opensearchdescription+xml" title="Документация Pixlpark" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.b0b92ecc.css">
-<script src="/assets/js/runtime~main.8f0d7885.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.c55cd24e.js" defer="defer"></script>
 <script src="/assets/js/main.5d63c9ea.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -174,13 +174,13 @@
 </ul>
 </li>
 <li>При желании к  позиции корзины внешнего сайта можно прикрепить превью созданного дизайна, которое находится у соответствующего элемента корзины Pixlpark. Для этого нужно с помощью <a href="https://docs.pixlpark.ru/dev/api" target="_blank" rel="noopener noreferrer">API-метода</a> <strong>Get By UserId</strong> (<code>/cart/{userId}</code>) получить всю корзину, а уже затем найти интересующий элемент по <code>shoppingCartItemId</code>.</li>
-<li>Отметим, что корзина Pixlpark хранится ровно 14 дней, после чего ее содержимое удаляется. Поэтому, на внешнем сайте надо либо предусмотреть аналогичную логику с уведомлением клиента об очистке корзины, либо в этот срок инициировать подготовку файлов для печати.</li>
-<li>Для создания заказа необходимо:<!-- -->
-<ul>
-<li>С помощью <a href="https://docs.pixlpark.ru/dev/api" target="_blank" rel="noopener noreferrer">API-метода</a> <strong>Create Order</strong> (<a href="https://api.pixlpark.com/orders/create" target="_blank" rel="noopener noreferrer">https://api.pixlpark.com/orders/create</a>) необходимо создать заказ, передав в качестве его параметров <strong>userId</strong>, <strong>shoppingCartItemId</strong> и <strong>shippingId</strong>, где <strong>shippingId</strong> - это идентификатор любой активной доставки, определенной в панели управления Pixlpark в разделе &quot;<strong>Настройка / Доставка / Способы доставки</strong>&quot;.
-<img loading="lazy" src="/assets/images/editor-shipping-id-83b2f158b156d4916ea5553e07b1ddce.png" title=":size=80%" width="2025" height="837" class="img_ev3q"></li>
 </ul>
-</li>
+<blockquote>
+<p>Отметим, что корзина Pixlpark хранится ровно 14 дней, после чего ее содержимое удаляется. Поэтому, на внешнем сайте надо либо предусмотреть аналогичную логику с уведомлением клиента об очистке корзины, либо в этот срок инициировать подготовку файлов для печати.</p>
+</blockquote>
+<ul>
+<li>Для создания заказа нужно воспользоваться <a href="https://docs.pixlpark.ru/dev/api" target="_blank" rel="noopener noreferrer">API-методом</a> <strong>Create Order</strong> (<a href="https://api.pixlpark.com/orders/create" target="_blank" rel="noopener noreferrer">https://api.pixlpark.com/orders/create</a>), передав в качестве его параметров <code>userId</code>, <code>shoppingCartItemId</code> и <code>shippingId</code>, где <code>shippingId</code> - это идентификатор любой активной доставки, определенной в панели управления Pixlpark в разделе &quot;<strong>Настройка / Доставка / Способы доставки</strong>&quot;.
+<img loading="lazy" src="/assets/images/editor-shipping-id-83b2f158b156d4916ea5553e07b1ddce.png" title=":size=80%" width="2025" height="837" class="img_ev3q"></li>
 </ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="сценарий-2-автоматическое-создание-заказа-createorder">Сценарий 2: Автоматическое создание заказа (createOrder)<a href="#сценарий-2-автоматическое-создание-заказа-createorder" class="hash-link" aria-label="Direct link to Сценарий 2: Автоматическое создание заказа (createOrder)" title="Direct link to Сценарий 2: Автоматическое создание заказа (createOrder)">​</a></h3>
 <ul>
