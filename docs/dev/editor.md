@@ -418,65 +418,74 @@ interface IPhotoEditorConfig {
 * Определить конфигурацию редактора на странице внешнего сайта необходимо при помощи кода:
 ```html
 <script async src="https://Ваш_сайт_pixlpark/api/externalEditor/js"
-    onerror="onPxpError('Error while loading init script')"
-    onload="onPxpLoaded()">
+  onerror="onPxpError('Error while loading init script')"
+  onload="onPxpLoaded()">
 </script>
+
 <div id="editorContainer"></div>
+
 <script>
-    const container = document.getElementById('editorContainer');
-	const photoEditorConfig = {
-		product: {
-			id: ID_товара
-			//или
-			//productUrlName: "идентификатор_продукта", //например, "50x90-one-sided"
-			//categoryUrlName: "идентификатор_категории_продукта", //например, "businesscards-template"
-		},
-		auth: {
-			// Этот метод будет вызван если не задан userToken
-			// В этом методе необходимо найти или создать пользователя на стороне Pixlpark,
-			// связать его с авторизованным пользователем вашей платформы
-			//  и вернуть его token на платформе Pixlpark
-			getToken: () => {
-				return new Promise((resolve, reject) => {
-					//`GET api.pixlpark.com/users/byEmail` и/или `POST api.pixlpark.com/users/create`
-					//`GET api.pixlpark.com/users/{id}/frontendToken`
-					resolve('token');
-				})
-			},
-			// Токен зарегистрированного пользователя
-			// При его указании редактор попробует войти под этим токеном
-			// Если не получится, редактор завершит работу с ошибкой
-			userToken: undefined,
-		},
-		ui: {
-			layoutMode: "auto",
-		},
-		events: {
-			onError: (error) => { onPxpError(error); },
-			onReady: () => {
-				console.log("Editor ready");
-			},
-			onCartItemCreated: (response) => {
-				console.log(`Положили товар в корзину: ${response.shoppingCartItemId}.`);
-			},
-			onOrderCreated: (response) => {
-				console.log(`Создали заказ: ${response.orderId}`);
-			},
-			onPriceChanged: (newPrice) => {
-				console.log("New price recieved", newPrice);
-			}
-		},
-	}
-	// Обработчик ошибок
-	function onPxpError(error) {}
-	// Этот код вызывается после загрузки скрипта редактора
-	function onPxpLoaded() {
-		var editor = pxp.external.createPhotoEditor(container, photoEditorConfig);
-		editor.render();
-		window.editor = editor;
-	}
-		
+const container = document.getElementById('editorContainer');
+
+const photoEditorConfig = {
+  product: {
+    id: ID_товара
+    // или
+    // productUrlName: "идентификатор_продукта", // например, "50x90-one-sided"
+    // categoryUrlName: "идентификатор_категории_продукта", // например, "businesscards-template"
+  },
+
+  auth: {
+    // Этот метод будет вызван, если не задан userToken
+    // В этом методе необходимо найти или создать пользователя на стороне Pixlpark,
+    // связать его с авторизованным пользователем вашей платформы
+    // и вернуть его token на платформе Pixlpark
+    getToken: () => {
+      return new Promise((resolve, reject) => {
+        // `GET api.pixlpark.com/users/byEmail` и/или `POST api.pixlpark.com/users/create`
+        // `GET api.pixlpark.com/users/{id}/frontendToken`
+        resolve('token');
+      });
+    },
+
+    // Токен зарегистрированного пользователя
+    // При его указании редактор попробует войти под этим токеном
+    // Если не получится, редактор завершит работу с ошибкой
+    userToken: undefined
+  },
+
+  ui: {
+    layoutMode: "auto"
+  },
+
+  events: {
+    onError: (error) => { onPxpError(error); },
+    onReady: () => {
+      console.log("Editor ready");
+    },
+    onCartItemCreated: (response) => {
+      console.log(`Положили товар в корзину: ${response.shoppingCartItemId}.`);
+    },
+    onOrderCreated: (response) => {
+      console.log(`Создали заказ: ${response.orderId}`);
+    },
+    onPriceChanged: (newPrice) => {
+      console.log("Изменилась цена", newPrice);
+    }
+  }
+};
+
+// Обработчик ошибок
+function onPxpError(error) {}
+
+// Этот код вызывается после загрузки скрипта редактора
+function onPxpLoaded() {
+  const editor = pxp.external.createPhotoEditor(container, photoEditorConfig);
+  editor.render();
+  window.editor = editor;
+}
 </script>
+
 ```
 ### Дополнительные методы управления редактором
 * Объект `window.editor` предоставляет набор методов для более гибкого управления редактором. С их помощью вы можете реализовывать собственные сценарии взаимодействия, а также создавать кастомные кнопки и элементы интерфейса, которые будут напрямую управлять редактором.
