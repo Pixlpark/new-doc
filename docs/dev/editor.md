@@ -352,7 +352,7 @@ interface IPhotoEditorConfig {
     // События редактора
     events?: {
         // Вызывается после того, как товар был добавлен в корзину.
-        onCartItemCreated?: (state: { redirectUrl: string; shoppingCartItemId: number; userId: number;}) => void
+        onCartItemCreated?: (state: { redirectUrl: string; shoppingCartItemId: number[]; userId: number;}) => void
 
         // Вызывается после того, как был создан заказ.
         onOrderCreated?: (state: { redirectUrl: string; orderId: number; userId: number;}) => void
