@@ -332,6 +332,11 @@ interface IPhotoEditorConfig {
         // Внешняя калькуляция цены. При самостоятельном расчете цены необходимо реализовать этот метод
         // Метод необходимо вызвать, когда нужно отобразить цену
         calculatePrice?: (state: {materialId: number; count: number;}) => Promise<{ totalPrice: number; quantity: number; }>,
+        // Состояние которое необходимо загрузить. Например, элемент корзины или позицю заказа.
+        stateInfo: {
+            stateIds: number[]; //ID позиции заказа, либо ID позиции корзины
+            type: 'cartItem' | 'orderDetail'; // cartItem - позиция в корзине; design - дизайн из личного кабинета; orderDetail - позиция заказа
+        };
     }
 
     // Аутентификация, если на момент открытия редактора известен пользователь,
