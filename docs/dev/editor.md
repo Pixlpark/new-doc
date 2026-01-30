@@ -335,7 +335,7 @@ interface IPhotoEditorConfig {
         // Состояние которое необходимо загрузить. Например, элемент корзины или позицю заказа.
         stateInfo: {
             stateIds: number[]; //ID позиции заказа, либо ID позиции корзины
-            type: 'cartItem' | 'orderDetail'; // cartItem - позиция в корзине; design - дизайн из личного кабинета; orderDetail - позиция заказа
+            type: 'cartItem' | 'orderDetail'; // cartItem - позиция в корзине; orderDetail - позиция заказа
         };
     }
 
