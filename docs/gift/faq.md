@@ -98,6 +98,12 @@ sidebar_position: 5
  5. Разместить ссылку на PDF-файл в разметке страницы "CMS / Страницы" → "collections".
 ```
 
+### 4. Смена иконок категорий каталога
+* Для использования собственных иконок категорий каталога используется файл gifts-icons.svg, который должен располагаться в корневой папке сайта (раздел CMS/Файлы).
+* ![](../_media/gift/gift51.png) 
+* В данном файле для каждой категории необходимо прописать код svg иконок соответствующей категории. 
+* ![](../_media/gift/gift52.png)
+
 ## Видеоуроки
 ### Как установить цены на сувениры
 <iframe width="720" height="405" src="https://rutube.ru/play/embed/1b7dd83f27bce3a65f6a9064955e134d/" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
