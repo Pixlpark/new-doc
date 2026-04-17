@@ -28,7 +28,9 @@ sidebar_position: 2
 * `[$city:phone$]` - телефон города с учётом маски.
 * `[$city:phoneNumber$]` - телефон города (только цифры).
 * `[$city:email$]` - эл. почта города.
+* `[$city:postalIndex$]` - почтовый индекс города.
 * `[$city:address$]` - адрес города.
+* `[$city:description$]` - описание города.
 * `[$city:pageAvailableFor$]` - список городов для которых доступна текущая страница.
 * `[$city:isVisibleFor(spb,tomsk)$]` - отображает элемент CMS для городов с ссылкой spb и tomsk (Пример использования `style="[$city:isVisibleFor(spb,tomsk)$]"`).
 * `[$city:isHiddenFor(spb,tomsk)$]` - скрывает элемент CMS для городов с ссылкой spb и tomsk (Пример использования `style="[$city:isHiddenFor(spb,tomsk)$]"`).
