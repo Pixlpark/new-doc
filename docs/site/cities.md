@@ -34,6 +34,9 @@ sidebar_position: 2
 * `[$city:pageAvailableFor$]` - список городов для которых доступна текущая страница.
 * `[$city:isVisibleFor(spb,tomsk)$]` - отображает элемент CMS для городов с ссылкой spb и tomsk (Пример использования `style="[$city:isVisibleFor(spb,tomsk)$]"`).
 * `[$city:isHiddenFor(spb,tomsk)$]` - скрывает элемент CMS для городов с ссылкой spb и tomsk (Пример использования `style="[$city:isHiddenFor(spb,tomsk)$]"`).
+* `[$city:maxSocialUrl$]` - ссылка на Max по городам.
+* `[$city:telegramSocialUrl$]` - ссылка на Telegram по городам.
+* `[$city:vkSocialUrl$]` - ссылка на ВК по городам.
 
 ## FAQ
 ### Группы городов
