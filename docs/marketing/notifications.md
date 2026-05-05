@@ -56,7 +56,7 @@ sidebar_position: 6
 * ![](../_media/marketing/notifications10.png)
 
 ## Настройка Max
-1. [Зарегистрируйтесь](https://business.max.ru/self) в мессенджере MAX и получите **токен для интеграции**, следуя [документации MAX](https://dev.max.ru/docs/chatbots/bots-create).
+1. [Зарегистрируйте](https://business.max.ru/self) вашу организацию в мессенджере MAX и получите **токен для интеграции**, следуя [документации](https://dev.max.ru/docs/chatbots/bots-create).
 2. Полученный токен введите в поле «**Токен Max бота**» в разделе  **Маркетинг → Уведомления → Настройка Max**
 * ![](../_media/marketing/max_integration.png)
 
