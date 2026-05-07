@@ -13,5 +13,6 @@ sidebar_position: 6
     + [Google](/integration/socials#google)
     + [Яндекс](/integration/socials#яндекс)
     + [Авторизация OAuth 2.0](https://oauth.net/)
+    + [СберID](/integration/socials#сберid)
 * ![](../_media/site/services.png)
 > Подробнее о настройке интеграции с внешними сервисами можно узнать в __[разделе](/integration/socials)__.
