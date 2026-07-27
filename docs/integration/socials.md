@@ -20,9 +20,9 @@ sidebar_position: 3
 4. Ввести название приложения, а также выбрать платформу Web и нажать "Далее"
 * ![](../_media/integration/vk-createapp1.png)
 5. На этапе ввода домена сайта указать базовый домен вашего сайта, а также 2 доверенных URL в виде:
-**https://*домен*/account/login/vkontakte**
-**https://*домен*/account/login**
-Нажать кнопку "Создать приложение".
+* **https://*домен*/account/login/vkontakte**
+* **https://*домен*/account/login**
+* Нажать кнопку "Создать приложение".
 * ![](../_media/integration/vk-createapp2.png)
 6. Нажать кнопку "К настройке"
 * ![](../_media/integration/vk-createapp3.png)
