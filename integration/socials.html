@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.0.1">
 <title data-rh="true">Социальные сети | Документация Pixlpark</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://docs.pixlpark.ru/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://docs.pixlpark.ru/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://docs.pixlpark.ru/integration/socials"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Социальные сети | Документация Pixlpark"><meta data-rh="true" name="description" content="Вконтакте, Яндекс, Одноклассники, Google"><meta data-rh="true" property="og:description" content="Вконтакте, Яндекс, Одноклассники, Google"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://docs.pixlpark.ru/integration/socials"><link data-rh="true" rel="alternate" href="https://docs.pixlpark.ru/integration/socials" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.pixlpark.ru/integration/socials" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://CBISSLUS3P-dsn.algolia.net" crossorigin="anonymous"><link rel="search" type="application/opensearchdescription+xml" title="Документация Pixlpark" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.b0b92ecc.css">
-<script src="/assets/js/runtime~main.4b188127.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.bacb9f93.js" defer="defer"></script>
 <script src="/assets/js/main.b470876f.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -13,44 +13,69 @@
 <ul>
 <li>Интеграция с <a href="https://vk.com" target="_blank" rel="noopener noreferrer">ВКонтакте</a> позволяет осуществлять вход на сайт, авторизуясь с помощью профиля в социальной сети, а также добавлять из него фотографии для заказа.</li>
 <li>Для настройки интеграции необходимо выполнить следующие действия.</li>
-<li>На сайте ВКонтакте в разделе &quot;<a href="https://dev.vk.com" target="_blank" rel="noopener noreferrer">Разработка приложений</a>&quot; нажать кнопку &quot;<strong>Создать приложение</strong>&quot;.
-<img loading="lazy" src="/assets/images/vk01-50f4cec0ae844ee63c86675b72edda1c.png" title=":size=70%" width="1112" height="583" class="img_ev3q"></li>
-<li>Далее, заполнить форму, указав:<!-- -->
-<ul>
-<li><strong>Название</strong>.</li>
-<li><strong>Платформу</strong> (выбрать &quot;<strong>Сайт</strong>&quot;).</li>
-<li><strong>Адрес сайта</strong>.</li>
-<li><strong>Базовый домен</strong>.
-<img loading="lazy" src="/assets/images/vk02-96f9df821fdcdf855aba757a6bc5d4c7.png" title=":size=70%" width="1025" height="515" class="img_ev3q"></li>
 </ul>
-</li>
-<li>И нажать кнопку &quot;<strong>Подключить сайт</strong>&quot;. А после создания приложения перейти в раздел &quot;<strong>Настройки</strong>&quot;.
-<img loading="lazy" src="/assets/images/vk03-ad564b7c98f8a858f54c96221d31abc8.png" title=":size=70%" width="971" height="425" class="img_ev3q"></li>
-<li>Параллельно открыть в панели управления Pixlpark раздел &quot;<strong>Настройка / Сервисы</strong>&quot; и включить &quot;<strong>ВКонтакте</strong>&quot;.
-<img loading="lazy" src="/assets/images/vk04-3f3d0dc2d8a5df53a3a9426475f032de.png" title=":size=70%" width="1294" height="646" class="img_ev3q"></li>
-<li>Затем скопировать поля из ВКонтакте в Pixlpark:<!-- -->
+<ol>
+<li>Зарегистрироваться в <a href="https://id.vk.com/about/business/go/accounts/0/apps" target="_blank" rel="noopener noreferrer">сервисе для авторизации ВК</a>.</li>
+<li>Создать профиль бизнеса, выбрав в выпадающем меню в правом верхнем углу пункт &quot;Новый профиль бизнеса&quot;</li>
+</ol>
 <ul>
-<li>&quot;<strong>ID приложения</strong>&quot; в &quot;<strong>App ID</strong>&quot;.</li>
-<li>&quot;<strong>Защищенный ключ</strong>&quot; в &quot;<strong>App Secret</strong>&quot;.</li>
-</ul>
-</li>
-<li>Далее, нажать кнопку &quot;<strong>Сохранить</strong>&quot; и сбросить кэш сайта.</li>
+<li><img loading="lazy" src="/assets/images/vk-newbusiness-97c954341291f13e2c78cfa277a8800c.png" width="934" height="525" class="img_ev3q"></li>
+<li>После создания профиля для бизнеса, подтвердить его с помощью Госуслуг, СберID или T-ID.</li>
+<li><img loading="lazy" src="/assets/images/vk-newbusiness2-213cef0838a70ac106406cccddc6208e.png" width="934" height="498" class="img_ev3q"></li>
 </ul>
 <blockquote>
-<p>В случае использования интеграции для мобильного приложения, открыть в панели управления Pixlpark раздел &quot;<strong>Приложение / Соц. сети</strong>&quot;. Затем скопировать поля из ВКонтакте в Pixlpark:</p>
-<ul>
-<li>&quot;<strong>ID приложения</strong>&quot; в &quot;<strong>App ID</strong>&quot;.</li>
-</ul>
+<p>Проверка профиля может занять до 3 рабочих дней.</p>
 </blockquote>
+<ol start="3">
+<li>На <a href="https://id.vk.com/about/business/go/" target="_blank" rel="noopener noreferrer">странице сервиса авторизации</a> нажать кнопку &quot;Добавить приложение&quot;</li>
+</ol>
 <ul>
-<li><img loading="lazy" src="/assets/images/vk05-1d879b78c5e444205ad6cfd5dfc50ec9.png" title=":size=70%" width="828" height="282" class="img_ev3q"></li>
+<li><img loading="lazy" src="/assets/images/vk-createapp-7db0412cd2f77aba014e19f081fa0b8f.png" width="934" height="554" class="img_ev3q"></li>
 </ul>
-<blockquote>
-<p>Далее, нажать кнопку &quot;<strong>Сохранить</strong>&quot; и сбросить кэш сайта.</p>
-</blockquote>
+<ol start="4">
+<li>Ввести название приложения, а также выбрать платформу Web и нажать &quot;Далее&quot;</li>
+</ol>
+<ul>
+<li><img loading="lazy" src="/assets/images/vk-createapp1-e8edacc11eb99381a525c7536a0e7f8c.png" width="934" height="503" class="img_ev3q"></li>
+</ul>
+<ol start="5">
+<li>На этапе ввода домена сайта указать базовый домен вашего сайта, а также 2 доверенных URL в виде:
+<strong>https://<em>домен</em>/account/login/vkontakte</strong>
+<strong>https://<em>домен</em>/account/login</strong>
+Нажать кнопку &quot;Создать приложение&quot;.</li>
+</ol>
+<ul>
+<li><img loading="lazy" src="/assets/images/vk-createapp2-d0a770787155f77152e1e7153b481af1.png" width="934" height="420" class="img_ev3q"></li>
+</ul>
+<ol start="6">
+<li>Нажать кнопку &quot;К настройке&quot;</li>
+</ol>
+<ul>
+<li><img loading="lazy" src="/assets/images/vk-createapp3-cc0f4a988ce333e60c465a64e4b82d13.png" width="934" height="530" class="img_ev3q"></li>
+</ul>
+<ol start="7">
+<li>В левом нижнем углу страницы нажать &quot;Настроить позже&quot; и продолжить без копирования кода приложения.</li>
+</ol>
+<ul>
+<li><img loading="lazy" src="/assets/images/vk-createapp4-f5cc1d8384bae8b426a5d6d0f978daf1.png" width="934" height="452" class="img_ev3q"></li>
+</ul>
+<ol start="8">
+<li>Скопировать <strong>ID приложения</strong> и <strong>защищенный ключ</strong> из настроек приложения.</li>
+</ol>
+<ul>
+<li><img loading="lazy" src="/assets/images/vk-keys-f7fc994e9a53749c9e111dbe581efdb0.png" width="934" height="525" class="img_ev3q"></li>
+</ul>
+<ol start="9">
+<li>В панели управления Pixlpark, в разделе <strong>Настройка - Сервисы</strong> вставить ID приложения и защищенный ключ в поля <strong>App ID</strong> и <strong>App Secret</strong>, а также включить галочку <strong>Oauth 2.1</strong>, после чего нажать &quot;Сохранить&quot; в правом нижнем углу страницы.</li>
+</ol>
+<ul>
+<li><img loading="lazy" src="/assets/images/vk-keys2-9de17d067f476bc514c7e17c663279ce.png" width="934" height="323" class="img_ev3q"></li>
+<li>На странице авторизации вашего сайта должна появиться иконка ВК.</li>
+<li><img loading="lazy" src="/assets/images/vk-success-91c03182d48e82973109904ddef0ebf3.png" width="587" height="597" class="img_ev3q"></li>
+</ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="одноклассники">Одноклассники<a href="#одноклассники" class="hash-link" aria-label="Direct link to Одноклассники" title="Direct link to Одноклассники">​</a></h2>
 <ul>
-<li>Интеграция с &quot;<a href="https://ok.ru/" target="_blank" rel="noopener noreferrer">Одноклассники</a>&quot; позволяет осуществлять вход на сайт, авторизуясь с помощью профиля в социальной сети, а  также добавлять из него фотографии для заказа.</li>
+<li>Интеграция с &quot;<a href="https://ok.ru/" target="_blank" rel="noopener noreferrer">Одноклассники</a>&quot; позволяет осуществлять вход на сайт, авторизуясь с помощью профиля в социальной сети, а также добавлять из него фотографии для заказа.</li>
 <li>Важно, чтобы к вашему аккаунту был привязан действующая электронная почта.</li>
 <li>Для настройки интеграции необходимо выполнить следующие действия.</li>
 <li>На <a href="http://ok.ru/devaccess" target="_blank" rel="noopener noreferrer">странице</a> необходимо получить права разработчика, а после - перейти на страницу управления приложением.
@@ -69,7 +94,7 @@
 <img loading="lazy" src="/assets/images/ok03-2148d6a32b77fd1aa4a5f961a5a85933.png" title=":size=70%" width="931" height="854" class="img_ev3q"></li>
 <li>После, для добавления платформы авторизации нажать кнопку &quot;<strong>+ Добавить платформу</strong>&quot; в нижней части экрана и в появившемся окне выбрать &quot;<strong>OAuth</strong>&quot;.
 <img loading="lazy" src="/assets/images/ok04-1e0fc160d868c05e6e6ed4666820babb.png" title=":size=30%" width="389" height="303" class="img_ev3q"></li>
-<li>Далее, в разделе &quot;<strong>Основные настройки приложения</strong>&quot; при необходимости добавить изображения для аватара и обложки согласно регламенту сервиса.
+<li>Далее, в разделе &quot;<strong>Основные настройки приложения</strong>&quot; при необходимости добавить изображения для аватара и обложки согласно регламенту сервис а.
 <img loading="lazy" src="/assets/images/ok05-ec7099accc1cc4a4dbadf50fd6b0f9c0.png" title=":size=70%" width="913" height="265" class="img_ev3q"></li>
 <li>В разделе &quot;<strong>Настройки внешнего вида приложения</strong>&quot; указать:<!-- -->
 <ul>
@@ -136,14 +161,14 @@
 <li><img loading="lazy" src="/assets/images/ya03-82f52efbfc8929677120fb94ae31ba0b.png" title=":size=100%" width="816" height="453" class="img_ev3q"></li>
 <li>Затем, в разделе &quot;<strong>Дополнительно</strong>&quot; заполнить поля, указав:<!-- -->
 <ul>
-<li><strong>Ссылк а на сайт</strong> - указать адрес сайта.</li>
+<li><strong>Ссылка на сайт</strong> - указать адрес сайта.</li>
 </ul>
 </li>
 <li><img loading="lazy" src="/assets/images/ya04-e611406c75ad1d4d1b514b86cb9533a8.png" title=":size=100%" width="806" height="409" class="img_ev3q"></li>
 <li>После, в разделе &quot;<strong>Контактные данные</strong>&quot; указать email для связи.
 <img loading="lazy" src="/assets/images/ya05-016f858f7f2343eccb943ce15e82ae01.png" title=":size=100%" width="805" height="210" class="img_ev3q"></li>
 <li>Далее, завершить создание приложения нажав кнопку &quot;<strong>Создать приложение</strong>&quot; в нижней части экрана.</li>
-<li>После этого сервис отобразит страницу с ключами созданного приложения.
+<li>После этого сервис отобразит ст раницу с ключами созданного приложения.
 <img loading="lazy" src="/assets/images/ya06-c467c94c2706e3457c6058438a3e0684.png" title=":size=100%" width="1514" height="723" class="img_ev3q"></li>
 <li>Параллельно открыть в панели управления Pixlpark раздел &quot;<strong>Настройка / Сервисы</strong>&quot; и включить &quot;<strong>Яндекс</strong>&quot;.</li>
 <li>Затем скопировать поля из Яндекс в Pixlpark:<!-- -->
@@ -182,7 +207,7 @@
 <li><strong>Email address</strong> в подразделе <strong>Developer contact information</strong> - электронная почта компании.</li>
 </ul>
 </li>
-<li>Затем нужно сохранить внесенные изменения, нажав кнопку &quot;<strong>SAVE AND CONTINUE</strong>&quot;. Закончить создание приложения, пройдя этапы, не требующие обязательного внесения дополнительных данных.</li>
+<li>Затем нужно сохранить внесенные изменения, нажав кнопку &quot;<strong>SAVE AND CONTINUE</strong>&quot;. Закончить создание п риложения, пройдя этапы, не требующие обязательного внесения дополнительных данных.</li>
 <li>По завершению будет создано приложение в тестовом режиме без публичного доступа. Для перевода приложения в боевой режим необходимо в разделе &quot;<strong>APIs &amp; Services</strong> → <strong>OAuth consent screen</strong>&quot; изменить статус приложения &quot;<strong>Publishing status</strong>&quot; на &quot;<strong>PUBLISH APP</strong>&quot;.
 <img loading="lazy" src="/assets/images/google07-4f7580f6eeb7cbfba88a6d96c58472b5.jpg" title=":size=50%" width="742" height="443" class="img_ev3q"></li>
 <li>После этого для создания ключей доступа к приложению нужно перейти в раздел &quot;<strong>APIs &amp; Services</strong> → <strong>Credentials</strong>&quot;, нажать кнопку &quot;<strong>+ CREATE CREDENTIALS</strong>&quot; и выбрать подпункт &quot;<strong>OAuth client ID</strong>&quot;.
@@ -217,7 +242,7 @@
 <blockquote>
 <p>Для поиска оферты в ЭДО можно использовать следующие данные:</p>
 <ul>
-<li>Тип документа: <code>Документ</code></li>
+<li>Тип докумен та: <code>Документ</code></li>
 <li>Получатель: <code>ПАО Сбербанк</code></li>
 <li>ИНН: <code>7707083893</code></li>
 <li>КПП: <code>773601001</code></li>
