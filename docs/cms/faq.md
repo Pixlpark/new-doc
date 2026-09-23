@@ -99,6 +99,10 @@ sidebar_position: 9
 * `[$poly1ccalculator(category:cUrl, product:pUrl)$]` - калькулятор для категории печати с подключенной ERP 1С:Полиграфия.
 * `[$asystemcalculator(category:cUrl, product:pUrl)$]` - калькулятор для категории печати с подключенной ERP ASystem.
 * `[$helloprintcalculator(category:cUrl, product:pUrl)$]` - калькулятор для категории печати с подключенной ERP HelloPrint.
+* `[$circulationTable(category:cUrl, products:'pUrl_1,pUrl_2,...,pUrl_n', title:'tTitle')$]` - таблица цен продуктов одной категории с учетом тиражности, где:
+    + cUrl - URL категории (обязательный параметр);
+    + pUrl_1,pUrl_2,...,pUrl_n - продукты категории (обязательный параметр);
+    + tTitle - опциональный заголовок блока (опциональный параметр).
 > Константы с выводом цен обновляются по системному кэшу раз в пол часа.
 
 ## Как подключить онлайн-чат на сайт
